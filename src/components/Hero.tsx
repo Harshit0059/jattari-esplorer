@@ -1,278 +1,251 @@
-
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import {
+  ArrowDown,
+  ArrowRight,
+  MapPin,
+  Pause,
+  Play,
+} from "lucide-react";
 
 const slides = [
   {
-    image: "/images/khatu%20shyam.jpeg",
-    title: "Discover Jattari.",
-    highlight: "Explore New Possibilities.",
+    image: "/images/anouncements.jpeg",
+    alt: "Jattari local announcements",
+    eyebrow: "WELCOME TO JATTARI",
+    title: "Discover Jattari",
     description:
-      "Discover Jattari, Uttar Pradesh — its location, connectivity, local facilities and opportunities around the area.",
-    label: "Discover Jattari",
+      "Explore the places, people, culture and everyday life that make Jattari a special place to discover.",
   },
   {
     image: "/images/skyline%20aerohomes.jpeg",
-    title: "Explore Local",
-    highlight: "Places & Connectivity.",
+    alt: "Skyline Aero Homes",
+    eyebrow: "A PLACE TO GROW",
+    title: "A New Perspective on Living",
     description:
-      "Explore local surroundings, roads, nearby places and useful information about Jattari.",
-    label: "Skyline Aero Homes",
+      "Discover residential opportunities and learn more about the changing landscape around Jattari.",
   },
   {
-    image: "/images/skyline%20aerohomes.jpeg",
-    title: "Explore Local",
-    highlight: "Places & Connectivity.",
+    image: "/images/explore-jattari.jpeg",
+    alt: "Jattari local market",
+    eyebrow: "LOCAL LIFE & MARKETS",
+    title: "Experience Local Life",
     description:
-      "Explore local surroundings, roads, nearby places and useful information about Jattari.",
-    label: "Skyline Aero Homes",
+      "Get to know local markets, everyday essentials, neighbourhood businesses and the community.",
+  },
+  {
+    image: "/images/culture.jpeg",
+    alt: "Jattari culture and temple",
+    eyebrow: "CULTURE & TRADITIONS",
+    title: "Discover Our Heritage",
+    description:
+      "Explore local traditions, cultural places and the stories that connect people with Jattari.",
   },
   {
     image: "/images/anugrah.jpeg",
-    title: "Spaces for Living.",
-    highlight: "Possibilities for Growth.",
+    alt: "Anugrah Homes in Jattari",
+    eyebrow: "EXPLORE PROPERTY OPTIONS",
+    title: "Find Your Place in Jattari",
     description:
-      "Explore property-related information and opportunities in and around Jattari.",
-    label: "Anugrah Homes",
+      "Learn about the area's location, connectivity and property opportunities before planning your next step.",
   },
 ];
 
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [imageErrors, setImageErrors] = useState<string[]>([]);
   const [isPaused, setIsPaused] = useState(false);
+  const [imageErrors, setImageErrors] = useState<Set<string>>(
+    () => new Set()
+  );
 
   useEffect(() => {
     if (isPaused) return;
 
-    const timer = window.setInterval(() => {
+    const interval = window.setInterval(() => {
       setActiveSlide((current) => (current + 1) % slides.length);
     }, 5000);
 
-    return () => window.clearInterval(timer);
+    return () => window.clearInterval(interval);
   }, [isPaused]);
+
+  const handleImageError = (image: string) => {
+    setImageErrors((previous) => {
+      const updated = new Set(previous);
+      updated.add(image);
+      return updated;
+    });
+  };
 
   const currentSlide = slides[activeSlide];
 
   return (
     <section
-      id="home"
       aria-label="Discover Jattari"
-      className="relative isolate flex min-h-[650px] items-center overflow-hidden bg-background sm:min-h-[700px] lg:min-h-[760px]"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onFocusCapture={() => setIsPaused(true)}
-      onBlurCapture={(event) => {
-        if (
-          !event.currentTarget.contains(
-            event.relatedTarget as Node | null
-          )
-        ) {
-          setIsPaused(false);
-        }
-      }}
+      className="relative isolate flex min-h-[650px] w-full items-center overflow-hidden bg-[#0B3D3E] sm:min-h-[700px] lg:min-h-[760px]"
     >
-      {/* Background slideshow */}
+      {/* Background images */}
       {slides.map((slide, index) => (
         <div
-          key={`${slide.image}-${index}`}
+          key={slide.image}
           aria-hidden="true"
           className={`absolute inset-0 z-0 overflow-hidden transition-opacity duration-1000 ease-in-out ${
-            index === activeSlide ? "opacity-100" : "opacity-0"
+            index === activeSlide
+              ? "opacity-100"
+              : "pointer-events-none opacity-0"
           }`}
         >
-          {!imageErrors.includes(slide.image) ? (
-            <img
-              src={slide.image}
-              alt=""
-              fetchPriority={index === 0 ? "high" : "auto"}
-              className="absolute inset-0 h-full w-full object-cover object-center"
-              onError={() => {
-                setImageErrors((previous) =>
-                  previous.includes(slide.image)
-                    ? previous
-                    : [...previous, slide.image]
-                );
-              }}
-            />
+          {!imageErrors.has(slide.image) ? (
+            <>
+              {/* Blurred background fills the entire hero */}
+              <Image
+                src={slide.image}
+                alt=""
+                fill
+                sizes="100vw"
+                className="scale-110 object-cover object-center opacity-50 blur-2xl"
+              />
+
+              {/* Main image stays full width */}
+              <div
+                className={`absolute inset-x-0 top-0 w-full overflow-hidden ${
+                  index === 0
+                    ? "h-[80%] sm:h-[85%] lg:h-[90%]"
+                    : "h-full"
+                }`}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  sizes="100vw"
+                  priority={index === 0}
+                  className="object-cover object-center"
+                  onError={() => handleImageError(slide.image)}
+                />
+              </div>
+            </>
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-primary text-white">
-              <p className="px-6 text-center">
-                Image load nahi hui: {slide.image}
-              </p>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0B3D3E] via-[#0F5257] to-[#287A6D]" />
           )}
         </div>
       ))}
 
-      {/* Theme-matched image overlays */}
-      <div className="pointer-events-none absolute inset-0 z-10 bg-[#0B3D3E]/35" />
+      {/* Overlay keeps text readable */}
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0B3D3E]/90 via-[#0B3D3E]/65 to-[#0B3D3E]/25" />
 
-      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#0B3D3E]/85 via-[#0F5257]/45 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0B3D3E]/70 via-transparent to-[#0B3D3E]/20" />
 
-      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#0B3D3E]/65 via-transparent to-[#0F5257]/15" />
+      {/* Decorative background elements */}
+      <div className="pointer-events-none absolute -left-24 top-1/4 z-[1] h-64 w-64 rounded-full border border-white/10 sm:h-80 sm:w-80" />
 
-      {/* Decorative circles */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 top-24 z-10 h-72 w-72 rounded-full border border-[#B9D8C8]/25 sm:h-96 sm:w-96"
-      />
+      <div className="pointer-events-none absolute -left-12 top-[30%] z-[1] h-44 w-44 rounded-full border border-white/10 sm:h-60 sm:w-60" />
 
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-12 top-36 z-10 h-52 w-52 rounded-full border border-[#B9D8C8]/20 sm:h-72 sm:w-72"
-      />
+      {/* Main content: separate spacing prevents overlap */}
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-5 pb-24 pt-28 sm:px-8 sm:pb-28 sm:pt-32 lg:px-12 lg:pb-32 lg:pt-36">
+        <div className="max-w-3xl">
+          {/* Location label */}
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold tracking-[0.16em] text-white backdrop-blur-sm sm:mb-7 sm:text-sm">
+            <MapPin className="h-4 w-4 shrink-0" />
+            <span>JATTARI, UTTAR PRADESH</span>
+          </div>
 
-      {/* Hero content */}
-      <div className="container-site relative z-20 w-full py-20 sm:py-24 lg:py-28">
-        <div key={currentSlide.label} className="hero-text-in max-w-4xl">
-          <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-[#B9D8C8]/40 bg-[#0B3D3E]/55 px-4 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md sm:text-sm">
-            <span className="relative flex h-2.5 w-2.5 shrink-0">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B9D8C8] opacity-60" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#B9D8C8]" />
-            </span>
+          {/* Slide heading */}
+          <p
+            key={`eyebrow-${activeSlide}`}
+            className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#B9D8C8] sm:mb-4 sm:text-sm"
+          >
+            {currentSlide.eyebrow}
+          </p>
 
-            Jattari Explorer
-
-            <span className="text-white/60">/</span>
-
-            Uttar Pradesh
-          </span>
-
-          <h1 className="mt-7 max-w-4xl text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-[82px]">
+          <h1
+            key={`title-${activeSlide}`}
+            className="max-w-3xl break-words text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl sm:leading-[1.1] md:text-6xl lg:text-7xl"
+          >
             {currentSlide.title}
-
-            <span className="mt-2 block text-[#B9D8C8]">
-              {currentSlide.highlight}
-            </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/90 sm:text-lg sm:leading-9">
+          {/* Description stays below the heading */}
+          <p
+            key={`description-${activeSlide}`}
+            className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:mt-6 sm:text-lg sm:leading-8 md:text-xl"
+          >
             {currentSlide.description}
           </p>
 
-          {/* CTA buttons */}
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-            <a
-              href="#explore"
-              className="button-primary group min-h-12 w-full justify-center px-6 shadow-lg shadow-[#0B3D3E]/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9D8C8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B3D3E] sm:w-auto"
+          {/* Buttons stay in normal document flow */}
+          <div className="mt-7 flex flex-col items-stretch gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+            <Link
+              href="/explore-jattari"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-[#0B3D3E] shadow-lg transition duration-300 hover:-translate-y-0.5 hover:bg-[#B9D8C8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B3D3E] sm:min-h-14 sm:px-7 sm:text-base"
             >
               Explore Jattari
+              <ArrowRight className="h-5 w-5 shrink-0" />
+            </Link>
 
-              <span
-                aria-hidden="true"
-                className="inline-block transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </a>
-
-            <a
-              href="#about"
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-[10px] border border-[#B9D8C8]/70 bg-[#0B3D3E]/35 px-6 py-3 font-semibold text-white backdrop-blur-md transition duration-300 hover:border-[#B9D8C8] hover:bg-[#B9D8C8] hover:text-[#0B3D3E] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9D8C8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B3D3E] sm:w-auto"
+            <Link
+              href="/location-connectivity"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/60 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:min-h-14 sm:px-7 sm:text-base"
             >
-              About Jattari
+              Explore Location
+              <MapPin className="h-5 w-5 shrink-0" />
+            </Link>
+          </div>
+        </div>
 
-              <span aria-hidden="true">↗</span>
-            </a>
+        {/* Slide indicators */}
+        <div className="mt-10 flex items-center gap-3 sm:mt-12">
+          <div
+            className="flex items-center gap-2"
+            aria-label="Choose hero slide"
+          >
+            {slides.map((slide, index) => (
+              <button
+                key={slide.image}
+                type="button"
+                onClick={() => setActiveSlide(index)}
+                aria-label={`Show slide ${index + 1}: ${slide.title}`}
+                aria-current={index === activeSlide ? "true" : undefined}
+                className={`h-2.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B3D3E] ${
+                  index === activeSlide
+                    ? "w-9 bg-white"
+                    : "w-2.5 bg-white/50 hover:bg-white/80"
+                }`}
+              />
+            ))}
           </div>
 
-          {/* Slider indicators */}
-          <div className="mt-10 flex flex-wrap items-center gap-3 sm:mt-12">
-            <div className="flex items-center gap-2.5">
-              {slides.map((slide, index) => (
-                <button
-                  key={`${slide.label}-${index}`}
-                  type="button"
-                  onClick={() => setActiveSlide(index)}
-                  aria-label={`Show slide ${index + 1}: ${slide.label}`}
-                  aria-pressed={index === activeSlide}
-                  className={`min-h-6 rounded-full p-2 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9D8C8] ${
-                    index === activeSlide ? "w-14" : "w-8"
-                  }`}
-                >
-                  <span
-                    className={`block h-1.5 rounded-full transition-all duration-300 ${
-                      index === activeSlide
-                        ? "bg-[#B9D8C8]"
-                        : "bg-white/50 hover:bg-white/80"
-                    }`}
-                  />
-                </button>
-              ))}
-            </div>
+          <span className="ml-1 text-sm font-medium tabular-nums text-white/80">
+            {String(activeSlide + 1).padStart(2, "0")} /{" "}
+            {String(slides.length).padStart(2, "0")}
+          </span>
 
-            <span
-              aria-live="polite"
-              className="ml-1 text-xs font-bold tracking-[0.2em] text-white"
-            >
-              0{activeSlide + 1}
-              <span className="mx-2 text-[#B9D8C8]/70">/</span>
-              0{slides.length}
-            </span>
-          </div>
-
-          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#B9D8C8]">
-            {currentSlide.label}
-          </p>
+          <button
+            type="button"
+            onClick={() => setIsPaused((previous) => !previous)}
+            aria-label={isPaused ? "Resume automatic slideshow" : "Pause automatic slideshow"}
+            className="ml-1 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            {isPaused ? (
+              <Play className="h-4 w-4" />
+            ) : (
+              <Pause className="h-4 w-4" />
+            )}
+          </button>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll hint */}
       <a
-        href="#about"
-        aria-label="Scroll to learn about Jattari"
-        className="absolute bottom-5 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs font-medium text-white/80 transition hover:text-[#B9D8C8] md:flex"
+        href="#main-content"
+        aria-label="Scroll to main content"
+        className="absolute bottom-5 right-5 z-10 hidden items-center gap-2 text-sm font-medium text-white/80 transition hover:text-white sm:flex md:bottom-8 md:right-10"
       >
-        <span>SCROLL TO EXPLORE</span>
-
-        <span className="hero-scroll-line block h-8 w-px bg-[#B9D8C8]/80" />
+        <span>Scroll to explore</span>
+        <ArrowDown className="h-4 w-4 animate-bounce" />
       </a>
-
-      {/* Text and scroll animations */}
-      <style jsx>{`
-        .hero-text-in {
-          animation: textReveal 700ms ease-out both;
-        }
-
-        .hero-scroll-line {
-          transform-origin: top;
-          animation: scrollLine 1.8s ease-in-out infinite;
-        }
-
-        @keyframes textReveal {
-          from {
-            opacity: 0;
-            transform: translateY(18px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes scrollLine {
-          0%,
-          100% {
-            transform: scaleY(0.55);
-            opacity: 0.5;
-          }
-
-          50% {
-            transform: scaleY(1);
-            opacity: 1;
-          }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .hero-text-in,
-          .hero-scroll-line {
-            animation: none;
-          }
-        }
-      `}</style>
     </section>
   );
 }

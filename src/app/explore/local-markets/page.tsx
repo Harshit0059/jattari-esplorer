@@ -1,5 +1,5 @@
+
 import Link from "next/link";
-import Image from "next/image";
 
 const marketFeatures = [
   {
@@ -28,43 +28,36 @@ const marketFeatures = [
   },
 ];
 
+const shoppingTips = [
+  "Check opening times before travelling.",
+  "Confirm prices and product availability with the seller.",
+  "Keep personal belongings secure in busy areas.",
+];
+
 export default function LocalMarketsPage() {
   return (
     <main className="min-h-screen bg-[#F5F7FA] text-[#1F2937]">
-      {/* HERO WITH MARKET BACKGROUND IMAGE */}
-      <section className="relative isolate min-h-[430px] overflow-hidden px-6 py-20 text-white sm:min-h-[460px] sm:py-24 md:px-12 md:py-28">
-        {/* Background Image */}
-        <Image
-          src="/images/market.jpeg"
-          alt="Local market in Jattari"
-          fill
-          priority
-          sizes="100vw"
-          className="z-0 object-cover object-center"
-        />
-
-        {/* Dark overlay: keeps text readable without hiding the image */}
+      {/* HERO WITH TEMPORARY DUMMY MARKET IMAGE */}
+      <section
+        className="relative isolate flex min-h-[440px] items-center overflow-hidden bg-cover bg-center px-6 py-20 text-white sm:min-h-[480px] md:px-12 md:py-28"
+       style={{
+  backgroundImage: "url('/images/market.jpeg')",
+}}
+      >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-black/30"
-        />
-
-        {/* Decorative shapes */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-16 z-10 h-72 w-72 rounded-full border border-white/25"
+          className="absolute inset-0 -z-10 bg-black/55"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -bottom-28 left-1/4 z-10 h-64 w-64 rounded-full bg-blue-200/15 blur-3xl"
+          className="pointer-events-none absolute -right-16 -top-16 -z-10 h-72 w-72 rounded-full border border-white/25"
         />
 
-        {/* Hero content */}
-        <div className="relative z-20 mx-auto max-w-6xl">
+        <div className="mx-auto w-full max-w-6xl">
           <Link
             href="/explore/food"
-            className="inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-blue-200"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white/90 transition hover:text-blue-200"
           >
             <span aria-hidden="true">←</span>
             Food &amp; Local Eateries
@@ -74,11 +67,11 @@ export default function LocalMarketsPage() {
             Explore Local Commerce
           </p>
 
-          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight drop-shadow-lg sm:text-5xl md:text-6xl">
             Local Markets of Jattari
           </h1>
 
-          <p className="mt-6 max-w-2xl text-sm leading-7 text-white drop-shadow-md sm:text-base sm:leading-8 md:text-lg">
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-white/95 sm:text-base sm:leading-8 md:text-lg">
             Discover the role of local shops and shopping areas in daily life,
             and get practical tips for exploring them.
           </p>
@@ -145,11 +138,7 @@ export default function LocalMarketsPage() {
           <h2 className="text-2xl font-bold">Useful shopping tips</h2>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {[
-              "Check opening times before travelling.",
-              "Confirm prices and product availability with the seller.",
-              "Keep personal belongings secure in busy areas.",
-            ].map((tip) => (
+            {shoppingTips.map((tip) => (
               <div
                 key={tip}
                 className="rounded-xl border border-[#E5E7EB] bg-white p-5 leading-7 text-[#1F2937]"

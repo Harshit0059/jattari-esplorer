@@ -4,307 +4,237 @@ import Link from "next/link";
 const developmentTopics = [
   {
     number: "01",
-    title: "Road & Infrastructure",
+    title: "Roads & Connectivity",
     description:
-      "Roads and infrastructure are important to everyday life in Jattari. Road conditions, drainage, street lighting and public-space maintenance can affect residents, commuters and local businesses. Understanding these facilities helps visitors learn about local infrastructure and the importance of ongoing maintenance.",
-    image: "/images/road.jpeg",
-    alt: "Road and infrastructure around Jattari",
-    highlights: [
-      "Road conditions and maintenance",
-      "Drainage and public infrastructure",
-      "Street lighting and public spaces",
-    ],
+      "Road conditions, route improvements and transport connectivity can influence everyday travel around Jattari. Before travelling, check current route conditions and verify any reported roadwork or traffic restrictions.",
+    label: "Transport",
   },
   {
     number: "02",
-    title: "Connectivity Improvements",
+    title: "Public Infrastructure",
     description:
-      "Connectivity influences how people travel between Jattari, nearby settlements, workplaces, markets and essential services. Road access and transport options matter for daily commuting, business activities and access to education and healthcare. Check current routes and transport information before travelling.",
-    image: "/images/road1.jpeg",
-    alt: "Road connectivity near Jattari",
-    highlights: [
-      "Road access to nearby areas",
-      "Daily commuting and transport",
-      "Travel routes and accessibility",
-    ],
+      "Drainage, street lighting, sanitation and other civic facilities are important to everyday community life. For information about a particular project, confirm its status and details with the responsible authority.",
+    label: "Civic facilities",
   },
   {
     number: "03",
-    title: "Education & Public Facilities",
+    title: "Education & Healthcare",
     description:
-      "Educational institutions and public facilities support families and the wider Jattari community. Schools, learning centres and essential services help people access resources closer to home. Confirm the availability, location and services of a specific facility directly with the relevant organisation.",
-    image: "/images/school.jpeg",
-    alt: "School representing local education facilities",
-    highlights: [
-      "Schools and learning facilities",
-      "Access to essential public services",
-      "Community needs and local resources",
-    ],
+      "Changes affecting schools, educational facilities, hospitals and other healthcare services can matter to local families. Confirm opening hours, service availability and official announcements directly with the institution.",
+    label: "Essential services",
+  },
+  {
+    number: "04",
+    title: "Markets & Local Economy",
+    description:
+      "Local markets, shops, small businesses and service providers contribute to Jattari's everyday economy. Verified information about public arrangements and business activities can help residents plan their day.",
+    label: "Local economy",
+  },
+];
+
+const verificationSteps = [
+  {
+    title: "Identify the original source",
+    description:
+      "Look for the relevant government department, local authority, institution or project organisation responsible for the announcement.",
+  },
+  {
+    title: "Check the project status",
+    description:
+      "Distinguish between a proposal, an announced plan, work in progress and a completed development.",
+  },
+  {
+    title: "Confirm the location and timeline",
+    description:
+      "Check the precise location, publication date and any official schedule before relying on a development update.",
+  },
+  {
+    title: "Avoid unverified claims",
+    description:
+      "Do not treat forwarded messages, promotional material or old photographs as proof that a project is approved or completed.",
   },
 ];
 
 export default function LocalDevelopmentsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Hero */}
+      {/* Hero section with a clearer background image */}
       <section className="relative isolate overflow-hidden border-b border-border">
         <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-20 bg-no-repeat"
+          className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/images/road.jpeg')",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "center",
+            backgroundImage:
+              "linear-gradient(90deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 25%, rgba(255,255,255,0.20) 55%, rgba(255,255,255,0.05) 100%), url('/images/developments.jpeg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center 42%",
           }}
-        />
-
-        <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-white/80 via-white/45 to-transparent"
         />
 
-        <div className="container-site flex min-h-[560px] items-center py-10 sm:min-h-[500px] sm:py-14 lg:min-h-[530px]">
-          <div className="w-full max-w-2xl">
+        <div className="container-site relative mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
+          <div className="max-w-3xl">
             <Link
               href="/news-updates"
-              className="mb-6 inline-flex items-center gap-2 rounded-xl bg-white/95 px-4 py-3 text-sm font-semibold text-primary shadow-sm transition hover:-translate-y-0.5"
+              className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-white/90 px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary hover:text-primary"
             >
               <span aria-hidden="true">←</span>
               Back to News & Updates
             </Link>
 
-            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/95 px-4 py-2.5 text-xs font-bold uppercase tracking-[0.16em] text-primary shadow-sm">
-              <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-              Jattari Community
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+              Jattari · Local Development
             </p>
 
-            <h1 className="max-w-xl text-4xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              Local Developments
-              <span className="mt-2 block text-primary">
-                Around Jattari
-              </span>
+            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+              Local Developments & Infrastructure Updates
             </h1>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-900 sm:text-lg sm:leading-8">
-              Explore local infrastructure, road connectivity, education
-              facilities and community resources that matter to everyday life
-              in and around Jattari.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
+              Explore the local development topics that can affect daily life
+              in Jattari, from roads and public infrastructure to education,
+              healthcare and local economic activity. Learn what to check and
+              how to verify information before making decisions.
             </p>
 
-            <a
-              href="#development-topics"
-              className="button-primary mt-7 inline-flex items-center gap-2"
-            >
-              Explore topics
-              <span aria-hidden="true">→</span>
-            </a>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#development-topics"
+                className="button-primary inline-flex items-center gap-2"
+              >
+                Explore development topics
+                <span aria-hidden="true">↓</span>
+              </a>
+
+              <a
+                href="#verify-developments"
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-white/90 px-5 py-3 font-semibold text-foreground transition hover:border-primary hover:text-primary"
+              >
+                Verify information
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="container-site py-12 sm:py-16">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+      <section className="container-site mx-auto px-4 py-16 sm:px-6 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">
-              Community information
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              Understanding local change
             </p>
 
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
-              Understand What Is Changing Locally
+            <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
+              Development that shapes everyday life
             </h2>
 
-            <p className="mt-4 leading-7 text-muted">
-              Local development covers the infrastructure, transport
-              connections and public facilities that people use in everyday
-              life. In Jattari, these topics are relevant to residents,
-              commuters, families and local businesses.
-            </p>
+            <div className="mt-6 space-y-4 leading-8 text-muted">
+              <p>
+                Local development includes the roads people use, the public
+                facilities they depend on and the services that support
+                families, students, workers and businesses. Improvements in
+                these areas can influence daily routines and future planning.
+              </p>
 
-            <p className="mt-4 leading-7 text-muted">
-              Understanding local conditions can help people learn about
-              accessibility, identify information they need and make informed
-              decisions about travel, education and everyday activities. Roads,
-              connectivity and education facilities are useful areas to explore
-              when learning about the local community.
-            </p>
+              <p>
+                For residents of Jattari, keeping track of reliable information
+                about civic facilities, connectivity, education, healthcare
+                and local economic activity can help them understand changes
+                in the surrounding area.
+              </p>
 
-            <p className="mt-4 leading-7 text-muted">
-              This page brings these subjects together in one place. It offers
-              an overview of the topics and helps visitors identify where to
-              look for further information about a particular facility or
-              local issue.
-            </p>
-          </div>
-
-          <div className="card-base bg-surface p-6 sm:p-8">
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-soft-accent text-primary">
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  className="h-6 w-6"
-                >
-                  <circle cx="12" cy="12" r="9" />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 11v5m0-8h.01"
-                  />
-                </svg>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-bold">
-                  Information & Verification
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-muted">
-                  Information about local development should be checked
-                  carefully before it is treated as a confirmed update.
-                  Conditions, services and project details can change over time.
-                </p>
-
-                <p className="mt-3 text-sm leading-7 text-muted">
-                  For specific details about a road, institution or development
-                  project, consult the relevant local authority or organisation.
-                  This page provides general topic information and does not
-                  claim that a particular project is currently underway or
-                  completed.
-                </p>
-              </div>
+              <p>
+                This page is an informational guide to development topics. It
+                does not confirm that a specific project has been announced,
+                approved, started or completed. Check current information
+                with the relevant authority before relying on a claim.
+              </p>
             </div>
           </div>
+
+          <aside className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+              What to look for
+            </p>
+
+            <h3 className="mt-3 text-2xl font-bold">
+              Read development updates carefully
+            </h3>
+
+            <p className="mt-4 leading-7 text-muted">
+              A headline or photograph may not show the complete status of a
+              project. Look for the issuing organisation, the exact location,
+              publication date and any official documentation.
+            </p>
+
+            <div className="mt-6 border-t border-border pt-5">
+              <ul className="space-y-3 text-sm leading-6 text-muted">
+                <li className="flex gap-3">
+                  <span className="text-primary">✓</span>
+                  Original announcement or official notice
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">✓</span>
+                  Confirmed location and current project status
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-primary">✓</span>
+                  Published timelines and relevant conditions
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </section>
 
-      {/* Anugrah Homes promotion */}
-      <section className="container-site pb-12 sm:pb-16">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
-          <div className="grid lg:grid-cols-[1fr_1.1fr]">
-            <div className="relative min-h-[240px] overflow-hidden bg-soft-accent sm:min-h-[300px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/anugrah.jpeg"
-                alt="Anugrah Homes residential property project"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-
-            <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-                Residential Property · Jattari
-              </p>
-
-              <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
-                Discover Anugrah Homes
-              </h2>
-
-              <p className="mt-4 leading-7 text-muted">
-                Exploring local development also means understanding the
-                residential options available in the area. Anugrah Homes
-                presents residential plots in Jattari, Aligarh, for people
-                exploring property options for their future home or considering
-                a property purchase.
-              </p>
-
-              <p className="mt-3 leading-7 text-muted">
-                Visitors can explore the project website to learn about its
-                location, available plot options, layout information and
-                enquiry process. Confirm current availability, pricing and
-                documentation directly with the developer before making a
-                decision.
-              </p>
-
-              <Link
-                href="https://www.anugrahhomes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-primary mt-6 inline-flex w-fit items-center gap-2"
-              >
-                Explore Anugrah Homes
-                <span aria-hidden="true">↗</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Existing development topics */}
+      {/* Development topics */}
       <section
         id="development-topics"
-        className="border-y border-border bg-surface py-12 sm:py-16"
+        className="scroll-mt-24 border-y border-border bg-surface py-16 sm:py-20"
       >
-        <div className="container-site">
-          <div className="mb-10 max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">
-              Explore by topic
+        <div className="container-site mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              Key areas
             </p>
 
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
-              Development Topics
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Development topics to follow in Jattari
             </h2>
 
-            <p className="mt-4 leading-7 text-muted">
-              Explore these three areas to understand their relevance to daily
-              life in Jattari. Each topic covers useful considerations and
-              points visitors towards the kind of information they may need.
+            <p className="mt-5 leading-8 text-muted">
+              These areas provide a useful starting point for understanding
+              local needs and evaluating reports about development in and
+              around Jattari.
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-10 divide-y divide-border border-y border-border">
             {developmentTopics.map((topic) => (
               <article
                 key={topic.number}
-                className="card-base group flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1 hover:border-primary"
+                className="grid gap-4 py-7 sm:grid-cols-[76px_1fr] sm:gap-7 sm:py-9"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-soft-accent">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={topic.image}
-                    alt={topic.alt}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-
-                  <span className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-sm font-bold text-primary shadow-sm">
+                <div>
+                  <span className="text-2xl font-semibold text-primary/70">
                     {topic.number}
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <h3 className="text-xl font-bold tracking-tight">
-                    {topic.title}
-                  </h3>
+                <div>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 className="text-xl font-bold sm:text-2xl">
+                      {topic.title}
+                    </h3>
 
-                  <p className="mt-3 leading-7 text-muted">
+                    <span className="rounded-full bg-soft-accent px-3 py-1 text-xs font-semibold text-primary">
+                      {topic.label}
+                    </span>
+                  </div>
+
+                  <p className="mt-3 max-w-3xl leading-8 text-muted">
                     {topic.description}
                   </p>
-
-                  <div className="mt-5 border-t border-border pt-4">
-                    <p className="text-sm font-bold text-foreground">
-                      Key areas to explore
-                    </p>
-
-                    <ul className="mt-3 space-y-2">
-                      {topic.highlights.map((highlight) => (
-                        <li
-                          key={highlight}
-                          className="flex items-start gap-2 text-sm leading-6 text-muted"
-                        >
-                          <span
-                            aria-hidden="true"
-                            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary"
-                          />
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </article>
             ))}
@@ -312,79 +242,213 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Skyline Aero Homes promotion */}
-      <section className="container-site py-12 sm:py-16">
-        <div className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
-          <div className="grid lg:grid-cols-[1.1fr_1fr]">
-            <div className="flex flex-col justify-center p-6 sm:p-9 lg:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
-                Residential Plots · Jewar Region
+      {/* Connectivity and infrastructure */}
+      <section className="container-site mx-auto px-4 py-16 sm:px-6 lg:py-20">
+        <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              Connectivity & facilities
+            </p>
+
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Why local infrastructure matters
+            </h2>
+
+            <div className="mt-6 space-y-4 leading-8 text-muted">
+              <p>
+                Reliable roads and public facilities support access to
+                schools, healthcare, markets and workplaces. Residents can
+                follow official notices about road maintenance, civic works
+                and changes that may affect local movement.
               </p>
 
-              <h2 className="mt-3 text-2xl font-extrabold tracking-tight sm:text-3xl">
-                Explore Skyline Aero Homes
-              </h2>
-
-              <p className="mt-4 leading-7 text-muted">
-                Residential development is another part of the wider local
-                property landscape. Skyline Aero Homes promotes residential
-                plots near Jewar Airport and the Yamuna Expressway, giving
-                visitors another project to explore when researching property
-                options in the region.
+              <p>
+                When reading about a new road, transport link or public
+                facility, check the exact route or location and identify
+                which authority or organisation is responsible for the work.
+                Published plans and proposals should not be confused with
+                completed infrastructure.
               </p>
 
-              <p className="mt-3 leading-7 text-muted">
-                Visit the official website to review project details, plot
-                options, site images and available facilities. Verify current
-                approvals, prices, availability and legal documents independently
-                before purchasing.
+              <p>
+                For immediate travel decisions, use current route information
+                and follow any traffic directions issued by the responsible
+                authorities.
               </p>
-
-              <Link
-                href="https://www.skylineaerohomes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-primary mt-6 inline-flex w-fit items-center gap-2"
-              >
-                Explore Skyline Aero Homes
-                <span aria-hidden="true">↗</span>
-              </Link>
             </div>
+          </div>
 
-            <div className="relative min-h-[240px] overflow-hidden bg-soft-accent sm:min-h-[300px]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/skyline aerohomes.jpeg"
-                alt="Skyline Aero Homes residential plot project"
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
+          <div className="border-l-2 border-primary pl-6 sm:pl-8">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
+              A practical checklist
+            </p>
+
+            <h3 className="mt-3 text-2xl font-bold">
+              Before relying on a development report
+            </h3>
+
+            <ul className="mt-6 space-y-4">
+              {[
+                "Check the publication date and original source.",
+                "Confirm the exact project location.",
+                "Find out whether it is proposed, approved, underway or completed.",
+                "Look for official notices or published documentation.",
+                "Recheck details before making travel or financial decisions.",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 leading-7 text-muted">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-soft-accent text-sm font-bold text-primary">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Existing bottom CTA */}
-      <section className="container-site pb-12 sm:pb-16">
-        <div className="flex flex-col gap-5 rounded-2xl border border-border bg-soft-accent p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
-          <div className="max-w-2xl">
-            <h2 className="text-xl font-extrabold sm:text-2xl">
-              Looking for More Local Information?
+      {/* Local economy and property planning */}
+      <section className="border-y border-border bg-surface py-16 sm:py-20">
+        <div className="container-site mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+              Community & local economy
+            </p>
+
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Local activity and future planning
             </h2>
 
-            <p className="mt-3 leading-7 text-muted">
-              Continue exploring Jattari through the available community
-              information. For details about road conditions, connectivity,
-              local facilities or residential property projects, consult the
-              relevant organisation and verify the latest information.
+            <p className="mt-5 leading-8 text-muted">
+              Markets, services, educational facilities, healthcare and
+              residential areas all contribute to the way a locality develops.
+              Reliable information helps residents understand the services
+              available to them and assess future plans more carefully.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-8 md:grid-cols-2">
+            <article className="border-l-2 border-primary pl-5 sm:pl-7">
+              <h3 className="text-xl font-bold">
+                Supporting local businesses
+              </h3>
+
+              <p className="mt-3 leading-8 text-muted">
+                Shops, service providers and small businesses play a role in
+                meeting everyday needs. When checking information about a
+                business opening, public facility or local market, confirm
+                the current details with the relevant source.
+              </p>
+            </article>
+
+            <article className="border-l-2 border-primary pl-5 sm:pl-7">
+              <h3 className="text-xl font-bold">
+                Residential and property planning
+              </h3>
+
+              <p className="mt-3 leading-8 text-muted">
+                People researching housing options may explore private
+                property-related resources such as{" "}
+                <span className="font-semibold text-primary">
+                  Anugrah Homes
+                </span>{" "}
+                and{" "}
+                <span className="font-semibold text-primary">
+                  Skyline Aero Homes
+                </span>
+                . These are private resources, not official development
+                authorities. Independently verify project details, land
+                records, applicable approvals, costs and terms before making
+                a property decision.
+              </p>
+            </article>
+          </div>
+
+          <p className="mt-8 max-w-4xl text-sm leading-7 text-muted">
+            Mention of private organisations does not imply official
+            endorsement, confirmed project approval or guaranteed investment
+            returns. Verify all material information independently.
+          </p>
+        </div>
+      </section>
+
+      {/* Verification guide */}
+      <section
+        id="verify-developments"
+        className="container-site mx-auto scroll-mt-24 px-4 py-16 sm:px-6 lg:py-20"
+      >
+        <div className="max-w-3xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
+            Information guide
+          </p>
+
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            How to verify local development updates
+          </h2>
+
+          <p className="mt-5 leading-8 text-muted">
+            A few simple checks can help distinguish reliable information
+            from rumours, outdated reports and promotional claims.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          {verificationSteps.map((step, index) => (
+            <article
+              key={step.title}
+              className="grid gap-3 border-t border-border py-6 sm:grid-cols-[56px_1fr] sm:gap-6 sm:py-7"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-soft-accent font-bold text-primary">
+                {index + 1}
+              </div>
+
+              <div>
+                <h3 className="text-lg font-bold sm:text-xl">
+                  {step.title}
+                </h3>
+
+                <p className="mt-2 max-w-3xl leading-8 text-muted">
+                  {step.description}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-border bg-surface p-6 sm:p-8">
+          <h3 className="text-xl font-bold">
+            Important information
+          </h3>
+
+          <p className="mt-3 leading-8 text-muted">
+            This page is an informational guide, not a live project tracker
+            or government notification service. It does not confirm the
+            approval, funding, schedule or completion of any specific
+            development. For official status, consult the responsible
+            authority or project organisation.
+          </p>
+        </div>
+      </section>
+
+      {/* Bottom navigation */}
+      <section className="border-t border-border bg-surface">
+        <div className="container-site mx-auto flex flex-col gap-5 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-2xl font-bold">
+              Stay informed about Jattari
+            </h2>
+
+            <p className="mt-2 max-w-2xl leading-7 text-muted">
+              Explore more local topics and community information in the
+              News & Updates section.
             </p>
           </div>
 
           <Link
             href="/news-updates"
-            className="button-primary inline-flex w-fit shrink-0 items-center gap-2"
+            className="button-primary inline-flex shrink-0 items-center justify-center gap-2"
           >
-            All News & Updates
+            Back to News & Updates
             <span aria-hidden="true">→</span>
           </Link>
         </div>
