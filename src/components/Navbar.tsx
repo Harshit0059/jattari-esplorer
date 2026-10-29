@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -17,26 +16,32 @@ type NavItem = {
   children?: MenuItem[];
 };
 
+const JATTARI_MAP_URL =
+  "https://www.google.com/maps/search/?api=1&query=Jattari%2C%20Uttar%20Pradesh%2C%20India";
+
 const navItems: NavItem[] = [
   { title: "Home", href: "/" },
 
-{
-  title: "Explore Jattari",
-  href: "/explore",
-  children: [
-    { title: "About Jattari", href: "/explore" },
-    // { title: "Introduction", href: "/explore/introduction" },
-    { title: "History & Culture", href: "/explore/history-culture" },
-    { title: "Lifestyle & Markets", href: "/explore/lifestyle-markets" },
-    { title: "Gallery", href: "/explore/gallery" },
-    { title: "FAQ", href: "/explore/faq" },
-    { title: "Contact & Feedback", href: "/explore/contact-feedback" },
-    { title: "Attractions & Places to Visit", href: "/explore/attractions-places-to-visit" },
-    { title: "Food & Local Eateries", href: "/explore/food-local-eateries" },
-    { title: "Local Markets", href: "/explore/local-markets" },
-    { title: "Travel Tips", href: "/explore/travel-tips" },
-  ],
-},
+  {
+    title: "Explore Jattari",
+    href: "/explore",
+    children: [
+      { title: "About Jattari", href: "/explore" },
+      // { title: "Introduction", href: "/explore/introduction" },
+      { title: "History & Culture", href: "/explore/history-culture" },
+      { title: "Lifestyle & Markets", href: "/explore/lifestyle-markets" },
+      { title: "Gallery", href: "/explore/gallery" },
+      { title: "FAQ", href: "/explore/faq" },
+      { title: "Contact & Feedback", href: "/explore/contact-feedback" },
+      {
+        title: "Attractions & Places to Visit",
+        href: "/explore/attractions-places-to-visit",
+      },
+      { title: "Food & Local Eateries", href: "/explore/food-local-eateries" },
+      { title: "Local Markets", href: "/explore/local-markets" },
+      { title: "Travel Tips", href: "/explore/travel-tips" },
+    ],
+  },
 
   {
     title: "Education",
@@ -50,6 +55,7 @@ const navItems: NavItem[] = [
       { title: "Libraries", href: "/education/libraries" },
     ],
   },
+
   {
     title: "Health",
     href: "/health",
@@ -62,6 +68,7 @@ const navItems: NavItem[] = [
       { title: "Emergency Services", href: "/health/emergency-services" },
     ],
   },
+
   {
     title: "Real Estate",
     href: "/real-estate",
@@ -74,19 +81,24 @@ const navItems: NavItem[] = [
       { title: "Property Enquiries", href: "/real-estate/property-enquiries" },
     ],
   },
+
   {
     title: "News & Updates",
     href: "/news-updates",
     children: [
       { title: "All Updates", href: "/news-updates" },
       { title: "Local Developments", href: "/news-updates/local-developments" },
-      { title: "Road & Connectivity Updates", href: "/news-updates/connectivity" },
+      {
+        title: "Road & Connectivity Updates",
+        href: "/news-updates/connectivity",
+      },
       { title: "Local Announcements", href: "/news-updates/announcements" },
     ],
   },
+
   {
     title: "Location",
-    href: "/location-connectivity",
+    href: JATTARI_MAP_URL,
     special: true,
   },
 ];
@@ -139,6 +151,7 @@ export default function Navbar() {
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
+    if (href.startsWith("http")) return false;
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 
@@ -291,14 +304,17 @@ export default function Navbar() {
         {/* Location button */}
         <div className="hidden shrink-0 items-center xl:flex">
           {specialItems.map((item) => (
-            <Link
-              key={item.href}
+            <a
+              key={item.title}
               href={item.href}
-              className={locationLinkClass(isActive(item.href))}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={locationLinkClass(false)}
+              aria-label="View Jattari location on Google Maps"
             >
               <MapPinIcon className="h-[18px] w-[18px]" />
               {item.title}
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -306,7 +322,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileOpen((open) => !open)}
-          aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            mobileOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={mobileOpen}
           className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border bg-background text-foreground transition hover:bg-soft-accent hover:text-primary xl:hidden"
         >
@@ -356,15 +374,18 @@ export default function Navbar() {
 
             if (item.special) {
               return (
-                <Link
-                  key={item.href}
+                <a
+                  key={item.title}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={closeMobileMenu}
-                  className={`${locationLinkClass(active)} w-full`}
+                  className={`${locationLinkClass(false)} w-full`}
+                  aria-label="View Jattari location on Google Maps"
                 >
                   <MapPinIcon className="h-5 w-5" />
                   {item.title}
-                </Link>
+                </a>
               );
             }
 
@@ -389,7 +410,9 @@ export default function Navbar() {
                       onClick={() =>
                         setMobileExpanded(expanded ? null : item.title)
                       }
-                      aria-label={`${expanded ? "Collapse" : "Expand"} ${item.title} menu`}
+                      aria-label={`${
+                        expanded ? "Collapse" : "Expand"
+                      } ${item.title} menu`}
                       aria-expanded={expanded}
                       className="ml-1 flex h-11 w-11 items-center justify-center rounded-xl text-muted transition hover:bg-soft-accent hover:text-primary"
                     >

@@ -6,12 +6,20 @@ const places = [
     number: "01",
     title: "Location & Connectivity",
     description:
-      "Explore Jattari's location, nearby routes, transport connections, and surrounding areas.",
-    href: "/explore/attractions",
+      "Explore Jattari's geographical location, nearby towns, road routes, transport options, and regional connectivity.",
+    href: "/location-connectivity",
     label: "Explore location",
   },
   {
     number: "02",
+    title: "Attractions & Places to Visit",
+    description:
+      "Discover parks, historic landmarks, cultural destinations, and places to explore around Jattari and the Aligarh region.",
+    href: "/explore/attractions",
+    label: "Explore attractions",
+  },
+  {
+    number: "03",
     title: "Local Facilities & Markets",
     description:
       "Learn about local shops, education, healthcare, everyday facilities, and community life.",
@@ -19,7 +27,7 @@ const places = [
     label: "Explore local facilities",
   },
   {
-    number: "03",
+    number: "04",
     title: "History & Culture",
     description:
       "Discover the wider Aligarh region's historical background, local traditions, and everyday life.",
@@ -27,7 +35,7 @@ const places = [
     label: "Explore history & culture",
   },
   {
-    number: "04",
+    number: "05",
     title: "Food & Local Eateries",
     description:
       "Explore regional food traditions and learn more about local eating experiences.",
@@ -35,7 +43,7 @@ const places = [
     label: "Explore food",
   },
   {
-    number: "05",
+    number: "06",
     title: "Lifestyle & Markets",
     description:
       "Learn about shopping areas, small businesses, local services, and daily activities.",
@@ -43,7 +51,7 @@ const places = [
     label: "Explore lifestyle",
   },
   {
-    number: "06",
+    number: "07",
     title: "Travel Tips",
     description:
       "Prepare for your visit with practical information to help you explore the area.",
@@ -54,25 +62,23 @@ const places = [
 
 export default function ExplorePage() {
   return (
-    <div className="min-h-screen bg-[#F5F7FA] text-[#1F2937]">
-      {/* HERO — LOCAL EXPLORE JATTARI IMAGE */}
+    <main className="min-h-screen bg-[#F5F7FA] text-[#1F2937]">
+      {/* HERO SECTION */}
       <section className="relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#17212B] sm:min-h-[500px] md:min-h-[540px] md:px-12">
         <Image
           src="/images/explore-jattari.jpeg"
           alt="Explore Jattari and its surrounding area"
           fill
-          preload
+          priority
           sizes="100vw"
           className="z-0 object-cover object-center"
         />
 
-        {/* Dark overlay for text readability */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#080F1C]/75 via-[#080F1C]/45 to-[#080F1C]/20"
         />
 
-        {/* Decorative graphics */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-white/20"
@@ -83,7 +89,6 @@ export default function ExplorePage() {
           className="pointer-events-none absolute -bottom-28 left-1/3 z-10 h-72 w-72 rounded-full bg-blue-300/10 blur-3xl"
         />
 
-        {/* Hero content */}
         <div className="relative z-20 mx-auto w-full max-w-6xl px-6 py-16 md:px-0 md:py-20">
           <Link
             href="/"
@@ -106,8 +111,8 @@ export default function ExplorePage() {
 
           <p className="mt-6 max-w-2xl text-sm leading-7 text-white/95 drop-shadow sm:text-base sm:leading-8 md:text-lg">
             Discover Jattari in Aligarh district, Uttar Pradesh. Explore its
-            surrounding areas, local facilities, markets, culture, food, and
-            useful information for visitors.
+            location, nearby attractions, local facilities, markets, culture,
+            food, and useful information for visitors.
           </p>
 
           <a
@@ -148,8 +153,8 @@ export default function ExplorePage() {
 
             <p className="mt-5 text-sm leading-8 text-[#4B5563] sm:text-base">
               Every place has its own character. Explore Jattari through its
-              location, local markets, essential services, regional history,
-              and everyday experiences.
+              location, nearby destinations, local markets, essential
+              services, regional history, and everyday experiences.
             </p>
 
             <p className="mt-4 text-sm leading-8 text-[#4B5563] sm:text-base">
@@ -167,7 +172,6 @@ export default function ExplorePage() {
             </Link>
           </div>
 
-          {/* Editorial highlight */}
           <div className="relative border-l-4 border-[#2563EB] py-3 pl-6 sm:pl-8">
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2563EB]">
               Explore at your pace
@@ -178,7 +182,7 @@ export default function ExplorePage() {
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-[#6B7280] sm:text-base">
-              From practical visitor information to the wider regional story,
+              From practical visitor information to regional attractions,
               each guide gives you another way to learn about Jattari.
             </p>
           </div>
@@ -257,7 +261,8 @@ export default function ExplorePage() {
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#6B7280] sm:text-base">
             Browse the available guides to learn about local facilities,
-            regional culture, shopping, and practical travel information.
+            regional culture, attractions, shopping, and practical travel
+            information.
           </p>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -270,6 +275,14 @@ export default function ExplorePage() {
             </Link>
 
             <Link
+              href="/explore/attractions"
+              className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB] bg-white px-6 py-3 text-sm font-semibold text-[#1F2937] transition hover:border-[#2563EB] hover:text-[#2563EB]"
+            >
+              Attractions &amp; Places to Visit
+              <span aria-hidden="true">→</span>
+            </Link>
+
+            <Link
               href="/explore/contact-feedback"
               className="inline-flex items-center gap-2 rounded-full border border-[#D1D5DB] bg-white px-6 py-3 text-sm font-semibold text-[#1F2937] transition hover:border-[#2563EB] hover:text-[#2563EB]"
             >
@@ -278,6 +291,6 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
