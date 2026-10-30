@@ -124,18 +124,18 @@ export const explorePages: ExplorePage[] = [
     ],
     note: "Restaurant names and recommendations should be added only after local verification.",
   },
-  {
-    slug: "local-markets",
-    title: "Local Markets",
-    eyebrow: "Shop nearby",
-    description: "A practical guide to exploring shopping areas and local vendors.",
-    intro: "Markets are useful places to find everyday goods and learn about local commerce. Plan what you need, check the market location and remember that availability and prices can vary by vendor and day.",
-    highlights: [
-      { title: "Make a short list", text: "Keep your essential shopping needs together before visiting." },
-      { title: "Confirm location", text: "Use a current map or ask locally for the right market entrance or lane." },
-      { title: "Shop thoughtfully", text: "Compare options and confirm prices before purchasing." },
-    ],
-  },
+  // {
+  //   slug: "local-markets",
+  //   title: "Local Markets",
+  //   eyebrow: "Shop nearby",
+  //   description: "A practical guide to exploring shopping areas and local vendors.",
+  //   intro: "Markets are useful places to find everyday goods and learn about local commerce. Plan what you need, check the market location and remember that availability and prices can vary by vendor and day.",
+  //   highlights: [
+  //     { title: "Make a short list", text: "Keep your essential shopping needs together before visiting." },
+  //     { title: "Confirm location", text: "Use a current map or ask locally for the right market entrance or lane." },
+  //     { title: "Shop thoughtfully", text: "Compare options and confirm prices before purchasing." },
+  //   ],
+  // },
   {
     slug: "travel-tips",
     title: "Travel Tips",
