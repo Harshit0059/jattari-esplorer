@@ -1,6 +1,12 @@
+
 "use client";
 
-import { useState, type FormEvent } from "react";
+import {
+  useEffect,
+  useState,
+  useRef,
+  type FormEvent,
+} from "react";
 
 const companies = [
   {
@@ -22,21 +28,18 @@ const companies = [
     title: "Dreams N Realtors",
     description:
       "Explore property opportunities and investment options.",
-    website: "https://dreamsnrealtors.com/",
   },
   {
     number: "04",
     title: "Jewar Lands",
     description:
       "Enquire about land and real estate investment opportunities.",
-    website: "https://jewarlands.com/",
   },
   {
     number: "05",
     title: "Shiva Associates",
     description:
       "Discuss your property requirements and investment plans.",
-    website: "https://www.shivaassociates.com/",
   },
 ];
 
@@ -70,6 +73,12 @@ const initialForm = {
   message: "",
 };
 
+const revealClasses =
+  "property-reveal translate-y-8 opacity-0 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:transition-none";
+
+const inputClasses =
+  "w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition-all duration-300 placeholder:text-muted/70 hover:border-primary/40 focus:border-primary focus:ring-2 focus:ring-primary/15";
+
 export default function PropertyInvestment() {
   const [selectedCompany, setSelectedCompany] = useState<string | null>(
     null
@@ -79,6 +88,112 @@ export default function PropertyInvestment() {
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  // Scroll reveal animation
+  useEffect(() => {
+    const sections = document.querySelectorAll<HTMLElement>(
+      "#property .property-reveal"
+    );
+
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      sections.forEach((section) => {
+        section.classList.remove("translate-y-8", "opacity-0");
+        section.classList.add("translate-y-0", "opacity-100");
+      });
+      return;
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      sections.forEach((section) => {
+        section.classList.remove("translate-y-8", "opacity-0");
+        section.classList.add("translate-y-0", "opacity-100");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove(
+              "translate-y-8",
+              "opacity-0"
+            );
+            entry.target.classList.add(
+              "translate-y-0",
+              "opacity-100"
+            );
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Modal keyboard and background scroll handling
+  useEffect(() => {
+    if (!selectedCompany) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !submitting) {
+        setSelectedCompany(null);
+      }
+
+      if (event.key === "Tab" && modalRef.current) {
+        const focusable = modalRef.current.querySelectorAll<HTMLElement>(
+          'button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), a[href], [tabindex]:not([tabindex="-1"])'
+        );
+
+        if (!focusable.length) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (
+          event.shiftKey &&
+          document.activeElement === first
+        ) {
+          event.preventDefault();
+          last.focus();
+        } else if (
+          !event.shiftKey &&
+          document.activeElement === last
+        ) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    const focusTimer = window.setTimeout(() => {
+      modalRef.current
+        ?.querySelector<HTMLElement>("input")
+        ?.focus();
+    }, 100);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+      window.clearTimeout(focusTimer);
+    };
+  }, [selectedCompany, submitting]);
 
   function openForm(company: string) {
     setSelectedCompany(company);
@@ -136,12 +251,15 @@ export default function PropertyInvestment() {
   }
 
   return (
-    <section id="property" className="bg-white py-10 sm:py-14 lg:py-16">
+    <section
+      id="property"
+      className="overflow-hidden bg-white py-10 sm:py-14 lg:py-16"
+    >
       <div className="container-site">
         {/* Introduction and investment research */}
         <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div>
-            <span className="inline-flex rounded-full bg-soft-accent px-3 py-1.5 text-xs font-semibold text-primary">
+          <div className={revealClasses}>
+            <span className="inline-flex rounded-full bg-soft-accent px-3 py-1.5 text-xs font-semibold text-primary transition-transform duration-300 hover:scale-105">
               Real Estate & Investment
             </span>
 
@@ -160,14 +278,18 @@ export default function PropertyInvestment() {
 
             <a
               href="#investment-options"
-              className="button-primary mt-5 inline-flex items-center justify-center"
+              className="button-primary mt-5 inline-flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
             >
               Explore Opportunities
-              <span className="ml-2">→</span>
+              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
             </a>
           </div>
 
-          <div className="rounded-2xl border border-border bg-background p-5 sm:p-6">
+          <div
+            className={`${revealClasses} rounded-2xl border border-border bg-background p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg sm:p-6`}
+          >
             <h3 className="text-lg font-bold text-foreground">
               Before You Invest
             </h3>
@@ -178,13 +300,16 @@ export default function PropertyInvestment() {
 
             <div className="mt-5 space-y-4">
               {propertyPoints.map((point) => (
-                <div key={point.number} className="flex gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-soft-accent text-sm font-bold text-primary">
+                <div
+                  key={point.number}
+                  className="group flex gap-3 rounded-xl p-2 transition-all duration-300 hover:bg-white hover:shadow-sm"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-soft-accent text-sm font-bold text-primary transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
                     {point.number}
                   </span>
 
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground">
+                    <h4 className="text-sm font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
                       {point.title}
                     </h4>
 
@@ -203,7 +328,7 @@ export default function PropertyInvestment() {
           id="investment-options"
           className="mt-12 scroll-mt-24 sm:mt-14"
         >
-          <div className="mx-auto max-w-2xl text-center">
+          <div className={`${revealClasses} mx-auto max-w-2xl text-center`}>
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-primary sm:text-sm">
               Find Your Next Investment
             </span>
@@ -227,22 +352,22 @@ export default function PropertyInvestment() {
             {companies.map((company) => (
               <article
                 key={company.number}
-                className="group flex h-full flex-col rounded-xl border border-border bg-white p-5 shadow-[var(--shadow-card)] transition duration-300 hover:-translate-y-1 hover:border-primary/40 sm:p-6"
+                className={`${revealClasses} group flex h-full flex-col rounded-xl border border-border bg-white p-5 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-xl sm:p-6`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-soft-accent text-sm font-bold text-primary">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-soft-accent text-sm font-bold text-primary transition-all duration-300 group-hover:rotate-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
                     {company.number}
                   </span>
 
                   <span
                     aria-hidden="true"
-                    className="text-xl text-primary transition-transform duration-300 group-hover:translate-x-1"
+                    className="text-xl text-primary transition-transform duration-300 group-hover:translate-x-2 group-hover:scale-110"
                   >
                     →
                   </span>
                 </div>
 
-                <h4 className="mt-4 text-lg font-bold text-foreground">
+                <h4 className="mt-4 text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
                   {company.title}
                 </h4>
 
@@ -254,20 +379,31 @@ export default function PropertyInvestment() {
                   <button
                     type="button"
                     onClick={() => openForm(company.title)}
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                   >
                     Enquire Now
-                    <span aria-hidden="true">→</span>
+                    <span
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    >
+                      →
+                    </span>
                   </button>
 
-                  <a
-                    href={company.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-primary transition hover:text-primary-hover"
-                  >
-                    Website ↗
-                  </a>
+                  {company.website ? (
+                    <a
+                      href={company.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-medium text-primary transition-all duration-300 hover:translate-x-1 hover:text-primary-hover focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    >
+                      Website ↗
+                    </a>
+                  ) : (
+                    <span className="text-xs text-muted">
+                      Contact through inquiry
+                    </span>
+                  )}
                 </div>
               </article>
             ))}
@@ -280,7 +416,9 @@ export default function PropertyInvestment() {
         </div>
 
         {/* General guidance disclaimer */}
-        <p className="mt-8 rounded-xl border border-border bg-background p-4 text-xs leading-6 text-muted">
+        <p
+          className={`${revealClasses} mt-8 rounded-xl border border-border bg-background p-4 text-xs leading-6 text-muted transition-colors duration-300 hover:border-primary/30`}
+        >
           Property information is for general guidance only and is not
           financial or legal advice. Independently verify property claims,
           ownership, approvals, and documents with qualified professionals
@@ -291,7 +429,7 @@ export default function PropertyInvestment() {
       {/* Company-specific inquiry modal */}
       {selectedCompany && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-950/60 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-slate-950/60 p-4 backdrop-blur-sm motion-safe:animate-[fadeIn_200ms_ease-out]"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               closeForm();
@@ -299,10 +437,11 @@ export default function PropertyInvestment() {
           }}
         >
           <div
+            ref={modalRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="investment-form-title"
-            className="my-auto max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-5 shadow-2xl sm:p-7"
+            className="my-auto max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-white/20 bg-white p-5 shadow-2xl motion-safe:animate-[modalIn_300ms_ease-out] sm:p-7"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -327,7 +466,7 @@ export default function PropertyInvestment() {
                 onClick={closeForm}
                 disabled={submitting}
                 aria-label="Close inquiry form"
-                className="rounded-lg px-3 py-1 text-xl text-muted transition hover:bg-background disabled:opacity-50"
+                className="rounded-lg px-3 py-1 text-xl text-muted transition-all duration-300 hover:rotate-90 hover:bg-background hover:text-primary disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 ×
               </button>
@@ -338,7 +477,11 @@ export default function PropertyInvestment() {
                 role="status"
                 className="mt-6 rounded-xl border border-primary/20 bg-soft-accent p-5"
               >
-                <h4 className="font-semibold text-foreground">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-xl text-white">
+                  ✓
+                </div>
+
+                <h4 className="mt-3 font-semibold text-foreground">
                   Thank You!
                 </h4>
 
@@ -349,7 +492,7 @@ export default function PropertyInvestment() {
                 <button
                   type="button"
                   onClick={() => setSelectedCompany(null)}
-                  className="button-primary mt-4"
+                  className="button-primary mt-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
                   Done
                 </button>
@@ -376,7 +519,7 @@ export default function PropertyInvestment() {
                       setForm({ ...form, name: event.target.value })
                     }
                     placeholder="Enter your full name"
-                    className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15"
+                    className={inputClasses}
                   />
                 </div>
 
@@ -400,7 +543,7 @@ export default function PropertyInvestment() {
                       setForm({ ...form, phone: event.target.value })
                     }
                     placeholder="Enter your mobile number"
-                    className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15"
+                    className={inputClasses}
                   />
                 </div>
 
@@ -423,7 +566,7 @@ export default function PropertyInvestment() {
                       setForm({ ...form, email: event.target.value })
                     }
                     placeholder="Enter your email"
-                    className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15"
+                    className={inputClasses}
                   />
                 </div>
 
@@ -445,7 +588,7 @@ export default function PropertyInvestment() {
                         investmentType: event.target.value,
                       })
                     }
-                    className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary"
+                    className={inputClasses}
                   >
                     <option>Residential Plots</option>
                     <option>Commercial Property</option>
@@ -470,7 +613,7 @@ export default function PropertyInvestment() {
                     onChange={(event) =>
                       setForm({ ...form, budget: event.target.value })
                     }
-                    className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary"
+                    className={inputClasses}
                   >
                     <option>Not decided</option>
                     <option>Below ₹10 lakh</option>
@@ -498,14 +641,14 @@ export default function PropertyInvestment() {
                       setForm({ ...form, message: event.target.value })
                     }
                     placeholder="Tell us what type of property you are looking for..."
-                    className="w-full resize-y rounded-lg border border-border bg-white px-3 py-2.5 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15"
+                    className={`${inputClasses} resize-y`}
                   />
                 </div>
 
                 {error && (
                   <p
                     role="alert"
-                    className="rounded-lg bg-red-50 p-3 text-sm text-red-700"
+                    className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700"
                   >
                     {error}
                   </p>
@@ -514,7 +657,7 @@ export default function PropertyInvestment() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="button-primary flex w-full items-center justify-center disabled:cursor-not-allowed disabled:opacity-60"
+                  className="button-primary flex w-full items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
                   {submitting
                     ? "Submitting..."

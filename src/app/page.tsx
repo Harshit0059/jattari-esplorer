@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import AboutJattari from "@/components/AboutJattari";
-import ExploreJattari from "@/components/ExploreJattari";
+// import ExploreJattari from "@/components/ExploreJattari";
 import PropertyInvestment from "@/components/PropertyInvestment";
 
 export default function Home() {
@@ -13,19 +13,11 @@ export default function Home() {
 
       <AboutJattari />
 
-      <ExploreJattari />
 
-      {/* Optional sections — currently disabled */}
-      {/* <LocalFacilities /> */}
-      {/* <LocationConnectivity /> */}
 
       <PropertyInvestment />
 
-      {/* Optional sections — currently disabled */}
-      {/* <Gallery /> */}
-      {/* <NewsUpdates /> */}
-      {/* <FAQ /> */}
-      {/* <Contact /> */}
+    
     </div>
   );
 }

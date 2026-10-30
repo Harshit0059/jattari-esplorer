@@ -61,22 +61,12 @@ export default function ConnectivityUpdatesPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-white/20"
-          aria-hidden="true"
-        />
-
+<div
+  className="absolute inset-0 bg-gradient-to-r from-[#FFF9F0]/90 0%, via-[#FFF9F0]/65 35%, via-[#FFF9F0]/10 65%, transparent 100%"
+  aria-hidden="true"
+/>
         <div className="container-site relative mx-auto flex min-h-[510px] items-center px-4 py-16 sm:min-h-[590px] sm:px-6 lg:py-24">
           <div className="max-w-3xl">
-            <Link
-              href="/news-updates"
-              className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-muted transition-colors hover:text-primary"
-            >
-              <ArrowLeft size={16} />
-              Back to News & Updates
-            </Link>
-
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
               <Navigation size={16} />
               Jattari Travel & Infrastructure

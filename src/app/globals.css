@@ -2,33 +2,39 @@
 @import "tailwindcss";
 
 /* ========================================
-   JATTARI EXPLORER — CENTRAL BLUE THEME
-   Future theme changes yahin se karo
+   JATTARI EXPLORER — FOREST GREEN THEME
+   Central theme configuration
+   Future colour changes yahin se karo
 ======================================== */
 
 :root {
   color-scheme: light;
 
   /* Main colors */
-  --background: #F5F7FA;
-  --foreground: #1F2937;
+  --background: #FFF9F0;
+  --foreground: #172B26;
   --surface: #FFFFFF;
 
-  /* Blue theme */
-  --primary: #2563EB;
-  --primary-hover: #1D4ED8;
-  --border: #E5E7EB;
-  --muted: #6B7280;
-  --soft-accent: #DBEAFE;
+  /* Forest green theme */
+  --primary: #06483D;
+  --primary-hover: #04382F;
+  --border: #E8E1D5;
+  --muted: #68756F;
+  --soft-accent: #E8F0E9;
 
-  /* Additional blue shades */
-  --blue-dark: #1E40AF;
-  --blue-light: #EFF6FF;
+  /* Additional theme shades */
+  --green-dark: #073B32;
+  --green-light: #EAF2ED;
+
+  /* Orange accent */
+  --accent: #D58A28;
+  --accent-hover: #B9741C;
+  --accent-light: #FFF0D8;
 
   /* Reusable design settings */
   --radius-card: 16px;
   --radius-button: 10px;
-  --shadow-card: 0 4px 20px rgb(15 23 42 / 6%);
+  --shadow-card: 0 4px 20px rgb(23 43 38 / 7%);
   --container-width: 1200px;
 }
 
@@ -42,8 +48,11 @@
   --color-border: var(--border);
   --color-muted: var(--muted);
   --color-soft-accent: var(--soft-accent);
-  --color-blue-dark: var(--blue-dark);
-  --color-blue-light: var(--blue-light);
+  --color-green-dark: var(--green-dark);
+  --color-green-light: var(--green-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -107,7 +116,7 @@ body {
 
 .button-primary:hover {
   background: var(--primary-hover);
-  box-shadow: 0 5px 14px rgb(37 99 235 / 18%);
+  box-shadow: 0 5px 14px rgb(6 72 61 / 18%);
 }
 
 .button-primary:active {
@@ -115,8 +124,38 @@ body {
 }
 
 .button-primary:focus-visible {
-  outline: 3px solid rgb(37 99 235 / 35%);
+  outline: 3px solid rgb(213 138 40 / 40%);
   outline-offset: 3px;
+}
+
+/* Orange accent button */
+.button-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-button);
+  background: var(--accent);
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.button-accent:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 5px 14px rgb(213 138 40 / 20%);
+}
+
+.button-accent:active {
+  transform: translateY(1px);
 }
 
 /* Accessible motion preferences */

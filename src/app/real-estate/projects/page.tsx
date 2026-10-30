@@ -85,9 +85,10 @@ function getEnquiryLink(brand: string) {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#F5F7FA] text-[#1F2937]">
+    <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+
       {/* Hero */}
-      <section className="relative isolate flex min-h-[470px] items-center overflow-hidden bg-[#111827] sm:min-h-[530px]">
+      <section className="relative isolate flex min-h-[470px] items-center overflow-hidden bg-[#073B32] sm:min-h-[530px]">
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
@@ -95,7 +96,7 @@ export default function ProjectsPage() {
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#111827]/90 via-[#111827]/70 to-[#111827]/25" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/80 to-[#073B32]/35" />
 
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
@@ -104,7 +105,7 @@ export default function ProjectsPage() {
               <span>Jattari and surrounding areas</span>
             </div>
 
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#F4B65E]">
               Jattari Real Estate Guide
             </p>
 
@@ -121,7 +122,7 @@ export default function ProjectsPage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/real-estate/property-enquiries"
-                className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#2563EB] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
+                className="inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#B9741C]"
               >
                 Submit Property Enquiry
                 <ArrowRight size={18} />
@@ -143,7 +144,7 @@ export default function ProjectsPage() {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D58A28]">
               Property information
             </p>
 
@@ -151,23 +152,23 @@ export default function ProjectsPage() {
               Make an informed property decision
             </h2>
 
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[#6B7280]">
+            <p className="mt-5 max-w-2xl text-base leading-8 text-[#68756F]">
               Choosing property involves more than comparing locations.
               Consider connectivity, the surrounding area, ownership records,
               land-use permissions and your long-term requirements before
               making a decision.
             </p>
 
-            <p className="mt-4 max-w-2xl text-base leading-8 text-[#6B7280]">
+            <p className="mt-4 max-w-2xl text-base leading-8 text-[#68756F]">
               Use the guides below to understand the basics, then submit an
               enquiry if you would like to discuss a specific property
               requirement.
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_20px_rgb(15_23_42/6%)] sm:p-8">
+          <div className="rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-8">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#DBEAFE] text-[#2563EB]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D]">
                 <ShieldCheck size={24} />
               </div>
 
@@ -176,7 +177,7 @@ export default function ProjectsPage() {
                   Verify before you invest
                 </h3>
 
-                <p className="mt-2 text-sm leading-7 text-[#6B7280]">
+                <p className="mt-2 text-sm leading-7 text-[#68756F]">
                   Check title documents, applicable approvals, land-use
                   permissions, access rights and the relevant records with
                   qualified professionals before committing funds.
@@ -184,7 +185,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href="/real-estate/buying-checklist"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB] hover:text-[#1D4ED8]"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
                 >
                   Read the checklist
                   <ArrowRight size={16} />
@@ -195,15 +196,13 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Property guides */}
-
-      {/* Property Guides - Editorial Layout, No Cards */}
-      <section className="border-y border-[#E5E7EB] bg-white">
+      {/* Property Guides */}
+      <section className="border-y border-[#E8E1D5] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            {/* Section introduction */}
+
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2563EB]">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#D58A28]">
                 Property Resources
               </p>
 
@@ -211,20 +210,19 @@ export default function ProjectsPage() {
                 Your guide to making a smarter property decision.
               </h2>
 
-              <p className="mt-5 max-w-md text-base leading-8 text-[#6B7280]">
+              <p className="mt-5 max-w-md text-base leading-8 text-[#68756F]">
                 Whether you are exploring land for your home or considering
                 a commercial property, start with the information that
                 matters to you.
               </p>
 
-              <div className="mt-8 flex items-center gap-3 text-sm text-[#6B7280]">
-                <span className="h-px w-10 bg-[#2563EB]" />
+              <div className="mt-8 flex items-center gap-3 text-sm text-[#68756F]">
+                <span className="h-px w-10 bg-[#D58A28]" />
                 <span>Explore our property guides</span>
               </div>
             </div>
 
-            {/* Simple editorial links */}
-            <div className="divide-y divide-[#E5E7EB]">
+            <div className="divide-y divide-[#E8E1D5]">
               {propertyGuides.map((guide) => {
                 const Icon = guide.icon;
 
@@ -235,17 +233,17 @@ export default function ProjectsPage() {
                     className="group block py-7 transition-colors first:pt-0 last:pb-0 sm:py-9"
                   >
                     <div className="flex items-start gap-5 sm:gap-7">
-                      <span className="pt-1 text-sm font-medium tabular-nums text-[#9CA3AF]">
+                      <span className="pt-1 text-sm font-medium tabular-nums text-[#A49D91]">
                         {guide.number}
                       </span>
 
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-4">
-                          <h3 className="text-xl font-semibold tracking-tight transition-colors group-hover:text-[#2563EB] sm:text-2xl lg:text-3xl">
+                          <h3 className="text-xl font-semibold tracking-tight transition-colors group-hover:text-[#D58A28] sm:text-2xl lg:text-3xl">
                             {guide.title}
                           </h3>
 
-                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E5E7EB] text-[#2563EB] transition-all group-hover:border-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E8E1D5] text-[#06483D] transition-all group-hover:border-[#06483D] group-hover:bg-[#06483D] group-hover:text-white">
                             <ArrowRight
                               size={19}
                               className="transition-transform group-hover:-rotate-45"
@@ -253,11 +251,11 @@ export default function ProjectsPage() {
                           </span>
                         </div>
 
-                        <p className="mt-3 max-w-xl text-sm leading-7 text-[#6B7280] sm:text-base">
+                        <p className="mt-3 max-w-xl text-sm leading-7 text-[#68756F] sm:text-base">
                           {guide.description}
                         </p>
 
-                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
+                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D]">
                           Explore guide
                           <span className="transition-transform group-hover:translate-x-1">
                             →
@@ -265,7 +263,7 @@ export default function ProjectsPage() {
                         </span>
                       </div>
 
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#DBEAFE] text-[#2563EB] sm:flex">
+                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D] sm:flex">
                         <Icon size={22} />
                       </div>
                     </div>
@@ -277,11 +275,10 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-
-      {/* Featured property brands */}
+      {/* Featured Property Brands */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2563EB]">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D58A28]">
             Featured property enquiries
           </p>
 
@@ -289,7 +286,7 @@ export default function ProjectsPage() {
             Explore featured options
           </h2>
 
-          <p className="mt-4 leading-7 text-[#6B7280]">
+          <p className="mt-4 leading-7 text-[#68756F]">
             Review these property-related options and use the enquiry form
             to share your requirements. Availability, pricing and approvals
             should be confirmed directly before making a decision.
@@ -300,9 +297,9 @@ export default function ProjectsPage() {
           {featuredBrands.map((brand) => (
             <article
               key={brand.name}
-              className="overflow-hidden rounded-2xl border border-[#E5E7EB] bg-white shadow-[0_4px_20px_rgb(15_23_42/6%)] transition hover:shadow-[0_8px_30px_rgb(15_23_42/10%)]"
+              className="overflow-hidden rounded-2xl border border-[#E8E1D5] bg-white shadow-[0_4px_20px_rgb(23_43_38/7%)] transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(23_43_38/12%)]"
             >
-              <div className="relative h-60 overflow-hidden bg-[#E5E7EB] sm:h-72">
+              <div className="relative h-60 overflow-hidden bg-[#E8F0E9] sm:h-72">
                 <div
                   role="img"
                   aria-label={brand.imageAlt}
@@ -312,8 +309,8 @@ export default function ProjectsPage() {
                   }}
                 />
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-5 pt-16">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#073B32]/80 to-transparent p-5 pt-16">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
                     <MapPin size={13} />
                     Jattari region
                   </span>
@@ -321,7 +318,7 @@ export default function ProjectsPage() {
               </div>
 
               <div className="p-6 sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#2563EB]">
+                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#D58A28]">
                   {brand.category}
                 </p>
 
@@ -329,13 +326,13 @@ export default function ProjectsPage() {
                   {brand.name}
                 </h3>
 
-                <p className="mt-3 text-sm leading-7 text-[#6B7280]">
+                <p className="mt-3 text-sm leading-7 text-[#68756F]">
                   {brand.description}
                 </p>
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#2563EB] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#1D4ED8]"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#06483D] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#04382F]"
                 >
                   Enquire about this option
                   <ArrowRight size={17} />
@@ -346,11 +343,11 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Additional property options: intentionally no images */}
-      <section className="border-y border-[#E5E7EB] bg-white">
+      {/* Additional Property Options */}
+      <section className="border-y border-[#E8E1D5] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#2563EB]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D58A28]">
               More enquiry options
             </p>
 
@@ -358,21 +355,21 @@ export default function ProjectsPage() {
               Other property enquiries
             </h2>
 
-            <p className="mt-4 leading-7 text-[#6B7280]">
+            <p className="mt-4 leading-7 text-[#68756F]">
               Select an option to submit your property requirements.
               These entries are enquiry categories and do not imply
               verification, partnership or endorsement.
             </p>
           </div>
 
-          <div className="mt-8 divide-y divide-[#E5E7EB]">
+          <div className="mt-8 divide-y divide-[#E8E1D5]">
             {otherBrands.map((brand, index) => (
               <article
                 key={brand.name}
-                className="grid gap-5 border-l-2 border-[#2563EB]/20 py-7 pl-5 sm:grid-cols-[1fr_auto] sm:items-center"
+                className="grid gap-5 border-l-2 border-[#D58A28]/40 py-7 pl-5 sm:grid-cols-[1fr_auto] sm:items-center"
               >
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#6B7280]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#68756F]">
                     Option 0{index + 3}
                   </p>
 
@@ -380,18 +377,18 @@ export default function ProjectsPage() {
                     {brand.name}
                   </h3>
 
-                  <p className="mt-1 text-sm font-medium text-[#2563EB]">
+                  <p className="mt-1 text-sm font-medium text-[#06483D]">
                     {brand.category}
                   </p>
 
-                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#6B7280]">
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#68756F]">
                     {brand.description}
                   </p>
                 </div>
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#2563EB] px-4 py-3 text-sm font-semibold text-[#2563EB] transition hover:bg-[#2563EB] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-4 py-3 text-sm font-semibold text-[#06483D] transition hover:bg-[#06483D] hover:text-white"
                 >
                   Enquire
                   <ArrowRight size={16} />
@@ -402,11 +399,11 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Buying guidance */}
+      {/* Buying Guidance */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-        <div className="grid gap-8 rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_20px_rgb(15_23_42/6%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
+        <div className="grid gap-8 rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
           <div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#DBEAFE] text-[#2563EB]">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF0D8] text-[#B9741C]">
               <CheckCircle2 size={25} />
             </div>
 
@@ -414,7 +411,7 @@ export default function ProjectsPage() {
               Before you finalise a property
             </h2>
 
-            <p className="mt-3 max-w-2xl leading-7 text-[#6B7280]">
+            <p className="mt-3 max-w-2xl leading-7 text-[#68756F]">
               Review the documentation, verify ownership and applicable
               permissions, understand the payment terms and seek independent
               legal advice where needed.
@@ -423,7 +420,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/real-estate/buying-checklist"
-            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#2563EB] px-5 py-3.5 text-sm font-semibold text-[#2563EB] transition hover:bg-[#2563EB] hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-5 py-3.5 text-sm font-semibold text-[#06483D] transition hover:bg-[#06483D] hover:text-white"
           >
             Open checklist
             <ArrowRight size={17} />
@@ -431,12 +428,12 @@ export default function ProjectsPage() {
         </div>
       </section>
 
-      {/* Final enquiry CTA */}
-      <section className="bg-[#1E3A8A]">
+      {/* Final Enquiry CTA */}
+      <section className="bg-[#073B32]">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
           <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-2 text-sm font-medium text-blue-100">
+              <div className="flex items-center gap-2 text-sm font-medium text-[#F4B65E]">
                 <MessageSquare size={17} />
                 Property requirements
               </div>
@@ -445,7 +442,7 @@ export default function ProjectsPage() {
                 Looking for a property in Jattari?
               </h2>
 
-              <p className="mt-4 leading-7 text-blue-100">
+              <p className="mt-4 leading-7 text-white/80">
                 Submit your requirements through the property enquiry
                 page to tell us what type of property you are exploring.
               </p>
@@ -453,7 +450,7 @@ export default function ProjectsPage() {
 
             <Link
               href="/real-estate/property-enquiries"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-white px-6 py-3.5 text-sm font-semibold text-[#1E3A8A] transition hover:bg-blue-50"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#B9741C]"
             >
               Go to Enquiry Form
               <ArrowRight size={18} />

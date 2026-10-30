@@ -58,40 +58,38 @@ const verificationSteps = [
 export default function LocalDevelopmentsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Hero section with a clearer background image */}
+      {/* HERO SECTION */}
       <section className="relative isolate overflow-hidden border-b border-border">
+        {/* Background image */}
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "linear-gradient(90deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.55) 25%, rgba(255,255,255,0.20) 55%, rgba(255,255,255,0.05) 100%), url('/images/developments.jpeg')",
+            backgroundImage: "url('/images/developments.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center 42%",
           }}
           aria-hidden="true"
         />
 
+        {/* Light overlay only behind the text */}
+        <div
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#FFF9F0]/55 via-[#FFF9F0]/25 to-transparent"
+          aria-hidden="true"
+        />
+
         <div className="container-site relative mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
-            <Link
-              href="/news-updates"
-              className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-white/90 px-4 py-2 text-sm font-medium text-foreground transition hover:border-primary hover:text-primary"
-            >
-              <span aria-hidden="true">←</span>
-              Back to News & Updates
-            </Link>
-
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#06483D]">
               Jattari · Local Development
             </p>
 
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-[#172B26] sm:text-5xl lg:text-6xl">
               Local Developments & Infrastructure Updates
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-gray-700 sm:text-lg">
-              Explore the local development topics that can affect daily life
-              in Jattari, from roads and public infrastructure to education,
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263A33] sm:text-lg">
+              Explore the local development topics that can affect daily life in
+              Jattari, from roads and public infrastructure to education,
               healthcare and local economic activity. Learn what to check and
               how to verify information before making decisions.
             </p>
@@ -107,7 +105,7 @@ export default function LocalDevelopmentsPage() {
 
               <a
                 href="#verify-developments"
-                className="inline-flex items-center gap-2 rounded-xl border border-border bg-white/90 px-5 py-3 font-semibold text-foreground transition hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-xl border border-border bg-white/95 px-5 py-3 font-semibold text-foreground transition hover:border-primary hover:text-primary"
               >
                 Verify information
               </a>
@@ -116,7 +114,7 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* INTRODUCTION */}
       <section className="container-site mx-auto px-4 py-16 sm:px-6 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div>
@@ -138,16 +136,16 @@ export default function LocalDevelopmentsPage() {
 
               <p>
                 For residents of Jattari, keeping track of reliable information
-                about civic facilities, connectivity, education, healthcare
-                and local economic activity can help them understand changes
-                in the surrounding area.
+                about civic facilities, connectivity, education, healthcare and
+                local economic activity can help them understand changes in the
+                surrounding area.
               </p>
 
               <p>
                 This page is an informational guide to development topics. It
                 does not confirm that a specific project has been announced,
-                approved, started or completed. Check current information
-                with the relevant authority before relying on a claim.
+                approved, started or completed. Check current information with
+                the relevant authority before relying on a claim.
               </p>
             </div>
           </div>
@@ -187,7 +185,7 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Development topics */}
+      {/* DEVELOPMENT TOPICS */}
       <section
         id="development-topics"
         className="scroll-mt-24 border-y border-border bg-surface py-16 sm:py-20"
@@ -204,8 +202,8 @@ export default function LocalDevelopmentsPage() {
 
             <p className="mt-5 leading-8 text-muted">
               These areas provide a useful starting point for understanding
-              local needs and evaluating reports about development in and
-              around Jattari.
+              local needs and evaluating reports about development in and around
+              Jattari.
             </p>
           </div>
 
@@ -242,7 +240,7 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Connectivity and infrastructure */}
+      {/* CONNECTIVITY AND INFRASTRUCTURE */}
       <section className="container-site mx-auto px-4 py-16 sm:px-6 lg:py-20">
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
@@ -256,18 +254,18 @@ export default function LocalDevelopmentsPage() {
 
             <div className="mt-6 space-y-4 leading-8 text-muted">
               <p>
-                Reliable roads and public facilities support access to
-                schools, healthcare, markets and workplaces. Residents can
-                follow official notices about road maintenance, civic works
-                and changes that may affect local movement.
+                Reliable roads and public facilities support access to schools,
+                healthcare, markets and workplaces. Residents can follow
+                official notices about road maintenance, civic works and changes
+                that may affect local movement.
               </p>
 
               <p>
                 When reading about a new road, transport link or public
-                facility, check the exact route or location and identify
-                which authority or organisation is responsible for the work.
-                Published plans and proposals should not be confused with
-                completed infrastructure.
+                facility, check the exact route or location and identify which
+                authority or organisation is responsible for the work. Published
+                plans and proposals should not be confused with completed
+                infrastructure.
               </p>
 
               <p>
@@ -307,7 +305,7 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Local economy and property planning */}
+      {/* LOCAL ECONOMY AND PROPERTY PLANNING */}
       <section className="border-y border-border bg-surface py-16 sm:py-20">
         <div className="container-site mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
@@ -336,8 +334,8 @@ export default function LocalDevelopmentsPage() {
               <p className="mt-3 leading-8 text-muted">
                 Shops, service providers and small businesses play a role in
                 meeting everyday needs. When checking information about a
-                business opening, public facility or local market, confirm
-                the current details with the relevant source.
+                business opening, public facility or local market, confirm the
+                current details with the relevant source.
               </p>
             </article>
 
@@ -357,9 +355,9 @@ export default function LocalDevelopmentsPage() {
                   Skyline Aero Homes
                 </span>
                 . These are private resources, not official development
-                authorities. Independently verify project details, land
-                records, applicable approvals, costs and terms before making
-                a property decision.
+                authorities. Independently verify project details, land records,
+                applicable approvals, costs and terms before making a property
+                decision.
               </p>
             </article>
           </div>
@@ -372,7 +370,7 @@ export default function LocalDevelopmentsPage() {
         </div>
       </section>
 
-      {/* Verification guide */}
+      {/* VERIFICATION GUIDE */}
       <section
         id="verify-developments"
         className="container-site mx-auto scroll-mt-24 px-4 py-16 sm:px-6 lg:py-20"
@@ -387,8 +385,8 @@ export default function LocalDevelopmentsPage() {
           </h2>
 
           <p className="mt-5 leading-8 text-muted">
-            A few simple checks can help distinguish reliable information
-            from rumours, outdated reports and promotional claims.
+            A few simple checks can help distinguish reliable information from
+            rumours, outdated reports and promotional claims.
           </p>
         </div>
 
@@ -416,21 +414,19 @@ export default function LocalDevelopmentsPage() {
         </div>
 
         <div className="mt-10 rounded-2xl border border-border bg-surface p-6 sm:p-8">
-          <h3 className="text-xl font-bold">
-            Important information
-          </h3>
+          <h3 className="text-xl font-bold">Important information</h3>
 
           <p className="mt-3 leading-8 text-muted">
-            This page is an informational guide, not a live project tracker
-            or government notification service. It does not confirm the
-            approval, funding, schedule or completion of any specific
-            development. For official status, consult the responsible
-            authority or project organisation.
+            This page is an informational guide, not a live project tracker or
+            government notification service. It does not confirm the approval,
+            funding, schedule or completion of any specific development. For
+            official status, consult the responsible authority or project
+            organisation.
           </p>
         </div>
       </section>
 
-      {/* Bottom navigation */}
+      {/* BOTTOM NAVIGATION */}
       <section className="border-t border-border bg-surface">
         <div className="container-site mx-auto flex flex-col gap-5 px-4 py-12 sm:px-6 md:flex-row md:items-center md:justify-between">
           <div>
@@ -439,18 +435,10 @@ export default function LocalDevelopmentsPage() {
             </h2>
 
             <p className="mt-2 max-w-2xl leading-7 text-muted">
-              Explore more local topics and community information in the
-              News & Updates section.
+              Explore more local topics and community information in the News &
+              Updates section.
             </p>
           </div>
-
-          <Link
-            href="/news-updates"
-            className="button-primary inline-flex shrink-0 items-center justify-center gap-2"
-          >
-            Back to News & Updates
-            <span aria-hidden="true">→</span>
-          </Link>
         </div>
       </section>
     </main>

@@ -10,27 +10,29 @@ export default function ConnectivityPromotionPopup() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("connectivity-promo-closed") === "true") {
-      return;
-    }
-
-    const timer = window.setTimeout(() => {
+    const showTimer = window.setTimeout(() => {
       setIsVisible(true);
-    }, 15000);
+    }, 5000);
 
-    return () => window.clearTimeout(timer);
+    const hideTimer = window.setTimeout(() => {
+      setIsVisible(false);
+    }, 25000);
+
+    return () => {
+      window.clearTimeout(showTimer);
+      window.clearTimeout(hideTimer);
+    };
   }, []);
 
   function closePopup() {
     setIsVisible(false);
-    sessionStorage.setItem("connectivity-promo-closed", "true");
   }
 
   return (
     <aside
       aria-label="Property promotions"
       aria-hidden={!isVisible}
-      className={`fixed bottom-5 right-4 z-[100] w-[calc(100%-2rem)] max-w-[390px] transition-all duration-700 ease-out sm:bottom-7 sm:right-7 ${
+      className={`fixed bottom-5 right-4 z-[9999] w-[calc(100%-2rem)] max-w-[390px] transition-all duration-700 ease-out sm:bottom-7 sm:right-7 ${
         isVisible
           ? "translate-x-0 opacity-100"
           : "pointer-events-none translate-x-[120%] opacity-0"
