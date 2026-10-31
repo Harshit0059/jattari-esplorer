@@ -207,8 +207,16 @@ export default function Navbar() {
         : "border-[#D58A28] bg-[#FFF0D8] text-[#06483D] hover:border-[#B9741C] hover:bg-[#D58A28] hover:text-white"
     }`;
 
+  const isHome = pathname === "/";
+
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#E8E1D5] bg-white/95 shadow-sm backdrop-blur-xl">
+    <header
+      className={
+        isHome
+          ? "absolute top-0 left-0 right-0 z-50 w-full bg-transparent border-none"
+          : "relative z-50 w-full border-b border-[#E8E1D5] bg-white shadow-sm"
+      }
+    >
       {/* Main Navbar */}
       <div className="flex min-h-[82px] items-center justify-between gap-3 px-3 py-3 sm:px-5 lg:px-7 2xl:px-10">
 
