@@ -201,38 +201,37 @@ export default function CollegesPage() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[440px] overflow-hidden bg-[#073B32] sm:min-h-[510px]">
+      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         <img
           src="https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46260/2022/10/3/College%20of%20Khair%20Kanya%20Mahavidhyalaya%20Aligarh_Campus-View.jpg"
           alt="College campus"
           aria-hidden="true"
-          className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
           onError={(event) => {
             event.currentTarget.style.display = "none";
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/80 to-[#073B32]/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
 
         {/* Decorative campus-inspired rings */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-20 -top-24 -z-0 h-[360px] w-[360px] rounded-full border border-white/15 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-12 sm:right-10 sm:h-[480px] sm:w-[480px]"
+          className="pointer-events-none absolute -right-20 -top-24 -z-0 h-[360px] w-[360px] rounded-full border border-[#10251F]/15 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-12 sm:right-10 sm:h-[480px] sm:w-[480px]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-8 top-[-55px] -z-0 h-[260px] w-[260px] rounded-full border border-white/10 transition-transform duration-1000 group-hover:scale-125 group-hover:-rotate-12 sm:right-28 sm:h-[340px] sm:w-[340px]"
+          className="pointer-events-none absolute -right-8 top-[-55px] -z-0 h-[260px] w-[260px] rounded-full border border-[#10251F]/10 transition-transform duration-1000 group-hover:scale-125 group-hover:-rotate-12 sm:right-28 sm:h-[340px] sm:w-[340px]"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[440px] max-w-7xl items-center px-6 py-16 sm:min-h-[510px] md:px-10 md:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
           <div
             data-reveal
-            className={`max-w-3xl text-white ${revealLeft}`}
+            className={`max-w-3xl text-[#10251F] ${revealLeft}`}
           >
-            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#F4B85A]">
-              <span className="h-px w-9 bg-[#F4B85A]" />
+            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C]"><span className="h-px w-9 bg-[#B9741C]" />
               Jattari & Nearby Areas
             </p>
 
@@ -240,15 +239,14 @@ export default function CollegesPage() {
               Colleges Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
               Explore higher-education institutions in Jattari, Khair, Tappal
               and nearby parts of Aligarh district.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/85">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#263D3A]">
               <span>
-                <strong className="text-[#F4B85A]">
-                  {colleges.length}
+                <strong className="text-[#D58A28]">{colleges.length}
                 </strong>{" "}
                 directory entries
               </span>
@@ -258,7 +256,7 @@ export default function CollegesPage() {
             <div className="mt-9">
               <a
                 href="#college-directory"
-                className="group/button inline-flex items-center gap-3 rounded-lg bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-xl"
+                className="group/button inline-flex items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-xl"
               >
                 Explore Colleges
                 <span className="transition-transform duration-300 group-hover/button:translate-y-1">
@@ -285,7 +283,7 @@ export default function CollegesPage() {
             College Directory
           </p>
 
-          <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#073B32] sm:text-3xl">
+          <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#10251F] sm:text-3xl">
             Explore colleges and locations
           </h2>
 
@@ -296,13 +294,13 @@ export default function CollegesPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="rounded-full bg-[#EAF2ED] px-4 py-2 text-xs font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            <span className="rounded-full bg-[#EAF2ED] px-4 py-2 text-xs font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               Higher Education
             </span>
             <span className="rounded-full bg-[#FFF0D8] px-4 py-2 text-xs font-semibold text-[#945A13] transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               Jattari Region
             </span>
-            <span className="rounded-full bg-[#EAF2ED] px-4 py-2 text-xs font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+            <span className="rounded-full bg-[#EAF2ED] px-4 py-2 text-xs font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               College Listings
             </span>
           </div>
@@ -316,7 +314,7 @@ export default function CollegesPage() {
             key={college.name}
             data-reveal
             style={{ transitionDelay: `${(index % 5) * 100}ms` }}
-            className={`group relative grid gap-5 border-b border-[#E8E1D5] py-8 transition-colors duration-500 hover:bg-[#EAF2ED]/60 md:grid-cols-[150px_minmax(0,1fr)_170px] md:items-start md:gap-7 ${
+            className={`group relative grid gap-5 border-b border-[#D8E5E8] py-8 transition-colors duration-500 hover:bg-[#EAF2ED]/60 md:grid-cols-[150px_minmax(0,1fr)_170px] md:items-start md:gap-7 ${
               index % 2 === 0 ? revealLeft : revealRight
             }`}
           >
@@ -350,7 +348,7 @@ export default function CollegesPage() {
                 />
               )}
 
-              <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#073B32]/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#10251F]/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             </div>
 
             {/* College Information */}
@@ -359,7 +357,7 @@ export default function CollegesPage() {
                 College {String(index + 1).padStart(2, "0")}
               </p>
 
-              <h3 className="mt-2 inline-block text-xl font-bold tracking-tight text-[#073B32] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#B9741C] sm:text-2xl">
+              <h3 className="mt-2 inline-block text-xl font-bold tracking-tight text-[#10251F] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#B9741C] sm:text-2xl">
                 {college.name}
               </h3>
 
@@ -378,8 +376,8 @@ export default function CollegesPage() {
               </p>
 
               <dl className="mt-5 grid gap-x-8 gap-y-4 text-sm sm:grid-cols-2">
-                <div className="rounded-lg border border-[#E8E1D5] bg-white/60 p-4 transition-all duration-300 group-hover:border-[#B9D8C8] group-hover:bg-white">
-                  <dt className="font-semibold text-[#172B26]">
+                <div className="rounded-lg border border-[#D8E5E8] bg-white/60 p-4 transition-all duration-300 group-hover:border-[#B9D8C8] group-hover:bg-white">
+                  <dt className="font-semibold text-[#10251F]">
                     Courses / programmes
                   </dt>
                   <dd className="mt-1 leading-6 text-[#68756F]">
@@ -394,7 +392,7 @@ export default function CollegesPage() {
                     href={college.website}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-[#06483D] underline decoration-[#B9D8C8] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
+                    className="inline-flex items-center gap-2 text-[#10251F] underline decoration-[#B9D8C8] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
                   >
                     Official website
                     <span aria-hidden="true">↗</span>
@@ -405,7 +403,7 @@ export default function CollegesPage() {
                   href={college.map}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-[#06483D] underline decoration-[#B9D8C8] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
+                  className="inline-flex items-center gap-2 text-[#10251F] underline decoration-[#B9D8C8] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
                 >
                   View on map
                   <span aria-hidden="true">↗</span>
@@ -415,7 +413,7 @@ export default function CollegesPage() {
                   href={college.source}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-[#68756F] underline decoration-[#E8E1D5] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
+                  className="inline-flex items-center gap-2 text-[#68756F] underline decoration-[#D8E5E8] underline-offset-4 transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
                 >
                   Source
                   <span aria-hidden="true">↗</span>
@@ -425,7 +423,7 @@ export default function CollegesPage() {
 
             {/* Animated number marker */}
             <div className="hidden justify-end md:flex">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E8E1D5] text-sm font-bold tabular-nums text-[#B9741C] transition-all duration-500 group-hover:rotate-12 group-hover:border-[#D58A28] group-hover:bg-[#D58A28] group-hover:text-white group-hover:shadow-lg">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#D8E5E8] text-sm font-bold tabular-nums text-[#B9741C] transition-all duration-500 group-hover:rotate-12 group-hover:border-[#D58A28] group-hover:bg-[#D58A28] group-hover:text-white group-hover:shadow-lg">
                 {String(index + 1).padStart(2, "0")}
               </span>
             </div>
@@ -439,7 +437,7 @@ export default function CollegesPage() {
 
         <div
           data-reveal
-          className={`mt-8 rounded-xl border border-[#E8E1D5] bg-white p-5 transition-all duration-300 hover:border-[#B9D8C8] hover:shadow-md ${reveal}`}
+          className={`mt-8 rounded-xl border border-[#D8E5E8] bg-white p-5 transition-all duration-300 hover:border-[#B9D8C8] hover:shadow-md ${reveal}`}
         >
           <p className="text-sm leading-7 text-[#68756F]">
             This is a regional directory, not an official ranking. Institution
@@ -460,7 +458,7 @@ export default function CollegesPage() {
             href={affiliationSource}
             target="_blank"
             rel="noreferrer"
-            className="font-semibold text-[#06483D] underline underline-offset-4 transition-colors hover:text-[#D58A28]"
+            className="font-semibold text-[#10251F] underline underline-offset-4 transition-colors hover:text-[#D58A28]"
           >
             Raja Mahendra Pratap Singh State University — Affiliated Colleges
           </a>
@@ -471,7 +469,7 @@ export default function CollegesPage() {
       <section className="relative isolate overflow-hidden bg-[#EAF2ED]">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full border border-[#06483D]/10"
+          className="pointer-events-none absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full border border-[#10251F]/10"
         />
 
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-14 md:grid-cols-[1fr_auto] md:px-10 md:py-16">
@@ -480,7 +478,7 @@ export default function CollegesPage() {
               Local Real Estate
             </p>
 
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#073B32] sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#10251F] sm:text-3xl">
               Discover Property Opportunities Around Jattari
             </h2>
 
@@ -492,7 +490,7 @@ export default function CollegesPage() {
               area.
             </p>
 
-            <p className="mt-3 text-sm font-semibold text-[#06483D]">
+            <p className="mt-3 text-sm font-semibold text-[#10251F]">
               Anugrah Homes · Jattari, Uttar Pradesh
             </p>
           </div>
@@ -500,7 +498,7 @@ export default function CollegesPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/real-estate"
-              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#06483D] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#04382F] hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-lg"
             >
               Explore Real Estate
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -512,7 +510,7 @@ export default function CollegesPage() {
       </section>
 
       {/* Skyline Aero Homes Promotion */}
-      <section className="relative isolate overflow-hidden bg-[#073B32]">
+      <section className="relative isolate overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -bottom-36 -right-20 -z-10 h-80 w-80 rounded-full bg-[#D58A28]/10 blur-3xl"
@@ -524,11 +522,11 @@ export default function CollegesPage() {
               Property & Connectivity
             </p>
 
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold tracking-tight text-[#10251F] sm:text-3xl">
               Explore Skyline Aero Homes
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-white/75">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A]">
               Interested in the wider Jattari and Jewar region? Explore
               Skyline Aero Homes to learn more about its residential plot
               offerings and the surrounding area's connectivity. Review
@@ -556,10 +554,10 @@ export default function CollegesPage() {
       </section>
 
       {/* Bottom Navigation */}
-      <section className="border-t border-[#E8E1D5] bg-[#FFF9F0]">
+      <section className="border-t border-[#D8E5E8] bg-[#F4F8FA]">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 px-6 py-10 sm:flex-row sm:items-center md:px-10">
           <div data-reveal className={revealLeft}>
-            <h2 className="text-xl font-bold text-[#073B32]">
+            <h2 className="text-xl font-bold text-[#10251F]">
               Explore more education options
             </h2>
             <p className="mt-2 text-sm text-[#68756F]">
@@ -570,7 +568,7 @@ export default function CollegesPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/education"
-              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#06483D] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#04382F] hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-lg"
             >
               Back to Education
               <span className="transition-transform duration-300 group-hover:translate-x-1">

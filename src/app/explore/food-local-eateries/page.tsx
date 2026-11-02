@@ -220,36 +220,35 @@ export default function FoodPage() {
       `}</style>
 
       {/* HERO SECTION */}
-      <section className="group relative min-h-[540px] overflow-hidden bg-green-dark">
+      <section className="group relative min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         <Image
           src="/images/food-hero.jpg"
           alt="Food and dining culture around Jattari"
           fill
           priority
-          className="object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-[1.035]"
+          className="object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-[1.035]"
           sizes="100vw"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/70 to-transparent" />
 
-        <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full border border-white/10 transition-transform duration-1000 group-hover:scale-110" />
-        <div className="pointer-events-none absolute -right-10 -top-16 h-64 w-64 rounded-full border border-white/10" />
+        <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full border border-[#10251F]/10 transition-transform duration-1000 group-hover:scale-110" />
+        <div className="pointer-events-none absolute -right-10 -top-16 h-64 w-64 rounded-full border border-[#10251F]/10" />
 
-        <div className="container-site relative z-10 flex min-h-[540px] items-center py-20">
-          <div className="max-w-3xl text-white">
-            <div data-reveal className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm font-semibold text-[#FFE4B5] backdrop-blur-sm transition duration-300 hover:bg-white/20">
+        <div className="container-site relative z-10 flex min-h-[540px] items-center pt-28 pb-16 sm:pt-32">
+          <div className="max-w-3xl text-[#10251F]">
+            <div data-reveal className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/80 px-4 py-2 text-sm font-semibold text-[#10251F] backdrop-blur-sm transition duration-300 hover:bg-white">
               <Utensils size={16} />
               EXPLORE JATTARI FOOD CULTURE
             </div>
 
             <h1 data-reveal className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
               Discover the
-              <span className="block text-[#F2B75D]">
-                Taste of Jattari
+              <span className="block text-[#D58A28]">Taste of Jattari
               </span>
             </h1>
 
-            <p data-reveal className="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
+            <p data-reveal className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
               From everyday North Indian meals and roadside dhabas to tea
               stalls, family restaurants and modern fast-food outlets,
               explore the different food experiences you can find in and
@@ -267,24 +266,24 @@ export default function FoodPage() {
 
               <a
                 href="#food-culture"
-                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-white/50 px-5 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#06483D]"
+                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-[#10251F]/40 px-5 py-3 font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
               >
                 Discover Food Culture
                 <ArrowUpRight size={18} className="transition-transform duration-300 group-hover/button:translate-x-1 group-hover/button:-translate-y-1" />
               </a>
             </div>
 
-            <div data-reveal className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/20 pt-6 text-sm text-white/80">
+            <div data-reveal className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#263D3A]">
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-3px]">
-                <Coffee size={17} className="text-[#F2B75D]" />
+                <Coffee size={17} className="text-[#D58A28]" />
                 Tea & Snacks
               </span>
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-3px]">
-                <CookingPot size={17} className="text-[#F2B75D]" />
+                <CookingPot size={17} className="text-[#D58A28]" />
                 Local Meals
               </span>
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-3px]">
-                <Store size={17} className="text-[#F2B75D]" />
+                <Store size={17} className="text-[#D58A28]" />
                 Restaurants & Dhabas
               </span>
             </div>
@@ -303,7 +302,7 @@ export default function FoodPage() {
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#172B26]/80 to-transparent p-7">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10251F]/80 to-transparent p-7">
               <p className="translate-y-2 font-semibold text-white transition-transform duration-500 group-hover:translate-y-0">
                 Everyday flavours, familiar food and local experiences
               </p>
@@ -519,7 +518,7 @@ export default function FoodPage() {
             ))}
           </div>
 
-          <div data-reveal className="mt-8 rounded-xl border border-[#E8E1D5] bg-[#FFF0D8] p-5 transition-shadow duration-300 hover:shadow-md sm:p-6">
+          <div data-reveal className="mt-8 rounded-xl border border-[#D8E5E8] bg-[#FFF0D8] p-5 transition-shadow duration-300 hover:shadow-md sm:p-6">
             <div className="flex items-start gap-3">
               <Info className="mt-1 shrink-0 text-[#B9741C]" size={21} />
               <p className="text-sm leading-7 text-[#684A23]">
@@ -535,25 +534,25 @@ export default function FoodPage() {
       </section>
 
       {/* FOOD EXPERIENCE */}
-      <section className="bg-[#073B32] py-20 text-white sm:py-24">
+      <section className="border-t border-[#D8E5E8] bg-[#F4F8FA] py-14 text-[#10251F] sm:py-16">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2">
           <div data-reveal>
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#F2B75D]">
               EXPLORE LOCAL LIFE
             </span>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
               Discover more than just food
             </h2>
 
-            <p className="mt-6 leading-8 text-white/75">
+            <p className="mt-6 leading-8 text-[#263D3A]">
               Exploring food outlets is also a way to discover the everyday
               rhythm of Jattari. Local markets, shops and roadside
               establishments together create the town's everyday
               commercial and social environment.
             </p>
 
-            <p className="mt-4 leading-8 text-white/75">
+            <p className="mt-4 leading-8 text-[#263D3A]">
               Take time to explore nearby market areas, ask local residents
               about their favourite food spots and check the latest
               information before planning your visit.
@@ -576,7 +575,7 @@ export default function FoodPage() {
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-[#073B32]/10 transition-colors duration-500 group-hover:bg-transparent" />
+            <div className="absolute inset-0 bg-[#10251F]/10 transition-colors duration-500 group-hover:bg-transparent" />
           </div>
         </div>
       </section>
@@ -639,7 +638,7 @@ export default function FoodPage() {
               <ShoppingBasket size={27} />
             </div>
 
-            <h2 className="mt-6 text-3xl font-bold text-[#172B26] sm:text-4xl">
+            <h2 className="mt-6 text-3xl font-bold text-[#10251F] sm:text-4xl">
               Explore the Local Side of Jattari
             </h2>
 
@@ -660,7 +659,7 @@ export default function FoodPage() {
 
               <Link
                 href="/explore/attractions-places-to-visit"
-                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-[#06483D]/20 px-5 py-3 font-semibold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md"
+                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-[#10251F]/20 px-5 py-3 font-semibold text-primary transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md"
               >
                 Places to Visit
                 <MapPinned size={18} className="transition-transform duration-300 group-hover/button:scale-110" />

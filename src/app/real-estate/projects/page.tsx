@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 import {
   ArrowRight,
@@ -85,10 +85,10 @@ function getEnquiryLink(brand: string) {
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* Hero */}
-      <section className="relative isolate flex min-h-[470px] items-center overflow-hidden bg-[#073B32] sm:min-h-[530px]">
+      <section className="relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] sm:min-h-[530px]">
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/80 to-[#073B32]/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
@@ -105,15 +105,15 @@ export default function ProjectsPage() {
               <span>Jattari and surrounding areas</span>
             </div>
 
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#F4B65E]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#B9741C]">
               Jattari Real Estate Guide
             </p>
 
-            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-[#10251F] sm:text-6xl lg:text-6xl">
               Explore Property Opportunities in Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
               Learn about residential and commercial plots, understand the
               property-buying process and submit an enquiry based on your
               requirements.
@@ -166,9 +166,9 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-8">
+          <div className="rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-8">
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8F2F6] text-[#10251F]">
                 <ShieldCheck size={24} />
               </div>
 
@@ -185,7 +185,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href="/real-estate/buying-checklist"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F] transition hover:text-[#D58A28]"
                 >
                   Read the checklist
                   <ArrowRight size={16} />
@@ -197,7 +197,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Property Guides */}
-      <section className="border-y border-[#E8E1D5] bg-white">
+      <section className="border-y border-[#D8E5E8] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
 
@@ -222,7 +222,7 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="divide-y divide-[#E8E1D5]">
+            <div className="divide-y divide-[#D8E5E8]">
               {propertyGuides.map((guide) => {
                 const Icon = guide.icon;
 
@@ -243,7 +243,7 @@ export default function ProjectsPage() {
                             {guide.title}
                           </h3>
 
-                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E8E1D5] text-[#06483D] transition-all group-hover:border-[#06483D] group-hover:bg-[#06483D] group-hover:text-white">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#D8E5E8] text-[#10251F] transition-all group-hover:border-[#10251F] group-hover:bg-[#10251F] group-hover:text-white">
                             <ArrowRight
                               size={19}
                               className="transition-transform group-hover:-rotate-45"
@@ -255,15 +255,15 @@ export default function ProjectsPage() {
                           {guide.description}
                         </p>
 
-                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D]">
+                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F]">
                           Explore guide
                           <span className="transition-transform group-hover:translate-x-1">
-                            →
+                            â†’
                           </span>
                         </span>
                       </div>
 
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D] sm:flex">
+                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8F2F6] text-[#10251F] sm:flex">
                         <Icon size={22} />
                       </div>
                     </div>
@@ -297,9 +297,9 @@ export default function ProjectsPage() {
           {featuredBrands.map((brand) => (
             <article
               key={brand.name}
-              className="overflow-hidden rounded-2xl border border-[#E8E1D5] bg-white shadow-[0_4px_20px_rgb(23_43_38/7%)] transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(23_43_38/12%)]"
+              className="overflow-hidden rounded-2xl border border-[#D8E5E8] bg-white shadow-[0_4px_20px_rgb(23_43_38/7%)] transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(23_43_38/12%)]"
             >
-              <div className="relative h-60 overflow-hidden bg-[#E8F0E9] sm:h-72">
+              <div className="relative h-60 overflow-hidden bg-[#E8F2F6] sm:h-72">
                 <div
                   role="img"
                   aria-label={brand.imageAlt}
@@ -309,7 +309,7 @@ export default function ProjectsPage() {
                   }}
                 />
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#073B32]/80 to-transparent p-5 pt-16">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10251F]/80 to-transparent p-5 pt-16">
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
                     <MapPin size={13} />
                     Jattari region
@@ -332,7 +332,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#06483D] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#04382F]"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#10251F] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#254C3C]"
                 >
                   Enquire about this option
                   <ArrowRight size={17} />
@@ -344,7 +344,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Additional Property Options */}
-      <section className="border-y border-[#E8E1D5] bg-white">
+      <section className="border-y border-[#D8E5E8] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#D58A28]">
@@ -362,7 +362,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="mt-8 divide-y divide-[#E8E1D5]">
+          <div className="mt-8 divide-y divide-[#D8E5E8]">
             {otherBrands.map((brand, index) => (
               <article
                 key={brand.name}
@@ -377,7 +377,7 @@ export default function ProjectsPage() {
                     {brand.name}
                   </h3>
 
-                  <p className="mt-1 text-sm font-medium text-[#06483D]">
+                  <p className="mt-1 text-sm font-medium text-[#10251F]">
                     {brand.category}
                   </p>
 
@@ -388,7 +388,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-4 py-3 text-sm font-semibold text-[#06483D] transition hover:bg-[#06483D] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-4 py-3 text-sm font-semibold text-[#10251F] transition hover:bg-[#10251F] hover:text-white"
                 >
                   Enquire
                   <ArrowRight size={16} />
@@ -401,7 +401,7 @@ export default function ProjectsPage() {
 
       {/* Buying Guidance */}
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
-        <div className="grid gap-8 rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
+        <div className="grid gap-8 rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12">
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF0D8] text-[#B9741C]">
               <CheckCircle2 size={25} />
@@ -420,7 +420,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/real-estate/buying-checklist"
-            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-5 py-3.5 text-sm font-semibold text-[#06483D] transition hover:bg-[#06483D] hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-5 py-3.5 text-sm font-semibold text-[#10251F] transition hover:bg-[#10251F] hover:text-white"
           >
             Open checklist
             <ArrowRight size={17} />
@@ -429,20 +429,20 @@ export default function ProjectsPage() {
       </section>
 
       {/* Final Enquiry CTA */}
-      <section className="bg-[#073B32]">
+      <section className="border-t border-[#D8E5E8] bg-[#F4F8FA]">
         <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
           <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-2 text-sm font-medium text-[#F4B65E]">
+              <div className="flex items-center gap-2 text-sm font-medium text-[#B9741C]">
                 <MessageSquare size={17} />
                 Property requirements
               </div>
 
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#10251F] sm:text-4xl">
                 Looking for a property in Jattari?
               </h2>
 
-              <p className="mt-4 leading-7 text-white/80">
+              <p className="mt-4 leading-7 text-[#263D3A]">
                 Submit your requirements through the property enquiry
                 page to tell us what type of property you are exploring.
               </p>
@@ -461,3 +461,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
+

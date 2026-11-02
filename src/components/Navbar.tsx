@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -174,7 +173,8 @@ export default function Navbar() {
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     if (href.startsWith("http")) return false;
-    return pathname === href || pathname.startsWith(`${href}/`);
+    // Exact match only — prevents parent items from staying highlighted when on a subpage
+    return pathname === href;
   };
 
   const closeMobileMenu = () => {
@@ -196,27 +196,19 @@ export default function Navbar() {
   const regularLinkClass = (active: boolean, open = false) =>
     `flex items-center gap-1.5 whitespace-nowrap rounded-xl px-3.5 py-3 text-[14px] font-bold transition duration-200 2xl:px-4 2xl:text-[15px] ${
       active || open
-        ? "bg-[#EAF2ED] text-[#06483D]"
-        : "text-[#172B26] hover:bg-[#EAF2ED] hover:text-[#06483D]"
+        ? "bg-[#E8F2F6] text-[#10251F]"
+        : "text-[#10251F] hover:bg-[#E8F2F6] hover:text-[#10251F]"
     }`;
 
   const locationLinkClass = (active: boolean) =>
     `flex items-center gap-2 rounded-full border px-4 py-3 text-sm font-extrabold transition duration-200 2xl:px-5 ${
       active
-        ? "border-[#06483D] bg-[#06483D] text-white shadow-md"
-        : "border-[#D58A28] bg-[#FFF0D8] text-[#06483D] hover:border-[#B9741C] hover:bg-[#D58A28] hover:text-white"
+        ? "border-[#10251F] bg-[#10251F] text-white shadow-md"
+        : "border-[#D58A28] bg-[#FFF0D8] text-[#10251F] hover:border-[#B9741C] hover:bg-[#D58A28] hover:text-white"
     }`;
 
-  const isHome = pathname === "/";
-
   return (
-    <header
-      className={
-        isHome
-          ? "absolute top-0 left-0 right-0 z-50 w-full bg-transparent border-none"
-          : "relative z-50 w-full border-b border-[#E8E1D5] bg-white shadow-sm"
-      }
-    >
+    <header className="absolute top-0 left-0 right-0 z-50 w-full bg-transparent border-none">
       {/* Main Navbar */}
       <div className="flex min-h-[82px] items-center justify-between gap-3 px-3 py-3 sm:px-5 lg:px-7 2xl:px-10">
 
@@ -230,7 +222,7 @@ export default function Navbar() {
           className="group flex shrink-0 items-center gap-2.5"
           aria-label="Jattari Explorer Home"
         >
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#06483D] text-white shadow-md transition duration-300 group-hover:-rotate-3 group-hover:scale-105">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#10251F] text-white shadow-md transition duration-300 group-hover:-rotate-3 group-hover:scale-105">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -250,10 +242,10 @@ export default function Navbar() {
           </div>
 
           <div className="leading-tight">
-            <span className="block whitespace-nowrap text-[17px] font-extrabold tracking-tight text-[#172B26] sm:text-xl">
+            <span className="block whitespace-nowrap text-[17px] font-extrabold tracking-tight text-[#10251F] sm:text-xl">
               Jattari <span className="text-[#D58A28]">Explorer</span>
             </span>
-            <span className="mt-1 block whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.15em] text-[#68756F] sm:text-[10px]">
+            <span className="mt-1 block whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.15em] text-[#5A736C] sm:text-[10px]">
               Discover Your Neighbourhood
             </span>
           </div>
@@ -304,12 +296,12 @@ export default function Navbar() {
                           : "invisible translate-y-2 opacity-0"
                       }`}
                     >
-                      <div className="overflow-hidden rounded-2xl border border-[#E8E1D5] bg-white p-3 shadow-xl">
-                        <div className="mb-2 border-b border-[#E8E1D5] px-3 pb-3 pt-1">
-                          <p className="text-sm font-extrabold text-[#06483D]">
+                      <div className="overflow-hidden rounded-2xl border border-[#D8E5E8] bg-white p-3 shadow-xl">
+                        <div className="mb-2 border-b border-[#D8E5E8] px-3 pb-3 pt-1">
+                          <p className="text-sm font-extrabold text-[#10251F]">
                             {item.title}
                           </p>
-                          <p className="mt-1 text-xs text-[#68756F]">
+                          <p className="mt-1 text-xs text-[#5A736C]">
                             Explore information and services
                           </p>
                         </div>
@@ -322,8 +314,8 @@ export default function Navbar() {
                               onClick={() => setActiveDropdown(null)}
                               className={`rounded-lg px-3 py-2.5 text-[12px] font-medium leading-snug transition ${
                                 isActive(child.href)
-                                  ? "bg-[#EAF2ED] text-[#06483D]"
-                                  : "text-[#172B26] hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                                  ? "bg-[#E8F2F6] text-[#10251F]"
+                                  : "text-[#10251F] hover:bg-[#E8F2F6] hover:text-[#10251F]"
                               }`}
                             >
                               {child.title}
@@ -334,7 +326,7 @@ export default function Navbar() {
                         <Link
                           href={item.href}
                           onClick={() => setActiveDropdown(null)}
-                          className="mt-2 flex items-center justify-between rounded-xl bg-[#FFF0D8] px-3 py-3 text-xs font-bold text-[#06483D] transition hover:bg-[#D58A28] hover:text-white"
+                          className="mt-2 flex items-center justify-between rounded-xl bg-[#FFF0D8] px-3 py-3 text-xs font-bold text-[#10251F] transition hover:bg-[#D58A28] hover:text-white"
                         >
                           View all {item.title}
                           <span aria-hidden="true">→</span>
@@ -357,8 +349,8 @@ export default function Navbar() {
             aria-expanded={searchOpen}
             className={`flex h-11 w-11 items-center justify-center rounded-xl border transition ${
               searchOpen
-                ? "border-[#06483D] bg-[#EAF2ED] text-[#06483D]"
-                : "border-[#E8E1D5] bg-white text-[#06483D] hover:bg-[#EAF2ED]"
+                ? "border-[#10251F] bg-[#E8F2F6] text-[#10251F]"
+                : "border-[#D8E5E8] bg-white text-[#10251F] hover:bg-[#E8F2F6]"
             }`}
           >
             <SearchIcon />
@@ -388,8 +380,8 @@ export default function Navbar() {
             aria-expanded={searchOpen}
             className={`flex h-11 w-11 items-center justify-center rounded-xl border transition ${
               searchOpen
-                ? "border-[#06483D] bg-[#EAF2ED] text-[#06483D]"
-                : "border-[#E8E1D5] bg-white text-[#06483D] hover:bg-[#EAF2ED]"
+                ? "border-[#10251F] bg-[#E8F2F6] text-[#10251F]"
+                : "border-[#D8E5E8] bg-white text-[#10251F] hover:bg-[#E8F2F6]"
             }`}
           >
             <SearchIcon />
@@ -402,7 +394,7 @@ export default function Navbar() {
               mobileOpen ? "Close navigation menu" : "Open navigation menu"
             }
             aria-expanded={mobileOpen}
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#E8E1D5] bg-white text-[#06483D] transition hover:bg-[#EAF2ED]"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#D8E5E8] bg-white text-[#10251F] transition hover:bg-[#E8F2F6]"
           >
             {mobileOpen ? (
               <svg
@@ -438,12 +430,12 @@ export default function Navbar() {
       {/* Floating Search Popup */}
       {searchOpen && (
         <div className="absolute right-4 top-full z-[60] w-[calc(100%-32px)] max-w-[540px] pt-3 sm:right-6 xl:right-[190px]">
-          <div className="overflow-hidden rounded-2xl border border-[#E8E1D5] bg-white shadow-2xl shadow-[#172B26]/15">
+          <div className="overflow-hidden rounded-2xl border border-[#D8E5E8] bg-white shadow-2xl shadow-[#10251F]/15">
 
             {/* Search Input */}
             <div className="p-4 sm:p-5">
-              <div className="flex items-center gap-3 rounded-2xl border border-[#B9D2C5] bg-[#F8FAF8] px-4 py-3.5 transition focus-within:border-[#06483D] focus-within:ring-2 focus-within:ring-[#06483D]/10">
-                <SearchIcon className="h-5 w-5 shrink-0 text-[#06483D]" />
+              <div className="flex items-center gap-3 rounded-2xl border border-[#B8D3DD] bg-[#F4F8FA] px-4 py-3.5 transition focus-within:border-[#10251F] focus-within:ring-2 focus-within:ring-[#10251F]/10">
+                <SearchIcon className="h-5 w-5 shrink-0 text-[#10251F]" />
 
                 <input
                   type="search"
@@ -455,7 +447,7 @@ export default function Navbar() {
                   }}
                   placeholder="Search Jattari, education, properties, news..."
                   aria-label="Search website pages"
-                  className="w-full bg-transparent text-sm text-[#172B26] outline-none placeholder:text-[#929B95]"
+                  className="w-full bg-transparent text-sm text-[#10251F] outline-none placeholder:text-[#7A938C]"
                 />
 
                 {searchQuery && (
@@ -463,7 +455,7 @@ export default function Navbar() {
                     type="button"
                     onClick={() => setSearchQuery("")}
                     aria-label="Clear search"
-                    className="shrink-0 text-xs font-semibold text-[#68756F] transition hover:text-[#06483D]"
+                    className="shrink-0 text-xs font-semibold text-[#5A736C] transition hover:text-[#10251F]"
                   >
                     Clear
                   </button>
@@ -473,7 +465,7 @@ export default function Navbar() {
                   type="button"
                   onClick={closeSearch}
                   aria-label="Close search"
-                  className="shrink-0 text-xl leading-none text-[#68756F] transition hover:text-[#06483D]"
+                  className="shrink-0 text-xl leading-none text-[#5A736C] transition hover:text-[#10251F]"
                 >
                   ×
                 </button>
@@ -483,7 +475,7 @@ export default function Navbar() {
               <div className="mt-4">
                 {!searchQuery.trim() ? (
                   <>
-                    <p className="mb-3 text-xs font-semibold text-[#68756F]">
+                    <p className="mb-3 text-xs font-semibold text-[#5A736C]">
                       Popular Searches
                     </p>
 
@@ -499,16 +491,16 @@ export default function Navbar() {
                           key={keyword}
                           type="button"
                           onClick={() => setSearchQuery(keyword)}
-                          className="rounded-full bg-[#EAF2ED] px-3.5 py-2 text-xs font-medium text-[#06483D] transition hover:bg-[#D5E7DC]"
+                          className="rounded-full bg-[#E8F2F6] px-3.5 py-2 text-xs font-medium text-[#10251F] transition hover:bg-[#D4E7EF]"
                         >
                           {keyword}
                         </button>
                       ))}
                     </div>
 
-                    <div className="my-4 border-t border-[#E8E1D5]" />
+                    <div className="my-4 border-t border-[#D8E5E8]" />
 
-                    <p className="mb-2 text-xs font-bold text-[#06483D]">
+                    <p className="mb-2 text-xs font-bold text-[#10251F]">
                       Quick Links
                     </p>
 
@@ -524,27 +516,27 @@ export default function Navbar() {
                           key={item.href}
                           href={item.href}
                           onClick={closeSearch}
-                          className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-[#172B26] transition hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                          className="flex items-center justify-between rounded-lg px-3 py-2.5 text-sm text-[#10251F] transition hover:bg-[#E8F2F6] hover:text-[#10251F]"
                         >
                           <span>{item.title}</span>
-                          <span className="text-[#68756F]">›</span>
+                          <span className="text-[#5A736C]">›</span>
                         </Link>
                       ))}
                     </div>
                   </>
                 ) : searchResults.length > 0 ? (
                   <>
-                    <p className="mb-2 px-1 text-xs font-semibold text-[#68756F]">
+                    <p className="mb-2 px-1 text-xs font-semibold text-[#5A736C]">
                       Search Results
                     </p>
 
-                    <div className="overflow-hidden rounded-xl border border-[#E8E1D5]">
+                    <div className="overflow-hidden rounded-xl border border-[#D8E5E8]">
                       {searchResults.map((result) => (
                         <Link
                           key={result.href}
                           href={result.href}
                           onClick={closeSearch}
-                          className="flex items-center justify-between border-b border-[#F0ECE5] px-4 py-3 text-sm font-medium text-[#172B26] transition last:border-0 hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                          className="flex items-center justify-between border-b border-[#E8EFF2] px-4 py-3 text-sm font-medium text-[#10251F] transition last:border-0 hover:bg-[#E8F2F6] hover:text-[#10251F]"
                         >
                           <span>{result.title}</span>
                           <span className="text-[#D58A28]">→</span>
@@ -553,7 +545,7 @@ export default function Navbar() {
                     </div>
                   </>
                 ) : (
-                  <p className="rounded-xl bg-[#FFF9F0] px-4 py-4 text-sm text-[#68756F]">
+                  <p className="rounded-xl bg-[#F4F8FA] px-4 py-4 text-sm text-[#5A736C]">
                     No pages found for &quot;{searchQuery}&quot;. Try another keyword.
                   </p>
                 )}
@@ -561,7 +553,7 @@ export default function Navbar() {
             </div>
 
             {/* Bottom Strip */}
-            <div className="flex items-center gap-2 bg-[#EAF2ED] px-5 py-3 text-xs font-medium text-[#06483D]">
+            <div className="flex items-center gap-2 bg-[#E8F2F6] px-5 py-3 text-xs font-medium text-[#10251F]">
               <MapPinIcon className="h-4 w-4" />
               Search for anything about Jattari
             </div>
@@ -571,7 +563,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`overflow-hidden border-t border-[#E8E1D5] bg-white transition-all duration-300 xl:hidden ${
+        className={`overflow-hidden border-t border-[#D8E5E8] bg-white transition-all duration-300 xl:hidden ${
           mobileOpen ? "max-h-[85vh] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -608,8 +600,8 @@ export default function Navbar() {
                     onClick={closeMobileMenu}
                     className={`flex-1 rounded-xl px-4 py-3.5 text-sm font-bold transition ${
                       active
-                        ? "bg-[#EAF2ED] text-[#06483D]"
-                        : "text-[#172B26] hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                        ? "bg-[#E8F2F6] text-[#10251F]"
+                        : "text-[#10251F] hover:bg-[#E8F2F6] hover:text-[#10251F]"
                     }`}
                   >
                     {item.title}
@@ -623,7 +615,7 @@ export default function Navbar() {
                       }
                       aria-label={`${expanded ? "Collapse" : "Expand"} ${item.title} menu`}
                       aria-expanded={expanded}
-                      className="ml-1 flex h-11 w-11 items-center justify-center rounded-xl text-[#68756F] transition hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                      className="ml-1 flex h-11 w-11 items-center justify-center rounded-xl text-[#5A736C] transition hover:bg-[#E8F2F6] hover:text-[#10251F]"
                     >
                       <ChevronIcon
                         className={`h-4 w-4 transition-transform duration-200 ${
@@ -635,7 +627,7 @@ export default function Navbar() {
                 </div>
 
                 {item.children && expanded && (
-                  <div className="ml-3 mt-1 space-y-1 border-l-2 border-[#E8E1D5] py-1 pl-3">
+                  <div className="ml-3 mt-1 space-y-1 border-l-2 border-[#D8E5E8] py-1 pl-3">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
@@ -643,8 +635,8 @@ export default function Navbar() {
                         onClick={closeMobileMenu}
                         className={`block rounded-lg px-3 py-2.5 text-sm transition ${
                           isActive(child.href)
-                            ? "bg-[#EAF2ED] font-semibold text-[#06483D]"
-                            : "text-[#172B26] hover:bg-[#EAF2ED] hover:text-[#06483D]"
+                            ? "bg-[#E8F2F6] font-semibold text-[#10251F]"
+                            : "text-[#10251F] hover:bg-[#E8F2F6] hover:text-[#10251F]"
                         }`}
                       >
                         {child.title}

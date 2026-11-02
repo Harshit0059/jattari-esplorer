@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import { useState, type FormEvent } from "react";
@@ -34,11 +34,11 @@ const propertyTypes = [
 
 const budgets = [
   "Not decided yet",
-  "Below ₹10 lakh",
-  "₹10–25 lakh",
-  "₹25–50 lakh",
-  "₹50 lakh–₹1 crore",
-  "Above ₹1 crore",
+  "Below â‚¹10 lakh",
+  "â‚¹10â€“25 lakh",
+  "â‚¹25â€“50 lakh",
+  "â‚¹50 lakhâ€“â‚¹1 crore",
+  "Above â‚¹1 crore",
 ];
 
 export default function PropertyEnquiriesPage() {
@@ -103,34 +103,34 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
   }
 
   const inputClass =
-    "w-full rounded-[10px] border border-[#E8E1D5] bg-white px-4 py-3 text-[#172B26] outline-none transition placeholder:text-[#A49C8F] focus:border-[#06483D] focus:ring-2 focus:ring-[#EAF2ED]";
+    "w-full rounded-[10px] border border-[#D8E5E8] bg-white px-4 py-3 text-[#10251F] outline-none transition placeholder:text-[#A49C8F] focus:border-[#10251F] focus:ring-2 focus:ring-[#EAF2ED]";
 
   const iconInputClass =
-    "w-full rounded-[10px] border border-[#E8E1D5] bg-white py-3 pl-10 pr-4 text-[#172B26] outline-none transition placeholder:text-[#A49C8F] focus:border-[#06483D] focus:ring-2 focus:ring-[#EAF2ED]";
+    "w-full rounded-[10px] border border-[#D8E5E8] bg-white py-3 pl-10 pr-4 text-[#10251F] outline-none transition placeholder:text-[#A49C8F] focus:border-[#10251F] focus:ring-2 focus:ring-[#EAF2ED]";
 
   return (
-    <main className="min-h-screen bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen bg-[#F4F8FA] text-[#10251F]">
       {/* Hero */}
-      <section className="relative isolate flex min-h-[390px] items-end overflow-hidden bg-[#073B32]">
+      <section className="relative isolate flex min-h-[390px] items-end overflow-hidden bg-[#10251F]">
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/skyline%20aerohomes.jpeg')",
           }}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/30" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 pb-14 pt-28 sm:px-8 lg:px-12">
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#F2B85B]">
-            Property Enquiries · Jattari
+            Property Enquiries Â· Jattari
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-[#10251F] sm:text-6xl lg:text-6xl">
             Tell Us What Property You Are Looking For.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#263D3A] sm:text-lg">
             Share your requirements for residential plots, commercial land or
             property projects around Jattari.
           </p>
@@ -143,7 +143,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
             Start a Conversation
           </p>
-          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#073B32] sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
             A property enquiry built around your needs.
           </h2>
           <div className="mt-6 h-1 w-16 rounded-full bg-[#D58A28]" />
@@ -163,14 +163,14 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
       </section>
 
       {/* Form */}
-      <section className="border-y border-[#E8E1D5] bg-white py-12 sm:py-16">
+      <section className="border-y border-[#D8E5E8] bg-white py-12 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20 lg:px-12">
           <aside>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
               Enquiry Details
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold text-[#073B32] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold text-[#10251F] sm:text-4xl">
               Let&apos;s understand your requirements.
             </h2>
 
@@ -179,14 +179,14 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               preferences. Fields marked with * are required.
             </p>
 
-            <div className="mt-10 space-y-6 border-t border-[#E8E1D5] pt-7">
+            <div className="mt-10 space-y-6 border-t border-[#D8E5E8] pt-7">
               <div className="flex items-start gap-4">
                 <MapPin
-                  className="mt-1 shrink-0 text-[#06483D]"
+                  className="mt-1 shrink-0 text-[#10251F]"
                   size={22}
                 />
                 <div>
-                  <h3 className="font-semibold text-[#073B32]">
+                  <h3 className="font-semibold text-[#10251F]">
                     Location focus
                   </h3>
                   <p className="mt-1 text-sm leading-6 text-[#68756F]">
@@ -197,11 +197,11 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
               <div className="flex items-start gap-4">
                 <ClipboardList
-                  className="mt-1 shrink-0 text-[#06483D]"
+                  className="mt-1 shrink-0 text-[#10251F]"
                   size={22}
                 />
                 <div>
-                  <h3 className="font-semibold text-[#073B32]">
+                  <h3 className="font-semibold text-[#10251F]">
                     Clear requirements
                   </h3>
                   <p className="mt-1 text-sm leading-6 text-[#68756F]">
@@ -212,11 +212,11 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
               <div className="flex items-start gap-4">
                 <MessageSquare
-                  className="mt-1 shrink-0 text-[#06483D]"
+                  className="mt-1 shrink-0 text-[#10251F]"
                   size={22}
                 />
                 <div>
-                  <h3 className="font-semibold text-[#073B32]">
+                  <h3 className="font-semibold text-[#10251F]">
                     Your enquiry
                   </h3>
                   <p className="mt-1 text-sm leading-6 text-[#68756F]">
@@ -228,7 +228,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
             </div>
 
             <div className="mt-9 border-l-4 border-[#D58A28] bg-[#FFF0D8] p-5">
-              <p className="text-sm font-semibold text-[#073B32]">
+              <p className="text-sm font-semibold text-[#10251F]">
                 Before submitting
               </p>
               <p className="mt-2 text-sm leading-6 text-[#68756F]">
@@ -243,7 +243,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="name"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Full Name *
                 </label>
@@ -270,7 +270,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="phone"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Mobile Number *
                 </label>
@@ -303,7 +303,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="email"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Email Address
                 </label>
@@ -324,7 +324,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="brand"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Preferred Brand
                 </label>
@@ -348,7 +348,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="propertyType"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Property Type *
                 </label>
@@ -373,7 +373,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div>
                 <label
                   htmlFor="budget"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Approximate Budget
                 </label>
@@ -397,7 +397,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div className="sm:col-span-2">
                 <label
                   htmlFor="location"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Preferred Location
                 </label>
@@ -416,7 +416,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-semibold text-[#172B26]"
+                  className="mb-2 block text-sm font-semibold text-[#10251F]"
                 >
                   Tell Us More About Your Requirements
                 </label>
@@ -461,7 +461,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
               </div>
             )}
 
-            <div className="mt-7 flex flex-col gap-4 border-t border-[#E8E1D5] pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-7 flex flex-col gap-4 border-t border-[#D8E5E8] pt-6 sm:flex-row sm:items-center sm:justify-between">
               <p className="max-w-sm text-xs leading-5 text-[#68756F]">
                 Your details should only be shared with the intended recipient
                 after you review the email.
@@ -469,7 +469,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-[#06483D] px-6 py-3.5 font-semibold text-white transition hover:bg-[#04382F] focus:outline-none focus:ring-2 focus:ring-[#287A6D] focus:ring-offset-2"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-[#10251F] px-6 py-3.5 font-semibold text-white transition hover:bg-[#254C3C] focus:outline-none focus:ring-2 focus:ring-[#287A6D] focus:ring-offset-2"
               >
                 Prepare Enquiry Email
                 <Send size={17} />
@@ -481,19 +481,19 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
       {/* More property pages */}
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
-        <div className="flex flex-col gap-5 border-b border-[#E8E1D5] pb-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-5 border-b border-[#D8E5E8] pb-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
               Continue Exploring
             </p>
-            <h2 className="mt-3 text-2xl font-bold text-[#073B32]">
+            <h2 className="mt-3 text-2xl font-bold text-[#10251F]">
               Learn more before you decide.
             </h2>
           </div>
 
           <Link
             href="/real-estate/buying-checklist"
-            className="inline-flex w-fit items-center gap-2 font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+            className="inline-flex w-fit items-center gap-2 font-semibold text-[#10251F] transition hover:text-[#D58A28]"
           >
             View Buying Checklist
             <ArrowRight size={17} />
@@ -503,10 +503,10 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
         <div className="grid gap-6 py-8 sm:grid-cols-2">
           <Link
             href="/real-estate/residential-plots"
-            className="group border-b border-[#E8E1D5] pb-6 transition"
+            className="group border-b border-[#D8E5E8] pb-6 transition"
           >
             <p className="text-sm text-[#B9741C]">01 / Residential</p>
-            <h3 className="mt-2 text-xl font-semibold text-[#073B32] transition group-hover:text-[#B9741C]">
+            <h3 className="mt-2 text-xl font-semibold text-[#10251F] transition group-hover:text-[#B9741C]">
               Residential Plots
             </h3>
             <p className="mt-2 text-sm leading-6 text-[#68756F]">
@@ -516,10 +516,10 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
           <Link
             href="/real-estate/commercial-plots"
-            className="group border-b border-[#E8E1D5] pb-6 transition"
+            className="group border-b border-[#D8E5E8] pb-6 transition"
           >
             <p className="text-sm text-[#B9741C]">02 / Commercial</p>
-            <h3 className="mt-2 text-xl font-semibold text-[#073B32] transition group-hover:text-[#B9741C]">
+            <h3 className="mt-2 text-xl font-semibold text-[#10251F] transition group-hover:text-[#B9741C]">
               Commercial Plots
             </h3>
             <p className="mt-2 text-sm leading-6 text-[#68756F]">
@@ -533,3 +533,4 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
     </main>
   );
 }
+

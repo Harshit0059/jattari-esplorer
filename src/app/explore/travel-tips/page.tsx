@@ -240,49 +240,49 @@ export default function TravelTipsPage() {
       `}</style>
 
       {/* HERO SECTION */}
-      <section className="group relative isolate flex min-h-[460px] items-center overflow-hidden bg-green-dark px-6 py-20 text-white sm:min-h-[520px] md:px-12 md:py-28">
+      <section className="group relative isolate flex min-h-[460px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] px-6 pt-28 pb-16 sm:min-h-[520px] sm:pt-32 md:px-12">
         <Image
           src="/images/road5.jpeg"
           alt="Road and travel surroundings near Jattari"
           fill
           priority
           sizes="100vw"
-          className="object-cover transition-transform duration-[1500ms] group-hover:scale-105"
+          className="object-cover opacity-25 transition-transform duration-[1500ms] group-hover:scale-105"
         />
 
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-0 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/30"
+          className="absolute inset-0 -z-0 bg-gradient-to-r from-[#E4EDF0]/90 via-[#E4EDF0]/60 to-transparent"
         />
 
         <div
           aria-hidden="true"
-          className="travel-orbit pointer-events-none absolute -right-20 -top-20 z-0 h-80 w-80 rounded-full border border-white/20"
+          className="travel-orbit pointer-events-none absolute -right-20 -top-20 z-0 h-80 w-80 rounded-full border border-[#10251F]/15"
         />
 
         <div
           aria-hidden="true"
-          className="travel-orbit-inner pointer-events-none absolute -right-10 -top-10 z-0 h-60 w-60 rounded-full border border-[#F2B75D]/30"
+          className="travel-orbit-inner pointer-events-none absolute -right-10 -top-10 z-0 h-60 w-60 rounded-full border border-[#D58A28]/30"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute bottom-10 right-[15%] z-0 h-3 w-3 rounded-full bg-[#F2B75D] shadow-[0_0_25px_8px_rgba(242,183,93,0.25)]"
+          className="pointer-events-none absolute bottom-10 right-[15%] z-0 h-3 w-3 rounded-full bg-[#D58A28] shadow-[0_0_25px_8px_rgba(213,138,40,0.25)]"
         />
 
         <div className="container-site relative z-10">
           <div data-reveal className="max-w-4xl">
-            <div className="travel-float inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#F2B75D] backdrop-blur-sm sm:text-sm">
+            <div className="travel-float inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#10251F] backdrop-blur-sm sm:text-sm">
               <Compass size={16} />
               Make Your Visit Easier
             </div>
 
-            <h1 className="mt-6 max-w-4xl text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 max-w-4xl text-4xl font-extrabold leading-tight text-[#10251F] sm:text-5xl md:text-6xl">
               Travel Tips for
-              <span className="block text-[#F2B75D]">Jattari</span>
+              <span className="block text-[#D58A28]">Jattari</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-sm leading-8 text-white/85 sm:text-base md:text-lg">
+            <p className="mt-6 max-w-2xl text-sm leading-8 text-[#263D3A] sm:text-base md:text-lg">
               Plan your journey, prepare your essentials and explore Jattari
               and its surroundings with practical travel guidance. A little
               preparation can make your visit easier and more comfortable.
@@ -296,17 +296,17 @@ export default function TravelTipsPage() {
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-2" />
             </a>
 
-            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/20 pt-6 text-sm text-white/85">
+            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#263D3A]">
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1">
-                <Navigation size={17} className="text-[#F2B75D]" />
+                <Navigation size={17} className="text-[#D58A28]" />
                 Route Planning
               </span>
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1">
-                <Bus size={17} className="text-[#F2B75D]" />
+                <Bus size={17} className="text-[#D58A28]" />
                 Transport
               </span>
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1">
-                <MapPin size={17} className="text-[#F2B75D]" />
+                <MapPin size={17} className="text-[#D58A28]" />
                 Local Guidance
               </span>
             </div>
@@ -533,7 +533,7 @@ export default function TravelTipsPage() {
       <section className="px-4 py-16 sm:px-6 sm:py-20">
         <div
           data-reveal
-          className="group container-site relative overflow-hidden rounded-3xl bg-[#073B32] p-7 text-white sm:p-10 md:p-12"
+          className="group container-site relative overflow-hidden rounded-3xl bg-[#10251F] p-7 text-white sm:p-10 md:p-12"
         >
           <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full border border-white/10 transition-transform duration-1000 group-hover:scale-125 group-hover:rotate-45" />
           <div className="pointer-events-none absolute -right-5 -top-12 h-44 w-44 rounded-full border border-[#F2B75D]/20" />

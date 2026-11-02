@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect } from "react";
@@ -93,47 +93,47 @@ export default function RealEstatePage() {
     <main className="overflow-hidden bg-background text-foreground">
       {/* HERO */}
       <section
-        className="group relative flex min-h-[650px] items-center overflow-hidden bg-cover bg-center md:min-h-[760px]"
+        className="group relative flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]"
       >
         <div
-          className="absolute inset-0 scale-105 bg-cover bg-center transition-transform duration-[12000ms] ease-out group-hover:scale-110"
+          className="absolute inset-0 scale-105 bg-cover bg-center opacity-30 transition-transform duration-[12000ms] ease-out group-hover:scale-110"
           style={{
             backgroundImage:
               "url('/images/skyline%20aerohomes.jpeg')",
           }}
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,59,50,0.94)_0%,rgba(7,59,50,0.72)_48%,rgba(7,59,50,0.28)_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#073B32]/50 via-transparent to-[#073B32]/10" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(228,237,240,0.92)_0%,rgba(244,248,250,0.80)_55%,transparent_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#E4EDF0]/30 via-transparent to-transparent" />
 
-        <div className="pointer-events-none absolute -right-32 top-20 h-[430px] w-[430px] animate-[spin_45s_linear_infinite] rounded-full border border-white/15" />
-        <div className="pointer-events-none absolute -right-16 top-36 h-[300px] w-[300px] animate-[spin_35s_linear_infinite_reverse] rounded-full border border-white/15" />
+        <div className="pointer-events-none absolute -right-32 top-20 h-[430px] w-[430px] animate-[spin_45s_linear_infinite] rounded-full border border-[#10251F]/12" />
+        <div className="pointer-events-none absolute -right-16 top-36 h-[300px] w-[300px] animate-[spin_35s_linear_infinite_reverse] rounded-full border border-[#10251F]/12" />
 
-        <div className="relative mx-auto w-full max-w-[1240px] px-5 py-24 sm:px-8 lg:px-12">
+        <div className="relative mx-auto w-full max-w-[1240px] px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-20 lg:px-12">
           <div
             data-property-reveal
             className="max-w-3xl translate-y-10 opacity-0 transition-all duration-1000 ease-out"
           >
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-md transition duration-500 hover:border-[#F4B65E]/70 hover:bg-white/20">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/80 px-4 py-2 text-sm text-[#10251F] backdrop-blur-md transition duration-500 hover:border-[#D58A28]/60 hover:bg-white">
               <MapPin size={15} />
-              <span>Real Estate & Property Guide · Jattari</span>
+              <span>Real Estate & Property Guide Â· Jattari</span>
             </div>
 
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#F4B65E]">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#B9741C]">
               Find your place. Understand your options.
             </p>
 
-            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.13] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-3xl text-4xl font-semibold leading-[1.13] tracking-tight text-[#10251F] sm:text-6xl lg:text-7xl">
               A better way to
               <br />
               explore{" "}
-              <span className="relative inline-block text-[#F4B65E]">
+              <span className="relative inline-block text-[#B9741C]">
                 property.
-                <span className="absolute -bottom-2 left-0 h-[3px] w-full origin-left scale-x-0 bg-[#F4B65E] transition-transform duration-1000 delay-500 group-hover:scale-x-100" />
+                <span className="absolute -bottom-2 left-0 h-[3px] w-full origin-left scale-x-0 bg-[#D58A28] transition-transform duration-1000 delay-500 group-hover:scale-x-100" />
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-base leading-8 text-white/85 sm:text-lg">
+            <p className="mt-7 max-w-xl text-base leading-8 text-[#263D3A] sm:text-lg">
               Explore residential land, commercial property and real estate
               projects around Jattari. Find useful information to help you
               make more informed property decisions.
@@ -153,14 +153,14 @@ export default function RealEstatePage() {
 
               <Link
                 href="/real-estate/buying-checklist"
-                className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/40 bg-white/10 px-6 py-4 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/20"
+                className="inline-flex items-center justify-center gap-3 rounded-xl border border-[#D8E5E8] bg-white/80 px-6 py-4 text-sm font-semibold text-[#10251F] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:bg-white"
               >
                 Property Buying Guide
                 <ArrowRight size={17} className="transition-transform duration-300 hover:translate-x-1" />
               </Link>
             </div>
 
-            <div className="mt-16 flex items-center gap-4 text-sm text-white/80">
+            <div className="mt-16 flex items-center gap-4 text-sm text-[#263D3A]">
               <div className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-white/30">
                 <ArrowDown size={18} />
               </div>
@@ -169,8 +169,8 @@ export default function RealEstatePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 hidden translate-y-5 border-l border-t border-white/20 bg-[#073B32]/60 p-7 text-white opacity-0 backdrop-blur-md transition-all duration-700 delay-500 lg:block lg:w-[310px] lg:translate-y-0 lg:opacity-100">
-          <p className="text-xs uppercase tracking-[0.22em] text-[#F4B65E]">
+        <div className="absolute bottom-0 right-0 hidden translate-y-5 border-l border-t border-white/20 bg-[#10251F]/60 p-7 text-white opacity-0 backdrop-blur-md transition-all duration-700 delay-500 lg:block lg:w-[310px] lg:translate-y-0 lg:opacity-100">
+          <p className="text-xs uppercase tracking-[0.22em] text-[#B9741C]">
             Your local guide
           </p>
           <p className="mt-2 text-xl font-medium">Property in Jattari</p>
@@ -283,7 +283,7 @@ export default function RealEstatePage() {
                 backgroundImage: "url('/images/skyline%20aerohomes.jpeg')",
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#073B32]/85 via-transparent to-transparent transition-opacity duration-500 group-hover:from-[#073B32]/95" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/85 via-transparent to-transparent transition-opacity duration-500 group-hover:from-[#10251F]/95" />
 
             <div className="absolute bottom-0 left-0 p-6 text-white transition-transform duration-500 group-hover:-translate-y-2 sm:p-9">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-3 py-1.5 text-xs backdrop-blur-sm">
@@ -293,7 +293,7 @@ export default function RealEstatePage() {
               <h3 className="mt-4 text-3xl font-semibold sm:text-4xl">
                 Skyline Aero Homes
               </h3>
-              <p className="mt-3 max-w-md text-sm leading-6 text-white/80">
+              <p className="mt-3 max-w-md text-sm leading-6 text-[#263D3A]">
                 Explore the project details, location information and
                 available property options directly with the developer.
               </p>
@@ -405,11 +405,11 @@ export default function RealEstatePage() {
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-[1500ms] group-hover:scale-110"
                 style={{ backgroundImage: "url('/images/anugrah.jpeg')" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#073B32]/65 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/65 via-transparent to-transparent" />
 
               <div className="absolute bottom-6 left-6 right-6 text-white transition-transform duration-500 group-hover:-translate-y-2 sm:bottom-8 sm:left-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#F4B65E]">
-                  Anugrah Homes · Jattari
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#B9741C]">
+                  Anugrah Homes Â· Jattari
                 </p>
                 <p className="mt-3 max-w-md text-2xl font-medium leading-snug sm:text-3xl">
                   Find the information you need to make a considered choice.
@@ -483,7 +483,7 @@ export default function RealEstatePage() {
         className="group relative overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(7,59,50,0.94), rgba(7,59,50,0.78)), url('/images/skyline%20aerohomes.jpeg')",
+            "linear-gradient(90deg, rgba(16,37,31,0.94), rgba(16,37,31,0.78)), url('/images/skyline%20aerohomes.jpeg')",
         }}
       >
         <div className="absolute -right-20 -top-24 h-80 w-80 rounded-full border border-white/10 transition-transform duration-[3000ms] group-hover:scale-125" />
@@ -493,7 +493,7 @@ export default function RealEstatePage() {
             data-property-reveal
             className="max-w-2xl translate-y-8 text-white opacity-0 transition-all duration-1000"
           >
-            <div className="flex items-center gap-2 text-sm text-[#F4B65E]">
+            <div className="flex items-center gap-2 text-sm text-[#B9741C]">
               <Compass size={17} />
               <span>Take your next step</span>
             </div>

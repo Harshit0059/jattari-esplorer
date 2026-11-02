@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import Link from "next/link";
@@ -127,9 +127,9 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* HERO */}
-      <section className="group relative isolate flex min-h-[470px] items-center overflow-hidden bg-[#073B32] sm:min-h-[530px]">
+      <section className="group relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] sm:min-h-[530px]">
         <div
           className="absolute inset-0 -z-20 scale-105 bg-cover bg-center transition-transform duration-[15000ms] ease-out group-hover:scale-100"
           style={{
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/80 to-[#073B32]/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
 
         <div className="pointer-events-none absolute -right-32 -top-32 h-[430px] w-[430px] rounded-full border border-white/15 transition-transform duration-[2000ms] group-hover:scale-125" />
         <div className="pointer-events-none absolute -right-12 -top-12 h-[280px] w-[280px] rounded-full border border-white/15 transition-transform duration-[2000ms] group-hover:scale-110" />
@@ -164,7 +164,7 @@ export default function ProjectsPage() {
                 transform: "translateY(20px)",
                 transition: "opacity 700ms ease 100ms, transform 700ms ease 100ms",
               }}
-              className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#F4B65E]"
+              className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#B9741C]"
             >
               Jattari Real Estate Guide
             </p>
@@ -176,7 +176,7 @@ export default function ProjectsPage() {
                 transform: "translateY(24px)",
                 transition: "opacity 900ms ease 150ms, transform 900ms ease 150ms",
               }}
-              className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+              className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-[#10251F] sm:text-6xl lg:text-6xl"
             >
               Explore Property Opportunities in Jattari
             </h1>
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
                 transform: "translateY(20px)",
                 transition: "opacity 900ms ease 250ms, transform 900ms ease 250ms",
               }}
-              className="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg"
+              className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg"
             >
               Learn about residential and commercial plots, understand the
               property-buying process and submit an enquiry based on your
@@ -270,10 +270,10 @@ export default function ProjectsPage() {
               transform: "translateX(25px)",
               transition: "opacity 800ms ease 150ms, transform 800ms ease 150ms",
             }}
-            className="rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-shadow duration-500 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgb(23_43_38/10%)] sm:p-8"
+            className="rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-shadow duration-500 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgb(23_43_38/10%)] sm:p-8"
           >
             <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D] transition-transform duration-500 hover:rotate-12 hover:scale-110">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#E8F2F6] text-[#10251F] transition-transform duration-500 hover:rotate-12 hover:scale-110">
                 <ShieldCheck size={24} />
               </div>
 
@@ -290,7 +290,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href="/real-estate/buying-checklist"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:gap-4 hover:text-[#D58A28]"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:gap-4 hover:text-[#D58A28]"
                 >
                   Read the checklist
                   <ArrowRight size={16} />
@@ -302,7 +302,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* PROPERTY GUIDES */}
-      <section className="border-y border-[#E8E1D5] bg-white">
+      <section className="border-y border-[#D8E5E8] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div
@@ -334,7 +334,7 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            <div className="divide-y divide-[#E8E1D5]">
+            <div className="divide-y divide-[#D8E5E8]">
               {propertyGuides.map((guide, index) => {
                 const Icon = guide.icon;
 
@@ -348,7 +348,7 @@ export default function ProjectsPage() {
                       transform: "translateX(25px)",
                       transition: `opacity 700ms ease ${index * 120}ms, transform 700ms ease ${index * 120}ms`,
                     }}
-                    className="group block py-7 transition-colors duration-300 first:pt-0 last:pb-0 hover:bg-[#FFF9F0] sm:py-9 sm:hover:px-4"
+                    className="group block py-7 transition-colors duration-300 first:pt-0 last:pb-0 hover:bg-[#F4F8FA] sm:py-9 sm:hover:px-4"
                   >
                     <div className="flex items-start gap-5 sm:gap-7">
                       <span className="pt-1 text-sm font-medium tabular-nums text-[#A49D91] transition-colors duration-300 group-hover:text-[#D58A28]">
@@ -361,7 +361,7 @@ export default function ProjectsPage() {
                             {guide.title}
                           </h3>
 
-                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E8E1D5] text-[#06483D] transition-all duration-300 group-hover:rotate-[-45deg] group-hover:border-[#06483D] group-hover:bg-[#06483D] group-hover:text-white">
+                          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#D8E5E8] text-[#10251F] transition-all duration-300 group-hover:rotate-[-45deg] group-hover:border-[#10251F] group-hover:bg-[#10251F] group-hover:text-white">
                             <ArrowRight size={19} />
                           </span>
                         </div>
@@ -370,15 +370,15 @@ export default function ProjectsPage() {
                           {guide.description}
                         </p>
 
-                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D]">
+                        <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F]">
                           Explore guide
                           <span className="transition-transform duration-300 group-hover:translate-x-2">
-                            →
+                            â†’
                           </span>
                         </span>
                       </div>
 
-                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8F0E9] text-[#06483D] transition-all duration-500 group-hover:rotate-12 group-hover:bg-[#06483D] group-hover:text-white sm:flex">
+                      <div className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#E8F2F6] text-[#10251F] transition-all duration-500 group-hover:rotate-12 group-hover:bg-[#10251F] group-hover:text-white sm:flex">
                         <Icon size={22} />
                       </div>
                     </div>
@@ -426,9 +426,9 @@ export default function ProjectsPage() {
                 transform: "translateY(25px)",
                 transition: `opacity 800ms ease ${index * 150}ms, transform 800ms ease ${index * 150}ms`,
               }}
-              className="group overflow-hidden rounded-2xl border border-[#E8E1D5] bg-white shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/50 hover:shadow-[0_18px_40px_rgb(23_43_38/13%)]"
+              className="group overflow-hidden rounded-2xl border border-[#D8E5E8] bg-white shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/50 hover:shadow-[0_18px_40px_rgb(23_43_38/13%)]"
             >
-              <div className="relative h-60 overflow-hidden bg-[#E8F0E9] sm:h-72">
+              <div className="relative h-60 overflow-hidden bg-[#E8F2F6] sm:h-72">
                 <div
                   role="img"
                   aria-label={brand.imageAlt}
@@ -438,9 +438,9 @@ export default function ProjectsPage() {
                   }}
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-[#073B32]/30 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/30 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#073B32]/80 to-transparent p-5 pt-16">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10251F]/80 to-transparent p-5 pt-16">
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-xs font-medium text-white backdrop-blur-sm transition-transform duration-500 group-hover:-translate-y-1">
                     <MapPin size={13} />
                     Jattari region
@@ -453,7 +453,7 @@ export default function ProjectsPage() {
                   {brand.category}
                 </p>
 
-                <h3 className="mt-2 text-2xl font-semibold transition-colors duration-300 group-hover:text-[#06483D]">
+                <h3 className="mt-2 text-2xl font-semibold transition-colors duration-300 group-hover:text-[#10251F]">
                   {brand.name}
                 </h3>
 
@@ -463,7 +463,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#06483D] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#04382F] hover:shadow-lg"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#10251F] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
                 >
                   Enquire about this option
                   <ArrowRight
@@ -478,7 +478,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ADDITIONAL PROPERTY OPTIONS */}
-      <section className="border-y border-[#E8E1D5] bg-white">
+      <section className="border-y border-[#D8E5E8] bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
           <div
             data-project-reveal
@@ -504,7 +504,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="mt-8 divide-y divide-[#E8E1D5]">
+          <div className="mt-8 divide-y divide-[#D8E5E8]">
             {otherBrands.map((brand, index) => (
               <article
                 key={brand.name}
@@ -514,18 +514,18 @@ export default function ProjectsPage() {
                   transform: "translateX(25px)",
                   transition: `opacity 700ms ease ${index * 100}ms, transform 700ms ease ${index * 100}ms`,
                 }}
-                className="group grid gap-5 border-l-2 border-[#D58A28]/40 py-7 pl-5 transition-all duration-300 hover:border-[#D58A28] hover:bg-[#FFF9F0] sm:grid-cols-[1fr_auto] sm:items-center sm:hover:pl-8"
+                className="group grid gap-5 border-l-2 border-[#D58A28]/40 py-7 pl-5 transition-all duration-300 hover:border-[#D58A28] hover:bg-[#F4F8FA] sm:grid-cols-[1fr_auto] sm:items-center sm:hover:pl-8"
               >
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#68756F]">
                     Option 0{index + 3}
                   </p>
 
-                  <h3 className="mt-1 text-xl font-semibold transition-colors duration-300 group-hover:text-[#06483D]">
+                  <h3 className="mt-1 text-xl font-semibold transition-colors duration-300 group-hover:text-[#10251F]">
                     {brand.name}
                   </h3>
 
-                  <p className="mt-1 text-sm font-medium text-[#06483D]">
+                  <p className="mt-1 text-sm font-medium text-[#10251F]">
                     {brand.category}
                   </p>
 
@@ -536,7 +536,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-4 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:bg-[#06483D] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-4 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
                 >
                   Enquire
                   <ArrowRight size={16} />
@@ -556,7 +556,7 @@ export default function ProjectsPage() {
             transform: "translateY(20px)",
             transition: "opacity 800ms ease, transform 800ms ease",
           }}
-          className="grid gap-8 rounded-2xl border border-[#E8E1D5] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-shadow duration-500 hover:shadow-[0_14px_35px_rgb(23_43_38/10%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12"
+          className="grid gap-8 rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-[0_4px_20px_rgb(23_43_38/7%)] transition-shadow duration-500 hover:shadow-[0_14px_35px_rgb(23_43_38/10%)] sm:p-9 lg:grid-cols-[1fr_auto] lg:items-center lg:p-12"
         >
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FFF0D8] text-[#B9741C] transition-all duration-500 hover:rotate-[-10deg] hover:scale-110">
@@ -576,7 +576,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/real-estate/buying-checklist"
-            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#06483D] px-5 py-3.5 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:bg-[#06483D] hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-5 py-3.5 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
           >
             Open checklist
             <ArrowRight size={17} />
@@ -585,7 +585,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* FINAL ENQUIRY CTA */}
-      <section className="group relative overflow-hidden bg-[#073B32]">
+      <section className="group relative overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA]">
         <div className="pointer-events-none absolute -right-20 -top-32 h-96 w-96 rounded-full border border-white/10 transition-transform duration-[2000ms] group-hover:scale-125" />
         <div className="pointer-events-none absolute -right-5 -top-16 h-64 w-64 rounded-full border border-white/10 transition-transform duration-[2000ms] group-hover:scale-110" />
 
@@ -600,16 +600,16 @@ export default function ProjectsPage() {
               }}
               className="max-w-2xl"
             >
-              <div className="flex items-center gap-2 text-sm font-medium text-[#F4B65E]">
+              <div className="flex items-center gap-2 text-sm font-medium text-[#B9741C]">
                 <MessageSquare size={17} />
                 Property requirements
               </div>
 
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#10251F] sm:text-4xl">
                 Looking for a property in Jattari?
               </h2>
 
-              <p className="mt-4 leading-7 text-white/80">
+              <p className="mt-4 leading-7 text-[#263D3A]">
                 Submit your requirements through the property enquiry
                 page to tell us what type of property you are exploring.
               </p>
@@ -640,3 +640,4 @@ export default function ProjectsPage() {
     </main>
   );
 }
+

@@ -130,28 +130,28 @@ export default function LibrariesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[420px] overflow-hidden bg-[#073B32] sm:min-h-[480px]">
+      <section className="group relative isolate min-h-[420px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[480px]">
         <img
           src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=85"
           alt="Library with bookshelves and reading spaces"
           aria-hidden="true"
-          className="absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
           onError={(event) => {
             event.currentTarget.style.display = "none";
           }}
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
 
         {/* Decorative book-inspired lines */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-[-70px] top-[-80px] -z-0 h-[360px] w-[260px] rotate-12 rounded-[45%] border border-white/15 transition-transform duration-1000 group-hover:rotate-[22deg] group-hover:scale-110 sm:right-10 sm:h-[480px] sm:w-[340px]"
+          className="pointer-events-none absolute right-[-70px] top-[-80px] -z-0 h-[360px] w-[260px] rotate-12 rounded-[45%] border border-[#10251F]/15 transition-transform duration-1000 group-hover:rotate-[22deg] group-hover:scale-110 sm:right-10 sm:h-[480px] sm:w-[340px]"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-[-20px] top-[-35px] -z-0 h-[300px] w-[210px] rotate-12 rounded-[45%] border border-white/10 transition-transform duration-1000 group-hover:-rotate-3 group-hover:scale-110 sm:right-24 sm:h-[400px] sm:w-[280px]"
+          className="pointer-events-none absolute right-[-20px] top-[-35px] -z-0 h-[300px] w-[210px] rotate-12 rounded-[45%] border border-[#10251F]/10 transition-transform duration-1000 group-hover:-rotate-3 group-hover:scale-110 sm:right-24 sm:h-[400px] sm:w-[280px]"
         />
 
         <div
@@ -159,13 +159,12 @@ export default function LibrariesPage() {
           className="pointer-events-none absolute bottom-[-100px] left-[30%] -z-0 h-64 w-64 rounded-full bg-[#D58A28]/15 blur-3xl transition-transform duration-1000 group-hover:scale-125"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-center px-6 py-16 sm:min-h-[480px] md:px-10 md:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-center px-6 pt-28 pb-12 sm:min-h-[480px] sm:pt-32 sm:pb-16 md:px-10">
           <div
             data-reveal
-            className={`max-w-3xl text-white ${revealLeft}`}
+            className={`max-w-3xl text-[#10251F] ${revealLeft}`}
           >
-            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#F4B65E]">
-              <span className="h-px w-9 bg-[#F4B65E]" />
+            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C]"><span className="h-px w-9 bg-[#B9741C]" />
               Jattari Education Directory
             </p>
 
@@ -173,17 +172,15 @@ export default function LibrariesPage() {
               Libraries Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
-              Discover local libraries, digital study spaces and reading
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">Discover local libraries, digital study spaces and reading
               facilities in Jattari and surrounding areas.
             </p>
 
-            <p className="mt-7 text-sm font-medium text-white/90">
-              <span className="font-bold text-[#F4B65E]">
-                {libraries.length}
+            <p className="mt-7 text-sm font-medium text-[#263D3A]">
+              <span className="font-bold text-[#D58A28]">{libraries.length}
               </span>{" "}
               directory entries
-              <span className="mx-2 text-white/50">·</span>
+              <span className="mx-2 text-[#263D3A]/50">·</span>
               Aligarh, Uttar Pradesh
             </p>
 
@@ -318,7 +315,7 @@ export default function LibrariesPage() {
       </section>
 
       {/* Residential Awareness and Brand Promotion */}
-      <section className="relative isolate overflow-hidden bg-[#073B32] px-6 py-14 text-white md:px-10 md:py-16">
+      <section className="relative isolate overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA] px-6 py-12 text-[#10251F] md:px-10 md:py-14">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-20 -top-24 -z-10 h-80 w-80 rounded-full border border-white/10"
@@ -335,11 +332,11 @@ export default function LibrariesPage() {
               Beyond Learning
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[#10251F] sm:text-4xl">
               Education, neighbourhood and better living.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
               When families explore a place to live, educational facilities,
               everyday connectivity and nearby services can all be part of
               their research. Explore these residential projects to learn
@@ -352,17 +349,17 @@ export default function LibrariesPage() {
             <div
               data-reveal
               style={{ transitionDelay: "100ms" }}
-              className={`group rounded-2xl border border-white/15 bg-white/[0.07] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealLeft}`}
+              className={`group rounded-2xl border border-[#D8E5E8] bg-white text-[#10251F] shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealLeft}`}
             >
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F4B65E]">
                 Residential Project · Jattari
               </p>
 
-              <h3 className="mt-3 text-2xl font-extrabold text-white transition-transform duration-300 group-hover:translate-x-1">
+              <h3 className="mt-3 text-2xl font-extrabold text-[#10251F] transition-transform duration-300 group-hover:translate-x-1">
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Explore Anugrah Homes and learn more about its residential
                 project in Jattari. Visit the official website for project
                 information and enquiries.
@@ -383,17 +380,17 @@ export default function LibrariesPage() {
             <div
               data-reveal
               style={{ transitionDelay: "220ms" }}
-              className={`group rounded-2xl border border-white/15 bg-white/[0.07] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealRight}`}
+              className={`group rounded-2xl border border-[#D8E5E8] bg-white text-[#10251F] shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealRight}`}
             >
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F4B65E]">
                 Residential Project · Jewar Region
               </p>
 
-              <h3 className="mt-3 text-2xl font-extrabold text-white transition-transform duration-300 group-hover:translate-x-1">
+              <h3 className="mt-3 text-2xl font-extrabold text-[#10251F] transition-transform duration-300 group-hover:translate-x-1">
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Discover Skyline Aero Homes and explore its residential
                 offerings in the wider Jewar region. Visit the official
                 website for project details and enquiries.

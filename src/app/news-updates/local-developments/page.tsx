@@ -73,17 +73,17 @@ export default function LocalDevelopmentsPage() {
 
         {/* Light overlay only behind the text */}
         <div
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#FFF9F0]/55 via-[#FFF9F0]/25 to-transparent"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#F4F8FA]/55 via-[#F4F8FA]/25 to-transparent"
           aria-hidden="true"
         />
 
         <div className="container-site relative mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#06483D]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#10251F]">
               Jattari · Local Development
             </p>
 
-            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-[#172B26] sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-[#10251F] sm:text-5xl lg:text-6xl">
               Local Developments & Infrastructure Updates
             </h1>
 

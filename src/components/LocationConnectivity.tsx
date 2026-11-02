@@ -267,13 +267,13 @@ const places = [
 ];
 
 const sectionLabel =
-  "inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#B9741C]";
+  "inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#D58A28]";
 
 const sectionHeading =
-  "text-3xl font-extrabold leading-tight tracking-tight text-[#172B26] sm:text-4xl lg:text-5xl";
+  "text-3xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-4xl lg:text-5xl";
 
 const bodyText =
-  "text-sm leading-7 text-[#64736D] sm:text-base sm:leading-8";
+  "text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8";
 
 const revealClasses =
   "about-reveal-section translate-y-8 opacity-0 transition-all duration-700 ease-out motion-reduce:translate-y-0 motion-reduce:opacity-100 motion-reduce:transition-none";
@@ -304,7 +304,6 @@ export default function AboutJattari() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [selectedPlace, setSelectedPlace] = useState("jattari");
   const [activeTopic, setActiveTopic] = useState(0);
-  const [revealed, setRevealed] = useState(false);
 
   const currentPlace =
     places.find((place) => place.id === selectedPlace) ?? places[0];
@@ -326,7 +325,6 @@ export default function AboutJattari() {
         section.classList.remove("translate-y-8", "opacity-0");
         section.classList.add("translate-y-0", "opacity-100");
       });
-      setRevealed(true);
       return;
     }
 
@@ -351,7 +349,6 @@ export default function AboutJattari() {
       observer.observe(section);
     });
 
-    setRevealed(true);
 
     return () => observer.disconnect();
   }, []);
@@ -398,37 +395,37 @@ export default function AboutJattari() {
   const selectedTravel = travelOptions[activeTravel];
 
   return (
-    <main className="overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* 01 — ABOUT HERO */}
-      <section className={`${revealClasses} relative overflow-hidden bg-[#FFF9F0] text-[#06483D]`}>
+      <section className={`${revealClasses} relative overflow-hidden bg-gradient-to-b from-[#E4EDF0] via-[#F4F8FA] to-[#F4F8FA] text-[#10251F]`}>
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-32 -top-24 h-[500px] w-[500px] rounded-full border border-[#D58A28]/20 transition-transform duration-1000 hover:scale-110"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-16 -top-12 h-[360px] w-[360px] rounded-full border border-[#06483D]/10"
+          className="pointer-events-none absolute -right-16 -top-12 h-[360px] w-[360px] rounded-full border border-[#10251F]/10"
         />
 
         <div className="container-site relative py-16 sm:py-24 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="relative w-full py-10 sm:py-14">
-              <div className="flex items-center justify-between border-y border-[#06483D]/20 py-4">
+              <div className="flex items-center justify-between border-y border-[#10251F]/20 py-4">
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#B9741C]">
                   Jattari Explorer / Field Notes
                 </p>
-                <p className="text-[10px] font-semibold tracking-widest text-[#89958E]">
+                <p className="text-[10px] font-semibold tracking-widest text-[#5C736D]">
                   LOCATION PROFILE — 001
                 </p>
               </div>
 
               <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_100px_0.85fr] lg:items-center">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#89958E]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#5C736D]">
                     A closer look at
                   </p>
 
-                  <h1 className="mt-4 text-5xl font-bold tracking-[-0.055em] text-[#06483D] transition-all duration-500 hover:tracking-[-0.025em] sm:text-6xl">
+                  <h1 className="mt-4 text-5xl font-bold tracking-[-0.055em] text-[#10251F] transition-all duration-500 hover:tracking-[-0.025em] sm:text-6xl">
                     Jattari<span className="text-[#D58A28]">.</span>
                   </h1>
 
@@ -437,11 +434,11 @@ export default function AboutJattari() {
                   </p>
 
                   <div className="mt-8 max-w-md">
-                    <h2 className="text-2xl font-semibold leading-snug text-[#06483D] sm:text-3xl">
+                    <h2 className="text-2xl font-semibold leading-snug text-[#10251F] sm:text-3xl">
                       Discover a place through the details that define it.
                     </h2>
 
-                    <p className="mt-5 text-sm leading-8 text-[#64736D]">
+                    <p className="mt-5 text-sm leading-8 text-[#263D3A]">
                       Explore Jattari through its geographical setting,
                       regional connectivity, everyday facilities, local
                       surroundings and property-related information.
@@ -451,7 +448,7 @@ export default function AboutJattari() {
                   <div className="mt-9 flex flex-wrap gap-6">
                     <Link
                       href="/#explore"
-                      className="group inline-flex items-center gap-3 border-b-2 border-[#D58A28] pb-2 text-sm font-bold text-[#06483D] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
+                      className="group inline-flex items-center gap-3 border-b-2 border-[#D58A28] pb-2 text-sm font-bold text-[#10251F] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
                     >
                       Explore Jattari
                       <span className="text-[#D58A28] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -461,24 +458,24 @@ export default function AboutJattari() {
 
                     <Link
                       href="/#contact"
-                      className="inline-flex items-center gap-2 pb-2 text-sm font-semibold text-[#7B8981] transition-all duration-300 hover:gap-3 hover:text-[#B9741C]"
+                      className="inline-flex items-center gap-2 pb-2 text-sm font-semibold text-[#5C736D] transition-all duration-300 hover:gap-3 hover:text-[#B9741C]"
                     >
                       Contact us <span>→</span>
                     </Link>
                   </div>
                 </div>
 
-                <div className="hidden h-[340px] flex-col items-center justify-center border-x border-[#06483D]/15 lg:flex">
+                <div className="hidden h-[340px] flex-col items-center justify-center border-x border-[#10251F]/15 lg:flex">
                   <span className="text-[76px] font-extralight leading-none tracking-[-0.1em] text-[#D58A28] transition-transform duration-500 hover:scale-110">
                     01
                   </span>
                   <span className="mt-5 h-20 w-px bg-[#D58A28]/60" />
-                  <span className="mt-5 text-[9px] font-bold uppercase tracking-[0.25em] text-[#89958E] [writing-mode:vertical-rl]">
+                  <span className="mt-5 text-[9px] font-bold uppercase tracking-[0.25em] text-[#5C736D] [writing-mode:vertical-rl]">
                     Explore the neighbourhood
                   </span>
                 </div>
 
-                <div className="border-t border-[#06483D]/20 lg:border-t-0">
+                <div className="border-t border-[#10251F]/20 lg:border-t-0">
                   <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.25em] text-[#B9741C]">
                     Inside this guide
                   </p>
@@ -508,17 +505,17 @@ export default function AboutJattari() {
                     <div
                       key={item.number}
                       style={{ transitionDelay: `${index * 80}ms` }}
-                      className="group grid grid-cols-[35px_1fr] gap-4 border-b border-[#06483D]/15 py-5 transition-all duration-300 hover:translate-x-2 hover:border-[#D58A28]"
+                      className="group grid grid-cols-[35px_1fr] gap-4 border-b border-[#10251F]/15 py-5 transition-all duration-300 hover:translate-x-2 hover:border-[#D58A28]"
                     >
                       <span className="pt-1 text-xs font-semibold text-[#B9741C]">
                         {item.number}
                       </span>
 
                       <div>
-                        <h3 className="text-sm font-bold text-[#06483D] transition-colors group-hover:text-[#B9741C]">
+                        <h3 className="text-sm font-bold text-[#10251F] transition-colors group-hover:text-[#B9741C]">
                           {item.title}
                         </h3>
-                        <p className="mt-2 text-xs leading-6 text-[#89958E]">
+                        <p className="mt-2 text-xs leading-6 text-[#5C736D]">
                           {item.detail}
                         </p>
                       </div>
@@ -527,7 +524,7 @@ export default function AboutJattari() {
                 </div>
               </div>
 
-              <div className="mt-12 grid grid-cols-2 border-y border-[#06483D]/20 sm:grid-cols-4">
+              <div className="mt-12 grid grid-cols-2 border-y border-[#10251F]/20 sm:grid-cols-4">
                 {[
                   ["REGION", "North India"],
                   ["STATE", "Uttar Pradesh"],
@@ -537,12 +534,12 @@ export default function AboutJattari() {
                   <div
                     key={label}
                     style={{ transitionDelay: `${index * 80}ms` }}
-                    className="group border-b border-r border-[#06483D]/10 px-4 py-5 transition-colors duration-300 hover:bg-[#F3EBDD] last:border-r-0 sm:border-b-0"
+                    className="group border-b border-r border-[#10251F]/10 px-4 py-5 transition-colors duration-300 hover:bg-[#EAF2F6] last:border-r-0 sm:border-b-0"
                   >
-                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#89958E]">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-[#5C736D]">
                       {label}
                     </p>
-                    <p className="mt-2 text-sm font-semibold text-[#06483D] transition-colors group-hover:text-[#B9741C]">
+                    <p className="mt-2 text-sm font-semibold text-[#10251F] transition-colors group-hover:text-[#B9741C]">
                       {value}
                     </p>
                   </div>
@@ -552,20 +549,20 @@ export default function AboutJattari() {
 
             <div className="relative mx-auto flex aspect-square w-full max-w-[360px] items-center justify-center">
               <div className="absolute inset-5 rounded-full border border-[#D58A28]/35 transition-transform duration-1000 hover:scale-105" />
-              <div className="absolute inset-12 rounded-full border border-[#06483D]/15" />
+              <div className="absolute inset-12 rounded-full border border-[#10251F]/15" />
               <div className="absolute inset-20 rounded-full border border-dashed border-[#D58A28]/40" />
 
-              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[#06483D]/10" />
-              <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-[#06483D]/10" />
+              <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[#10251F]/10" />
+              <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-[#10251F]/10" />
 
-              <div className="relative flex h-48 w-48 flex-col items-center justify-center rounded-full bg-[#06483D] text-center text-white shadow-2xl shadow-[#06483D]/15 transition-transform duration-700 hover:scale-105 sm:h-56 sm:w-56">
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F2AE45]">
+              <div className="relative flex h-48 w-48 flex-col items-center justify-center rounded-full border border-[#D8E5E8] bg-white text-center text-[#10251F] shadow-xl transition-transform duration-700 hover:scale-105 sm:h-56 sm:w-56">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D58A28]">
                   Uttar Pradesh
                 </span>
-                <span className="mt-1 text-8xl font-black leading-none">
+                <span className="mt-1 text-8xl font-black leading-none text-[#10251F]">
                   J
                 </span>
-                <span className="mt-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-white/65">
+                <span className="mt-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#5C736D]">
                   Discover Jattari
                 </span>
               </div>
@@ -574,16 +571,16 @@ export default function AboutJattari() {
                 Explore
               </span>
 
-              <span className="absolute bottom-[15%] left-0 rounded-full border border-[#06483D]/10 bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-[#06483D] shadow-sm transition-transform duration-300 hover:translate-y-1">
+              <span className="absolute bottom-[15%] left-0 rounded-full border border-[#10251F]/10 bg-white px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-[#10251F] shadow-sm transition-transform duration-300 hover:translate-y-1">
                 Discover
               </span>
 
               <span className="absolute left-[17%] top-[20%] h-3 w-3 animate-pulse rounded-full bg-[#D58A28] motion-reduce:animate-none" />
-              <span className="absolute bottom-[24%] right-[17%] h-2.5 w-2.5 animate-pulse rounded-full bg-[#0B5A49] motion-reduce:animate-none" />
+              <span className="absolute bottom-[24%] right-[17%] h-2.5 w-2.5 animate-pulse rounded-full bg-[#254C3C] motion-reduce:animate-none" />
             </div>
           </div>
 
-          <div className="mt-16 grid gap-5 border-t border-[#06483D]/15 pt-7 sm:grid-cols-3">
+          <div className="mt-16 grid gap-5 border-t border-[#10251F]/15 pt-7 sm:grid-cols-3">
             {[
               ["01", "Town", "Jattari"],
               ["02", "District", "Aligarh, Uttar Pradesh"],
@@ -597,8 +594,8 @@ export default function AboutJattari() {
                   {number}
                 </span>
                 <div>
-                  <p className="text-xs text-[#7B8981]">{label}</p>
-                  <p className="mt-1 text-sm font-bold text-[#06483D] transition-colors group-hover:text-[#B9741C]">
+                  <p className="text-xs text-[#5C736D]">{label}</p>
+                  <p className="mt-1 text-sm font-bold text-[#10251F] transition-colors group-hover:text-[#B9741C]">
                     {value}
                   </p>
                 </div>
@@ -609,20 +606,20 @@ export default function AboutJattari() {
       </section>
 
       {/* 02 — ABOUT JATTARI */}
-      <section className={`${revealClasses} relative overflow-hidden bg-[#F3EBDD] py-20 sm:py-28`}>
+      <section className={`${revealClasses} relative overflow-hidden bg-[#EAF2F6] py-20 sm:py-28`}>
         <div className="container-site">
           <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
             <div>
               <span className={sectionLabel}>01 / About the place</span>
-              <p className="mt-6 max-w-[220px] text-sm font-semibold uppercase leading-6 tracking-[0.15em] text-[#06483D]">
+              <p className="mt-6 max-w-[220px] text-sm font-semibold uppercase leading-6 tracking-[0.15em] text-[#10251F]">
                 Understanding a town beyond its name.
               </p>
             </div>
 
             <div className="max-w-3xl">
-              <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-[#172B26] transition-all duration-500 hover:tracking-normal sm:text-5xl lg:text-6xl">
+              <h2 className="text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] transition-all duration-500 hover:tracking-normal sm:text-5xl lg:text-6xl">
                 A closer look at
-                <span className="block text-[#0B5A49]">Jattari.</span>
+                <span className="block text-[#254C3C]">Jattari.</span>
               </h2>
 
               <div className="mt-8 grid gap-7 sm:grid-cols-2">
@@ -640,8 +637,8 @@ export default function AboutJattari() {
                 </p>
               </div>
 
-              <div className="mt-8 border-t border-[#06483D]/20 pt-6">
-                <p className="max-w-2xl text-lg font-semibold leading-8 text-[#06483D]">
+              <div className="mt-8 border-t border-[#10251F]/20 pt-6">
+                <p className="max-w-2xl text-lg font-semibold leading-8 text-[#10251F]">
                   Jattari Explorer brings these subjects together in one guide.
                   Use it as a starting point, and verify specific addresses,
                   services and travel details before making plans.
@@ -650,7 +647,7 @@ export default function AboutJattari() {
 
               <Link
                 href="#location"
-                className="group mt-8 inline-flex items-center gap-3 text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
+                className="group mt-8 inline-flex items-center gap-3 text-sm font-bold text-[#254C3C] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
               >
                 Explore the regional map
                 <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -665,7 +662,7 @@ export default function AboutJattari() {
       {/* 03 — INTERACTIVE REGIONAL MAP */}
       <section
         id="location"
-        className={`${revealClasses} bg-[#FFF9F0] py-20 sm:py-24`}
+        className={`${revealClasses} bg-[#F4F8FA] py-20 sm:py-24`}
       >
         <div className="container-site">
           <SectionHeading
@@ -675,10 +672,10 @@ export default function AboutJattari() {
           />
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="group relative overflow-hidden rounded-[2rem] border border-[#06483D]/15 bg-[#F3EBDD] p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl sm:p-7">
+            <div className="group relative overflow-hidden rounded-[2rem] border border-[#10251F]/15 bg-[#EAF2F6] p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl sm:p-7">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(#0B5A49_1px,transparent_1px)] bg-[size:20px_20px] opacity-40"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(#254C3C_1px,transparent_1px)] bg-[size:20px_20px] opacity-40"
               />
 
               <svg
@@ -697,7 +694,7 @@ export default function AboutJattari() {
                 <path
                   d="M300 250 C390 180 440 140 510 90"
                   fill="none"
-                  stroke="#0B5A49"
+                  stroke="#254C3C"
                   strokeWidth="3"
                   strokeDasharray="7 8"
                 />
@@ -711,7 +708,7 @@ export default function AboutJattari() {
                 <path
                   d="M300 250 C200 300 140 350 90 390"
                   fill="none"
-                  stroke="#0B5A49"
+                  stroke="#254C3C"
                   strokeWidth="3"
                   strokeDasharray="7 8"
                 />
@@ -725,7 +722,7 @@ export default function AboutJattari() {
                 <path
                   d="M300 250 L300 35 M300 250 L300 470"
                   fill="none"
-                  stroke="#0B5A49"
+                  stroke="#254C3C"
                   strokeOpacity=".2"
                   strokeWidth="2"
                 />
@@ -752,7 +749,7 @@ export default function AboutJattari() {
                     >
                       <span className="flex flex-col items-center">
                         <span
-                          className={`relative flex items-center justify-center overflow-hidden rounded-full border-[3px] border-[#FFF9F0] shadow-lg transition-all duration-500 ${
+                          className={`relative flex items-center justify-center overflow-hidden rounded-full border-[3px] border-[#F4F8FA] shadow-lg transition-all duration-500 ${
                             isMain
                               ? "h-[76px] w-[76px] ring-4 ring-[#D58A28]/30 group-hover:ring-[#D58A28]/60 sm:h-[84px] sm:w-[84px]"
                               : isSelected
@@ -776,10 +773,10 @@ export default function AboutJattari() {
                         <span
                           className={`mt-2 whitespace-nowrap rounded-full border px-2.5 py-1.5 text-[9px] font-extrabold shadow-sm transition-all duration-300 sm:px-3 sm:text-[11px] ${
                             isSelected
-                              ? "border-[#D58A28] bg-[#06483D] text-white"
+                              ? "border-[#D58A28] bg-[#10251F] text-white"
                               : isMain
-                                ? "border-[#D58A28] bg-white text-[#06483D]"
-                                : "border-[#06483D]/10 bg-white/95 text-[#172B26] group-hover:border-[#D58A28] group-hover:bg-[#06483D] group-hover:text-white"
+                                ? "border-[#D58A28] bg-white text-[#10251F]"
+                                : "border-[#10251F]/10 bg-white/95 text-[#10251F] group-hover:border-[#D58A28] group-hover:bg-[#10251F] group-hover:text-white"
                           }`}
                         >
                           {place.name}
@@ -794,18 +791,18 @@ export default function AboutJattari() {
                 </div>
               </div>
 
-              <div className="relative mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-[#06483D]/15 pt-5">
-                <span className="flex items-center gap-2 text-[10px] font-semibold text-[#53645E]">
+              <div className="relative mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-[#10251F]/15 pt-5">
+                <span className="flex items-center gap-2 text-[10px] font-semibold text-[#4A605A]">
                   <span className="h-3 w-3 rounded-full bg-[#D58A28]" />
                   Main destination
                 </span>
-                <span className="flex items-center gap-2 text-[10px] font-semibold text-[#53645E]">
-                  <span className="h-3 w-3 rounded-full bg-[#0B5A49]" />
+                <span className="flex items-center gap-2 text-[10px] font-semibold text-[#4A605A]">
+                  <span className="h-3 w-3 rounded-full bg-[#254C3C]" />
                   Nearby locations
                 </span>
               </div>
 
-              <p className="relative mt-4 text-center text-[10px] leading-5 text-[#64736D]">
+              <p className="relative mt-4 text-center text-[10px] leading-5 text-[#263D3A]">
                 Illustrative regional connectivity diagram, not a scale-accurate
                 navigation map. Verify exact routes and directions before travelling.
               </p>
@@ -813,29 +810,29 @@ export default function AboutJattari() {
 
             <div
               key={currentPlace.id}
-              className="flex flex-col justify-between rounded-[2rem] bg-[#06483D] p-7 text-white shadow-lg transition-all duration-500 animate-in fade-in slide-in-from-bottom-3 sm:p-9"
+              className="flex flex-col justify-between rounded-[2rem] border border-[#D8E5E8] bg-white p-7 text-[#10251F] shadow-md transition-all duration-500 animate-in fade-in slide-in-from-bottom-3 sm:p-9"
             >
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#F2AE45]">
+                <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#D58A28]">
                   Explore the region
                 </span>
 
-                <p className="mt-10 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+                <p className="mt-8 text-xs font-semibold uppercase tracking-[0.2em] text-[#5C736D]">
                   {currentPlace.category}
                 </p>
 
-                <h3 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+                <h3 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl text-[#10251F]">
                   {currentPlace.name}
-                  <span className="text-[#F2AE45]">.</span>
+                  <span className="text-[#D58A28]">.</span>
                 </h3>
 
-                <p className="mt-6 text-sm leading-8 text-white/70 sm:text-base">
+                <p className="mt-5 text-sm leading-8 text-[#263D3A] sm:text-base">
                   {currentPlace.description}
                 </p>
               </div>
 
-              <div className="mt-10 border-t border-white/15 pt-6">
-                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#F2AE45]">
+              <div className="mt-8 border-t border-[#D8E5E8] pt-6">
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#D58A28]">
                   Explore other locations
                 </p>
 
@@ -847,8 +844,8 @@ export default function AboutJattari() {
                       onClick={() => setSelectedPlace(place.id)}
                       className={`rounded-full border px-3 py-2 text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                         selectedPlace === place.id
-                          ? "border-[#D58A28] bg-[#D58A28] text-white shadow-md"
-                          : "border-white/20 text-white/70 hover:border-[#F2AE45] hover:text-[#F2AE45]"
+                          ? "border-[#D58A28] bg-[#D58A28] text-white shadow-sm"
+                          : "border-[#D8E5E8] bg-[#F4F8FA] text-[#10251F] hover:border-[#D58A28] hover:bg-white"
                       }`}
                     >
                       {place.name}
@@ -862,7 +859,7 @@ export default function AboutJattari() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mt-7 inline-flex items-center gap-3 text-sm font-bold text-[#F2AE45] transition-all duration-300 hover:gap-5"
+                  className="group mt-6 inline-flex items-center gap-3 text-sm font-bold text-[#D58A28] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
                 >
                   View selected location on Google Maps
                   <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
@@ -876,21 +873,21 @@ export default function AboutJattari() {
       </section>
 
       {/* 04 — CONNECTIVITY */}
-      <section className={`${revealClasses} relative overflow-hidden bg-[#06483D] py-20 text-white sm:py-24`}>
+      <section className={`${revealClasses} relative overflow-hidden bg-[#F4F8FA] py-16 sm:py-20 text-[#10251F]`}>
         <div className="container-site">
           <div className="mb-12 max-w-3xl">
-            <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#F2AE45]">
+            <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#D58A28]">
               03 / Connectivity & Travel
             </span>
 
-            <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-5xl lg:text-6xl">
               Closer to Every
-              <span className="block text-[#F2AE45]">Destination.</span>
+              <span className="block text-[#D58A28]">Destination.</span>
             </h2>
           </div>
 
           <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="group relative min-h-[380px] overflow-hidden rounded-[24px] bg-[#0A5749] sm:min-h-[480px]">
+            <div className="group relative min-h-[380px] overflow-hidden rounded-[24px] border border-[#D8E5E8] bg-white shadow-md sm:min-h-[480px]">
               <Image
                 key={selectedTravel.image}
                 src={selectedTravel.image}
@@ -900,7 +897,7 @@ export default function AboutJattari() {
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#062E27]/90 via-[#062E27]/10 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/85 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-90" />
 
               <div className="absolute left-6 top-6 rounded-full border border-white/30 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">
                 {selectedTravel.number} / 04
@@ -925,11 +922,11 @@ export default function AboutJattari() {
             </div>
 
             <div className="flex flex-col justify-center">
-              <p className="mb-6 text-[11px] font-bold uppercase tracking-[0.22em] text-[#F2AE45]">
+              <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.22em] text-[#D58A28]">
                 Explore travel essentials
               </p>
 
-              <div className="border-t border-white/15">
+              <div className="border-t border-[#D8E5E8]">
                 {travelOptions.map((item, index) => {
                   const isActive = activeTravel === index;
 
@@ -939,15 +936,17 @@ export default function AboutJattari() {
                       type="button"
                       onClick={() => setActiveTravel(index)}
                       aria-pressed={isActive}
-                      className={`group grid w-full grid-cols-[48px_1fr_28px] items-center gap-4 border-b border-white/15 py-6 text-left transition-all duration-300 ${
-                        isActive ? "bg-white/5 pl-3" : "hover:bg-white/5 hover:pl-3"
+                      className={`group grid w-full grid-cols-[48px_1fr_28px] items-center gap-4 border-b border-[#D8E5E8] py-5 text-left transition-all duration-300 rounded-xl px-2 ${
+                        isActive
+                          ? "bg-white shadow-sm border-[#D58A28] px-4"
+                          : "hover:bg-white/70 hover:px-4"
                       }`}
                     >
                       <span
                         className={`text-sm font-bold tracking-widest transition-colors ${
                           isActive
-                            ? "text-[#F2AE45]"
-                            : "text-white/35 group-hover:text-[#F2AE45]"
+                            ? "text-[#D58A28]"
+                            : "text-[#5C736D] group-hover:text-[#D58A28]"
                         }`}
                       >
                         {item.number}
@@ -957,14 +956,14 @@ export default function AboutJattari() {
                         <span
                           className={`block text-xl font-bold transition-colors sm:text-2xl ${
                             isActive
-                              ? "text-[#F2AE45]"
-                              : "text-white group-hover:text-[#F2AE45]"
+                              ? "text-[#10251F]"
+                              : "text-[#10251F] group-hover:text-[#D58A28]"
                           }`}
                         >
                           {item.title}
                         </span>
 
-                        <span className="mt-2 block text-sm leading-7 text-white/55">
+                        <span className="mt-1 block text-sm leading-6 text-[#263D3A]">
                           {item.description}
                         </span>
                       </span>
@@ -972,8 +971,8 @@ export default function AboutJattari() {
                       <span
                         className={`text-xl transition-all duration-300 ${
                           isActive
-                            ? "translate-x-1 text-[#F2AE45]"
-                            : "text-white/35 group-hover:translate-x-1 group-hover:text-[#F2AE45]"
+                            ? "translate-x-1 text-[#D58A28]"
+                            : "text-[#5C736D] group-hover:translate-x-1 group-hover:text-[#D58A28]"
                         }`}
                       >
                         →
@@ -983,14 +982,14 @@ export default function AboutJattari() {
                 })}
               </div>
 
-              <p className="mt-6 text-xs leading-6 text-white/45">
+              <p className="mt-5 text-xs leading-6 text-[#5C736D]">
                 Actual journey time depends on your starting point, vehicle,
                 route and traffic. Check current travel conditions before departure.
               </p>
 
               <Link
                 href="/#location"
-                className="group mt-6 inline-flex w-fit items-center gap-3 text-sm font-bold text-[#F2AE45] transition-all duration-300 hover:gap-5"
+                className="group mt-6 inline-flex w-fit items-center gap-3 text-sm font-bold text-[#D58A28] transition-all duration-300 hover:gap-5 hover:text-[#B9741C]"
               >
                 Explore location information
                 <span className="transition-transform group-hover:translate-x-1">
@@ -1003,7 +1002,7 @@ export default function AboutJattari() {
       </section>
 
       {/* 05 — EVERYDAY LIFE */}
-      <section className={`${revealClasses} relative overflow-hidden bg-[#F3EBDD] py-20 sm:py-28`}>
+      <section className={`${revealClasses} relative overflow-hidden bg-[#EAF2F6] py-20 sm:py-28`}>
         <div className="container-site">
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div className="relative">
@@ -1011,17 +1010,17 @@ export default function AboutJattari() {
 
               <h2 className={`mt-6 max-w-md ${sectionHeading}`}>
                 A neighbourhood shaped by{" "}
-                <span className="text-[#0B5A49]">everyday living.</span>
+                <span className="text-[#254C3C]">everyday living.</span>
               </h2>
 
-              <p className="mt-6 max-w-sm text-sm leading-8 text-[#64736D]">
+              <p className="mt-6 max-w-sm text-sm leading-8 text-[#263D3A]">
                 Discover the local facilities, familiar services and everyday
                 essentials that make Jattari an active neighbourhood.
               </p>
 
               <Link
                 href="/#location"
-                className="group mt-9 inline-flex items-center gap-3 border-b border-[#0B5A49]/30 pb-2 text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:gap-5 hover:border-[#D58A28]"
+                className="group mt-9 inline-flex items-center gap-3 border-b border-[#254C3C]/30 pb-2 text-sm font-bold text-[#254C3C] transition-all duration-300 hover:gap-5 hover:border-[#D58A28]"
               >
                 Explore Jattari location
                 <span className="text-lg transition-transform duration-300 group-hover:translate-x-2">
@@ -1033,7 +1032,7 @@ export default function AboutJattari() {
                 <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#B9741C]">
                   The local perspective
                 </p>
-                <p className="mt-3 text-sm leading-7 text-[#64736D]">
+                <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                   Small everyday details come together to define the character
                   of a place.
                 </p>
@@ -1041,12 +1040,12 @@ export default function AboutJattari() {
             </div>
 
             <div className="relative">
-              <div className="mb-7 flex items-center justify-between border-b border-[#06483D]/20 pb-4">
+              <div className="mb-7 flex items-center justify-between border-b border-[#10251F]/20 pb-4">
                 <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#B9741C]">
                   Jattari / Local Directory
                 </span>
 
-                <span className="text-xs font-semibold text-[#64736D]">
+                <span className="text-xs font-semibold text-[#263D3A]">
                   01 — 0{areaHighlights.length}
                 </span>
               </div>
@@ -1056,7 +1055,7 @@ export default function AboutJattari() {
                   <article
                     key={item.number}
                     style={{ transitionDelay: `${index * 60}ms` }}
-                    className="group relative grid grid-cols-[48px_1fr_30px] items-center gap-4 border-b border-[#06483D]/15 py-7 transition-all duration-500 hover:translate-x-2 hover:border-[#D58A28] sm:grid-cols-[65px_1fr_40px] sm:gap-6"
+                    className="group relative grid grid-cols-[48px_1fr_30px] items-center gap-4 border-b border-[#10251F]/15 py-7 transition-all duration-500 hover:translate-x-2 hover:border-[#D58A28] sm:grid-cols-[65px_1fr_40px] sm:gap-6"
                   >
                     <span className="text-2xl font-light tracking-tight text-[#B9741C]/70 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#D58A28] sm:text-3xl">
                       {item.number}
@@ -1067,16 +1066,16 @@ export default function AboutJattari() {
                         {item.detail}
                       </p>
 
-                      <h3 className="mt-2 text-lg font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#0B5A49] sm:text-xl">
+                      <h3 className="mt-2 text-lg font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#254C3C] sm:text-xl">
                         {item.title}
                       </h3>
 
-                      <p className="mt-2 max-w-lg text-sm leading-7 text-[#64736D]">
+                      <p className="mt-2 max-w-lg text-sm leading-7 text-[#263D3A]">
                         {item.description}
                       </p>
                     </div>
 
-                    <div className="flex h-10 w-10 items-center justify-center text-xl text-[#0B5A49] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:text-[#D58A28] sm:h-12 sm:w-12">
+                    <div className="flex h-10 w-10 items-center justify-center text-xl text-[#254C3C] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-110 group-hover:text-[#D58A28] sm:h-12 sm:w-12">
                       {item.icon}
                     </div>
 
@@ -1086,11 +1085,11 @@ export default function AboutJattari() {
               </div>
 
               <div className="mt-8 flex items-center justify-between gap-4">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#64736D]">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#263D3A]">
                   Everyday life in Jattari
                 </p>
 
-                <span className="text-2xl text-[#0B5A49] transition-transform duration-300 hover:translate-x-2 hover:translate-y-1">
+                <span className="text-2xl text-[#254C3C] transition-transform duration-300 hover:translate-x-2 hover:translate-y-1">
                   ↘
                 </span>
               </div>
@@ -1102,14 +1101,14 @@ export default function AboutJattari() {
       {/* 06 — INTERACTIVE TOPIC SELECTOR */}
       <section
         id="explore"
-        className={`${revealClasses} bg-[#FFF9F0] py-20 sm:py-24`}
+        className={`${revealClasses} bg-[#F4F8FA] py-20 sm:py-24`}
       >
         <div className="container-site">
           <div className="max-w-3xl">
             <span className={sectionLabel}>05 / Your area guide</span>
             <h2 className={`mt-4 ${sectionHeading}`}>
               Explore Jattari{" "}
-              <span className="text-[#0B5A49]">your way.</span>
+              <span className="text-[#254C3C]">your way.</span>
             </h2>
             <p className={`mt-4 ${bodyText}`}>
               Choose a subject to discover more. Each topic offers a different
@@ -1118,7 +1117,7 @@ export default function AboutJattari() {
           </div>
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="border-t border-[#06483D]/20">
+            <div className="border-t border-[#10251F]/20">
               {exploreTopics.map((topic, index) => (
                 <button
                   key={topic.title}
@@ -1127,15 +1126,15 @@ export default function AboutJattari() {
                   aria-pressed={activeTopic === index}
                   className={`group flex w-full items-center gap-4 border-b py-5 text-left transition-all duration-300 ${
                     activeTopic === index
-                      ? "border-[#D58A28] bg-[#F3EBDD] px-4"
-                      : "border-[#06483D]/15 px-2 hover:bg-[#F3EBDD]/60 hover:pl-4"
+                      ? "border-[#D58A28] bg-[#EAF2F6] px-4"
+                      : "border-[#10251F]/15 px-2 hover:bg-[#EAF2F6]/60 hover:pl-4"
                   }`}
                 >
                   <span
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-lg transition-all duration-300 group-hover:scale-110 ${
                       activeTopic === index
-                        ? "bg-[#06483D] text-[#F2AE45]"
-                        : "bg-[#F3EBDD] text-[#0B5A49]"
+                        ? "bg-[#10251F] text-[#F2AE45]"
+                        : "bg-[#EAF2F6] text-[#254C3C]"
                     }`}
                   >
                     {topic.icon}
@@ -1147,8 +1146,8 @@ export default function AboutJattari() {
                     <span
                       className={`mt-1 block text-sm font-bold sm:text-base ${
                         activeTopic === index
-                          ? "text-[#06483D]"
-                          : "text-[#53645E]"
+                          ? "text-[#10251F]"
+                          : "text-[#4A605A]"
                       }`}
                     >
                       {topic.title}
@@ -1163,34 +1162,34 @@ export default function AboutJattari() {
 
             <div
               key={currentTopic.title}
-              className="relative flex min-h-[350px] flex-col justify-between overflow-hidden rounded-[2rem] bg-[#06483D] p-7 text-white shadow-lg transition-all duration-500 sm:min-h-[430px] sm:p-10"
+              className="relative flex min-h-[350px] flex-col justify-between overflow-hidden rounded-[2rem] border border-[#D8E5E8] bg-white p-7 text-[#10251F] shadow-md transition-all duration-500 sm:min-h-[430px] sm:p-10"
             >
               <div
                 aria-hidden="true"
-                className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-white/10 transition-transform duration-1000 hover:scale-110"
+                className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-[#D58A28]/10 transition-transform duration-1000 hover:scale-110"
               />
               <div
                 aria-hidden="true"
-                className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#F2AE45]/20"
+                className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#D58A28]/15"
               />
 
               <div className="relative">
-                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#F2AE45]">
+                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D58A28]">
                   {currentTopic.eyebrow}
                 </p>
-                <span className="mt-8 block text-5xl text-[#F2AE45]">
+                <span className="mt-6 block text-5xl text-[#D58A28]">
                   {currentTopic.icon}
                 </span>
-                <h3 className="mt-6 max-w-lg text-3xl font-extrabold leading-tight sm:text-4xl">
+                <h3 className="mt-5 max-w-lg text-3xl font-extrabold leading-tight text-[#10251F] sm:text-4xl">
                   {currentTopic.title}
                 </h3>
-                <p className="mt-5 max-w-xl text-sm leading-8 text-white/70 sm:text-base">
+                <p className="mt-4 max-w-xl text-sm leading-8 text-[#263D3A] sm:text-base">
                   {currentTopic.detail}
                 </p>
               </div>
 
-              <div className="relative mt-10 flex items-center justify-between border-t border-white/15 pt-5">
-                <span className="text-xs font-semibold text-white/45">
+              <div className="relative mt-8 flex items-center justify-between border-t border-[#D8E5E8] pt-5">
+                <span className="text-xs font-semibold text-[#5C736D]">
                   TOPIC {String(activeTopic + 1).padStart(2, "0")} / 06
                 </span>
                 <div className="flex gap-2">
@@ -1203,8 +1202,8 @@ export default function AboutJattari() {
                       onClick={() => setActiveTopic(index)}
                       className={`h-2 rounded-full transition-all duration-300 ${
                         activeTopic === index
-                          ? "w-8 bg-[#F2AE45]"
-                          : "w-2 bg-white/30 hover:bg-white/60"
+                          ? "w-8 bg-[#D58A28]"
+                          : "w-2 bg-[#D8E5E8] hover:bg-[#D58A28]/50"
                       }`}
                     />
                   ))}
@@ -1213,14 +1212,14 @@ export default function AboutJattari() {
             </div>
           </div>
 
-          <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-[#06483D]/10 bg-[#F3EBDD] p-5 transition-all duration-300 hover:border-[#D58A28]/50 hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:px-7">
-            <p className="max-w-2xl text-sm leading-7 text-[#53645E]">
+          <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-[#10251F]/10 bg-[#EAF2F6] p-5 transition-all duration-300 hover:border-[#D58A28]/50 hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <p className="max-w-2xl text-sm leading-7 text-[#4A605A]">
               Verify current addresses, services, approvals and travel details
               before making decisions.
             </p>
             <Link
               href="/#location"
-              className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:gap-4"
+              className="group inline-flex shrink-0 items-center gap-2 text-sm font-bold text-[#254C3C] transition-all duration-300 hover:gap-4"
             >
               Explore location <span>→</span>
             </Link>
@@ -1229,21 +1228,21 @@ export default function AboutJattari() {
       </section>
 
       {/* 07 — PROPERTY RESEARCH */}
-      <section className={`${revealClasses} bg-[#F3EBDD] py-20 sm:py-24`}>
+      <section className={`${revealClasses} bg-[#EAF2F6] py-20 sm:py-24`}>
         <div className="container-site grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div>
             <span className={sectionLabel}>06 / Property research</span>
             <h2 className={`mt-4 ${sectionHeading}`}>
               Make property decisions
-              <span className="block text-[#0B5A49]">with care.</span>
+              <span className="block text-[#254C3C]">with care.</span>
             </h2>
-            <p className="mt-6 text-sm leading-8 text-[#64736D]">
+            <p className="mt-6 text-sm leading-8 text-[#263D3A]">
               If you are researching residential plots or other property
               options in Jattari, look beyond location and price. Review
               access, surrounding facilities, records, approvals and essential
               services before making a decision.
             </p>
-            <p className="mt-4 text-sm leading-8 text-[#64736D]">
+            <p className="mt-4 text-sm leading-8 text-[#263D3A]">
               Prices, future development and investment returns are not
               guaranteed. Inspect the property, compare independent
               information and seek professional advice before committing
@@ -1251,7 +1250,7 @@ export default function AboutJattari() {
             </p>
             <Link
               href="/#contact"
-              className="group mt-7 inline-flex items-center gap-3 rounded-full bg-[#06483D] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg"
+              className="group mt-7 inline-flex items-center gap-3 rounded-full bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
             >
               Ask an enquiry
               <span className="text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-1">
@@ -1260,31 +1259,31 @@ export default function AboutJattari() {
             </Link>
           </div>
 
-          <div className="border-t border-[#06483D]/20">
+          <div className="border-t border-[#10251F]/20">
             {propertyChecks.map((item) => (
               <article
                 key={item.number}
-                className="group grid grid-cols-[42px_1fr] gap-4 border-b border-[#06483D]/20 py-6 transition-all duration-300 hover:translate-x-2 hover:border-[#D58A28] sm:grid-cols-[58px_1fr]"
+                className="group grid grid-cols-[42px_1fr] gap-4 border-b border-[#10251F]/20 py-6 transition-all duration-300 hover:translate-x-2 hover:border-[#D58A28] sm:grid-cols-[58px_1fr]"
               >
                 <span className="pt-1 text-xs font-bold tracking-[0.15em] text-[#B9741C]">
                   {item.number}
                 </span>
                 <div>
-                  <h3 className="text-lg font-bold text-[#172B26] transition-colors group-hover:text-[#0B5A49]">
+                  <h3 className="text-lg font-bold text-[#10251F] transition-colors group-hover:text-[#254C3C]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-[#64736D]">
+                  <p className="mt-2 text-sm leading-7 text-[#263D3A]">
                     {item.description}
                   </p>
                 </div>
-                <span className="col-start-2 text-lg text-[#0B5A49] transition-transform duration-300 group-hover:translate-x-2">
+                <span className="col-start-2 text-lg text-[#254C3C] transition-transform duration-300 group-hover:translate-x-2">
                   ↗
                 </span>
               </article>
             ))}
 
-            <p className="mt-5 border-l-2 border-[#D58A28] pl-4 text-xs leading-6 text-[#64736D]">
-              <strong className="text-[#06483D]">Please note:</strong> This
+            <p className="mt-5 border-l-2 border-[#D58A28] pl-4 text-xs leading-6 text-[#263D3A]">
+              <strong className="text-[#10251F]">Please note:</strong> This
               guide is for general research only. Confirm documents and
               details independently; it is not a guarantee of property status
               or investment performance.
@@ -1294,25 +1293,25 @@ export default function AboutJattari() {
       </section>
 
       {/* 08 — FAQ */}
-      <section className={`${revealClasses} bg-[#FFF9F0] py-20 sm:py-24`}>
+      <section className={`${revealClasses} bg-[#F4F8FA] py-20 sm:py-24`}>
         <div className="container-site">
           <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
             <div>
               <span className={sectionLabel}>07 / Need to know</span>
               <h2 className={`mt-4 ${sectionHeading}`}>
                 Questions about
-                <span className="block text-[#0B5A49]">Jattari.</span>
+                <span className="block text-[#254C3C]">Jattari.</span>
               </h2>
               <p className={`mt-5 ${bodyText}`}>
                 Find answers about Jattari, local facilities, connectivity and
                 property research.
               </p>
               <p className="mt-8 text-6xl font-black tracking-tighter text-[#D58A28]">
-                FAQ<span className="text-[#06483D]">.</span>
+                FAQ<span className="text-[#10251F]">.</span>
               </p>
             </div>
 
-            <div className="border-t border-[#06483D]/20">
+            <div className="border-t border-[#10251F]/20">
               {faqs.map((faq, index) => {
                 const isOpen = openFaq === index;
 
@@ -1322,7 +1321,7 @@ export default function AboutJattari() {
                     className={`border-b transition-colors duration-300 ${
                       isOpen
                         ? "border-[#D58A28]"
-                        : "border-[#06483D]/15"
+                        : "border-[#10251F]/15"
                     }`}
                   >
                     <button
@@ -1335,15 +1334,15 @@ export default function AboutJattari() {
                         <span className="pt-1 text-xs font-bold tracking-widest text-[#B9741C]">
                           {String(index + 1).padStart(2, "0")}
                         </span>
-                        <span className="text-sm font-bold leading-6 text-[#172B26] transition-colors group-hover:text-[#0B5A49] sm:text-base">
+                        <span className="text-sm font-bold leading-6 text-[#10251F] transition-colors group-hover:text-[#254C3C] sm:text-base">
                           {faq.question}
                         </span>
                       </span>
                       <span
                         className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-lg transition-all duration-300 ${
                           isOpen
-                            ? "rotate-45 border-[#06483D] bg-[#06483D] text-[#F2AE45]"
-                            : "border-[#06483D]/20 text-[#06483D] group-hover:border-[#D58A28]"
+                            ? "rotate-45 border-[#10251F] bg-[#10251F] text-[#F2AE45]"
+                            : "border-[#10251F]/20 text-[#10251F] group-hover:border-[#D58A28]"
                         }`}
                         aria-hidden="true"
                       >
@@ -1360,7 +1359,7 @@ export default function AboutJattari() {
                     >
                       <div className="overflow-hidden">
                         <div className="pb-6 pl-10 pr-10">
-                          <p className="text-sm leading-7 text-[#64736D]">
+                          <p className="text-sm leading-7 text-[#263D3A]">
                             {faq.answer}
                           </p>
                         </div>
@@ -1375,55 +1374,42 @@ export default function AboutJattari() {
       </section>
 
       {/* 09 — FINAL CTA */}
-      <section className={`${revealClasses} bg-[#06483D] py-20 text-white sm:py-24`}>
+      <section className={`${revealClasses} bg-[#F4F8FA] py-10 sm:py-14`}>
         <div className="container-site">
-          <div className="group relative overflow-hidden rounded-[2rem] border border-white/15 bg-[#073B32] px-7 py-12 transition-all duration-500 hover:border-[#D58A28]/50 hover:shadow-2xl hover:shadow-black/10 sm:px-12 sm:py-16 lg:px-16">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -right-24 -top-28 h-80 w-80 rounded-full border border-[#F2AE45]/20 transition-transform duration-1000 group-hover:scale-125"
-            />
-
-            <div className="relative grid items-center gap-10 lg:grid-cols-[1fr_auto]">
-              <div className="max-w-3xl">
-                <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-[#F2AE45]">
+          <div className="relative overflow-hidden rounded-2xl border border-[#D8E5E8] bg-gradient-to-r from-white via-[#F4F8FA] to-[#EAF2F6] p-6 shadow-sm sm:p-8 lg:p-10">
+            <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="max-w-2xl">
+                <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#D58A28]">
                   Continue your discovery
                 </span>
-                <h2 className="mt-5 text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-                  Your guide to
-                  <span className="block text-[#F2AE45]">
-                    discovering Jattari.
-                  </span>
+                <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#10251F] sm:text-3xl">
+                  Your guide to{" "}
+                  <span className="text-[#D58A28]">discovering Jattari.</span>
                 </h2>
-                <p className="mt-6 max-w-2xl text-sm leading-8 text-white/65 sm:text-base">
+                <p className="mt-2 text-sm leading-6 text-[#263D3A]">
                   Continue exploring the location, local surroundings,
-                  connectivity and useful information about Jattari. Start
-                  with the topics that matter most to you.
+                  connectivity and useful information about Jattari. Start with
+                  the topics that matter most to you.
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <div className="flex shrink-0 flex-wrap items-center gap-3">
                 <Link
                   href="/#explore"
-                  className="group/button inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-[#D58A28] px-7 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
+                  className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#D58A28] px-6 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#B9741C] hover:shadow-md"
                 >
                   Explore Jattari
-                  <span className="transition-transform duration-300 group-hover/button:translate-x-1">
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
                     →
                   </span>
                 </Link>
                 <Link
                   href="/#contact"
-                  className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/25 px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#F2AE45] hover:text-[#F2AE45]"
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border border-[#D8E5E8] bg-white px-6 py-2.5 text-sm font-semibold text-[#10251F] shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E8F2F6] hover:border-[#D58A28]/50"
                 >
                   Get in touch
                 </Link>
               </div>
-            </div>
-
-            <div className="relative mt-12 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/15 pt-6 text-xs font-medium text-white/55">
-              <span>01 — Explore the location</span>
-              <span>02 — Learn about local facilities</span>
-              <span>03 — Research with confidence</span>
             </div>
           </div>
         </div>

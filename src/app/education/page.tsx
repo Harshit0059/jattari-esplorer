@@ -99,11 +99,11 @@ export default function EducationPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate flex min-h-[370px] items-center overflow-hidden bg-[#073B32] sm:min-h-[420px] lg:min-h-[460px]">
+      <section className="group relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         <img
           src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=90"
           alt="Students learning together in a classroom"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-30 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
           onError={(event) => {
             event.currentTarget.style.display = "none";
           }}
@@ -111,7 +111,7 @@ export default function EducationPage() {
 
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/90 via-[#073B32]/65 to-[#073B32]/20"
+          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/85 to-transparent"
         />
 
         {/* Decorative animated circles */}
@@ -130,39 +130,39 @@ export default function EducationPage() {
           className="pointer-events-none absolute bottom-[-100px] left-[40%] z-0 h-56 w-56 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover:scale-125"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[370px] w-full max-w-7xl items-center px-6 py-12 sm:min-h-[420px] md:px-10 lg:min-h-[460px]">
+        <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
           <div
             data-reveal
-            className={`max-w-3xl text-white ${revealLeft}`}
+            className={`max-w-3xl text-[#10251F] ${revealLeft}`}
           >
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white/90 transition-all duration-300 hover:gap-3 hover:text-[#F4B65E]"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:gap-3 hover:text-[#D58A28]"
             >
               <span aria-hidden="true">←</span>
               Back to Home
             </Link>
 
-            <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#F4B65E]/70 hover:bg-white/15">
+            <div className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-[#10251F] shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-[#D58A28]/70 hover:bg-white">
               <span className="h-2 w-2 animate-pulse rounded-full bg-[#D58A28]" />
               Jattari Education Directory
             </div>
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-5xl lg:text-6xl">
               Learning Today.
-              <span className="mt-1 block text-[#F4B65E] transition-colors duration-500">
+              <span className="mt-1 block text-[#D58A28] transition-colors duration-500">
                 Building Tomorrow.
               </span>
             </h1>
 
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-base sm:leading-8">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8">
               Explore education opportunities in Jattari and nearby areas,
               from schools and colleges to tuition, coaching and libraries.
             </p>
 
             <a
               href="#education-options"
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#D58A28] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-xl"
+              className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-xl"
             >
               Explore Education
               <span className="transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">

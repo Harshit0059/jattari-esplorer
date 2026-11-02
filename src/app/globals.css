@@ -2,31 +2,34 @@
 @import "tailwindcss";
 
 /* ========================================
-   JATTARI EXPLORER — FOREST GREEN THEME
-   Central theme configuration
-   Future colour changes yahin se karo
+   JATTARI EXPLORER — HERO-ALIGNED THEME
+   Theme aligned with cinematic Hero section:
+   - Sky mist background (#F4F8FA) flowing from temple mist (#E4EDF0)
+   - Obsidian spruce primary (#10251F) & hover (#254C3C)
+   - Saffron gold accent (#D58A28) & warm sunlight cream (#FFF0D8)
+   - Sky mist soft accent (#E8F2F6) & crisp borders (#D8E5E8)
 ======================================== */
 
 :root {
   color-scheme: light;
 
-  /* Main colors */
-  --background: #FFF9F0;
-  --foreground: #172B26;
+  /* Main colors aligned with Hero */
+  --background: #F4F8FA;
+  --foreground: #10251F;
   --surface: #FFFFFF;
 
-  /* Forest green theme */
-  --primary: #06483D;
-  --primary-hover: #04382F;
-  --border: #E8E1D5;
-  --muted: #68756F;
-  --soft-accent: #E8F0E9;
+  /* Obsidian spruce theme (matching Hero title & CTA) */
+  --primary: #10251F;
+  --primary-hover: #254C3C;
+  --border: #D8E5E8;
+  --muted: #4D645E;
+  --soft-accent: #E8F2F6;
 
   /* Additional theme shades */
-  --green-dark: #073B32;
-  --green-light: #EAF2ED;
+  --green-dark: #0D1F1A;
+  --green-light: #E8F2F6;
 
-  /* Orange accent */
+  /* Saffron gold & sunlight amber accent (matching Hero eyebrow & glow) */
   --accent: #D58A28;
   --accent-hover: #B9741C;
   --accent-light: #FFF0D8;
@@ -34,7 +37,7 @@
   /* Reusable design settings */
   --radius-card: 16px;
   --radius-button: 10px;
-  --shadow-card: 0 4px 20px rgb(23 43 38 / 7%);
+  --shadow-card: 0 4px 20px rgb(16 37 31 / 6%);
   --container-width: 1200px;
 }
 
@@ -116,7 +119,7 @@ body {
 
 .button-primary:hover {
   background: var(--primary-hover);
-  box-shadow: 0 5px 14px rgb(6 72 61 / 18%);
+  box-shadow: 0 5px 14px rgb(16 37 31 / 20%);
 }
 
 .button-primary:active {

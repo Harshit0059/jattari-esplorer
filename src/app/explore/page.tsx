@@ -100,55 +100,55 @@
 //   }, []);
 
 //   return (
-//     <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+//     <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 //       {/* HERO SECTION */}
-//       <section className="group/hero relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#06483D] sm:min-h-[500px] md:min-h-[540px] md:px-12">
+//       <section className="group/hero relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] md:px-12">
 //         <Image
 //           src="/images/explore-jattari.jpeg"
 //           alt="Explore Jattari and its surrounding area"
 //           fill
 //           priority
 //           sizes="100vw"
-//           className="z-0 object-cover object-center transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
+//           className="z-0 object-cover object-center opacity-30 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
 //         />
 
 //         {/* Image overlays */}
 //         <div
 //           aria-hidden="true"
-//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#06483D]/80 via-[#06483D]/45 to-[#06483D]/10"
+//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#E4EDF0]/50 to-transparent"
 //         />
 
 //         <div
 //           aria-hidden="true"
-//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#06483D]/50 via-transparent to-[#06483D]/20"
+//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#DCEBF0]/40 via-transparent to-transparent"
 //         />
 
 //         {/* Decorative elements */}
-//         <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#FFF9F0]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
+//         <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#F4F8FA]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
 
 //         <div className="pointer-events-none absolute -bottom-28 left-1/3 z-10 h-72 w-72 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover/hero:scale-125" />
 
 //         {/* Hero content */}
-//         <div className="relative z-20 mx-auto w-full max-w-6xl px-6 py-16 md:px-0 md:py-20">
+//         <div className="relative z-20 mx-auto w-full max-w-6xl px-6 pt-28 pb-12 sm:pt-32 sm:pb-16 md:px-0">
 //           <div className="max-w-4xl">
 //             <p
-//               className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#F2AE45] sm:text-sm`}
+//               className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#B9741C] sm:text-sm`}
 //             >
 //               Discover the Region
 //             </p>
 
 //             <h1
-//               className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl`}
+//               className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-[#10251F] sm:text-5xl md:text-6xl lg:text-7xl`}
 //               style={{ transitionDelay: "100ms" }}
 //             >
 //               Explore Jattari
-//               <span className="mt-2 block text-[#F2AE45]">
+//               <span className="mt-2 block text-[#D58A28]">
 //                 Places, People &amp; Everyday Life
 //               </span>
 //             </h1>
 
 //             <p
-//               className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-white/90 drop-shadow sm:text-base sm:leading-8 md:text-lg`}
+//               className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8 md:text-lg`}
 //               style={{ transitionDelay: "200ms" }}
 //             >
 //               Discover Jattari in Aligarh district, Uttar Pradesh. Explore its
@@ -158,7 +158,7 @@
 
 //             <a
 //               href="#explore-topics"
-//               className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06483D]`}
+//               className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EEF5F8]`}
 //               style={{ transitionDelay: "300ms" }}
 //             >
 //               Start Exploring
@@ -175,14 +175,14 @@
 //               style={{ transitionDelay: "400ms" }}
 //             >
 //               <span>
-//                 <strong className="text-white">Location</strong>
-//                 <span className="mx-2 text-[#F2AE45]">/</span>
+//                 <strong className="text-[#10251F]">Location</strong>
+//                 <span className="mx-2 text-[#D58A28]">/</span>
 //                 Jattari
 //               </span>
 
 //               <span>
-//                 <strong className="text-white">Region</strong>
-//                 <span className="mx-2 text-[#F2AE45]">/</span>
+//                 <strong className="text-[#10251F]">Region</strong>
+//                 <span className="mx-2 text-[#D58A28]">/</span>
 //                 Western Uttar Pradesh
 //               </span>
 //             </div>
@@ -198,17 +198,17 @@
 //               Get to Know Jattari
 //             </p>
 
-//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //               A closer look at the town and its surroundings
 //             </h2>
 
-//             <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
+//             <p className="mt-5 text-sm leading-8 text-[#263D3A] sm:text-base">
 //               Every place has its own character. Explore Jattari through its
 //               location, nearby destinations, local markets, essential
 //               services, regional history, and everyday experiences.
 //             </p>
 
-//             <p className="mt-4 text-sm leading-8 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
 //               Use these guides to find helpful information about the area.
 //               Details such as opening hours, routes, available services, and
 //               local facilities should be checked before travelling.
@@ -216,7 +216,7 @@
 
 //             <Link
 //               href="/explore/introduction"
-//               className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0B5A49] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
+//               className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#254C3C] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
 //             >
 //               Get introduced to Jattari
 //               <span
@@ -236,11 +236,11 @@
 //               Explore at your pace
 //             </span>
 
-//             <h3 className="mt-4 text-2xl font-bold leading-snug text-[#172B26] sm:text-3xl">
+//             <h3 className="mt-4 text-2xl font-bold leading-snug text-[#10251F] sm:text-3xl">
 //               Understand the location. Discover the community.
 //             </h3>
 
-//             <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
 //               From practical visitor information to regional attractions,
 //               each guide gives you another way to learn about Jattari.
 //             </p>
@@ -250,31 +250,31 @@
 //         </div>
 //       </section>
 // {/* JATTARI STREET VIEW */}
-// <section className="relative overflow-hidden bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20">
+// <section className="relative overflow-hidden bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20">
 //   <div className="mx-auto max-w-6xl">
 //     <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
 //       {/* LEFT CONTENT */}
 //       <div className="explore-reveal">
-//         <div className="inline-flex items-center gap-2 rounded-full border border-[#06483D]/15 bg-[#FFF9F0] px-3 py-1.5">
+//         <div className="inline-flex items-center gap-2 rounded-full border border-[#10251F]/15 bg-[#F4F8FA] px-3 py-1.5">
 //           <span className="h-2 w-2 rounded-full bg-[#D58A28]" />
-//           <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#06483D]">
+//           <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#10251F]">
 //             Explore Jattari in 360°
 //           </span>
 //         </div>
 
-//         <h2 className="mt-5 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//         <h2 className="mt-5 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //           Take a closer look
-//           <span className="mt-1 block text-[#0B5A49]">at Jattari</span>
+//           <span className="mt-1 block text-[#254C3C]">at Jattari</span>
 //         </h2>
 
-//         <p className="mt-5 max-w-md text-sm leading-7 text-[#64736D] sm:text-base">
+//         <p className="mt-5 max-w-md text-sm leading-7 text-[#263D3A] sm:text-base">
 //           Explore a real Google Street View panorama from Jattari, Aligarh
 //           district. Move around the 360° view and get a street-level glimpse
 //           of the selected location.
 //         </p>
 
-//         <div className="mt-7 flex items-start gap-3 border-t border-[#06483D]/15 pt-5">
-//           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#06483D] text-[#FFF9F0]">
+//         <div className="mt-7 flex items-start gap-3 border-t border-[#10251F]/15 pt-5">
+//           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#10251F] text-[#F4F8FA]">
 //             <svg
 //               aria-hidden="true"
 //               viewBox="0 0 24 24"
@@ -297,10 +297,10 @@
 //           </div>
 
 //           <div>
-//             <p className="text-sm font-bold text-[#172B26]">
+//             <p className="text-sm font-bold text-[#10251F]">
 //               Jattari, Aligarh District
 //             </p>
-//             <p className="mt-1 text-xs leading-5 text-[#64736D]">
+//             <p className="mt-1 text-xs leading-5 text-[#263D3A]">
 //               Uttar Pradesh, India
 //             </p>
 //           </div>
@@ -310,7 +310,7 @@
 //           href="https://www.google.com/maps/place/Jattari,+Uttar+Pradesh+202137/@28.0288648,77.65919,215a,75y,51.02h,90.18t/data=!3m7!1e1!3m5!1sV8isf-s3muwJvyYN7ikvKw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.1793921534147529%26panoid%3DV8isf-s3muwJvyYN7ikvKw%26yaw%3D51.022305053157666!7i16384!8i8192!4m15!1m8!3m7!1s0x39734c0092e80951:0x2a22db0dec9bebb0!2sJattari,+Uttar+Pradesh+202137!3b1!8m2!3d28.0233337!4d77.656476!16z%2Fm%2F0f50_f!3m5!1s0x39734c0092e80951:0x2a22db0dec9bebb0!8m2!3d28.0233337!4d77.656476!16z%2Fm%2F0f50_f?entry=ttu"
 //           target="_blank"
 //           rel="noopener noreferrer"
-//           className="group mt-7 inline-flex items-center gap-3 rounded-xl bg-[#06483D] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0B5A49] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//           className="group mt-7 inline-flex items-center gap-3 rounded-xl bg-[#10251F] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#254C3C] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //         >
 //           Explore 360° View
 //           <span
@@ -327,11 +327,11 @@
 //         className="explore-reveal"
 //         style={{ transitionDelay: "150ms" }}
 //       >
-//         <div className="group relative rounded-2xl border border-[#06483D]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
+//         <div className="group relative rounded-2xl border border-[#10251F]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
 //           {/* Small top label */}
 //           <div className="flex items-center justify-between gap-3 px-2 pb-3">
 //             <div className="flex items-center gap-2">
-//               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F0E9] text-[#06483D]">
+//               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F2F6] text-[#10251F]">
 //                 <svg
 //                   aria-hidden="true"
 //                   viewBox="0 0 24 24"
@@ -353,7 +353,7 @@
 //                 </svg>
 //               </span>
 
-//               <span className="text-xs font-bold text-[#172B26] sm:text-sm">
+//               <span className="text-xs font-bold text-[#10251F] sm:text-sm">
 //                 Google Street View
 //               </span>
 //             </div>
@@ -363,7 +363,7 @@
 //             </span>
 //           </div>
 
-//           <div className="relative overflow-hidden rounded-xl bg-[#E8E1D5]">
+//           <div className="relative overflow-hidden rounded-xl bg-[#D8E5E8]">
 //             <iframe
 //               title="Google Street View of Jattari, Aligarh District"
 //               src="https://www.google.com/maps/embed?pb=!4v0!6m8!1m7!1sV8isf-s3muwJvyYN7ikvKw!2m2!1d28.0288648!2d77.65919!3f51.02!4f0!5f0.7820865974627469"
@@ -378,10 +378,10 @@
 //           </div>
 
 //           <div className="flex items-center justify-between gap-3 px-2 pt-3">
-//             <p className="text-xs text-[#64736D]">
+//             <p className="text-xs text-[#263D3A]">
 //               Move around to explore the surroundings
 //             </p>
-//             <span className="shrink-0 text-xs font-semibold text-[#0B5A49]">
+//             <span className="shrink-0 text-xs font-semibold text-[#254C3C]">
 //               Jattari, UP
 //             </span>
 //           </div>
@@ -393,7 +393,7 @@
 //       {/* EXPLORE TOPICS */}
 //       <section
 //         id="explore-topics"
-//         className="scroll-mt-24 border-y border-[#06483D]/15 bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20"
+//         className="scroll-mt-24 border-y border-[#10251F]/15 bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20"
 //       >
 //         <div className="mx-auto max-w-6xl">
 //           <div className={revealClass}>
@@ -401,42 +401,42 @@
 //               Explore by Topic
 //             </p>
 
-//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //               What would you like to discover?
 //             </h2>
 
-//             <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
 //               Choose a topic to explore information about Jattari and its
 //               surrounding region.
 //             </p>
 //           </div>
 
-//           <div className="mt-9 border-t border-[#06483D]/20">
+//           <div className="mt-9 border-t border-[#10251F]/20">
 //             {places.map((place, index) => (
 //               <article
 //                 key={place.number}
-//                 className={`${revealClass} group grid gap-4 border-b border-[#06483D]/15 py-6 transition-all duration-300 hover:bg-[#FFF9F0]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
+//                 className={`${revealClass} group grid gap-4 border-b border-[#10251F]/15 py-6 transition-all duration-300 hover:bg-[#F4F8FA]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
 //                 style={{
 //                   transitionDelay: `${Math.min(index * 70, 350)}ms`,
 //                 }}
 //               >
-//                 <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#06483D]">
+//                 <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10251F]">
 //                   {place.number}
 //                 </span>
 
 //                 <div>
-//                   <h3 className="text-lg font-bold text-[#172B26] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#0B5A49] sm:text-xl">
+//                   <h3 className="text-lg font-bold text-[#10251F] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#254C3C] sm:text-xl">
 //                     {place.title}
 //                   </h3>
 
-//                   <p className="mt-2 max-w-2xl text-sm leading-7 text-[#64736D] transition-colors duration-300 group-hover:text-[#435B51]">
+//                   <p className="mt-2 max-w-2xl text-sm leading-7 text-[#263D3A] transition-colors duration-300 group-hover:text-[#435B51]">
 //                     {place.description}
 //                   </p>
 //                 </div>
 
 //                 <Link
 //                   href={place.href}
-//                   className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
+//                   className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#254C3C] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
 //                 >
 //                   {place.label}
 //                   <span
@@ -455,17 +455,17 @@
 //       {/* CLOSING SECTION */}
 //       <section className="px-6 py-14 sm:py-16 md:px-12 md:py-20">
 //         <div
-//           className={`${revealClass} mx-auto max-w-6xl border-t border-[#06483D]/15 pt-8 sm:pt-10`}
+//           className={`${revealClass} mx-auto max-w-6xl border-t border-[#10251F]/15 pt-8 sm:pt-10`}
 //         >
 //           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
 //             Your Jattari Guide
 //           </p>
 
-//           <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#172B26] sm:text-3xl md:text-4xl">
+//           <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#10251F] sm:text-3xl md:text-4xl">
 //             Keep exploring and learn more about the area.
 //           </h2>
 
-//           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#64736D] sm:text-base">
+//           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base">
 //             Browse the available guides to learn about local facilities,
 //             regional culture, attractions, shopping, and practical travel
 //             information.
@@ -474,7 +474,7 @@
 //           <div className="mt-7 flex flex-wrap gap-3">
 //             <Link
 //               href="/location-connectivity"
-//               className="group inline-flex items-center gap-2 rounded-xl bg-[#06483D] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl bg-[#10251F] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Location &amp; Connectivity
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -484,7 +484,7 @@
 
 //             <Link
 //               href="/explore/attractions"
-//               className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Attractions &amp; Places to Visit
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -494,7 +494,7 @@
 
 //             <Link
 //               href="/explore/contact-feedback"
-//               className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Contact &amp; Feedback
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -661,55 +661,55 @@
 //   };
 
 //   return (
-//     <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+//     <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 //       {/* HERO SECTION */}
-//       <section className="group/hero relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#06483D] sm:min-h-[500px] md:min-h-[540px] md:px-12">
+//       <section className="group/hero relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] md:px-12">
 //         <Image
 //           src="/images/explore-jattari.jpeg"
 //           alt="Explore Jattari and its surrounding area"
 //           fill
 //           priority
 //           sizes="100vw"
-//           className="z-0 object-cover object-center transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
+//           className="z-0 object-cover object-center opacity-30 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
 //         />
 
 //         {/* Image overlays */}
 //         <div
 //           aria-hidden="true"
-//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#06483D]/80 via-[#06483D]/45 to-[#06483D]/10"
+//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#E4EDF0]/50 to-transparent"
 //         />
 
 //         <div
 //           aria-hidden="true"
-//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#06483D]/50 via-transparent to-[#06483D]/20"
+//           className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#DCEBF0]/40 via-transparent to-transparent"
 //         />
 
 //         {/* Decorative elements */}
-//         <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#FFF9F0]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
+//         <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#F4F8FA]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
 
 //         <div className="pointer-events-none absolute -bottom-28 left-1/3 z-10 h-72 w-72 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover/hero:scale-125" />
 
 //         {/* Hero content */}
-//         <div className="relative z-20 mx-auto w-full max-w-6xl px-6 py-16 md:px-0 md:py-20">
+//         <div className="relative z-20 mx-auto w-full max-w-6xl px-6 pt-28 pb-12 sm:pt-32 sm:pb-16 md:px-0">
 //           <div className="max-w-4xl">
 //             <p
-//               className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#F2AE45] sm:text-sm`}
+//               className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#B9741C] sm:text-sm`}
 //             >
 //               Discover the Region
 //             </p>
 
 //             <h1
-//               className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl`}
+//               className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-[#10251F] sm:text-5xl md:text-6xl lg:text-7xl`}
 //               style={{ transitionDelay: "100ms" }}
 //             >
 //               Explore Jattari
-//               <span className="mt-2 block text-[#F2AE45]">
+//               <span className="mt-2 block text-[#D58A28]">
 //                 Places, People &amp; Everyday Life
 //               </span>
 //             </h1>
 
 //             <p
-//               className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-white/90 drop-shadow sm:text-base sm:leading-8 md:text-lg`}
+//               className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8 md:text-lg`}
 //               style={{ transitionDelay: "200ms" }}
 //             >
 //               Discover Jattari in Aligarh district, Uttar Pradesh. Explore its
@@ -719,7 +719,7 @@
 
 //             <a
 //               href="#explore-topics"
-//               className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06483D]`}
+//               className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EEF5F8]`}
 //               style={{ transitionDelay: "300ms" }}
 //             >
 //               Start Exploring
@@ -736,14 +736,14 @@
 //               style={{ transitionDelay: "400ms" }}
 //             >
 //               <span>
-//                 <strong className="text-white">Location</strong>
-//                 <span className="mx-2 text-[#F2AE45]">/</span>
+//                 <strong className="text-[#10251F]">Location</strong>
+//                 <span className="mx-2 text-[#D58A28]">/</span>
 //                 Jattari
 //               </span>
 
 //               <span>
-//                 <strong className="text-white">Region</strong>
-//                 <span className="mx-2 text-[#F2AE45]">/</span>
+//                 <strong className="text-[#10251F]">Region</strong>
+//                 <span className="mx-2 text-[#D58A28]">/</span>
 //                 Western Uttar Pradesh
 //               </span>
 //             </div>
@@ -759,17 +759,17 @@
 //               Get to Know Jattari
 //             </p>
 
-//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //               A closer look at the town and its surroundings
 //             </h2>
 
-//             <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
+//             <p className="mt-5 text-sm leading-8 text-[#263D3A] sm:text-base">
 //               Every place has its own character. Explore Jattari through its
 //               location, nearby destinations, local markets, essential
 //               services, regional history, and everyday experiences.
 //             </p>
 
-//             <p className="mt-4 text-sm leading-8 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
 //               Use these guides to find helpful information about the area.
 //               Details such as opening hours, routes, available services, and
 //               local facilities should be checked before travelling.
@@ -777,7 +777,7 @@
 
 //             <Link
 //               href="/explore/introduction"
-//               className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0B5A49] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
+//               className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#254C3C] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
 //             >
 //               Get introduced to Jattari
 //               <span
@@ -797,11 +797,11 @@
 //               Explore at your pace
 //             </span>
 
-//             <h3 className="mt-4 text-2xl font-bold leading-snug text-[#172B26] sm:text-3xl">
+//             <h3 className="mt-4 text-2xl font-bold leading-snug text-[#10251F] sm:text-3xl">
 //               Understand the location. Discover the community.
 //             </h3>
 
-//             <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
 //               From practical visitor information to regional attractions,
 //               each guide gives you another way to learn about Jattari.
 //             </p>
@@ -812,31 +812,31 @@
 //       </section>
 
 //       {/* JATTARI STREET VIEW */}
-//       <section className="relative overflow-hidden bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20">
+//       <section className="relative overflow-hidden bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20">
 //         <div className="mx-auto max-w-6xl">
 //           <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
 //             {/* LEFT CONTENT */}
 //             <div className="explore-reveal">
-//               <div className="inline-flex items-center gap-2 rounded-full border border-[#06483D]/15 bg-[#FFF9F0] px-3 py-1.5">
+//               <div className="inline-flex items-center gap-2 rounded-full border border-[#10251F]/15 bg-[#F4F8FA] px-3 py-1.5">
 //                 <span className="h-2 w-2 rounded-full bg-[#D58A28]" />
-//                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#06483D]">
+//                 <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#10251F]">
 //                   Explore Jattari in 360°
 //                 </span>
 //               </div>
 
-//               <h2 className="mt-5 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//               <h2 className="mt-5 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //                 Take a closer look
-//                 <span className="mt-1 block text-[#0B5A49]">at Jattari</span>
+//                 <span className="mt-1 block text-[#254C3C]">at Jattari</span>
 //               </h2>
 
-//               <p className="mt-5 max-w-md text-sm leading-7 text-[#64736D] sm:text-base">
+//               <p className="mt-5 max-w-md text-sm leading-7 text-[#263D3A] sm:text-base">
 //                 Explore a real Google Street View panorama from Jattari,
 //                 Aligarh district. Move around the 360° view and get a
 //                 street-level glimpse of the selected location.
 //               </p>
 
-//               <div className="mt-7 flex items-start gap-3 border-t border-[#06483D]/15 pt-5">
-//                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#06483D] text-[#FFF9F0]">
+//               <div className="mt-7 flex items-start gap-3 border-t border-[#10251F]/15 pt-5">
+//                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#10251F] text-[#F4F8FA]">
 //                   <svg
 //                     aria-hidden="true"
 //                     viewBox="0 0 24 24"
@@ -859,10 +859,10 @@
 //                 </div>
 
 //                 <div>
-//                   <p className="text-sm font-bold text-[#172B26]">
+//                   <p className="text-sm font-bold text-[#10251F]">
 //                     Jattari, Aligarh District
 //                   </p>
-//                   <p className="mt-1 text-xs leading-5 text-[#64736D]">
+//                   <p className="mt-1 text-xs leading-5 text-[#263D3A]">
 //                     Uttar Pradesh, India
 //                   </p>
 //                 </div>
@@ -874,7 +874,7 @@
 //                   <button
 //                     type="button"
 //                     onClick={handleOpenStreetView}
-//                     className="group inline-flex items-center justify-center gap-3 rounded-xl bg-[#06483D] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0B5A49] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//                     className="group inline-flex items-center justify-center gap-3 rounded-xl bg-[#10251F] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#254C3C] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //                   >
 //                     Explore in 360°
 //                     <span
@@ -954,10 +954,10 @@
 //               aria-hidden={!streetViewOpen}
 //             >
 //               {streetViewOpen && (
-//                 <div className="group relative rounded-2xl border border-[#06483D]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
+//                 <div className="group relative rounded-2xl border border-[#10251F]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
 //                   <div className="flex items-center justify-between gap-3 px-2 pb-3">
 //                     <div className="flex items-center gap-2">
-//                       <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F0E9] text-[#06483D]">
+//                       <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F2F6] text-[#10251F]">
 //                         <svg
 //                           aria-hidden="true"
 //                           viewBox="0 0 24 24"
@@ -978,7 +978,7 @@
 //                           />
 //                         </svg>
 //                       </span>
-//                       <span className="text-xs font-bold text-[#172B26] sm:text-sm">
+//                       <span className="text-xs font-bold text-[#10251F] sm:text-sm">
 //                         Google Street View
 //                       </span>
 //                     </div>
@@ -988,7 +988,7 @@
 //                     </span>
 //                   </div>
 
-//                   <div className="relative overflow-hidden rounded-xl bg-[#E8E1D5]">
+//                   <div className="relative overflow-hidden rounded-xl bg-[#D8E5E8]">
 //                     <iframe
 //                       title="Google Street View of Jattari, Aligarh District"
 //                       src={streetViewEmbedUrl}
@@ -1003,13 +1003,13 @@
 //                   </div>
 
 //                   <div className="flex flex-wrap items-center justify-between gap-3 px-2 pt-3">
-//                     <p className="text-xs text-[#64736D]">
+//                     <p className="text-xs text-[#263D3A]">
 //                       Move around to explore the surroundings
 //                     </p>
 //                     <button
 //                       type="button"
 //                       onClick={handleCloseStreetView}
-//                       className="inline-flex items-center gap-2 rounded-lg border border-[#06483D]/15 px-3 py-2 text-xs font-bold text-[#06483D] transition-colors hover:border-[#D58A28] hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
+//                       className="inline-flex items-center gap-2 rounded-lg border border-[#10251F]/15 px-3 py-2 text-xs font-bold text-[#10251F] transition-colors hover:border-[#D58A28] hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
 //                     >
 //                       Close View
 //                       <span aria-hidden="true">×</span>
@@ -1025,7 +1025,7 @@
 //       {/* EXPLORE TOPICS */}
 //       <section
 //         id="explore-topics"
-//         className="scroll-mt-24 border-y border-[#06483D]/15 bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20"
+//         className="scroll-mt-24 border-y border-[#10251F]/15 bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20"
 //       >
 //         <div className="mx-auto max-w-6xl">
 //           <div className={revealClass}>
@@ -1033,42 +1033,42 @@
 //               Explore by Topic
 //             </p>
 
-//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+//             <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
 //               What would you like to discover?
 //             </h2>
 
-//             <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+//             <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
 //               Choose a topic to explore information about Jattari and its
 //               surrounding region.
 //             </p>
 //           </div>
 
-//           <div className="mt-9 border-t border-[#06483D]/20">
+//           <div className="mt-9 border-t border-[#10251F]/20">
 //             {places.map((place, index) => (
 //               <article
 //                 key={place.number}
-//                 className={`${revealClass} group grid gap-4 border-b border-[#06483D]/15 py-6 transition-all duration-300 hover:bg-[#FFF9F0]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
+//                 className={`${revealClass} group grid gap-4 border-b border-[#10251F]/15 py-6 transition-all duration-300 hover:bg-[#F4F8FA]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
 //                 style={{
 //                   transitionDelay: `${Math.min(index * 70, 350)}ms`,
 //                 }}
 //               >
-//                 <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#06483D]">
+//                 <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10251F]">
 //                   {place.number}
 //                 </span>
 
 //                 <div>
-//                   <h3 className="text-lg font-bold text-[#172B26] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#0B5A49] sm:text-xl">
+//                   <h3 className="text-lg font-bold text-[#10251F] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#254C3C] sm:text-xl">
 //                     {place.title}
 //                   </h3>
 
-//                   <p className="mt-2 max-w-2xl text-sm leading-7 text-[#64736D] transition-colors duration-300 group-hover:text-[#435B51]">
+//                   <p className="mt-2 max-w-2xl text-sm leading-7 text-[#263D3A] transition-colors duration-300 group-hover:text-[#435B51]">
 //                     {place.description}
 //                   </p>
 //                 </div>
 
 //                 <Link
 //                   href={place.href}
-//                   className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
+//                   className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#254C3C] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
 //                 >
 //                   {place.label}
 //                   <span
@@ -1087,17 +1087,17 @@
 //       {/* CLOSING SECTION */}
 //       <section className="px-6 py-14 sm:py-16 md:px-12 md:py-20">
 //         <div
-//           className={`${revealClass} mx-auto max-w-6xl border-t border-[#06483D]/15 pt-8 sm:pt-10`}
+//           className={`${revealClass} mx-auto max-w-6xl border-t border-[#10251F]/15 pt-8 sm:pt-10`}
 //         >
 //           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
 //             Your Jattari Guide
 //           </p>
 
-//           <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#172B26] sm:text-3xl md:text-4xl">
+//           <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#10251F] sm:text-3xl md:text-4xl">
 //             Keep exploring and learn more about the area.
 //           </h2>
 
-//           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#64736D] sm:text-base">
+//           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base">
 //             Browse the available guides to learn about local facilities,
 //             regional culture, attractions, shopping, and practical travel
 //             information.
@@ -1106,7 +1106,7 @@
 //           <div className="mt-7 flex flex-wrap gap-3">
 //             <Link
 //               href="/location-connectivity"
-//               className="group inline-flex items-center gap-2 rounded-xl bg-[#06483D] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl bg-[#10251F] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Location &amp; Connectivity
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1116,7 +1116,7 @@
 
 //             <Link
 //               href="/explore/attractions"
-//               className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Attractions &amp; Places to Visit
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1126,7 +1126,7 @@
 
 //             <Link
 //               href="/explore/contact-feedback"
-//               className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+//               className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
 //             >
 //               Contact &amp; Feedback
 //               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1398,55 +1398,55 @@ export default function ExplorePage() {
   };
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* HERO SECTION */}
-      <section className="group/hero relative isolate flex min-h-[460px] items-center overflow-hidden bg-[#06483D] sm:min-h-[500px] md:min-h-[540px] md:px-12">
+      <section className="group/hero relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] md:px-12">
         <Image
           src="/images/explore-jattari.jpeg"
           alt="Explore Jattari and its surrounding area"
           fill
           priority
           sizes="100vw"
-          className="z-0 object-cover object-center transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
+          className="z-0 object-cover object-center opacity-30 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
         />
 
         {/* Image overlays */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#06483D]/80 via-[#06483D]/45 to-[#06483D]/10"
+          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#E4EDF0]/50 to-transparent"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#06483D]/50 via-transparent to-[#06483D]/20"
+          className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#DCEBF0]/40 via-transparent to-transparent"
         />
 
         {/* Decorative elements */}
-        <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#FFF9F0]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
+        <div className="pointer-events-none absolute -right-20 -top-20 z-10 h-72 w-72 rounded-full border border-[#F4F8FA]/20 transition-transform duration-1000 group-hover/hero:rotate-45" />
 
         <div className="pointer-events-none absolute -bottom-28 left-1/3 z-10 h-72 w-72 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover/hero:scale-125" />
 
         {/* Hero content */}
-        <div className="relative z-20 mx-auto w-full max-w-6xl px-6 py-16 md:px-0 md:py-20">
+        <div className="relative z-20 mx-auto w-full max-w-6xl px-6 pt-28 pb-12 sm:pt-32 sm:pb-16 md:px-0">
           <div className="max-w-4xl">
             <p
-              className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#F2AE45] sm:text-sm`}
+              className={`${revealClass} mt-12 text-xs font-bold uppercase tracking-[0.3em] text-[#B9741C] sm:text-sm`}
             >
               Discover the Region
             </p>
 
             <h1
-              className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-white drop-shadow-lg sm:text-5xl md:text-6xl lg:text-7xl`}
+              className={`${revealClass} mt-4 text-4xl font-extrabold leading-tight text-[#10251F] sm:text-5xl md:text-6xl lg:text-7xl`}
               style={{ transitionDelay: "100ms" }}
             >
               Explore Jattari
-              <span className="mt-2 block text-[#F2AE45]">
+              <span className="mt-2 block text-[#D58A28]">
                 Places, People &amp; Everyday Life
               </span>
             </h1>
 
             <p
-              className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-white/90 drop-shadow sm:text-base sm:leading-8 md:text-lg`}
+              className={`${revealClass} mt-6 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8 md:text-lg`}
               style={{ transitionDelay: "200ms" }}
             >
               Discover Jattari in Aligarh district, Uttar Pradesh. Explore its
@@ -1456,7 +1456,7 @@ export default function ExplorePage() {
 
             <a
               href="#explore-topics"
-              className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#06483D]`}
+              className={`${revealClass} mt-8 inline-flex items-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F2AE45] focus-visible:ring-offset-2 focus-visible:ring-offset-[#EEF5F8]`}
               style={{ transitionDelay: "300ms" }}
             >
               Start Exploring
@@ -1473,14 +1473,14 @@ export default function ExplorePage() {
               style={{ transitionDelay: "400ms" }}
             >
               <span>
-                <strong className="text-white">Location</strong>
-                <span className="mx-2 text-[#F2AE45]">/</span>
+                <strong className="text-[#10251F]">Location</strong>
+                <span className="mx-2 text-[#D58A28]">/</span>
                 Jattari
               </span>
 
               <span>
-                <strong className="text-white">Region</strong>
-                <span className="mx-2 text-[#F2AE45]">/</span>
+                <strong className="text-[#10251F]">Region</strong>
+                <span className="mx-2 text-[#D58A28]">/</span>
                 Western Uttar Pradesh
               </span>
             </div>
@@ -1496,17 +1496,17 @@ export default function ExplorePage() {
               Get to Know Jattari
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
               A closer look at the town and its surroundings
             </h2>
 
-            <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
+            <p className="mt-5 text-sm leading-8 text-[#263D3A] sm:text-base">
               Every place has its own character. Explore Jattari through its
               location, nearby destinations, local markets, essential
               services, regional history, and everyday experiences.
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-[#64736D] sm:text-base">
+            <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
               Use these guides to find helpful information about the area.
               Details such as opening hours, routes, available services, and
               local facilities should be checked before travelling.
@@ -1514,7 +1514,7 @@ export default function ExplorePage() {
 
             <Link
               href="/explore/introduction"
-              className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0B5A49] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
+              className="group mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#254C3C] transition-colors duration-300 hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
             >
               Get introduced to Jattari
               <span
@@ -1534,11 +1534,11 @@ export default function ExplorePage() {
               Explore at your pace
             </span>
 
-            <h3 className="mt-4 text-2xl font-bold leading-snug text-[#172B26] sm:text-3xl">
+            <h3 className="mt-4 text-2xl font-bold leading-snug text-[#10251F] sm:text-3xl">
               Understand the location. Discover the community.
             </h3>
 
-            <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
               From practical visitor information to regional attractions,
               each guide gives you another way to learn about Jattari.
             </p>
@@ -1549,31 +1549,31 @@ export default function ExplorePage() {
       </section>
 
       {/* JATTARI STREET VIEW */}
-      <section className="relative overflow-hidden bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20">
+      <section className="relative overflow-hidden bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-12">
             {/* LEFT CONTENT */}
             <div className="explore-reveal">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#06483D]/15 bg-[#FFF9F0] px-3 py-1.5">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#10251F]/15 bg-[#F4F8FA] px-3 py-1.5">
                 <span className="h-2 w-2 rounded-full bg-[#D58A28]" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#06483D]">
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#10251F]">
                   Explore Jattari in 360°
                 </span>
               </div>
 
-              <h2 className="mt-5 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+              <h2 className="mt-5 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
                 Take a closer look
-                <span className="mt-1 block text-[#0B5A49]">at Jattari</span>
+                <span className="mt-1 block text-[#254C3C]">at Jattari</span>
               </h2>
 
-              <p className="mt-5 max-w-md text-sm leading-7 text-[#64736D] sm:text-base">
+              <p className="mt-5 max-w-md text-sm leading-7 text-[#263D3A] sm:text-base">
                 Explore a real Google Street View panorama from Jattari,
                 Aligarh district. Move around the 360° view and get a
                 street-level glimpse of the selected location.
               </p>
 
-              <div className="mt-7 flex items-start gap-3 border-t border-[#06483D]/15 pt-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#06483D] text-[#FFF9F0]">
+              <div className="mt-7 flex items-start gap-3 border-t border-[#10251F]/15 pt-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#10251F] text-[#F4F8FA]">
                   <svg
                     aria-hidden="true"
                     viewBox="0 0 24 24"
@@ -1596,10 +1596,10 @@ export default function ExplorePage() {
                 </div>
 
                 <div>
-                  <p className="text-sm font-bold text-[#172B26]">
+                  <p className="text-sm font-bold text-[#10251F]">
                     Jattari, Aligarh District
                   </p>
-                  <p className="mt-1 text-xs leading-5 text-[#64736D]">
+                  <p className="mt-1 text-xs leading-5 text-[#263D3A]">
                     Uttar Pradesh, India
                   </p>
                 </div>
@@ -1610,7 +1610,7 @@ export default function ExplorePage() {
                 <button
                   type="button"
                   onClick={handleOpenStreetView}
-                  className="group mt-7 inline-flex items-center justify-center gap-3 rounded-xl bg-[#06483D] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0B5A49] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+                  className="group mt-7 inline-flex items-center justify-center gap-3 rounded-xl bg-[#10251F] px-5 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#254C3C] hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
                 >
                   Explore in 360°
                   <span
@@ -1627,10 +1627,10 @@ export default function ExplorePage() {
             <div className="min-w-0">
               {/* Google Map is visible when the page loads */}
               {!streetViewOpen && !streetViewLoading && (
-                <div className="overflow-hidden rounded-2xl border border-[#06483D]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
+                <div className="overflow-hidden rounded-2xl border border-[#10251F]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
                   <div className="flex items-center justify-between gap-3 px-2 pb-3">
                     <div className="flex items-center gap-2">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F0E9] text-[#06483D]">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F2F6] text-[#10251F]">
                         <svg
                           aria-hidden="true"
                           viewBox="0 0 24 24"
@@ -1651,17 +1651,17 @@ export default function ExplorePage() {
                         </svg>
                       </span>
 
-                      <span className="text-xs font-bold text-[#172B26] sm:text-sm">
+                      <span className="text-xs font-bold text-[#10251F] sm:text-sm">
                         Google Maps · Jattari
                       </span>
                     </div>
 
-                    <span className="rounded-full bg-[#E8F0E9] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#06483D] sm:text-[11px]">
+                    <span className="rounded-full bg-[#E8F2F6] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#10251F] sm:text-[11px]">
                       Map View
                     </span>
                   </div>
 
-                  <div className="relative overflow-hidden rounded-xl bg-[#E8E1D5]">
+                  <div className="relative overflow-hidden rounded-xl bg-[#D8E5E8]">
                     <iframe
                       title="Google Map of Jattari, Aligarh District"
                       src={googleMapsEmbedUrl}
@@ -1674,7 +1674,7 @@ export default function ExplorePage() {
                     />
                   </div>
 
-                  <p className="px-2 pt-3 text-xs text-[#64736D]">
+                  <p className="px-2 pt-3 text-xs text-[#263D3A]">
                     Explore the location of Jattari on Google Maps
                   </p>
                 </div>
@@ -1682,10 +1682,10 @@ export default function ExplorePage() {
 
               {/* Street View panel appears after animation */}
               {streetViewOpen && (
-                <div className="animate-in fade-in slide-in-from-right-8 duration-700 rounded-2xl border border-[#06483D]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
+                <div className="animate-in fade-in slide-in-from-right-8 duration-700 rounded-2xl border border-[#10251F]/10 bg-white p-2.5 shadow-[0_16px_45px_rgb(23_43_38_/_12%)] sm:p-3">
                   <div className="flex items-center justify-between gap-3 px-2 pb-3">
                     <div className="flex items-center gap-2">
-                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F0E9] text-[#06483D]">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#E8F2F6] text-[#10251F]">
                         <svg
                           aria-hidden="true"
                           viewBox="0 0 24 24"
@@ -1707,7 +1707,7 @@ export default function ExplorePage() {
                         </svg>
                       </span>
 
-                      <span className="text-xs font-bold text-[#172B26] sm:text-sm">
+                      <span className="text-xs font-bold text-[#10251F] sm:text-sm">
                         Google Street View
                       </span>
                     </div>
@@ -1717,7 +1717,7 @@ export default function ExplorePage() {
                     </span>
                   </div>
 
-                  <div className="relative overflow-hidden rounded-xl bg-[#E8E1D5]">
+                  <div className="relative overflow-hidden rounded-xl bg-[#D8E5E8]">
                     <iframe
                       title="Google Street View of Jattari, Aligarh District"
                       src={streetViewEmbedUrl}
@@ -1731,14 +1731,14 @@ export default function ExplorePage() {
                   </div>
 
                   <div className="flex flex-wrap items-center justify-between gap-3 px-2 pt-3">
-                    <p className="text-xs text-[#64736D]">
+                    <p className="text-xs text-[#263D3A]">
                       Move around to explore the surroundings
                     </p>
 
                     <button
                       type="button"
                       onClick={handleCloseStreetView}
-                      className="inline-flex items-center gap-2 rounded-lg border border-[#06483D]/15 px-3 py-2 text-xs font-bold text-[#06483D] transition-colors hover:border-[#D58A28] hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
+                      className="inline-flex items-center gap-2 rounded-lg border border-[#10251F]/15 px-3 py-2 text-xs font-bold text-[#10251F] transition-colors hover:border-[#D58A28] hover:text-[#B9741C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28]"
                     >
                       Close View
                       <span aria-hidden="true">×</span>
@@ -1754,7 +1754,7 @@ export default function ExplorePage() {
       {/* EXPLORE TOPICS */}
       <section
         id="explore-topics"
-        className="scroll-mt-24 border-y border-[#06483D]/15 bg-[#F3EBDD] px-6 py-14 sm:py-16 md:px-12 md:py-20"
+        className="scroll-mt-24 border-y border-[#10251F]/15 bg-[#EAF2F6] px-6 py-14 sm:py-16 md:px-12 md:py-20"
       >
         <div className="mx-auto max-w-6xl">
           <div className={revealClass}>
@@ -1762,42 +1762,42 @@ export default function ExplorePage() {
               Explore by Topic
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
               What would you like to discover?
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#64736D] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
               Choose a topic to explore information about Jattari and its
               surrounding region.
             </p>
           </div>
 
-          <div className="mt-9 border-t border-[#06483D]/20">
+          <div className="mt-9 border-t border-[#10251F]/20">
             {places.map((place, index) => (
               <article
                 key={place.number}
-                className={`${revealClass} group grid gap-4 border-b border-[#06483D]/15 py-6 transition-all duration-300 hover:bg-[#FFF9F0]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
+                className={`${revealClass} group grid gap-4 border-b border-[#10251F]/15 py-6 transition-all duration-300 hover:bg-[#F4F8FA]/70 sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-6 sm:px-4`}
                 style={{
                   transitionDelay: `${Math.min(index * 70, 350)}ms`,
                 }}
               >
-                <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#06483D]">
+                <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#10251F]">
                   {place.number}
                 </span>
 
                 <div>
-                  <h3 className="text-lg font-bold text-[#172B26] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#0B5A49] sm:text-xl">
+                  <h3 className="text-lg font-bold text-[#10251F] transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#254C3C] sm:text-xl">
                     {place.title}
                   </h3>
 
-                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#64736D] transition-colors duration-300 group-hover:text-[#435B51]">
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#263D3A] transition-colors duration-300 group-hover:text-[#435B51]">
                     {place.description}
                   </p>
                 </div>
 
                 <Link
                   href={place.href}
-                  className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
+                  className="inline-flex items-center gap-2 justify-self-start text-sm font-bold text-[#254C3C] transition-all duration-300 hover:text-[#B9741C] focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] sm:justify-self-end"
                 >
                   {place.label}
                   <span
@@ -1816,17 +1816,17 @@ export default function ExplorePage() {
       {/* CLOSING SECTION */}
       <section className="px-6 py-14 sm:py-16 md:px-12 md:py-20">
         <div
-          className={`${revealClass} mx-auto max-w-6xl border-t border-[#06483D]/15 pt-8 sm:pt-10`}
+          className={`${revealClass} mx-auto max-w-6xl border-t border-[#10251F]/15 pt-8 sm:pt-10`}
         >
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
             Your Jattari Guide
           </p>
 
-          <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#172B26] sm:text-3xl md:text-4xl">
+          <h2 className="mt-4 max-w-3xl text-2xl font-bold leading-tight text-[#10251F] sm:text-3xl md:text-4xl">
             Keep exploring and learn more about the area.
           </h2>
 
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#64736D] sm:text-base">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base">
             Browse the available guides to learn about local facilities,
             regional culture, attractions, shopping, and practical travel
             information.
@@ -1835,7 +1835,7 @@ export default function ExplorePage() {
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
               href="/location-connectivity"
-              className="group inline-flex items-center gap-2 rounded-xl bg-[#06483D] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+              className="group inline-flex items-center gap-2 rounded-xl bg-[#10251F] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
             >
               Location &amp; Connectivity
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1845,7 +1845,7 @@ export default function ExplorePage() {
 
             <Link
               href="/explore/attractions"
-              className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+              className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
             >
               Attractions &amp; Places to Visit
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1855,7 +1855,7 @@ export default function ExplorePage() {
 
             <Link
               href="/explore/contact-feedback"
-              className="group inline-flex items-center gap-2 rounded-xl border border-[#06483D]/20 bg-[#FFF9F0] px-6 py-3 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
+              className="group inline-flex items-center gap-2 rounded-xl border border-[#10251F]/20 bg-[#F4F8FA] px-6 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C] hover:shadow-md active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D58A28] focus-visible:ring-offset-2"
             >
               Contact &amp; Feedback
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -1869,7 +1869,7 @@ export default function ExplorePage() {
       {/* FULL-SCREEN 5-SECOND ANIMATION */}
       {streetViewLoading && (
         <div
-          className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center overflow-hidden bg-[#FFF9F0] px-6"
+          className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center overflow-hidden bg-[#F4F8FA] px-6"
           role="status"
           aria-live="polite"
           aria-label="Preparing Google Street View"
@@ -1882,7 +1882,7 @@ export default function ExplorePage() {
 
           <div
             aria-hidden="true"
-            className="absolute left-1/2 top-1/2 h-[min(85vw,650px)] w-[min(85vw,650px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#06483D]/10"
+            className="absolute left-1/2 top-1/2 h-[min(85vw,650px)] w-[min(85vw,650px)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#10251F]/10"
           />
 
           <div
@@ -1891,12 +1891,12 @@ export default function ExplorePage() {
           />
 
           <div className="relative z-10 w-full max-w-xl text-center">
-            <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-[#06483D] shadow-[0_20px_60px_rgba(6,72,61,0.22)]">
+            <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl bg-[#10251F] shadow-[0_20px_60px_rgba(6,72,61,0.22)]">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 48 48"
                 fill="none"
-                className="h-12 w-12 text-[#FFF9F0]"
+                className="h-12 w-12 text-[#F4F8FA]"
               >
                 <path
                   d="M24 42s14-10.4 14-24a14 14 0 1 0-28 0c0 13.6 14 24 14 24Z"
@@ -1923,17 +1923,17 @@ export default function ExplorePage() {
               Jattari Explorer
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold text-[#06483D] sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-[#10251F] sm:text-4xl">
               Preparing your 360° view
             </h2>
 
-            <p className="mx-auto mt-4 max-w-md text-sm leading-7 text-[#64736D] sm:text-base">
+            <p className="mx-auto mt-4 max-w-md text-sm leading-7 text-[#263D3A] sm:text-base">
               Scanning the surroundings and preparing a street-level view of
               Jattari.
             </p>
 
             {/* Theme-colored scanning animation */}
-            <div className="relative mx-auto mt-9 h-28 max-w-md overflow-hidden rounded-2xl border border-[#06483D]/15 bg-white/70 shadow-inner">
+            <div className="relative mx-auto mt-9 h-28 max-w-md overflow-hidden rounded-2xl border border-[#10251F]/15 bg-white/70 shadow-inner">
               <div
                 aria-hidden="true"
                 className="absolute inset-0 bg-[linear-gradient(rgba(6,72,61,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(6,72,61,0.07)_1px,transparent_1px)] bg-[size:18px_18px]"
@@ -1944,7 +1944,7 @@ export default function ExplorePage() {
                   aria-hidden="true"
                   viewBox="0 0 180 80"
                   fill="none"
-                  className="h-20 w-44 text-[#06483D]"
+                  className="h-20 w-44 text-[#10251F]"
                 >
                   <path
                     d="M12 65 42 38 70 50 106 18 145 42 168 28M12 65h156M42 38v27M70 50v15M106 18v47M145 42v23"
@@ -1971,16 +1971,16 @@ export default function ExplorePage() {
             </div>
 
             {/* Progress bar */}
-            <div className="mt-5 h-2 overflow-hidden rounded-full bg-[#06483D]/10">
+            <div className="mt-5 h-2 overflow-hidden rounded-full bg-[#10251F]/10">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-[#06483D] via-[#0B5A49] to-[#D58A28] transition-[width] duration-75 ease-linear"
+                className="h-full rounded-full bg-gradient-to-r from-[#10251F] via-[#254C3C] to-[#D58A28] transition-[width] duration-75 ease-linear"
                 style={{ width: `${scanProgress}%` }}
               />
             </div>
 
             <div className="mt-4 flex items-center justify-center gap-3">
               <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-[#D58A28]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#06483D]">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#10251F]">
                 Mapping panorama coordinates
               </span>
             </div>

@@ -246,7 +246,7 @@ export default function LocalMarketsPage() {
   }, []);
 
   return (
-    <main className="markets-page min-h-screen overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="markets-page min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       <style jsx global>{`
         .markets-page [data-reveal] {
           opacity: 0;
@@ -323,23 +323,23 @@ export default function LocalMarketsPage() {
           backgroundImage: 'url("/images/market.jpeg")',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FFF9F0]/90 via-[#FFF9F0]/65 to-[#FFF9F0]/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F4F8FA]/90 via-[#F4F8FA]/65 to-[#F4F8FA]/10" />
 
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border border-[#D58A28]/40 transition-transform duration-1000 group-hover:rotate-12 group-hover:scale-110" />
-        <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full border border-[#0B5A49]/30 transition-transform duration-1000 group-hover:-rotate-12" />
+        <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full border border-[#254C3C]/30 transition-transform duration-1000 group-hover:-rotate-12" />
 
         <div className="relative mx-auto w-full max-w-6xl">
           <div
             data-reveal
-            className="max-w-3xl rounded-2xl border border-white/50 bg-[#FFF9F0]/60 p-6 shadow-xl backdrop-blur-md sm:p-9 md:p-11"
+            className="max-w-3xl rounded-2xl border border-white/50 bg-[#F4F8FA]/60 p-6 shadow-xl backdrop-blur-md sm:p-9 md:p-11"
           >
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#B9741C] sm:text-sm">
               Local Life · Shopping · Community
             </p>
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-[#172B26] sm:text-5xl md:text-7xl">
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight text-[#10251F] sm:text-5xl md:text-7xl">
               The Markets &amp;
-              <span className="block text-[#0B5A49]">
+              <span className="block text-[#254C3C]">
                 Lifestyle of Jattari
               </span>
             </h1>
@@ -354,7 +354,7 @@ export default function LocalMarketsPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#market-areas"
-                className="group/btn inline-flex items-center gap-3 rounded-xl bg-[#06483D] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg"
+                className="group/btn inline-flex items-center gap-3 rounded-xl bg-[#10251F] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
               >
                 Discover Jattari Markets
                 <span className="transition-transform duration-300 group-hover/btn:translate-x-2" aria-hidden="true">
@@ -364,18 +364,18 @@ export default function LocalMarketsPage() {
 
               <a
                 href="#daily-life"
-                className="inline-flex items-center gap-3 rounded-xl border border-[#06483D]/30 bg-[#FFF9F0] px-6 py-3.5 text-sm font-semibold text-[#06483D] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C]"
+                className="inline-flex items-center gap-3 rounded-xl border border-[#10251F]/30 bg-[#F4F8FA] px-6 py-3.5 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:text-[#B9741C]"
               >
                 Explore Local Lifestyle
               </a>
             </div>
 
-            <div className="mt-9 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#06483D]/15 pt-6">
+            <div className="mt-9 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/15 pt-6">
               <div>
                 <p className="text-xs uppercase tracking-widest text-[#64736D]">
                   Location
                 </p>
-                <p className="mt-1 text-sm font-bold text-[#172B26]">
+                <p className="mt-1 text-sm font-bold text-[#10251F]">
                   Jattari, Uttar Pradesh
                 </p>
               </div>
@@ -383,7 +383,7 @@ export default function LocalMarketsPage() {
                 <p className="text-xs uppercase tracking-widest text-[#64736D]">
                   Discover
                 </p>
-                <p className="mt-1 text-sm font-bold text-[#172B26]">
+                <p className="mt-1 text-sm font-bold text-[#10251F]">
                   Markets &amp; Businesses
                 </p>
               </div>
@@ -391,7 +391,7 @@ export default function LocalMarketsPage() {
                 <p className="text-xs uppercase tracking-widest text-[#64736D]">
                   Experience
                 </p>
-                <p className="mt-1 text-sm font-bold text-[#172B26]">
+                <p className="mt-1 text-sm font-bold text-[#10251F]">
                   Everyday Local Life
                 </p>
               </div>
@@ -408,7 +408,7 @@ export default function LocalMarketsPage() {
               Understanding the Town
             </p>
 
-            <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 max-w-2xl text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl md:text-5xl">
               More than shopping. A town built around everyday connections.
             </h2>
 
@@ -445,7 +445,7 @@ export default function LocalMarketsPage() {
               />
             </div>
 
-            <div className="relative -mt-12 ml-auto mr-4 max-w-[290px] border-l-4 border-[#D58A28] bg-[#06483D] p-6 text-white shadow-xl transition-transform duration-500 hover:-translate-y-2 sm:mr-8">
+            <div className="relative -mt-12 ml-auto mr-4 max-w-[290px] border-l-4 border-[#D58A28] bg-[#10251F] p-6 text-white shadow-xl transition-transform duration-500 hover:-translate-y-2 sm:mr-8">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#F2AE45]">
                 The Local Experience
               </p>
@@ -460,7 +460,7 @@ export default function LocalMarketsPage() {
       {/* MARKET AREAS */}
       <section
         id="market-areas"
-        className="scroll-mt-24 bg-[#F3EBDD] px-6 py-16 md:px-12 md:py-24"
+        className="scroll-mt-24 bg-[#EAF2F6] px-6 py-16 md:px-12 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
@@ -468,7 +468,7 @@ export default function LocalMarketsPage() {
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
                 Explore the Shopping Areas
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-[#172B26] sm:text-4xl md:text-5xl">
+              <h2 className="mt-3 text-3xl font-bold text-[#10251F] sm:text-4xl md:text-5xl">
                 Get to know Jattari's markets
               </h2>
               <p className="mt-4 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -478,28 +478,28 @@ export default function LocalMarketsPage() {
               </p>
             </div>
 
-            <span className="text-sm font-semibold text-[#0B5A49]">
+            <span className="text-sm font-semibold text-[#254C3C]">
               Local Market Guide · 01—04
             </span>
           </div>
 
-          <div className="mt-12 border-t border-[#06483D]/20">
+          <div className="mt-12 border-t border-[#10251F]/20">
             {marketAreas.map((market, index) => (
               <article
                 key={market.number}
                 data-reveal={index % 2 === 0 ? "left" : "right"}
                 style={{ transitionDelay: `${index * 100}ms` }}
-                className="market-line group grid gap-5 border-b border-[#06483D]/20 py-7 transition-all duration-500 hover:bg-[#FFF9F0]/70 sm:grid-cols-[90px_1fr_220px] sm:items-center sm:gap-8 sm:px-5"
+                className="market-line group grid gap-5 border-b border-[#10251F]/20 py-7 transition-all duration-500 hover:bg-[#F4F8FA]/70 sm:grid-cols-[90px_1fr_220px] sm:items-center sm:gap-8 sm:px-5"
               >
                 <span className="text-3xl font-light text-[#B9741C] transition-all duration-500 group-hover:translate-x-2 group-hover:scale-110">
                   {market.number}
                 </span>
 
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#0B5A49]">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#254C3C]">
                     {market.category}
                   </p>
-                  <h3 className="mt-2 text-xl font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#B9741C] sm:text-2xl">
+                  <h3 className="mt-2 text-xl font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#B9741C] sm:text-2xl">
                     {market.title}
                   </h3>
                   <p className="mt-2 text-sm leading-7 text-[#64736D]">
@@ -511,7 +511,7 @@ export default function LocalMarketsPage() {
                   <p className="text-xs font-bold uppercase tracking-wider text-[#B9741C]">
                     Area Reference
                   </p>
-                  <p className="mt-2 text-sm font-semibold leading-6 text-[#172B26]">
+                  <p className="mt-2 text-sm font-semibold leading-6 text-[#10251F]">
                     {market.location}
                   </p>
                 </div>
@@ -528,13 +528,13 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* SHOPPING CATEGORIES */}
-      <section className="bg-[#FFF9F0] px-6 py-16 md:px-12 md:py-24">
+      <section className="bg-[#F4F8FA] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
               Inside the Local Economy
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-[#172B26] sm:text-4xl md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold text-[#10251F] sm:text-4xl md:text-5xl">
               What can you find in Jattari?
             </h2>
             <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -550,7 +550,7 @@ export default function LocalMarketsPage() {
                 key={item.number}
                 data-reveal={index % 2 === 0 ? "left" : "right"}
                 style={{ transitionDelay: `${(index % 3) * 110}ms` }}
-                className="group border-t border-[#06483D]/20 py-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#D58A28] sm:py-9"
+                className="group border-t border-[#10251F]/20 py-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#D58A28] sm:py-9"
               >
                 <div className="flex items-start justify-between">
                   <span className="inline-block text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6" aria-hidden="true">
@@ -561,7 +561,7 @@ export default function LocalMarketsPage() {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-xl font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#0B5A49] sm:text-2xl">
+                <h3 className="mt-5 text-xl font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#254C3C] sm:text-2xl">
                   {item.title}
                 </h3>
 
@@ -570,14 +570,14 @@ export default function LocalMarketsPage() {
                 </p>
 
                 <div className="mt-5">
-                  <p className="text-xs font-bold uppercase tracking-widest text-[#0B5A49]">
+                  <p className="text-xs font-bold uppercase tracking-widest text-[#254C3C]">
                     Local examples in online listings
                   </p>
                   <ul className="mt-3 flex flex-wrap gap-2">
                     {item.examples.map((example) => (
                       <li
                         key={example}
-                        className="border border-[#06483D]/15 bg-[#F3EBDD] px-3 py-2 text-xs font-medium text-[#43564E] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:bg-white hover:text-[#0B5A49]"
+                        className="border border-[#10251F]/15 bg-[#EAF2F6] px-3 py-2 text-xs font-medium text-[#43564E] transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28] hover:bg-white hover:text-[#254C3C]"
                       >
                         {example}
                       </li>
@@ -591,7 +591,7 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* AGRICULTURE FEATURE */}
-      <section className="relative overflow-hidden bg-[#06483D] px-6 py-16 text-white md:px-12 md:py-24">
+      <section className="relative overflow-hidden border-t border-[#D8E5E8] bg-[#EAF2F6] px-6 py-14 text-[#10251F] md:px-12 md:py-16">
         <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full border border-white/10" />
         <div className="pointer-events-none absolute -right-10 -top-10 h-52 w-52 rounded-full border border-[#F2AE45]/20" />
 
@@ -601,18 +601,18 @@ export default function LocalMarketsPage() {
               Agriculture &amp; Rural Connections
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl md:text-5xl">
               The connection between the town and its fields.
             </h2>
 
-            <p className="mt-6 text-sm leading-8 text-white/80 sm:text-base">
+            <p className="mt-6 text-sm leading-8 text-[#263D3A] sm:text-base">
               Jattari's identity is connected with the wider agricultural
               landscape of western Uttar Pradesh. Farming-related shops
               and suppliers serve an important practical role by providing
               access to agricultural inputs and products.
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-white/80 sm:text-base">
+            <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
               Seed and fertiliser shops are examples of how local trade
               supports farming activities. Seasonal requirements,
               agricultural work and connections with nearby villages
@@ -637,7 +637,7 @@ export default function LocalMarketsPage() {
               alt="Local commerce and agricultural connections around Jattari"
               className="h-[350px] w-full object-cover sm:h-[440px]"
             />
-            <div className="absolute bottom-5 left-5 bg-[#FFF9F0] px-5 py-4 text-[#172B26] shadow-xl transition-transform duration-500 hover:-translate-y-2">
+            <div className="absolute bottom-5 left-5 bg-[#F4F8FA] px-5 py-4 text-[#10251F] shadow-xl transition-transform duration-500 hover:-translate-y-2">
               <p className="text-xs font-bold uppercase tracking-widest text-[#B9741C]">
                 Local Economy
               </p>
@@ -650,14 +650,14 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* ROADS & CONNECTIVITY */}
-      <section className="bg-[#F3EBDD] px-6 py-16 md:px-12 md:py-24">
+      <section className="bg-[#EAF2F6] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
             <div data-reveal="left">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
                 Roads &amp; Local Access
               </p>
-              <h2 className="mt-3 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
                 The roads that connect local life
               </h2>
               <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -667,19 +667,19 @@ export default function LocalMarketsPage() {
               </p>
             </div>
 
-            <div className="border-t border-[#06483D]/20">
+            <div className="border-t border-[#10251F]/20">
               {localRoads.map((road, index) => (
                 <div
                   key={road.name}
                   data-reveal="right"
                   style={{ transitionDelay: `${index * 90}ms` }}
-                  className="group grid gap-2 border-b border-[#06483D]/20 py-5 transition-all duration-300 hover:bg-[#FFF9F0]/60 sm:grid-cols-[45px_1fr] sm:px-4"
+                  className="group grid gap-2 border-b border-[#10251F]/20 py-5 transition-all duration-300 hover:bg-[#F4F8FA]/60 sm:grid-cols-[45px_1fr] sm:px-4"
                 >
                   <span className="text-sm font-bold text-[#B9741C] transition-transform duration-300 group-hover:translate-x-2">
                     0{index + 1}
                   </span>
                   <div>
-                    <h3 className="text-lg font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#B9741C]">
+                    <h3 className="text-lg font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#B9741C]">
                       {road.name}
                     </h3>
                     <p className="mt-2 text-sm leading-7 text-[#64736D]">
@@ -696,14 +696,14 @@ export default function LocalMarketsPage() {
       {/* DAILY LIFESTYLE */}
       <section
         id="daily-life"
-        className="scroll-mt-24 bg-[#FFF9F0] px-6 py-16 md:px-12 md:py-24"
+        className="scroll-mt-24 bg-[#F4F8FA] px-6 py-16 md:px-12 md:py-24"
       >
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
               Life in Jattari
             </p>
-            <h2 className="mt-3 text-3xl font-bold text-[#172B26] sm:text-4xl md:text-5xl">
+            <h2 className="mt-3 text-3xl font-bold text-[#10251F] sm:text-4xl md:text-5xl">
               A closer look at everyday life
             </h2>
             <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -720,7 +720,7 @@ export default function LocalMarketsPage() {
                 key={moment.number}
                 data-reveal={index % 2 === 0 ? "left" : "right"}
                 style={{ transitionDelay: `${index * 120}ms` }}
-                className={`group border-t border-[#06483D]/20 py-8 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] sm:py-10 ${
+                className={`group border-t border-[#10251F]/20 py-8 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] sm:py-10 ${
                   index % 2 === 0 ? "md:mr-8 md:pr-8" : "md:ml-8 md:pl-8"
                 }`}
               >
@@ -732,7 +732,7 @@ export default function LocalMarketsPage() {
                     {moment.number}
                   </span>
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#0B5A49] sm:text-2xl">
+                <h3 className="mt-5 text-xl font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#254C3C] sm:text-2xl">
                   {moment.title}
                 </h3>
                 <p className="mt-3 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -745,14 +745,14 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* BUSINESS DIRECTORY */}
-      <section className="bg-[#F3EBDD] px-6 py-16 md:px-12 md:py-24">
+      <section className="bg-[#EAF2F6] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-6xl">
           <div data-reveal className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
                 Local Business Guide
               </p>
-              <h2 className="mt-3 text-3xl font-bold text-[#172B26] sm:text-4xl">
+              <h2 className="mt-3 text-3xl font-bold text-[#10251F] sm:text-4xl">
                 Some local business references
               </h2>
               <p className="mt-4 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -761,29 +761,29 @@ export default function LocalMarketsPage() {
                 complete directory.
               </p>
             </div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-[#0B5A49]">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#254C3C]">
               Local Listings
             </span>
           </div>
 
-          <div className="mt-10 overflow-hidden border-t border-[#06483D]/20">
+          <div className="mt-10 overflow-hidden border-t border-[#10251F]/20">
             {businessExamples.map((business, index) => (
               <div
                 key={business.name}
                 data-reveal={index % 2 === 0 ? "left" : "right"}
                 style={{ transitionDelay: `${(index % 3) * 90}ms` }}
-                className="group grid gap-2 border-b border-[#06483D]/20 py-5 transition-all duration-300 hover:bg-[#FFF9F0]/70 sm:grid-cols-[60px_1.2fr_1fr_1fr] sm:items-center sm:gap-5 sm:px-4"
+                className="group grid gap-2 border-b border-[#10251F]/20 py-5 transition-all duration-300 hover:bg-[#F4F8FA]/70 sm:grid-cols-[60px_1.2fr_1fr_1fr] sm:items-center sm:gap-5 sm:px-4"
               >
                 <span className="text-sm font-bold text-[#B9741C]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="font-bold text-[#172B26] transition-colors duration-300 group-hover:text-[#B9741C]">
+                <p className="font-bold text-[#10251F] transition-colors duration-300 group-hover:text-[#B9741C]">
                   {business.name}
                 </p>
                 <p className="text-sm text-[#64736D]">
                   {business.type}
                 </p>
-                <p className="text-sm font-medium text-[#0B5A49]">
+                <p className="text-sm font-medium text-[#254C3C]">
                   {business.area}
                 </p>
               </div>
@@ -800,13 +800,13 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* VISITOR TIPS */}
-      <section className="bg-[#FFF9F0] px-6 py-16 md:px-12 md:py-24">
+      <section className="bg-[#F4F8FA] px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
           <div data-reveal="left">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
               A Practical Guide
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight text-[#172B26] sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
               A few things to know before exploring.
             </h2>
             <p className="mt-5 text-sm leading-8 text-[#64736D] sm:text-base">
@@ -816,15 +816,15 @@ export default function LocalMarketsPage() {
             </p>
           </div>
 
-          <div className="border-t border-[#06483D]/20">
+          <div className="border-t border-[#10251F]/20">
             {marketTips.map((tip, index) => (
               <div
                 key={tip}
                 data-reveal="right"
                 style={{ transitionDelay: `${index * 80}ms` }}
-                className="group flex gap-4 border-b border-[#06483D]/15 py-5 transition-all duration-300 hover:translate-x-2 hover:bg-[#F3EBDD]/60"
+                className="group flex gap-4 border-b border-[#10251F]/15 py-5 transition-all duration-300 hover:translate-x-2 hover:bg-[#EAF2F6]/60"
               >
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-[#06483D] text-xs font-bold text-white transition-all duration-300 group-hover:rotate-6 group-hover:bg-[#D58A28]">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-[#10251F] text-xs font-bold text-white transition-all duration-300 group-hover:rotate-6 group-hover:bg-[#D58A28]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <p className="text-sm leading-7 text-[#43564E] sm:text-base">
@@ -837,7 +837,7 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* RELATED GUIDES */}
-      <section className="relative overflow-hidden bg-[#06483D] px-6 py-16 text-white md:px-12 md:py-20">
+      <section className="relative overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA] px-6 py-12 text-[#10251F] md:px-12 md:py-16">
         <div className="pointer-events-none absolute -right-20 -bottom-40 h-96 w-96 rounded-full border border-white/10" />
 
         <div className="relative mx-auto max-w-6xl">
@@ -845,7 +845,7 @@ export default function LocalMarketsPage() {
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F2AE45] sm:text-sm">
               Continue Exploring
             </p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-bold sm:text-4xl">
+            <h2 className="mt-3 max-w-2xl text-3xl font-bold text-[#10251F] sm:text-4xl">
               Discover more sides of Jattari.
             </h2>
           </div>
@@ -854,15 +854,15 @@ export default function LocalMarketsPage() {
             <Link
               href="/explore/food"
               data-reveal="left"
-              className="group border border-white/20 p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#F2AE45] hover:bg-white/5 hover:shadow-xl"
+              className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
               <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6">
                 🍲
               </span>
-              <h3 className="mt-4 text-xl font-bold">
+              <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 Food &amp; Local Eateries
               </h3>
-              <p className="mt-2 text-sm leading-7 text-white/70">
+              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
                 Discover food options, local eateries and everyday flavours.
               </p>
               <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
@@ -873,15 +873,15 @@ export default function LocalMarketsPage() {
             <Link
               href="/explore/travel-tips"
               data-reveal="scale"
-              className="group border border-white/20 p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#F2AE45] hover:bg-white/5 hover:shadow-xl"
+              className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
               <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:rotate-6">
                 🧭
               </span>
-              <h3 className="mt-4 text-xl font-bold">
+              <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 Travel Tips
               </h3>
-              <p className="mt-2 text-sm leading-7 text-white/70">
+              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
                 Prepare for your visit and explore the area with useful tips.
               </p>
               <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
@@ -892,15 +892,15 @@ export default function LocalMarketsPage() {
             <Link
               href="/explore/history-culture"
               data-reveal="right"
-              className="group border border-white/20 p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#F2AE45] hover:bg-white/5 hover:shadow-xl"
+              className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
               <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6">
                 🏛️
               </span>
-              <h3 className="mt-4 text-xl font-bold">
+              <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 History &amp; Culture
               </h3>
-              <p className="mt-2 text-sm leading-7 text-white/70">
+              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
                 Learn about Jattari's history, heritage and community.
               </p>
               <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
@@ -912,8 +912,8 @@ export default function LocalMarketsPage() {
       </section>
 
       {/* SOURCES & DISCLAIMER */}
-      <section className="bg-[#FFF9F0] px-6 py-8 md:px-12">
-        <div data-reveal className="mx-auto max-w-6xl border-t border-[#06483D]/15 pt-6">
+      <section className="bg-[#F4F8FA] px-6 py-8 md:px-12">
+        <div data-reveal className="mx-auto max-w-6xl border-t border-[#10251F]/15 pt-6">
           <p className="text-xs font-bold uppercase tracking-widest text-[#B9741C]">
             Research &amp; Information Note
           </p>
@@ -931,7 +931,7 @@ export default function LocalMarketsPage() {
               href="https://aligarh.nic.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0B5A49] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
+              className="text-[#254C3C] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
             >
               District Aligarh Official Website
             </a>
@@ -939,7 +939,7 @@ export default function LocalMarketsPage() {
               href="https://www.justdial.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0B5A49] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
+              className="text-[#254C3C] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
             >
               Local Business Directory
             </a>

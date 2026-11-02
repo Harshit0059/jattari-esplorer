@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -19,32 +19,32 @@ const checks = [
 
 export default function ResidentialPlotsPage() {
   return (
-    <main className="overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* HERO */}
-      <section className="relative flex min-h-[580px] items-center overflow-hidden bg-[#073B32]">
+      <section className="relative flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{
             backgroundImage: "url('/images/residentails.jpeg')",
           }}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/80 to-[#073B32]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 py-24 sm:px-10 lg:px-12">
+        <div className="relative mx-auto w-full max-w-7xl px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
 
-          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#F4B65E]">
+          <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#B9741C]">
             Jattari Real Estate Guide
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-[#10251F] sm:text-6xl lg:text-7xl">
             Find Space for
             <br />
             Your Future.
           </h1>
 
-          <p className="mt-7 max-w-xl text-base leading-8 text-white/85 sm:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-8 text-[#263D3A] sm:text-lg">
             Explore residential plot opportunities around Jattari.
             Understand the location, review important documents, and make
             informed decisions about your property journey.
@@ -53,7 +53,7 @@ export default function ResidentialPlotsPage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/real-estate/property-enquiries?type=Residential%20Plot"
-              className="inline-flex items-center gap-3 rounded-[10px] bg-[#D58A28] px-6 py-4 font-semibold text-white transition hover:bg-[#B9741C]"
+              className="inline-flex items-center gap-3 rounded-[10px] bg-[#10251F] px-6 py-4 font-semibold text-white transition hover:bg-[#254C3C]"
             >
               Explore Property Enquiries
               <ArrowRight size={18} />
@@ -61,7 +61,7 @@ export default function ResidentialPlotsPage() {
 
             <Link
               href="/real-estate/buying-checklist"
-              className="inline-flex items-center gap-3 rounded-[10px] border border-white/60 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-3 rounded-[10px] border border-[#D8E5E8] bg-white/80 px-6 py-4 font-semibold text-[#10251F] transition hover:border-[#D58A28] hover:bg-white"
             >
               Buying Checklist
               <FileCheck2 size={18} />
@@ -103,7 +103,7 @@ export default function ResidentialPlotsPage() {
 
             <Link
               href="/location-connectivity"
-              className="inline-flex items-center gap-2 font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="inline-flex items-center gap-2 font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               Explore Location & Connectivity
               <ArrowRight size={18} />
@@ -113,7 +113,7 @@ export default function ResidentialPlotsPage() {
       </section>
 
       {/* PROPERTY EVALUATION */}
-      <section className="border-y border-[#E8E1D5] bg-white">
+      <section className="border-y border-[#D8E5E8] bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-12 lg:py-24">
           <div className="mb-14 max-w-2xl">
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.22em] text-[#D58A28]">
@@ -133,7 +133,7 @@ export default function ResidentialPlotsPage() {
 
           <div className="grid gap-x-12 gap-y-10 md:grid-cols-2">
             <div className="border-t-2 border-[#D58A28] pt-6">
-              <MapPin className="mb-5 text-[#06483D]" size={28} />
+              <MapPin className="mb-5 text-[#10251F]" size={28} />
               <h3 className="text-xl font-semibold">Location & Access</h3>
               <p className="mt-3 leading-7 text-[#68756F]">
                 Evaluate approach roads, nearby daily conveniences,
@@ -142,7 +142,7 @@ export default function ResidentialPlotsPage() {
             </div>
 
             <div className="border-t-2 border-[#D58A28] pt-6">
-              <ShieldCheck className="mb-5 text-[#06483D]" size={28} />
+              <ShieldCheck className="mb-5 text-[#10251F]" size={28} />
               <h3 className="text-xl font-semibold">Legal Verification</h3>
               <p className="mt-3 leading-7 text-[#68756F]">
                 Verify ownership, land-use permissions, applicable
@@ -151,7 +151,7 @@ export default function ResidentialPlotsPage() {
             </div>
 
             <div className="border-t-2 border-[#D58A28] pt-6">
-              <FileCheck2 className="mb-5 text-[#06483D]" size={28} />
+              <FileCheck2 className="mb-5 text-[#10251F]" size={28} />
               <h3 className="text-xl font-semibold">Plot Details</h3>
               <p className="mt-3 leading-7 text-[#68756F]">
                 Confirm the area, dimensions, boundaries, access-road
@@ -160,7 +160,7 @@ export default function ResidentialPlotsPage() {
             </div>
 
             <div className="border-t-2 border-[#D58A28] pt-6">
-              <CheckCircle2 className="mb-5 text-[#06483D]" size={28} />
+              <CheckCircle2 className="mb-5 text-[#10251F]" size={28} />
               <h3 className="text-xl font-semibold">Total Budget</h3>
               <p className="mt-3 leading-7 text-[#68756F]">
                 Account for the plot price, registration, applicable taxes,
@@ -190,14 +190,14 @@ export default function ResidentialPlotsPage() {
 
             <Link
               href="/real-estate/buying-checklist"
-              className="mt-7 inline-flex items-center gap-2 font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="mt-7 inline-flex items-center gap-2 font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               Read the Full Buying Checklist
               <ArrowRight size={18} />
             </Link>
           </div>
 
-          <div className="divide-y divide-[#E8E1D5] border-y border-[#E8E1D5]">
+          <div className="divide-y divide-[#D8E5E8] border-y border-[#D8E5E8]">
             {checks.map((item, index) => (
               <div key={item} className="flex gap-5 py-6">
                 <span className="pt-0.5 text-sm font-bold tabular-nums text-[#D58A28]">
@@ -211,7 +211,7 @@ export default function ResidentialPlotsPage() {
       </section>
 
       {/* SUBTLE BRAND MENTIONS */}
-      <section className="border-t border-[#E8E1D5] bg-[#EAF2ED]">
+      <section className="border-t border-[#D8E5E8] bg-[#EAF2ED]">
         <div className="mx-auto max-w-7xl px-6 py-12 sm:px-10 lg:px-12">
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#68756F]">
             Property Enquiry Resources
@@ -219,7 +219,7 @@ export default function ResidentialPlotsPage() {
 
           <div className="mt-6 flex flex-col gap-5 border-y border-[#C8D9CE] py-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-lg font-semibold text-[#172B26]">
+              <p className="text-lg font-semibold text-[#10251F]">
                 Anugrah Homes
               </p>
               <p className="mt-1 text-sm leading-6 text-[#68756F]">
@@ -229,7 +229,7 @@ export default function ResidentialPlotsPage() {
 
             <Link
               href="/real-estate/property-enquiries?brand=Anugrah%20Homes&type=Residential%20Plot"
-              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               View Enquiry Details
               <ArrowRight size={16} />
@@ -238,7 +238,7 @@ export default function ResidentialPlotsPage() {
 
           <div className="flex flex-col gap-5 border-b border-[#C8D9CE] py-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-lg font-semibold text-[#172B26]">
+              <p className="text-lg font-semibold text-[#10251F]">
                 Skyline Aero Homes
               </p>
               <p className="mt-1 text-sm leading-6 text-[#68756F]">
@@ -248,7 +248,7 @@ export default function ResidentialPlotsPage() {
 
             <Link
               href="/real-estate/property-enquiries?brand=Skyline%20Aero%20Homes&type=Residential%20Plot"
-              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               View Enquiry Details
               <ArrowRight size={16} />
@@ -260,3 +260,4 @@ export default function ResidentialPlotsPage() {
     </main>
   );
 }
+

@@ -117,7 +117,7 @@ export default function CoachingCentresPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[420px] overflow-hidden bg-[#073B32] sm:min-h-[480px]">
+      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         {/* Hero Background Image */}
         <Image
           src="/images/coaching-hero.webp"
@@ -126,11 +126,11 @@ export default function CoachingCentresPage() {
           priority
           sizes="100vw"
           quality={75}
-          className="z-0 object-cover object-center transition-transform duration-[2000ms] ease-out group-hover:scale-105"
+          className="z-0 object-cover object-center opacity-25 transition-transform duration-[2000ms] ease-out group-hover:scale-105"
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/35" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
 
         {/* Animated Decorative Lines */}
         <div
@@ -145,28 +145,25 @@ export default function CoachingCentresPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-center px-6 py-16 sm:min-h-[480px] md:px-10 md:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
           <div
             data-coach-reveal
             className="max-w-3xl translate-x-[-45px] opacity-0 transition-all duration-1000 ease-out"
           >
-            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#F4B65E]">
-              <span className="h-px w-10 bg-[#F4B65E]" />
+            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C]"><span className="h-px w-10 bg-[#B9741C]" />
               Jattari Education Directory
             </p>
 
-            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-[#10251F] sm:text-5xl md:text-6xl">
               Coaching Centres Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/85 sm:text-lg">
-              Explore academic coaching and competitive-exam preparation
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">Explore academic coaching and competitive-exam preparation
               options in Jattari and the surrounding Aligarh area.
             </p>
 
-            <div className="mt-7 text-sm font-medium text-white/85">
-              <span className="font-bold text-[#F4B65E]">
-                {coachingCentres.length}
+            <div className="mt-7 text-sm font-medium text-[#263D3A]">
+              <span className="font-bold text-[#D58A28]">{coachingCentres.length}
               </span>{" "}
               directory entries · Aligarh, Uttar Pradesh
             </div>
@@ -317,7 +314,7 @@ export default function CoachingCentresPage() {
       </section>
 
       {/* Indirect Real Estate Promotion */}
-      <section className="relative isolate overflow-hidden bg-[#073B32] px-6 py-16 text-white md:px-10 md:py-20">
+      <section className="relative isolate overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA] px-6 py-12 text-[#10251F] md:px-10 md:py-14">
         {/* Floating Decorative Elements */}
         <div
           aria-hidden="true"
@@ -338,11 +335,11 @@ export default function CoachingCentresPage() {
               Growing Neighbourhoods
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-white sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[#10251F] sm:text-4xl">
               Learning opportunities shape the future of a neighbourhood.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
               Education, connectivity and residential development all
               contribute to the character of a growing area. Along with
               learning facilities, families and property explorers may
@@ -364,11 +361,11 @@ export default function CoachingCentresPage() {
                 </p>
               </div>
 
-              <h3 className="mt-4 text-2xl font-extrabold text-white">
+              <h3 className="mt-4 text-2xl font-extrabold text-[#10251F]">
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Discover Anugrah Homes and explore its residential project
                 in Jattari. Learn more about the project and the surrounding
                 neighbourhood through its official website.
@@ -398,11 +395,11 @@ export default function CoachingCentresPage() {
                 </p>
               </div>
 
-              <h3 className="mt-4 text-2xl font-extrabold text-white">
+              <h3 className="mt-4 text-2xl font-extrabold text-[#10251F]">
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Explore Skyline Aero Homes and learn about its residential
                 offerings in the wider Jewar region through its official
                 website.

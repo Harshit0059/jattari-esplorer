@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -69,16 +69,16 @@ const documents = [
 
 export default function BuyingChecklistPage() {
   return (
-    <main className="min-h-screen bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen bg-[#F4F8FA] text-[#10251F]">
       {/* Hero */}
-      <section className="relative isolate flex min-h-[440px] items-end overflow-hidden bg-[#073B32]">
+      <section className="relative isolate flex min-h-[440px] items-end overflow-hidden bg-[#10251F]">
         <div
           className="absolute inset-0 -z-20 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/residentails.jpeg')",
           }}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/95 via-[#073B32]/75 to-[#073B32]/30" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 pb-14 pt-28 sm:px-8 lg:px-12">
 
@@ -90,14 +90,14 @@ export default function BuyingChecklistPage() {
             Buying Property in Jattari? Start with the Right Checklist.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#263D3A] sm:text-lg">
             A practical guide to checking documents, understanding costs and
             evaluating a property before making a decision.
           </p>
 
           <Link
             href="/real-estate/property-enquiries"
-            className="mt-8 inline-flex items-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 text-sm font-semibold text-[#172B26] transition hover:bg-[#B9741C] hover:text-white"
+            className="mt-8 inline-flex items-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 text-sm font-semibold text-[#10251F] transition hover:bg-[#B9741C] hover:text-white"
           >
             Discuss a Property Enquiry
             <ArrowRight size={17} />
@@ -111,7 +111,7 @@ export default function BuyingChecklistPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
             Before You Buy
           </p>
-          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#073B32] sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight text-[#10251F] sm:text-4xl">
             Make an informed property decision.
           </h2>
           <div className="mt-6 h-1 w-16 rounded-full bg-[#D58A28]" />
@@ -133,13 +133,13 @@ export default function BuyingChecklistPage() {
       </section>
 
       {/* Main checklist */}
-      <section className="border-y border-[#E8E1D5] bg-white py-16 sm:py-20">
+      <section className="border-y border-[#D8E5E8] bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
               Six Essential Checks
             </p>
-            <h2 className="mt-4 text-3xl font-bold text-[#073B32] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold text-[#10251F] sm:text-4xl">
               What to verify before making a payment
             </h2>
             <p className="mt-4 leading-7 text-[#68756F]">
@@ -148,7 +148,7 @@ export default function BuyingChecklistPage() {
             </p>
           </div>
 
-          <div className="mt-12 divide-y divide-[#E8E1D5]">
+          <div className="mt-12 divide-y divide-[#D8E5E8]">
             {checklist.map((item) => {
               const Icon = item.icon;
 
@@ -162,14 +162,14 @@ export default function BuyingChecklistPage() {
                       {item.number}
                     </span>
                     <Icon
-                      className="mt-1 text-[#06483D] sm:mt-4"
+                      className="mt-1 text-[#10251F] sm:mt-4"
                       size={25}
                       strokeWidth={1.7}
                     />
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-[#073B32]">
+                    <h3 className="text-xl font-semibold text-[#10251F]">
                       {item.title}
                     </h3>
                     <p className="mt-3 max-w-3xl leading-7 text-[#68756F]">
@@ -189,7 +189,7 @@ export default function BuyingChecklistPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
             Document Review
           </p>
-          <h2 className="mt-4 text-3xl font-bold text-[#073B32] sm:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold text-[#10251F] sm:text-4xl">
             Documents to discuss with your legal adviser
           </h2>
           <p className="mt-5 leading-7 text-[#68756F]">
@@ -199,25 +199,25 @@ export default function BuyingChecklistPage() {
 
           <Link
             href="/real-estate/property-enquiries"
-            className="mt-7 inline-flex items-center gap-2 font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+            className="mt-7 inline-flex items-center gap-2 font-semibold text-[#10251F] transition hover:text-[#D58A28]"
           >
             Ask about a property
             <ArrowRight size={17} />
           </Link>
         </div>
 
-        <div className="border-t border-[#E8E1D5]">
+        <div className="border-t border-[#D8E5E8]">
           {documents.map((document, index) => (
             <div
               key={document}
-              className="flex items-start gap-4 border-b border-[#E8E1D5] py-5"
+              className="flex items-start gap-4 border-b border-[#D8E5E8] py-5"
             >
               <CheckCircle2
                 size={20}
                 className="mt-0.5 shrink-0 text-[#287A6D]"
               />
               <div>
-                <p className="font-medium text-[#172B26]">{document}</p>
+                <p className="font-medium text-[#10251F]">{document}</p>
                 <p className="mt-1 text-sm leading-6 text-[#68756F]">
                   Verify relevance, validity and completeness for the specific
                   property.
@@ -238,7 +238,7 @@ export default function BuyingChecklistPage() {
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#B9741C]">
               Plan Your Budget
             </p>
-            <h2 className="mt-4 text-3xl font-bold text-[#073B32] sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold text-[#10251F] sm:text-4xl">
               Look beyond the quoted plot price.
             </h2>
             <p className="mt-5 leading-7 text-[#52665D]">
@@ -251,7 +251,7 @@ export default function BuyingChecklistPage() {
 
           <Link
             href="/real-estate/property-enquiries"
-            className="inline-flex w-fit items-center gap-2 rounded-[10px] bg-[#06483D] px-6 py-3.5 font-semibold text-white transition hover:bg-[#04382F]"
+            className="inline-flex w-fit items-center gap-2 rounded-[10px] bg-[#10251F] px-6 py-3.5 font-semibold text-white transition hover:bg-[#254C3C]"
           >
             Make an Enquiry
             <ArrowRight size={17} />
@@ -265,9 +265,9 @@ export default function BuyingChecklistPage() {
           Property Enquiry Resources
         </p>
 
-        <div className="mt-6 grid gap-8 border-t border-[#E8E1D5] pt-7 md:grid-cols-2 md:gap-14">
+        <div className="mt-6 grid gap-8 border-t border-[#D8E5E8] pt-7 md:grid-cols-2 md:gap-14">
           <div>
-            <h3 className="text-lg font-semibold text-[#073B32]">
+            <h3 className="text-lg font-semibold text-[#10251F]">
               Anugrah Homes
             </h3>
             <p className="mt-2 leading-7 text-[#68756F]">
@@ -277,7 +277,7 @@ export default function BuyingChecklistPage() {
             </p>
             <Link
               href="/real-estate/property-enquiries?brand=Anugrah%20Homes&type=Buying%20Checklist"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               Enquire about property
               <ArrowRight size={16} />
@@ -285,7 +285,7 @@ export default function BuyingChecklistPage() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold text-[#073B32]">
+            <h3 className="text-lg font-semibold text-[#10251F]">
               Skyline Aero Homes
             </h3>
             <p className="mt-2 leading-7 text-[#68756F]">
@@ -295,7 +295,7 @@ export default function BuyingChecklistPage() {
             </p>
             <Link
               href="/real-estate/property-enquiries?brand=Skyline%20Aero%20Homes&type=Buying%20Checklist"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#06483D] transition hover:text-[#D58A28]"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F] transition hover:text-[#D58A28]"
             >
               Enquire about property
               <ArrowRight size={16} />
@@ -305,10 +305,10 @@ export default function BuyingChecklistPage() {
       </section>
 
       {/* Bottom navigation */}
-      <section className="border-t border-[#E8E1D5] bg-white">
+      <section className="border-t border-[#D8E5E8] bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
           <div>
-            <h2 className="text-xl font-bold text-[#073B32]">
+            <h2 className="text-xl font-bold text-[#10251F]">
               Explore more property options
             </h2>
             <p className="mt-2 text-sm leading-6 text-[#68756F]">
@@ -320,21 +320,21 @@ export default function BuyingChecklistPage() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/real-estate/residential-plots"
-              className="rounded-[10px] border border-[#E8E1D5] px-4 py-3 text-sm font-semibold text-[#06483D] transition hover:border-[#D58A28] hover:bg-[#FFF0D8]"
+              className="rounded-[10px] border border-[#D8E5E8] px-4 py-3 text-sm font-semibold text-[#10251F] transition hover:border-[#D58A28] hover:bg-[#FFF0D8]"
             >
               Residential Plots
             </Link>
 
             <Link
               href="/real-estate/commercial-plots"
-              className="rounded-[10px] border border-[#E8E1D5] px-4 py-3 text-sm font-semibold text-[#06483D] transition hover:border-[#D58A28] hover:bg-[#FFF0D8]"
+              className="rounded-[10px] border border-[#D8E5E8] px-4 py-3 text-sm font-semibold text-[#10251F] transition hover:border-[#D58A28] hover:bg-[#FFF0D8]"
             >
               Commercial Plots
             </Link>
 
             <Link
               href="/real-estate/property-enquiries"
-              className="inline-flex items-center gap-2 rounded-[10px] bg-[#06483D] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#04382F]"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-[#10251F] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#254C3C]"
             >
               Property Enquiries
               <ArrowRight size={16} />
@@ -345,3 +345,4 @@ export default function BuyingChecklistPage() {
     </main>
   );
 }
+

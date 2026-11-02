@@ -62,7 +62,7 @@ export default function ConnectivityUpdatesPage() {
           className="object-cover object-center"
         />
 <div
-  className="absolute inset-0 bg-gradient-to-r from-[#FFF9F0]/90 0%, via-[#FFF9F0]/65 35%, via-[#FFF9F0]/10 65%, transparent 100%"
+  className="absolute inset-0 bg-gradient-to-r from-[#F4F8FA]/90 0%, via-[#F4F8FA]/65 35%, via-[#F4F8FA]/10 65%, transparent 100%"
   aria-hidden="true"
 />
         <div className="container-site relative mx-auto flex min-h-[510px] items-center px-4 py-16 sm:min-h-[590px] sm:px-6 lg:py-24">

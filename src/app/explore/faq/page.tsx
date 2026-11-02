@@ -153,10 +153,10 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="min-h-screen scroll-smooth overflow-hidden bg-[#FFF9F0] text-[#172B26]">
+    <main className="min-h-screen scroll-smooth overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* HERO SECTION */}
-      <section className="relative isolate overflow-hidden border-b border-[#06483D]/10 bg-[#F3EBDD]">
+      <section className="relative isolate overflow-hidden border-b border-[#10251F]/10 bg-[#EAF2F6]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full border border-[#D58A28]/20 transition-transform duration-1000 hover:scale-110"
@@ -164,7 +164,7 @@ export default function FAQPage() {
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 -top-14 h-72 w-72 rounded-full border border-[#06483D]/10"
+          className="pointer-events-none absolute -right-10 -top-14 h-72 w-72 rounded-full border border-[#10251F]/10"
         />
 
         <div
@@ -176,14 +176,14 @@ export default function FAQPage() {
           <div className="mt-14 grid items-center gap-12 md:mt-16 md:grid-cols-[1fr_300px] lg:gap-20">
 
             <div className={reveal}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#D58A28]/30 bg-[#FFF9F0] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#B9741C] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:text-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#D58A28]/30 bg-[#F4F8FA] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#B9741C] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:text-sm">
                 <HelpCircle className="h-4 w-4" />
                 Your Questions, Answered
               </div>
 
-              <h1 className="mt-7 text-4xl font-extrabold leading-[1.1] tracking-tight text-[#172B26] sm:text-5xl md:text-6xl lg:text-7xl">
+              <h1 className="mt-7 text-4xl font-extrabold leading-[1.1] tracking-tight text-[#10251F] sm:text-5xl md:text-6xl lg:text-7xl">
                 Everything you
-                <span className="block text-[#0B5A49]">
+                <span className="block text-[#254C3C]">
                   need to know.
                 </span>
               </h1>
@@ -195,12 +195,12 @@ export default function FAQPage() {
               </p>
 
               <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4 text-sm font-semibold text-[#43564E]">
-                <span className="inline-flex items-center gap-2 transition-colors hover:text-[#0B5A49]">
+                <span className="inline-flex items-center gap-2 transition-colors hover:text-[#254C3C]">
                   <CheckCircle2 className="h-4 w-4 text-[#B9741C]" />
                   Quick answers
                 </span>
 
-                <span className="inline-flex items-center gap-2 transition-colors hover:text-[#0B5A49]">
+                <span className="inline-flex items-center gap-2 transition-colors hover:text-[#254C3C]">
                   <Compass className="h-4 w-4 text-[#B9741C]" />
                   Local information
                 </span>
@@ -209,21 +209,21 @@ export default function FAQPage() {
 
             {/* FAQ DECORATIVE ILLUSTRATION */}
             <div className={`hidden justify-center md:flex ${reveal}`}>
-              <div className="group relative flex h-64 w-64 items-center justify-center rounded-[2.5rem] border border-[#06483D]/15 bg-[#FFF9F0] shadow-[0_25px_70px_rgba(6,72,61,0.10)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_80px_rgba(6,72,61,0.16)] lg:h-72 lg:w-72">
+              <div className="group relative flex h-64 w-64 items-center justify-center rounded-[2.5rem] border border-[#10251F]/15 bg-[#F4F8FA] shadow-[0_25px_70px_rgba(6,72,61,0.10)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_80px_rgba(6,72,61,0.16)] lg:h-72 lg:w-72">
                 <div className="absolute inset-5 rounded-[2rem] border border-dashed border-[#D58A28]/40 transition-transform duration-700 group-hover:rotate-6" />
 
-                <div className="flex h-32 w-32 items-center justify-center rounded-[2rem] bg-[#06483D] text-[#FFF9F0] shadow-xl shadow-[#06483D]/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 lg:h-36 lg:w-36">
+                <div className="flex h-32 w-32 items-center justify-center rounded-[2rem] bg-[#10251F] text-[#F4F8FA] shadow-xl shadow-[#10251F]/20 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 lg:h-36 lg:w-36">
                   <MessageCircle
                     className="h-16 w-16 transition-transform duration-500 group-hover:scale-110 lg:h-[72px] lg:w-[72px]"
                     strokeWidth={1.4}
                   />
                 </div>
 
-                <span className="absolute right-5 top-7 flex h-11 w-11 items-center justify-center rounded-xl border border-[#D58A28]/30 bg-[#F3EBDD] text-[#B9741C] transition-all duration-500 group-hover:-translate-y-2 group-hover:rotate-12">
+                <span className="absolute right-5 top-7 flex h-11 w-11 items-center justify-center rounded-xl border border-[#D58A28]/30 bg-[#EAF2F6] text-[#B9741C] transition-all duration-500 group-hover:-translate-y-2 group-hover:rotate-12">
                   <BookOpen className="h-5 w-5" />
                 </span>
 
-                <span className="absolute bottom-7 left-5 flex h-11 w-11 items-center justify-center rounded-xl border border-[#06483D]/15 bg-[#F3EBDD] text-[#06483D] transition-all duration-500 group-hover:translate-y-2 group-hover:-rotate-12">
+                <span className="absolute bottom-7 left-5 flex h-11 w-11 items-center justify-center rounded-xl border border-[#10251F]/15 bg-[#EAF2F6] text-[#10251F] transition-all duration-500 group-hover:translate-y-2 group-hover:-rotate-12">
                   <MapPin className="h-5 w-5" />
                 </span>
 
@@ -247,7 +247,7 @@ export default function FAQPage() {
               FAQ DIRECTORY
             </p>
 
-            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#172B26] sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#10251F] sm:text-3xl">
               Find your answer
             </h2>
 
@@ -268,8 +268,8 @@ export default function FAQPage() {
                     style={{ transitionDelay: `${index * 35}ms` }}
                     className={`group flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold transition-all duration-300 hover:translate-x-1 ${
                       selected
-                        ? "bg-[#06483D] text-white shadow-lg shadow-[#06483D]/15"
-                        : "border border-[#06483D]/10 bg-white text-[#43564E] hover:border-[#D58A28]/50 hover:bg-[#F3EBDD] hover:text-[#06483D]"
+                        ? "bg-[#10251F] text-white shadow-lg shadow-[#10251F]/15"
+                        : "border border-[#10251F]/10 bg-white text-[#43564E] hover:border-[#D58A28]/50 hover:bg-[#EAF2F6] hover:text-[#10251F]"
                     }`}
                   >
                     <span>{category}</span>
@@ -283,12 +283,12 @@ export default function FAQPage() {
             </div>
 
             {/* HELP CARD */}
-            <div className="group mt-8 border border-[#06483D]/15 bg-[#F3EBDD] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28]/50 hover:shadow-lg">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#06483D] text-white transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
+            <div className="group mt-8 border border-[#10251F]/15 bg-[#EAF2F6] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#D58A28]/50 hover:shadow-lg">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#10251F] text-white transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
                 <MessageCircle className="h-5 w-5" />
               </div>
 
-              <h3 className="mt-4 font-bold text-[#172B26]">
+              <h3 className="mt-4 font-bold text-[#10251F]">
                 Still need help?
               </h3>
 
@@ -299,7 +299,7 @@ export default function FAQPage() {
               <button
                 type="button"
                 onClick={() => setContactOpen(true)}
-                className="group/link mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0B5A49] transition-all duration-300 hover:gap-3 hover:text-[#B9741C]"
+                className="group/link mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#254C3C] transition-all duration-300 hover:gap-3 hover:text-[#B9741C]"
               >
                 Contact us
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/link:translate-x-1" />
@@ -316,19 +316,19 @@ export default function FAQPage() {
                   COMMON QUESTIONS
                 </p>
 
-                <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#172B26] sm:text-3xl">
+                <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#10251F] sm:text-3xl">
                   Frequently asked questions
                 </h2>
               </div>
 
-              <span className="rounded-full border border-[#D58A28]/25 bg-[#F3EBDD] px-4 py-2 text-sm font-semibold text-[#64736D] transition-all duration-300">
+              <span className="rounded-full border border-[#D58A28]/25 bg-[#EAF2F6] px-4 py-2 text-sm font-semibold text-[#64736D] transition-all duration-300">
                 {filteredFaqs.length}{" "}
                 {filteredFaqs.length === 1 ? "question" : "questions"}
               </span>
             </div>
 
             {/* SEARCH */}
-            <label className="mt-6 flex items-center gap-3 rounded-2xl border border-[#06483D]/15 bg-white px-4 py-4 shadow-sm transition-all duration-300 focus-within:border-[#D58A28] focus-within:shadow-md focus-within:ring-4 focus-within:ring-[#D58A28]/10 hover:border-[#D58A28]/50">
+            <label className="mt-6 flex items-center gap-3 rounded-2xl border border-[#10251F]/15 bg-white px-4 py-4 shadow-sm transition-all duration-300 focus-within:border-[#D58A28] focus-within:shadow-md focus-within:ring-4 focus-within:ring-[#D58A28]/10 hover:border-[#D58A28]/50">
               <Search className="h-5 w-5 shrink-0 text-[#B9741C] transition-transform duration-300" />
 
               <input
@@ -340,7 +340,7 @@ export default function FAQPage() {
                 }}
                 placeholder="Search your question..."
                 aria-label="Search frequently asked questions"
-                className="w-full bg-transparent text-sm text-[#172B26] outline-none placeholder:text-[#9CA39B]"
+                className="w-full bg-transparent text-sm text-[#10251F] outline-none placeholder:text-[#9CA39B]"
               />
 
               {searchQuery && (
@@ -351,7 +351,7 @@ export default function FAQPage() {
                     setOpenIndex(null);
                   }}
                   aria-label="Clear search"
-                  className="rounded-full p-1 text-[#64736D] transition-all duration-300 hover:rotate-90 hover:bg-[#F3EBDD] hover:text-[#06483D]"
+                  className="rounded-full p-1 text-[#64736D] transition-all duration-300 hover:rotate-90 hover:bg-[#EAF2F6] hover:text-[#10251F]"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -371,7 +371,7 @@ export default function FAQPage() {
                     className={`group overflow-hidden border bg-white transition-all duration-300 hover:-translate-y-0.5 ${
                       isOpen
                         ? "border-[#D58A28]/60 shadow-[0_12px_35px_rgba(6,72,61,0.07)]"
-                        : "border-[#06483D]/10 hover:border-[#D58A28]/50 hover:shadow-md"
+                        : "border-[#10251F]/10 hover:border-[#D58A28]/50 hover:shadow-md"
                     }`}
                   >
                     <button
@@ -384,15 +384,15 @@ export default function FAQPage() {
                       <span
                         className={`flex h-10 w-10 shrink-0 items-center justify-center text-xs font-extrabold transition-all duration-300 ${
                           isOpen
-                            ? "scale-105 bg-[#06483D] text-[#F2AE45]"
-                            : "bg-[#F3EBDD] text-[#B9741C] group-hover:bg-[#06483D] group-hover:text-white"
+                            ? "scale-105 bg-[#10251F] text-[#F2AE45]"
+                            : "bg-[#EAF2F6] text-[#B9741C] group-hover:bg-[#10251F] group-hover:text-white"
                         }`}
                       >
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
                       <span className="min-w-0 flex-1">
-                        <span className="block text-[15px] font-bold leading-6 text-[#172B26] transition-colors duration-300 group-hover:text-[#0B5A49] sm:text-base">
+                        <span className="block text-[15px] font-bold leading-6 text-[#10251F] transition-colors duration-300 group-hover:text-[#254C3C] sm:text-base">
                           {faq.q}
                         </span>
 
@@ -404,8 +404,8 @@ export default function FAQPage() {
                       <span
                         className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
                           isOpen
-                            ? "rotate-180 bg-[#06483D] text-[#F2AE45]"
-                            : "bg-[#F3EBDD] text-[#64736D] group-hover:bg-[#D58A28]/15"
+                            ? "rotate-180 bg-[#10251F] text-[#F2AE45]"
+                            : "bg-[#EAF2F6] text-[#64736D] group-hover:bg-[#D58A28]/15"
                         }`}
                       >
                         <ChevronDown className="h-4 w-4" />
@@ -422,7 +422,7 @@ export default function FAQPage() {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="border-t border-[#06483D]/10 bg-[#FFFDF8] px-4 pb-6 pt-5 sm:px-6 sm:pl-[4.75rem]">
+                        <div className="border-t border-[#10251F]/10 bg-[#FFFDF8] px-4 pb-6 pt-5 sm:px-6 sm:pl-[4.75rem]">
                           <p className="text-sm leading-8 text-[#64736D] sm:text-[15px]">
                             {faq.a}
                           </p>
@@ -437,11 +437,11 @@ export default function FAQPage() {
             {/* EMPTY SEARCH RESULT */}
             {filteredFaqs.length === 0 && (
               <div className="mt-5 border border-dashed border-[#D58A28]/50 bg-white px-5 py-14 text-center animate-in">
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F3EBDD] text-[#B9741C]">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EAF2F6] text-[#B9741C]">
                   <Search className="h-9 w-9" />
                 </div>
 
-                <h3 className="mt-4 text-lg font-bold text-[#172B26]">
+                <h3 className="mt-4 text-lg font-bold text-[#10251F]">
                   No matching questions
                 </h3>
 
@@ -456,7 +456,7 @@ export default function FAQPage() {
                     setActiveCategory("All Questions");
                     setOpenIndex(null);
                   }}
-                  className="mt-5 rounded-xl bg-[#06483D] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B5A49] hover:shadow-lg"
+                  className="mt-5 rounded-xl bg-[#10251F] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
                 >
                   Clear filters
                 </button>
@@ -473,7 +473,7 @@ export default function FAQPage() {
 
       {/* CONTACT BANNER */}
       <section className="px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12">
-        <div className={`relative mx-auto max-w-7xl overflow-hidden bg-[#06483D] px-6 py-11 shadow-[0_20px_60px_rgba(6,72,61,0.12)] transition-all duration-500 hover:shadow-[0_25px_70px_rgba(6,72,61,0.20)] sm:px-10 sm:py-14 lg:px-14 lg:py-16 ${reveal}`}>
+        <div className={`relative mx-auto max-w-7xl overflow-hidden bg-[#10251F] px-6 py-11 shadow-[0_20px_60px_rgba(6,72,61,0.12)] transition-all duration-500 hover:shadow-[0_25px_70px_rgba(6,72,61,0.20)] sm:px-10 sm:py-14 lg:px-14 lg:py-16 ${reveal}`}>
 
           <div
             aria-hidden="true"
@@ -504,7 +504,7 @@ export default function FAQPage() {
             <button
               type="button"
               onClick={() => setContactOpen(true)}
-              className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-[#D58A28] px-6 py-3 text-sm font-bold text-[#172B26] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E6A443] hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:self-center"
+              className="group inline-flex min-h-12 shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-[#D58A28] px-6 py-3 text-sm font-bold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E6A443] hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:self-center"
             >
               Contact Us
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -516,7 +516,7 @@ export default function FAQPage() {
       {/* CONTACT MODAL */}
       {contactOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#172B26]/70 p-4 backdrop-blur-sm animate-in"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-[#10251F]/70 p-4 backdrop-blur-sm animate-in"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) {
               setContactOpen(false);
@@ -527,7 +527,7 @@ export default function FAQPage() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="contact-modal-title"
-            className="relative my-auto max-h-[92vh] w-full max-w-2xl overflow-y-auto border border-[#D58A28]/20 bg-[#FFF9F0] p-5 shadow-2xl animate-in sm:p-7"
+            className="relative my-auto max-h-[92vh] w-full max-w-2xl overflow-y-auto border border-[#D58A28]/20 bg-[#F4F8FA] p-5 shadow-2xl animate-in sm:p-7"
           >
             <div className="mb-5 flex items-start justify-between gap-4">
               <div>
@@ -537,7 +537,7 @@ export default function FAQPage() {
 
                 <h2
                   id="contact-modal-title"
-                  className="mt-2 text-2xl font-extrabold text-[#172B26] sm:text-3xl"
+                  className="mt-2 text-2xl font-extrabold text-[#10251F] sm:text-3xl"
                 >
                   Contact Jattari Explorer
                 </h2>
@@ -551,7 +551,7 @@ export default function FAQPage() {
                 type="button"
                 onClick={() => setContactOpen(false)}
                 aria-label="Close contact form"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#06483D]/15 text-[#64736D] transition-all duration-300 hover:rotate-90 hover:bg-[#F3EBDD] hover:text-[#06483D]"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#10251F]/15 text-[#64736D] transition-all duration-300 hover:rotate-90 hover:bg-[#EAF2F6] hover:text-[#10251F]"
               >
                 <X className="h-4 w-4" />
               </button>

@@ -142,7 +142,7 @@ export default function SchoolsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[430px] overflow-hidden bg-[#073B32] sm:min-h-[500px]">
+      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
         <Image
           src="/images/schools-hero.webp"
           alt="Schools and education facilities in Jattari"
@@ -150,20 +150,20 @@ export default function SchoolsPage() {
           priority
           sizes="100vw"
           quality={75}
-          className="-z-20 object-cover object-center transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="-z-20 object-cover object-center opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
         />
 
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#073B32]/90 via-[#073B32]/70 to-[#073B32]/30" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
 
         {/* Decorative background elements */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 top-10 -z-0 h-72 w-72 rounded-full border border-white/15 transition-transform duration-[1200ms] group-hover:rotate-45 group-hover:scale-110 sm:h-96 sm:w-96"
+          className="pointer-events-none absolute -right-24 top-10 -z-0 h-72 w-72 rounded-full border border-[#10251F]/15 transition-transform duration-[1200ms] group-hover:rotate-45 group-hover:scale-110 sm:h-96 sm:w-96"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 top-24 -z-0 h-52 w-52 rounded-full border border-white/10 transition-transform duration-[1200ms] group-hover:-rotate-45 group-hover:scale-110 sm:h-72 sm:w-72"
+          className="pointer-events-none absolute -right-10 top-24 -z-0 h-52 w-52 rounded-full border border-[#10251F]/10 transition-transform duration-[1200ms] group-hover:-rotate-45 group-hover:scale-110 sm:h-72 sm:w-72"
         />
 
         <div
@@ -171,13 +171,12 @@ export default function SchoolsPage() {
           className="pointer-events-none absolute bottom-[-100px] left-[25%] -z-0 h-64 w-64 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover:scale-125"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[430px] max-w-7xl items-center px-6 py-16 sm:min-h-[500px] md:px-10 md:py-20">
+        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
           <div
             data-reveal
-            className={`max-w-3xl text-white ${revealLeft}`}
+            className={`max-w-3xl text-[#10251F] ${revealLeft}`}
           >
-            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#F4B65E]">
-              <span className="h-px w-8 bg-[#F4B65E]" />
+            <p className="mt-12 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C]"><span className="h-px w-8 bg-[#B9741C]" />
               Jattari Education Directory
             </p>
 
@@ -185,16 +184,15 @@ export default function SchoolsPage() {
               Schools in Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
               Explore school information and educational options around
               Jattari to help families learn more about the local education
               landscape.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/90">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#263D3A]">
               <span className="transition-transform duration-300 hover:translate-y-[-3px]">
-                <strong className="text-[#F4B65E]">
-                  {schools.length}
+                <strong className="text-[#D58A28]">{schools.length}
                 </strong>{" "}
                 directory entries
               </span>
@@ -376,7 +374,7 @@ export default function SchoolsPage() {
       </section>
 
       {/* Anugrah Homes and Skyline Aero Homes Promotion */}
-      <section className="relative isolate overflow-hidden bg-[#073B32] px-6 py-14 text-white md:px-10 md:py-16">
+      <section className="relative isolate overflow-hidden border-t border-[#D8E5E8] bg-[#F4F8FA] px-6 py-12 text-[#10251F] md:px-10 md:py-14">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-24 -z-10 h-80 w-80 rounded-full border border-white/10"
@@ -393,11 +391,11 @@ export default function SchoolsPage() {
               Beyond Education
             </p>
 
-            <h2 className="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[#10251F] sm:text-4xl">
               A neighbourhood is more than its schools.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
               For families exploring the Jattari and wider Jewar region,
               education is one part of the neighbourhood picture. Residential
               options, everyday connectivity and nearby facilities can also
@@ -410,17 +408,17 @@ export default function SchoolsPage() {
             <div
               data-reveal
               style={{ transitionDelay: "100ms" }}
-              className={`group rounded-2xl border border-white/15 bg-white/[0.07] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealLeft}`}
+              className={`group rounded-2xl border border-[#D8E5E8] bg-white text-[#10251F] shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealLeft}`}
             >
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F4B65E]">
                 Residential Project · Jattari
               </p>
 
-              <h3 className="mt-3 text-2xl font-extrabold text-white transition-transform duration-300 group-hover:translate-x-1">
+              <h3 className="mt-3 text-2xl font-extrabold text-[#10251F] transition-transform duration-300 group-hover:translate-x-1">
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Explore Anugrah Homes and learn more about its residential
                 project in Jattari. Visit the official website for project
                 information and enquiries.
@@ -441,17 +439,17 @@ export default function SchoolsPage() {
             <div
               data-reveal
               style={{ transitionDelay: "220ms" }}
-              className={`group rounded-2xl border border-white/15 bg-white/[0.07] p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealRight}`}
+              className={`group rounded-2xl border border-[#D8E5E8] bg-white text-[#10251F] shadow-sm p-6 transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28]/70 hover:bg-white/[0.10] hover:shadow-2xl sm:p-8 ${revealRight}`}
             >
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F4B65E]">
                 Residential Project · Jewar Region
               </p>
 
-              <h3 className="mt-3 text-2xl font-extrabold text-white transition-transform duration-300 group-hover:translate-x-1">
+              <h3 className="mt-3 text-2xl font-extrabold text-[#10251F] transition-transform duration-300 group-hover:translate-x-1">
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-white/75">
+              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
                 Discover Skyline Aero Homes and explore its residential
                 offerings in the wider Jewar region. Visit the official
                 website for project details and enquiries.
