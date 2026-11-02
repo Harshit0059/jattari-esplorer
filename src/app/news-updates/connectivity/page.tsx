@@ -1,4 +1,4 @@
-import ConnectivityPromotionPopup from "@/components/ConnectivityPromotionPopup";
+﻿import ConnectivityPromotionPopup from "@/components/ConnectivityPromotionPopup";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -52,20 +52,18 @@ export default function ConnectivityUpdatesPage() {
   return (
     <main className="overflow-hidden bg-background text-foreground">
       {/* HERO */}
-      <section className="relative isolate min-h-[510px] overflow-hidden border-b border-border sm:min-h-[590px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <Image
-          src="/images/road-connectivity.jpeg"
+          src="/images/road.jpeg"
           alt="Road development and connectivity around Jattari"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="z-0 object-cover object-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
         />
-<div
-  className="absolute inset-0 bg-gradient-to-r from-[#F4F8FA]/90 0%, via-[#F4F8FA]/65 35%, via-[#F4F8FA]/10 65%, transparent 100%"
-  aria-hidden="true"
-/>
-        <div className="container-site relative mx-auto flex min-h-[510px] items-center px-4 py-16 sm:min-h-[590px] sm:px-6 lg:py-24">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
+        <div className="container-site relative z-10 mx-auto flex min-h-[510px] items-center px-4 py-16 sm:min-h-[590px] sm:px-6 lg:py-24">
           <div className="max-w-3xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
               <Navigation size={16} />
@@ -202,7 +200,7 @@ export default function ConnectivityUpdatesPage() {
       </section>
 
       {/* PROPERTY CONNECTIVITY + PROMOTION */}
-      <section className="container-site mx-auto px-4 py-16 sm:px-6 lg:py-24">
+      <section className="container-site mx-auto px-4 pt-32 pb-16 sm:px-6 sm:pt-36 sm:pb-20 lg:pt-36 lg:pb-24">
         <div className="max-w-2xl">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary">
             Connectivity & Property
@@ -394,3 +392,4 @@ export default function ConnectivityUpdatesPage() {
     </main>
   );
 }
+

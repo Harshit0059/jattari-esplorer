@@ -105,7 +105,7 @@ body {
   padding: 12px 20px;
   border: 1px solid transparent;
   border-radius: var(--radius-button);
-  background: var(--primary);
+  background: var(--accent);
   color: #FFFFFF;
   font: inherit;
   font-weight: 600;
@@ -118,8 +118,8 @@ body {
 }
 
 .button-primary:hover {
-  background: var(--primary-hover);
-  box-shadow: 0 5px 14px rgb(16 37 31 / 20%);
+  background: var(--accent-hover);
+  box-shadow: 0 5px 14px rgb(213 138 40 / 30%);
 }
 
 .button-primary:active {

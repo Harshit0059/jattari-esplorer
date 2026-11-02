@@ -1,4 +1,4 @@
-﻿
+
 "use client";
 
 import Link from "next/link";
@@ -11,8 +11,13 @@ import {
   Clock3,
   Landmark,
   MapPin,
+  MessageSquare,
   ScrollText,
   Sparkles,
+  Store,
+  Users,
+  Utensils,
+  Wheat,
 } from "lucide-react";
 
 const jattariHistory = [
@@ -80,7 +85,7 @@ const regionalHistory = [
       "The Aligarh region experienced changes in rulers and political control over several centuries. The early history of the district up to the 12th century is described as obscure in the official district account. These developments provide regional context but should not automatically be attributed to Jattari.",
   },
   {
-    period: "1524â€“1525",
+    period: "1524–1525",
     title: "Muhammadgarh and the Koil fort",
     description:
       "According to the official district history, during Ibrahim Lodhi's reign, Muhammad, son of Umar, built a fort at Koil and named the city Muhammadgarh. This event belongs to the history of Koil and Aligarh city, rather than a confirmed event in Jattari.",
@@ -92,7 +97,7 @@ const regionalHistory = [
       "The district history records that Jat ruler Surajmal occupied the fort of Koil in 1753, after which it was renamed Ramgarh. Later, Najaf Khan captured Kol and gave it the name Aligarh. These events are part of the wider regional history.",
   },
   {
-    period: "1875â€“1920",
+    period: "1875–1920",
     title: "The growth of modern Aligarh",
     description:
       "Sir Syed Ahmad Khan founded the Muhammadan Anglo-Oriental College in 1875. The institution later became Aligarh Muslim University in 1920. It became an important educational institution in the wider district.",
@@ -102,42 +107,42 @@ const regionalHistory = [
 const culturalHighlights = [
   {
     number: "01",
-    icon: "ðŸ¡",
+    Icon: Users,
     title: "Community & Everyday Life",
     description:
       "Jattari's identity is shaped by its residents, neighbourhoods, family occasions, local businesses and shared public spaces. Conversations with older residents can help preserve memories of how the town and its communities have changed over generations.",
   },
   {
     number: "02",
-    icon: "ðŸŒ¾",
+    Icon: Wheat,
     title: "Agriculture & Regional Landscape",
     description:
       "Jattari is part of the agricultural landscape of western Uttar Pradesh. Farming, surrounding settlements, local roads and town markets have all contributed to the area's economic and social connections.",
   },
   {
     number: "03",
-    icon: "ðŸŽ‰",
+    Icon: Sparkles,
     title: "Festivals & Traditions",
     description:
       "Religious festivals, seasonal celebrations, family gatherings and community occasions contribute to social life in Jattari. Specific local customs and stories are best documented through residents and families who have preserved them.",
   },
   {
     number: "04",
-    icon: "ðŸ²",
+    Icon: Utensils,
     title: "Food & Hospitality",
     description:
       "Everyday meals, seasonal ingredients, home cooking, breads, lentils, vegetables and festive dishes reflect the food traditions of the wider western Uttar Pradesh region. Local recipes and family food memories can add a personal layer to Jattari's cultural story.",
   },
   {
     number: "05",
-    icon: "ðŸ›ï¸",
+    Icon: Store,
     title: "Markets & Local Exchange",
     description:
       "Jattari's shops, small businesses and local markets serve everyday needs and connect residents with goods and services. Markets also offer a glimpse into the town's changing economy and daily social life.",
   },
   {
     number: "06",
-    icon: "ðŸ¤",
+    Icon: MessageSquare,
     title: "Languages & Social Connections",
     description:
       "Hindi and regional forms of speech are part of everyday communication across this area. Local expressions, family histories and conversations with residents help visitors understand the community more closely.",
@@ -240,13 +245,13 @@ export default function HistoryCulturePage() {
       `}</style>
 
       {/* HERO */}
-      <section className="group relative isolate overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] px-6 pt-28 pb-12 sm:pt-32 sm:pb-16 md:px-12">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 -z-20 scale-100 bg-cover bg-center opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="absolute inset-0 -z-20 scale-100 bg-cover bg-center opacity-95 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
           style={{ backgroundImage: 'url("/images/culture.jpeg")' }}
         />
-
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#E4EDF0]/75 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full border border-[#10251F]/15 transition-transform duration-1000 group-hover:scale-110" />
         <div className="pointer-events-none absolute -right-10 -top-16 h-64 w-64 rounded-full border border-[#10251F]/10" />
@@ -265,7 +270,7 @@ export default function HistoryCulturePage() {
             </span>
           </h1>
 
-          <p data-reveal className="mt-6 max-w-3xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8 md:text-lg">
+          <p data-reveal className="mt-6 max-w-3xl text-sm leading-7 text-[#10251F] font-medium sm:text-base sm:leading-8 md:text-lg">
             Discover the story of Jattari, from its old settlement and the
             origin of its name to historical accounts, the events of 1857,
             census records and the culture of its people. Explore the town's
@@ -597,10 +602,8 @@ export default function HistoryCulturePage() {
                 <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#EAF2F6] opacity-0 transition-all duration-500 group-hover:scale-150 group-hover:opacity-70" />
 
                 <div className="relative flex items-center justify-between">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-2xl transition-all duration-500 group-hover:rotate-[-8deg] group-hover:scale-110 group-hover:bg-[#10251F] group-hover:shadow-md">
-                    <span className="transition-transform duration-500 group-hover:scale-110">
-                      {item.icon}
-                    </span>
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:rotate-[-8deg] group-hover:scale-110 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:shadow-md">
+                    <item.Icon className="h-6 w-6 transition-transform duration-500 group-hover:scale-110" />
                   </span>
                   <span className="text-sm font-bold tracking-widest text-[#B9741C]">
                     {item.number}
@@ -707,7 +710,7 @@ export default function HistoryCulturePage() {
 
           <Link
             href="/explore/lifestyle-markets"
-            className="group/button relative inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-xl bg-[#10251F] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-xl sm:px-7 sm:py-4 sm:text-base md:self-center"
+            className="group/button relative inline-flex shrink-0 items-center justify-center gap-3 self-start rounded-xl bg-[#D58A28] px-5 py-3 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl sm:px-7 sm:py-4 sm:text-base md:self-center"
           >
             Next: Lifestyle &amp; Markets
             <ArrowRight size={18} className="transition-transform duration-300 group-hover/button:translate-x-1" />
@@ -728,32 +731,32 @@ export default function HistoryCulturePage() {
             >
               Archaeological Gazetteer of Aligarh &amp; Hathras Districts
             </a>
-            {" Â· "}
+            {" · "}
             <a
               className="font-medium text-[#254C3C] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
               href="https://censusindia.mha.gov.in/nada/index.php/catalog/28477"
               target="_blank"
               rel="noopener noreferrer"
             >
-              District Census Handbook, Aligarh â€” 1961
+              District Census Handbook, Aligarh — 1961
             </a>
-            {" Â· "}
+            {" · "}
             <a
               className="font-medium text-[#254C3C] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
               href="https://www.scribd.com/document/1070321046/23538-1951-ALI"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Aligarh District Census â€” 1951
+              Aligarh District Census — 1951
             </a>
-            {" Â· "}
+            {" · "}
             <a
               className="font-medium text-[#254C3C] underline underline-offset-4 transition-colors hover:text-[#B9741C]"
               href="https://aligarh.nic.in/history/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              District Aligarh â€” Official History
+              District Aligarh — Official History
             </a>
             . Historical accounts and local traditions should be checked
             against original archival records wherever possible.
@@ -771,4 +774,6 @@ function InfoIcon() {
     </span>
   );
 }
+
+
 

@@ -3,6 +3,20 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import {
+  Compass,
+  Hammer,
+  Landmark,
+  Shirt,
+  ShoppingCart,
+  Sparkles,
+  Store,
+  Sun,
+  Trees,
+  Utensils,
+  Wheat,
+  Wrench,
+} from "lucide-react";
 
 const marketAreas = [
   {
@@ -42,7 +56,7 @@ const marketAreas = [
 const shoppingCategories = [
   {
     number: "01",
-    icon: "🛒",
+    Icon: ShoppingCart,
     title: "Grocery & Daily Essentials",
     description:
       "Kirana shops, general stores and grocery outlets help residents purchase everyday food items, packaged products, household supplies and personal-use essentials.",
@@ -54,7 +68,7 @@ const shoppingCategories = [
   },
   {
     number: "02",
-    icon: "👗",
+    Icon: Shirt,
     title: "Clothing & Family Shopping",
     description:
       "Clothing stores and garment retailers serve everyday shopping as well as family occasions, celebrations and seasonal clothing needs.",
@@ -66,7 +80,7 @@ const shoppingCategories = [
   },
   {
     number: "03",
-    icon: "🌾",
+    Icon: Wheat,
     title: "Agriculture & Farming Supplies",
     description:
       "Agriculture is an important part of the wider rural economy. Seed, fertiliser and agricultural supply shops connect farmers with products needed for seasonal farming activities.",
@@ -78,7 +92,7 @@ const shoppingCategories = [
   },
   {
     number: "04",
-    icon: "🥛",
+    Icon: Utensils,
     title: "Food, Dairy & Bakery",
     description:
       "Restaurants, dairy outlets and bakeries contribute to the town's food culture. These businesses serve everyday meals, refreshments, dairy products and special occasions.",
@@ -90,7 +104,7 @@ const shoppingCategories = [
   },
   {
     number: "05",
-    icon: "🏠",
+    Icon: Hammer,
     title: "Hardware & Building Materials",
     description:
       "Building material suppliers and hardware shops support home construction, repair, renovation and other property-related requirements.",
@@ -102,7 +116,7 @@ const shoppingCategories = [
   },
   {
     number: "06",
-    icon: "🔧",
+    Icon: Wrench,
     title: "Automotive & Local Services",
     description:
       "Vehicle-related businesses and service providers are part of the wider local economy. They help residents access automotive products and other practical services.",
@@ -146,30 +160,26 @@ const lifestyleMoments = [
   {
     number: "01",
     title: "Morning in Jattari",
-    description:
-      "The morning routine of a town revolves around daily errands, opening shops, household purchases, work and movement between neighbourhoods and nearby settlements.",
-    icon: "🌅",
+    description: "The morning routine of a town revolves around daily errands, opening shops, household purchases, work and movement between neighbourhoods and nearby settlements.",
+    Icon: Sun,
   },
   {
     number: "02",
     title: "A Day at the Market",
-    description:
-      "Markets bring together shopkeepers, customers, local services and small businesses. Shopping is also an opportunity for everyday conversations and community interaction.",
-    icon: "🏪",
+    description: "Markets bring together shopkeepers, customers, local services and small businesses. Shopping is also an opportunity for everyday conversations and community interaction.",
+    Icon: Store,
   },
   {
     number: "03",
     title: "Family & Celebrations",
-    description:
-      "Family occasions, weddings, festivals and seasonal celebrations create additional shopping needs for clothing, food, gifts and household items.",
-    icon: "🎉",
+    description: "Family occasions, weddings, festivals and seasonal celebrations create additional shopping needs for clothing, food, gifts and household items.",
+    Icon: Sparkles,
   },
   {
     number: "04",
     title: "Rural Connections",
-    description:
-      "Jattari's connection with nearby villages is an important part of its local identity. People travel between settlements for shopping, services, work and everyday requirements.",
-    icon: "🌿",
+    description: "Jattari's connection with nearby villages is an important part of its local identity. People travel between settlements for shopping, services, work and everyday requirements.",
+    Icon: Trees,
   },
 ];
 
@@ -317,21 +327,21 @@ export default function LocalMarketsPage() {
       `}</style>
 
       {/* HERO */}
-      <section
-        className="group relative flex min-h-[650px] items-center overflow-hidden bg-cover bg-center px-6 py-20 md:min-h-[720px] md:px-12"
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12"
         style={{
           backgroundImage: 'url("/images/market.jpeg")',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F4F8FA]/90 via-[#F4F8FA]/65 to-[#F4F8FA]/10" />
+                <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border border-[#D58A28]/40 transition-transform duration-1000 group-hover:rotate-12 group-hover:scale-110" />
         <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full border border-[#254C3C]/30 transition-transform duration-1000 group-hover:-rotate-12" />
 
-        <div className="relative mx-auto w-full max-w-6xl">
+        <div className="relative z-10 mx-auto w-full max-w-6xl">
           <div
             data-reveal
-            className="max-w-3xl rounded-2xl border border-white/50 bg-[#F4F8FA]/60 p-6 shadow-xl backdrop-blur-md sm:p-9 md:p-11"
+            className="max-w-3xl"
           >
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#B9741C] sm:text-sm">
               Local Life · Shopping · Community
@@ -344,7 +354,7 @@ export default function LocalMarketsPage() {
               </span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#43564E] sm:text-base sm:leading-8 md:text-lg">
+            <p className="mt-6 max-w-2xl text-sm font-medium leading-7 text-[#10251F] sm:text-base sm:leading-8 md:text-lg">
               Explore the everyday character of Jattari through its local
               markets, neighbourhood shops, agricultural connections, food
               culture, small businesses and the people who make the town
@@ -354,7 +364,7 @@ export default function LocalMarketsPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#market-areas"
-                className="group/btn inline-flex items-center gap-3 rounded-xl bg-[#10251F] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
+                className="group/btn inline-flex items-center gap-3 rounded-xl bg-[#D58A28] px-6 py-3.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
               >
                 Discover Jattari Markets
                 <span className="transition-transform duration-300 group-hover/btn:translate-x-2" aria-hidden="true">
@@ -553,8 +563,8 @@ export default function LocalMarketsPage() {
                 className="group border-t border-[#10251F]/20 py-8 transition-all duration-500 hover:-translate-y-1 hover:border-[#D58A28] sm:py-9"
               >
                 <div className="flex items-start justify-between">
-                  <span className="inline-block text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6" aria-hidden="true">
-                    {item.icon}
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:scale-110">
+                    <item.Icon className="h-6 w-6 transition-transform duration-500 group-hover:scale-110" />
                   </span>
                   <span className="text-sm font-bold tracking-widest text-[#B9741C] transition-transform duration-300 group-hover:translate-x-1">
                     {item.number}
@@ -605,14 +615,14 @@ export default function LocalMarketsPage() {
               The connection between the town and its fields.
             </h2>
 
-            <p className="mt-6 text-sm leading-8 text-[#263D3A] sm:text-base">
+            <p className="mt-6 text-sm leading-8 text-[#10251F] font-medium sm:text-base">
               Jattari's identity is connected with the wider agricultural
               landscape of western Uttar Pradesh. Farming-related shops
               and suppliers serve an important practical role by providing
               access to agricultural inputs and products.
             </p>
 
-            <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
+            <p className="mt-4 text-sm leading-8 text-[#10251F] font-medium sm:text-base">
               Seed and fertiliser shops are examples of how local trade
               supports farming activities. Seasonal requirements,
               agricultural work and connections with nearby villages
@@ -725,8 +735,8 @@ export default function LocalMarketsPage() {
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="inline-block text-3xl transition-transform duration-500 group-hover:scale-125 group-hover:rotate-6">
-                    {moment.icon}
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:scale-110">
+                    <moment.Icon className="h-6 w-6 transition-transform duration-500 group-hover:scale-110" />
                   </span>
                   <span className="text-sm font-bold tracking-widest text-[#B9741C]">
                     {moment.number}
@@ -842,7 +852,7 @@ export default function LocalMarketsPage() {
 
         <div className="relative mx-auto max-w-6xl">
           <div data-reveal>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#F2AE45] sm:text-sm">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#B9741C] sm:text-sm">
               Continue Exploring
             </p>
             <h2 className="mt-3 max-w-2xl text-3xl font-bold text-[#10251F] sm:text-4xl">
@@ -852,20 +862,20 @@ export default function LocalMarketsPage() {
 
           <div className="mt-9 grid gap-4 md:grid-cols-3">
             <Link
-              href="/explore/food"
+              href="/explore/food-local-eateries"
               data-reveal="left"
               className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
-              <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6">
-                🍲
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:scale-110">
+                <Utensils className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 Food &amp; Local Eateries
               </h3>
-              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-2 text-sm leading-7 text-[#10251F] font-medium">
                 Discover food options, local eateries and everyday flavours.
               </p>
-              <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#B9741C] transition-all duration-300 group-hover:translate-x-2">
                 Explore Food →
               </span>
             </Link>
@@ -875,16 +885,16 @@ export default function LocalMarketsPage() {
               data-reveal="scale"
               className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
-              <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:rotate-6">
-                🧭
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:scale-110">
+                <Compass className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 Travel Tips
               </h3>
-              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-2 text-sm leading-7 text-[#10251F] font-medium">
                 Prepare for your visit and explore the area with useful tips.
               </p>
-              <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#B9741C] transition-all duration-300 group-hover:translate-x-2">
                 Plan Your Visit →
               </span>
             </Link>
@@ -894,16 +904,16 @@ export default function LocalMarketsPage() {
               data-reveal="right"
               className="group rounded-2xl border border-[#D8E5E8] bg-white p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#D58A28] hover:shadow-md"
             >
-              <span className="inline-block text-2xl transition-transform duration-500 group-hover:scale-125 group-hover:-rotate-6">
-                🏛️
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EAF2F6] text-[#254C3C] transition-all duration-500 group-hover:bg-[#10251F] group-hover:text-[#F2AE45] group-hover:scale-110">
+                <Landmark className="h-6 w-6" />
               </span>
               <h3 className="mt-4 text-xl font-bold text-[#10251F]">
                 History &amp; Culture
               </h3>
-              <p className="mt-2 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-2 text-sm leading-7 text-[#10251F] font-medium">
                 Learn about Jattari's history, heritage and community.
               </p>
-              <span className="mt-5 inline-flex text-sm font-semibold text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-2">
+              <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#B9741C] transition-all duration-300 group-hover:translate-x-2">
                 Discover History →
               </span>
             </Link>
@@ -949,3 +959,5 @@ export default function LocalMarketsPage() {
     </main>
   );
 }
+
+

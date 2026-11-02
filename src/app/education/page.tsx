@@ -99,30 +99,25 @@ export default function EducationPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <img
-          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=2200&q=90"
-          alt="Students learning together in a classroom"
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-30 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-          onError={(event) => {
-            event.currentTarget.style.display = "none";
-          }}
+          src="/images/school.jpeg"
+          alt="Students learning together in an educational institution in Jattari"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-95 transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
         />
 
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/85 to-transparent"
-        />
+                <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         {/* Decorative animated circles */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-24 -top-28 z-0 h-80 w-80 rounded-full border border-white/15 transition-transform duration-1000 group-hover:rotate-12 group-hover:scale-110 sm:h-[440px] sm:w-[440px]"
+          className="pointer-events-none absolute -right-24 -top-28 z-0 h-80 w-80 rounded-full border border-[#10251F]/15 transition-transform duration-1000 group-hover:rotate-12 group-hover:scale-110 sm:h-[440px] sm:w-[440px]"
         />
 
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-10 -top-14 z-0 h-60 w-60 rounded-full border border-white/10 transition-transform duration-1000 group-hover:-rotate-12 group-hover:scale-110 sm:h-[340px] sm:w-[340px]"
+          className="pointer-events-none absolute -right-10 -top-14 z-0 h-60 w-60 rounded-full border border-[#10251F]/10 transition-transform duration-1000 group-hover:-rotate-12 group-hover:scale-110 sm:h-[340px] sm:w-[340px]"
         />
 
         <div
@@ -130,7 +125,7 @@ export default function EducationPage() {
           className="pointer-events-none absolute bottom-[-100px] left-[40%] z-0 h-56 w-56 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover:scale-125"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[520px] w-full max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
           <div
             data-reveal
             className={`max-w-3xl text-[#10251F] ${revealLeft}`}
@@ -148,21 +143,21 @@ export default function EducationPage() {
               Jattari Education Directory
             </div>
 
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-6xl lg:text-7xl">
               Learning Today.
               <span className="mt-1 block text-[#D58A28] transition-colors duration-500">
                 Building Tomorrow.
               </span>
             </h1>
 
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#263D3A] sm:text-base sm:leading-8">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#10251F] font-medium sm:text-lg sm:leading-8">
               Explore education opportunities in Jattari and nearby areas,
               from schools and colleges to tuition, coaching and libraries.
             </p>
 
             <a
               href="#education-options"
-              className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-xl"
+              className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#D58A28] px-7 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-xl"
             >
               Explore Education
               <span className="transition-transform duration-300 group-hover:translate-y-1" aria-hidden="true">
@@ -344,7 +339,7 @@ export default function EducationPage() {
             <div data-reveal className={revealRight}>
               <Link
                 href="/explore/contact-feedback"
-                className="group inline-flex w-fit shrink-0 items-center justify-center gap-3 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-primary-hover hover:shadow-xl"
+                className="group inline-flex w-fit shrink-0 items-center justify-center gap-3 rounded-full bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-xl"
               >
                 Contact &amp; Feedback
                 <span
@@ -361,3 +356,4 @@ export default function EducationPage() {
     </main>
   );
 }
+

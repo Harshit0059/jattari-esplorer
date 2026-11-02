@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const announcementTopics = [
   {
@@ -72,9 +72,9 @@ export default function AnnouncementsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden border-b border-border">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
           style={{
             backgroundImage: "url('/images/anouncements.jpeg')",
             backgroundSize: "cover",
@@ -85,14 +85,12 @@ export default function AnnouncementsPage() {
         />
 
         {/* Light overlay keeps the image visible while preserving text readability */}
-        <div
-          className="absolute inset-0 z-0 bg-gradient-to-r from-white/65 via-white/40 to-white/10"
-          aria-hidden="true"
-        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="container-site relative z-10 mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/80 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/45 bg-white/80 px-4 py-2 text-sm font-semibold text-primary shadow-sm backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-primary" />
               Jattari Community Updates
             </div>
@@ -411,3 +409,4 @@ export default function AnnouncementsPage() {
     </main>
   );
 }
+

@@ -92,31 +92,29 @@ export default function RealEstatePage() {
   return (
     <main className="overflow-hidden bg-background text-foreground">
       {/* HERO */}
-      <section
-        className="group relative flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]"
-      >
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 scale-105 bg-cover bg-center opacity-30 transition-transform duration-[12000ms] ease-out group-hover:scale-110"
+          className="absolute inset-0 scale-105 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover:scale-110"
           style={{
             backgroundImage:
-              "url('/images/skyline%20aerohomes.jpeg')",
+              "url('/images/real estate.jpeg')",
           }}
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(228,237,240,0.92)_0%,rgba(244,248,250,0.80)_55%,transparent_100%)]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#E4EDF0]/30 via-transparent to-transparent" />
+                <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="pointer-events-none absolute -right-32 top-20 h-[430px] w-[430px] animate-[spin_45s_linear_infinite] rounded-full border border-[#10251F]/12" />
         <div className="pointer-events-none absolute -right-16 top-36 h-[300px] w-[300px] animate-[spin_35s_linear_infinite_reverse] rounded-full border border-[#10251F]/12" />
 
-        <div className="relative mx-auto w-full max-w-[1240px] px-5 pt-32 pb-16 sm:px-8 sm:pt-36 sm:pb-20 lg:px-12">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
           <div
             data-property-reveal
             className="max-w-3xl translate-y-10 opacity-0 transition-all duration-1000 ease-out"
           >
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/80 px-4 py-2 text-sm text-[#10251F] backdrop-blur-md transition duration-500 hover:border-[#D58A28]/60 hover:bg-white">
               <MapPin size={15} />
-              <span>Real Estate & Property Guide Â· Jattari</span>
+              <span>Real Estate & Property Guide · Jattari</span>
             </div>
 
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#B9741C]">
@@ -133,7 +131,7 @@ export default function RealEstatePage() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-base leading-8 text-[#263D3A] sm:text-lg">
+            <p className="mt-7 max-w-xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">
               Explore residential land, commercial property and real estate
               projects around Jattari. Find useful information to help you
               make more informed property decisions.
@@ -142,7 +140,7 @@ export default function RealEstatePage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/real-estate/projects"
-                className="group/button inline-flex items-center justify-center gap-3 rounded-xl bg-accent px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-accent-hover hover:shadow-xl"
+                className="group/button inline-flex items-center justify-center gap-3 rounded-xl bg-[#D58A28] px-6 py-4 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-accent-hover hover:shadow-xl"
               >
                 Explore Projects
                 <ArrowUpRight
@@ -160,7 +158,7 @@ export default function RealEstatePage() {
               </Link>
             </div>
 
-            <div className="mt-16 flex items-center gap-4 text-sm text-[#263D3A]">
+            <div className="mt-16 flex items-center gap-4 text-sm text-[#10251F] font-medium">
               <div className="flex h-10 w-10 animate-bounce items-center justify-center rounded-full border border-white/30">
                 <ArrowDown size={18} />
               </div>
@@ -293,7 +291,7 @@ export default function RealEstatePage() {
               <h3 className="mt-4 text-3xl font-semibold sm:text-4xl">
                 Skyline Aero Homes
               </h3>
-              <p className="mt-3 max-w-md text-sm leading-6 text-[#263D3A]">
+              <p className="mt-3 max-w-md text-sm leading-6 text-[#10251F] font-medium">
                 Explore the project details, location information and
                 available property options directly with the developer.
               </p>
@@ -339,7 +337,7 @@ export default function RealEstatePage() {
 
             <Link
               href="/real-estate/projects"
-              className="mt-9 inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover hover:shadow-lg"
+              className="mt-9 inline-flex items-center gap-3 rounded-xl bg-[#D58A28] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
             >
               View Project Details <ArrowRight size={18} />
             </Link>
@@ -390,7 +388,7 @@ export default function RealEstatePage() {
 
             <Link
               href="/real-estate/property-enquiries"
-              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-primary px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-primary-hover hover:shadow-lg"
+              className="mt-8 inline-flex items-center gap-3 rounded-xl bg-[#D58A28] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Enquire About Property <ArrowUpRight size={18} />
             </Link>
@@ -409,7 +407,7 @@ export default function RealEstatePage() {
 
               <div className="absolute bottom-6 left-6 right-6 text-white transition-transform duration-500 group-hover:-translate-y-2 sm:bottom-8 sm:left-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#B9741C]">
-                  Anugrah Homes Â· Jattari
+                  Anugrah Homes · Jattari
                 </p>
                 <p className="mt-3 max-w-md text-2xl font-medium leading-snug sm:text-3xl">
                   Find the information you need to make a considered choice.
@@ -542,3 +540,5 @@ export default function RealEstatePage() {
     </main>
   );
 }
+
+

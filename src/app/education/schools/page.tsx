@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -142,18 +142,18 @@ export default function SchoolsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <Image
-          src="/images/schools-hero.webp"
+          src="/images/school.jpeg"
           alt="Schools and education facilities in Jattari"
           fill
           priority
           sizes="100vw"
           quality={75}
-          className="-z-20 object-cover object-center opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="-z-20 object-cover object-center opacity-95 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
         />
-
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         {/* Decorative background elements */}
         <div
@@ -171,7 +171,7 @@ export default function SchoolsPage() {
           className="pointer-events-none absolute bottom-[-100px] left-[25%] -z-0 h-64 w-64 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 group-hover:scale-125"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[580px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[640px] sm:pt-32 sm:pb-20 md:min-h-[700px] md:px-10">
           <div
             data-reveal
             className={`max-w-3xl text-[#10251F] ${revealLeft}`}
@@ -184,13 +184,13 @@ export default function SchoolsPage() {
               Schools in Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">
               Explore school information and educational options around
               Jattari to help families learn more about the local education
               landscape.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#263D3A]">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#10251F] font-medium">
               <span className="transition-transform duration-300 hover:translate-y-[-3px]">
                 <strong className="text-[#D58A28]">{schools.length}
                 </strong>{" "}
@@ -255,7 +255,7 @@ export default function SchoolsPage() {
               key={`${school.name}-${index}`}
               data-reveal
               style={{ transitionDelay: `${(index % 5) * 100}ms` }}
-              className={`group relative grid gap-5 border-b border-border py-7 transition-all duration-500 hover:bg-green-light/50 md:grid-cols-[64px_minmax(0,1fr)] md:items-start md:gap-7 md:py-8 ${
+              className={`group relative grid gap-5 border-b border-border py-7 transition-all duration-500 hover:bg-green-light/50 md:grid-cols-[64px_minmax(0,1fr)_220px] md:items-start md:gap-7 md:py-8 ${
                 isEven ? revealLeft : revealRight
               }`}
             >
@@ -395,7 +395,7 @@ export default function SchoolsPage() {
               A neighbourhood is more than its schools.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#10251F] font-medium sm:text-base">
               For families exploring the Jattari and wider Jewar region,
               education is one part of the neighbourhood picture. Residential
               options, everyday connectivity and nearby facilities can also
@@ -418,7 +418,7 @@ export default function SchoolsPage() {
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Explore Anugrah Homes and learn more about its residential
                 project in Jattari. Visit the official website for project
                 information and enquiries.
@@ -449,7 +449,7 @@ export default function SchoolsPage() {
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Discover Skyline Aero Homes and explore its residential
                 offerings in the wider Jewar region. Visit the official
                 website for project details and enquiries.
@@ -495,7 +495,7 @@ export default function SchoolsPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/education"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-4 hover:bg-primary-hover hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#D58A28] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-4 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Back to Education
               <span
@@ -511,3 +511,4 @@ export default function SchoolsPage() {
     </main>
   );
 }
+

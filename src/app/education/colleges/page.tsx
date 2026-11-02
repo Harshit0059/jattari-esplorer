@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -21,6 +21,7 @@ const affiliationSource =
 const colleges: College[] = [
   {
     name: "Bohare Mohan Lal Memorial Mahavidyalaya",
+    image: "/images/school.jpeg",
     location:
       "Plot No. 576/3, Jattari Bypass, Nagar Panchayat Jattari, Tehsil Khair, Aligarh, UP 202137",
     details:
@@ -35,6 +36,7 @@ const colleges: College[] = [
   },
   {
     name: "Government Degree College, Khair",
+    image: "/images/schools/babuji-convent.jpg",
     location: "Khair, Aligarh, Uttar Pradesh",
     details:
       "Government degree college listed in the Raja Mahendra Pratap Singh State University directory.",
@@ -47,6 +49,7 @@ const colleges: College[] = [
   },
   {
     name: "Rajkiye Mahavidyalaya, Tappal",
+    image: "/images/schools/rps-global.jpg",
     location: "Tappal, Aligarh, Uttar Pradesh",
     details:
       "Government college listed in the affiliated-college directory for Aligarh district.",
@@ -59,6 +62,7 @@ const colleges: College[] = [
   },
   {
     name: "Chaudhary Sahab Singh Bohre Mahavidyalaya",
+    image: "/images/schools/sd-international.jpg",
     location:
       "Goumat Chauraha, Palwal Road, Khair, Aligarh, Uttar Pradesh",
     details:
@@ -72,6 +76,7 @@ const colleges: College[] = [
   },
   {
     name: "D.D.S. Mahavidyalaya",
+    image: "/images/schools/jeevan-jyoti.jpg",
     location: "Bharatpur, Bajeda, Khair, Aligarh, Uttar Pradesh",
     details:
       "Institution listed in the university's affiliated-college directory.",
@@ -84,6 +89,7 @@ const colleges: College[] = [
   },
   {
     name: "Govind Mahavidyalaya",
+    image: "/images/school1.jpeg",
     location: "Khair, Aligarh, Uttar Pradesh 202138",
     details:
       "The college website describes a campus serving students from rural areas.",
@@ -96,8 +102,7 @@ const colleges: College[] = [
   },
   {
     name: "Khair Kanya Mahavidyalaya",
-    image:
-      "https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46260/2022/10/3/College%20of%20Khair%20Kanya%20Mahavidhyalaya%20Aligarh_Campus-View.jpg",
+    image: "https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46260/2022/10/3/College%20of%20Khair%20Kanya%20Mahavidhyalaya%20Aligarh_Campus-View.jpg",
     location: "Khair, Aligarh, Uttar Pradesh",
     details:
       "A girls' college listed in the affiliated-college directory. A campus photograph is available from a public college listing.",
@@ -111,8 +116,7 @@ const colleges: College[] = [
   },
   {
     name: "Shri Khushiram Mahavidyalaya",
-    image:
-      "https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46317/2025/5/29/Campus%20View%20of%20Shri%20Khushi%20Ram%20Mahavidyalaya%20Aligarh_Campus-View.jpg",
+    image: "https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46317/2025/5/29/Campus%20View%20of%20Shri%20Khushi%20Ram%20Mahavidyalaya%20Aligarh_Campus-View.jpg",
     location: "Khair, Aligarh, Uttar Pradesh",
     details:
       "Listed as Shri Khushiram Mahavidyalaya in the university's affiliated-college directory.",
@@ -125,6 +129,7 @@ const colleges: College[] = [
   },
   {
     name: "Maa Saraswati Nawal Singh Kanya Mahavidyalaya",
+    image: "/images/schools/sd-international.jpg",
     location: "Madak, Tappal, Aligarh, Uttar Pradesh",
     details:
       "Girls' college listed in the affiliated-college directory for the Tappal area.",
@@ -137,6 +142,7 @@ const colleges: College[] = [
   },
   {
     name: "Pt. Shri Chand Sharma Memorial P.G. College",
+    image: "/images/schools/jeevan-jyoti.jpg",
     location: "Manpur Kalan, Khair, Aligarh, Uttar Pradesh",
     details: "Listed in the university's affiliated-college directory.",
     courses:
@@ -203,18 +209,17 @@ export default function CollegesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <img
-          src="https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46260/2022/10/3/College%20of%20Khair%20Kanya%20Mahavidhyalaya%20Aligarh_Campus-View.jpg"
-          alt="College campus"
+          src="https://cache.careers360.mobi/media/colleges/social-media/media-gallery/46260/2022/10/3/College%20of%20Khair%20Kanya%20Mahavidhyalaya%20Aligarh_Campus-View.jpg" alt="College campus"
           aria-hidden="true"
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-95 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
           onError={(event) => {
             event.currentTarget.style.display = "none";
           }}
         />
-
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         {/* Decorative campus-inspired rings */}
         <div
@@ -226,7 +231,7 @@ export default function CollegesPage() {
           className="pointer-events-none absolute -right-8 top-[-55px] -z-0 h-[260px] w-[260px] rounded-full border border-[#10251F]/10 transition-transform duration-1000 group-hover:scale-125 group-hover:-rotate-12 sm:right-28 sm:h-[340px] sm:w-[340px]"
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[580px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[640px] sm:pt-32 sm:pb-20 md:min-h-[700px] md:px-10">
           <div
             data-reveal
             className={`max-w-3xl text-[#10251F] ${revealLeft}`}
@@ -239,12 +244,12 @@ export default function CollegesPage() {
               Colleges Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">
               Explore higher-education institutions in Jattari, Khair, Tappal
               and nearby parts of Aligarh district.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#263D3A]">
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-[#10251F] font-medium">
               <span>
                 <strong className="text-[#D58A28]">{colleges.length}
                 </strong>{" "}
@@ -256,7 +261,7 @@ export default function CollegesPage() {
             <div className="mt-9">
               <a
                 href="#college-directory"
-                className="group/button inline-flex items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-xl"
+                className="group/button inline-flex items-center gap-3 rounded-lg bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-xl"
               >
                 Explore Colleges
                 <span className="transition-transform duration-300 group-hover/button:translate-y-1">
@@ -314,9 +319,8 @@ export default function CollegesPage() {
             key={college.name}
             data-reveal
             style={{ transitionDelay: `${(index % 5) * 100}ms` }}
-            className={`group relative grid gap-5 border-b border-[#D8E5E8] py-8 transition-colors duration-500 hover:bg-[#EAF2ED]/60 md:grid-cols-[150px_minmax(0,1fr)_170px] md:items-start md:gap-7 ${
-              index % 2 === 0 ? revealLeft : revealRight
-            }`}
+            className={`group relative grid gap-5 border-b border-[#D8E5E8] py-8 transition-colors duration-500 hover:bg-[#EAF2ED]/60 md:grid-cols-[150px_minmax(0,1fr)_170px] md:items-start md:gap-7 ${index % 2 === 0 ? revealLeft : revealRight
+              }`}
           >
             {/* College Image */}
             <div className="relative h-36 w-full overflow-hidden rounded-xl bg-[#EAF2ED] md:h-28 md:w-[150px]">
@@ -366,7 +370,7 @@ export default function CollegesPage() {
                   className="shrink-0 text-[#D58A28] transition-transform duration-300 group-hover:scale-125"
                   aria-hidden="true"
                 >
-                  ⌖
+                  📍
                 </span>
                 <span>{college.location}</span>
               </p>
@@ -498,7 +502,7 @@ export default function CollegesPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/real-estate"
-              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#D58A28] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Explore Real Estate
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -526,7 +530,7 @@ export default function CollegesPage() {
               Explore Skyline Aero Homes
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#263D3A]">
+            <p className="mt-4 text-sm leading-7 text-[#10251F] font-medium">
               Interested in the wider Jattari and Jewar region? Explore
               Skyline Aero Homes to learn more about its residential plot
               offerings and the surrounding area's connectivity. Review
@@ -568,7 +572,7 @@ export default function CollegesPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/education"
-              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#254C3C] hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-3 rounded-lg bg-[#D58A28] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Back to Education
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -581,3 +585,4 @@ export default function CollegesPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -130,18 +130,17 @@ export default function LibrariesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[420px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[480px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <img
-          src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=85"
-          alt="Library with bookshelves and reading spaces"
+          src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=2000&q=85" alt="Library with bookshelves and reading spaces"
           aria-hidden="true"
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-95 transition-transform duration-[1800ms] ease-out group-hover:scale-105"
           onError={(event) => {
             event.currentTarget.style.display = "none";
           }}
         />
-
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         {/* Decorative book-inspired lines */}
         <div
@@ -172,15 +171,15 @@ export default function LibrariesPage() {
               Libraries Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">Discover local libraries, digital study spaces and reading
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">Discover local libraries, digital study spaces and reading
               facilities in Jattari and surrounding areas.
             </p>
 
-            <p className="mt-7 text-sm font-medium text-[#263D3A]">
+            <p className="mt-7 text-sm font-medium text-[#10251F] font-medium">
               <span className="font-bold text-[#D58A28]">{libraries.length}
               </span>{" "}
               directory entries
-              <span className="mx-2 text-[#263D3A]/50">·</span>
+              <span className="mx-2 text-[#10251F] font-medium/50">·</span>
               Aligarh, Uttar Pradesh
             </p>
 
@@ -234,7 +233,7 @@ export default function LibrariesPage() {
             key={library.name}
             data-reveal
             style={{ transitionDelay: `${(index % 5) * 100}ms` }}
-            className={`group relative grid gap-4 border-b border-border py-7 transition-all duration-500 hover:bg-green-light/60 sm:grid-cols-[60px_minmax(0,1fr)] sm:gap-6 md:py-8 ${
+            className={`group relative grid gap-4 border-b border-border py-7 transition-all duration-500 hover:bg-green-light/60 sm:grid-cols-[60px_minmax(0,1fr)_180px] sm:gap-6 sm:items-center md:py-8 ${
               index % 2 === 0 ? revealLeft : revealRight
             }`}
           >
@@ -336,7 +335,7 @@ export default function LibrariesPage() {
               Education, neighbourhood and better living.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#10251F] font-medium sm:text-base">
               When families explore a place to live, educational facilities,
               everyday connectivity and nearby services can all be part of
               their research. Explore these residential projects to learn
@@ -359,7 +358,7 @@ export default function LibrariesPage() {
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Explore Anugrah Homes and learn more about its residential
                 project in Jattari. Visit the official website for project
                 information and enquiries.
@@ -390,7 +389,7 @@ export default function LibrariesPage() {
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Discover Skyline Aero Homes and explore its residential
                 offerings in the wider Jewar region. Visit the official
                 website for project details and enquiries.
@@ -435,7 +434,7 @@ export default function LibrariesPage() {
           <div data-reveal className={revealRight}>
             <Link
               href="/education"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-4 hover:bg-primary-hover hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#D58A28] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:gap-4 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Back to Education
               <span
@@ -451,3 +450,4 @@ export default function LibrariesPage() {
     </main>
   );
 }
+

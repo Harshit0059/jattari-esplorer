@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import Image from "next/image";
@@ -240,20 +240,17 @@ export default function TravelTipsPage() {
       `}</style>
 
       {/* HERO SECTION */}
-      <section className="group relative isolate flex min-h-[460px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] px-6 pt-28 pb-16 sm:min-h-[520px] sm:pt-32 md:px-12">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <Image
-          src="/images/road5.jpeg"
+          src="/images/road.jpeg"
           alt="Road and travel surroundings near Jattari"
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-25 transition-transform duration-[1500ms] group-hover:scale-105"
+          className="object-cover opacity-95 transition-transform duration-[1500ms] group-hover:scale-105"
         />
-
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-0 bg-gradient-to-r from-[#E4EDF0]/90 via-[#E4EDF0]/60 to-transparent"
-        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div
           aria-hidden="true"
@@ -282,7 +279,7 @@ export default function TravelTipsPage() {
               <span className="block text-[#D58A28]">Jattari</span>
             </h1>
 
-            <p className="mt-6 max-w-2xl text-sm leading-8 text-[#263D3A] sm:text-base md:text-lg">
+            <p className="mt-6 max-w-2xl text-sm leading-8 text-[#10251F] font-medium sm:text-base md:text-lg">
               Plan your journey, prepare your essentials and explore Jattari
               and its surroundings with practical travel guidance. A little
               preparation can make your visit easier and more comfortable.
@@ -296,7 +293,7 @@ export default function TravelTipsPage() {
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-2" />
             </a>
 
-            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#263D3A]">
+            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#10251F] font-medium">
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-x-1">
                 <Navigation size={17} className="text-[#D58A28]" />
                 Route Planning
@@ -569,3 +566,5 @@ export default function TravelTipsPage() {
     </main>
   );
 }
+
+

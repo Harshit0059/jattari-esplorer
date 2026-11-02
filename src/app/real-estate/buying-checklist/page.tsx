@@ -71,14 +71,15 @@ export default function BuyingChecklistPage() {
   return (
     <main className="min-h-screen bg-[#F4F8FA] text-[#10251F]">
       {/* Hero */}
-      <section className="relative isolate flex min-h-[440px] items-end overflow-hidden bg-[#10251F]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
           style={{
             backgroundImage: "url('/images/residentails.jpeg')",
           }}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 pb-14 pt-28 sm:px-8 lg:px-12">
 
@@ -86,11 +87,11 @@ export default function BuyingChecklistPage() {
             Jattari Property Guide
           </p>
 
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-4xl font-bold leading-tight text-[#10251F] sm:text-5xl lg:text-6xl">
             Buying Property in Jattari? Start with the Right Checklist.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-[#263D3A] sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#10251F] font-medium sm:text-lg">
             A practical guide to checking documents, understanding costs and
             evaluating a property before making a decision.
           </p>
@@ -251,7 +252,7 @@ export default function BuyingChecklistPage() {
 
           <Link
             href="/real-estate/property-enquiries"
-            className="inline-flex w-fit items-center gap-2 rounded-[10px] bg-[#10251F] px-6 py-3.5 font-semibold text-white transition hover:bg-[#254C3C]"
+            className="inline-flex w-fit items-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 font-semibold text-white transition hover:bg-[#B9741C]"
           >
             Make an Enquiry
             <ArrowRight size={17} />
@@ -334,7 +335,7 @@ export default function BuyingChecklistPage() {
 
             <Link
               href="/real-estate/property-enquiries"
-              className="inline-flex items-center gap-2 rounded-[10px] bg-[#10251F] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#254C3C]"
+              className="inline-flex items-center gap-2 rounded-[10px] bg-[#D58A28] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#B9741C]"
             >
               Property Enquiries
               <ArrowRight size={16} />
@@ -345,4 +346,6 @@ export default function BuyingChecklistPage() {
     </main>
   );
 }
+
+
 

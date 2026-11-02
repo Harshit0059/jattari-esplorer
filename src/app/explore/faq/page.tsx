@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
@@ -33,57 +33,57 @@ const faqs: {
   a: string;
   category: Exclude<Category, "All Questions">;
 }[] = [
-  {
-    q: "Where is Jattari located?",
-    a: "Jattari is a town in Uttar Pradesh, India, in the Aligarh district. You can use the Location page to explore its location and learn about connectivity to nearby areas.",
-    category: "About Jattari",
-  },
-  {
-    q: "What can I explore on this website?",
-    a: "This guide brings together information about Jattari, its history and culture, local markets, food, attractions, education, healthcare, real estate and local updates.",
-    category: "About Jattari",
-  },
-  {
-    q: "How can I find places to visit in Jattari?",
-    a: "Visit the Attractions & Places to Visit page under Explore Jattari. Check local information before travelling, as access and opening hours may change.",
-    category: "Exploring",
-  },
-  {
-    q: "Where can I learn about Jattari's history and culture?",
-    a: "Open the History & Culture page to explore introductory information about the area's traditions, heritage and community life.",
-    category: "Exploring",
-  },
-  {
-    q: "Can I find local food and shopping information?",
-    a: "Yes. Visit the Food & Local Eateries and Local Markets pages for introductory information about local food and shopping options.",
-    category: "Travel & Local Life",
-  },
-  {
-    q: "Are opening hours and travel details always up to date?",
-    a: "Not necessarily. Transport options, opening hours and local services can change. Confirm important details directly with the relevant local business or service before travelling.",
-    category: "Travel & Local Life",
-  },
-  {
-    q: "Where can I find schools, colleges and healthcare facilities?",
-    a: "Use the Education and Health sections in the main navigation to explore information about schools, colleges, clinics, hospitals and other listed facilities. Confirm availability and details independently.",
-    category: "Exploring",
-  },
-  {
-    q: "Where can I read local announcements and development updates?",
-    a: "Visit News & Updates to explore local announcements, development information and road and connectivity updates. Check the original source for confirmation of important updates.",
-    category: "Exploring",
-  },
-  {
-    q: "How can I share a suggestion or report incorrect information?",
-    a: "Use the Contact Us button on this page to open the feedback form. Share the page or information you are referring to and explain the correction or suggestion.",
-    category: "Website Help",
-  },
-  {
-    q: "Does this website guarantee the availability of listed services or properties?",
-    a: "No. Listings and introductory information should be independently verified. Contact the relevant provider or property representative to confirm availability, terms and current details.",
-    category: "Website Help",
-  },
-];
+    {
+      q: "Where is Jattari located?",
+      a: "Jattari is a town in Uttar Pradesh, India, in the Aligarh district. You can use the Location page to explore its location and learn about connectivity to nearby areas.",
+      category: "About Jattari",
+    },
+    {
+      q: "What can I explore on this website?",
+      a: "This guide brings together information about Jattari, its history and culture, local markets, food, attractions, education, healthcare, real estate and local updates.",
+      category: "About Jattari",
+    },
+    {
+      q: "How can I find places to visit in Jattari?",
+      a: "Visit the Attractions & Places to Visit page under Explore Jattari. Check local information before travelling, as access and opening hours may change.",
+      category: "Exploring",
+    },
+    {
+      q: "Where can I learn about Jattari's history and culture?",
+      a: "Open the History & Culture page to explore introductory information about the area's traditions, heritage and community life.",
+      category: "Exploring",
+    },
+    {
+      q: "Can I find local food and shopping information?",
+      a: "Yes. Visit the Food & Local Eateries and Local Markets pages for introductory information about local food and shopping options.",
+      category: "Travel & Local Life",
+    },
+    {
+      q: "Are opening hours and travel details always up to date?",
+      a: "Not necessarily. Transport options, opening hours and local services can change. Confirm important details directly with the relevant local business or service before travelling.",
+      category: "Travel & Local Life",
+    },
+    {
+      q: "Where can I find schools, colleges and healthcare facilities?",
+      a: "Use the Education and Health sections in the main navigation to explore information about schools, colleges, clinics, hospitals and other listed facilities. Confirm availability and details independently.",
+      category: "Exploring",
+    },
+    {
+      q: "Where can I read local announcements and development updates?",
+      a: "Visit News & Updates to explore local announcements, development information and road and connectivity updates. Check the original source for confirmation of important updates.",
+      category: "Exploring",
+    },
+    {
+      q: "How can I share a suggestion or report incorrect information?",
+      a: "Use the Contact Us button on this page to open the feedback form. Share the page or information you are referring to and explain the correction or suggestion.",
+      category: "Website Help",
+    },
+    {
+      q: "Does this website guarantee the availability of listed services or properties?",
+      a: "No. Listings and introductory information should be independently verified. Contact the relevant provider or property representative to confirm availability, terms and current details.",
+      category: "Website Help",
+    },
+  ];
 
 const reveal =
   "reveal-on-scroll opacity-0 translate-y-8 transition-all duration-700 ease-out motion-reduce:opacity-100 motion-reduce:translate-y-0 motion-reduce:transition-none";
@@ -156,7 +156,13 @@ export default function FAQPage() {
     <main className="min-h-screen scroll-smooth overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* HERO SECTION */}
-      <section className="relative isolate overflow-hidden border-b border-[#10251F]/10 bg-[#EAF2F6]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out hover:scale-105"
+          style={{ backgroundImage: "url('/images/FAQ.jpeg')" }}
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -right-24 -top-28 h-96 w-96 rounded-full border border-[#D58A28]/20 transition-transform duration-1000 hover:scale-110"
@@ -172,8 +178,8 @@ export default function FAQPage() {
           className="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-[#D58A28]/10 blur-3xl"
         />
 
-        <div className="relative mx-auto max-w-7xl px-5 pb-16 pt-8 sm:px-8 sm:pb-20 sm:pt-10 lg:px-12 lg:pb-24">
-          <div className="mt-14 grid items-center gap-12 md:mt-16 md:grid-cols-[1fr_300px] lg:gap-20">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-32 lg:px-12 lg:pb-24">
+          <div className="mt-8 grid items-center gap-12 md:mt-10 md:grid-cols-[1fr_300px] lg:gap-20">
 
             <div className={reveal}>
               <div className="inline-flex items-center gap-2 rounded-full border border-[#D58A28]/30 bg-[#F4F8FA] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#B9741C] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:text-sm">
@@ -266,11 +272,10 @@ export default function FAQPage() {
                     onClick={() => handleCategoryChange(category)}
                     aria-pressed={selected}
                     style={{ transitionDelay: `${index * 35}ms` }}
-                    className={`group flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold transition-all duration-300 hover:translate-x-1 ${
-                      selected
+                    className={`group flex w-full items-center justify-between gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold transition-all duration-300 hover:translate-x-1 ${selected
                         ? "bg-[#10251F] text-white shadow-lg shadow-[#10251F]/15"
                         : "border border-[#10251F]/10 bg-white text-[#43564E] hover:border-[#D58A28]/50 hover:bg-[#EAF2F6] hover:text-[#10251F]"
-                    }`}
+                      }`}
                   >
                     <span>{category}</span>
 
@@ -368,11 +373,10 @@ export default function FAQPage() {
                   <article
                     key={faq.q}
                     style={{ transitionDelay: `${Math.min(index * 35, 210)}ms` }}
-                    className={`group overflow-hidden border bg-white transition-all duration-300 hover:-translate-y-0.5 ${
-                      isOpen
+                    className={`group overflow-hidden border bg-white transition-all duration-300 hover:-translate-y-0.5 ${isOpen
                         ? "border-[#D58A28]/60 shadow-[0_12px_35px_rgba(6,72,61,0.07)]"
                         : "border-[#10251F]/10 hover:border-[#D58A28]/50 hover:shadow-md"
-                    }`}
+                      }`}
                   >
                     <button
                       type="button"
@@ -382,11 +386,10 @@ export default function FAQPage() {
                       className="flex w-full items-start gap-4 px-4 py-5 text-left transition-colors duration-300 hover:bg-[#FFFDF8] sm:items-center sm:px-6 sm:py-6"
                     >
                       <span
-                        className={`flex h-10 w-10 shrink-0 items-center justify-center text-xs font-extrabold transition-all duration-300 ${
-                          isOpen
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center text-xs font-extrabold transition-all duration-300 ${isOpen
                             ? "scale-105 bg-[#10251F] text-[#F2AE45]"
                             : "bg-[#EAF2F6] text-[#B9741C] group-hover:bg-[#10251F] group-hover:text-white"
-                        }`}
+                          }`}
                       >
                         {String(index + 1).padStart(2, "0")}
                       </span>
@@ -402,11 +405,10 @@ export default function FAQPage() {
                       </span>
 
                       <span
-                        className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                          isOpen
+                        className={`mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${isOpen
                             ? "rotate-180 bg-[#10251F] text-[#F2AE45]"
                             : "bg-[#EAF2F6] text-[#64736D] group-hover:bg-[#D58A28]/15"
-                        }`}
+                          }`}
                       >
                         <ChevronDown className="h-4 w-4" />
                       </span>
@@ -415,11 +417,10 @@ export default function FAQPage() {
                     <div
                       id={answerId}
                       aria-hidden={!isOpen}
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen
+                      className={`grid transition-all duration-300 ease-in-out ${isOpen
                           ? "grid-rows-[1fr] opacity-100"
                           : "grid-rows-[0fr] opacity-0"
-                      }`}
+                        }`}
                     >
                       <div className="overflow-hidden">
                         <div className="border-t border-[#10251F]/10 bg-[#FFFDF8] px-4 pb-6 pt-5 sm:px-6 sm:pl-[4.75rem]">
@@ -456,7 +457,7 @@ export default function FAQPage() {
                     setActiveCategory("All Questions");
                     setOpenIndex(null);
                   }}
-                  className="mt-5 rounded-xl bg-[#10251F] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
+                  className="mt-5 rounded-xl bg-[#D58A28] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
                 >
                   Clear filters
                 </button>

@@ -129,15 +129,15 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* HERO */}
-      <section className="group relative isolate flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px] sm:min-h-[530px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
           className="absolute inset-0 -z-20 scale-105 bg-cover bg-center transition-transform duration-[15000ms] ease-out group-hover:scale-100"
           style={{
             backgroundImage: "url('/images/skyline%20aerohomes.jpeg')",
           }}
         />
-
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="pointer-events-none absolute -right-32 -top-32 h-[430px] w-[430px] rounded-full border border-white/15 transition-transform duration-[2000ms] group-hover:scale-125" />
         <div className="pointer-events-none absolute -right-12 -top-12 h-[280px] w-[280px] rounded-full border border-white/15 transition-transform duration-[2000ms] group-hover:scale-110" />
@@ -188,7 +188,7 @@ export default function ProjectsPage() {
                 transform: "translateY(20px)",
                 transition: "opacity 900ms ease 250ms, transform 900ms ease 250ms",
               }}
-              className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg"
+              className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg"
             >
               Learn about residential and commercial plots, understand the
               property-buying process and submit an enquiry based on your
@@ -373,7 +373,7 @@ export default function ProjectsPage() {
                         <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#10251F]">
                           Explore guide
                           <span className="transition-transform duration-300 group-hover:translate-x-2">
-                            â†’
+                            →
                           </span>
                         </span>
                       </div>
@@ -463,7 +463,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#10251F] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
+                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-[10px] bg-[#D58A28] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
                 >
                   Enquire about this option
                   <ArrowRight
@@ -536,7 +536,7 @@ export default function ProjectsPage() {
 
                 <Link
                   href={getEnquiryLink(brand.name)}
-                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-4 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-4 py-3 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#D58A28] hover:text-white"
                 >
                   Enquire
                   <ArrowRight size={16} />
@@ -576,7 +576,7 @@ export default function ProjectsPage() {
 
           <Link
             href="/real-estate/buying-checklist"
-            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-5 py-3.5 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
+            className="inline-flex items-center justify-center gap-2 rounded-[10px] border border-[#10251F] px-5 py-3.5 text-sm font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#D58A28] hover:text-white"
           >
             Open checklist
             <ArrowRight size={17} />
@@ -589,7 +589,7 @@ export default function ProjectsPage() {
         <div className="pointer-events-none absolute -right-20 -top-32 h-96 w-96 rounded-full border border-white/10 transition-transform duration-[2000ms] group-hover:scale-125" />
         <div className="pointer-events-none absolute -right-5 -top-16 h-64 w-64 rounded-full border border-white/10 transition-transform duration-[2000ms] group-hover:scale-110" />
 
-        <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
+        <div className="relative z-10 mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
           <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
             <div
               data-project-reveal
@@ -609,7 +609,7 @@ export default function ProjectsPage() {
                 Looking for a property in Jattari?
               </h2>
 
-              <p className="mt-4 leading-7 text-[#263D3A]">
+              <p className="mt-4 leading-7 text-[#10251F] font-medium">
                 Submit your requirements through the property enquiry
                 page to tell us what type of property you are exploring.
               </p>
@@ -640,4 +640,6 @@ export default function ProjectsPage() {
     </main>
   );
 }
+
+
 

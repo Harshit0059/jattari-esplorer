@@ -72,7 +72,7 @@ export default function SuggestionForm() {
 
         <button
           type="submit"
-          className="w-full rounded-xl bg-primary px-6 py-3.5 font-semibold text-white transition hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="w-full rounded-xl bg-[#D58A28] px-6 py-3.5 font-semibold text-white transition hover:bg-[#B9741C] focus:outline-none focus:ring-2 focus:ring-[#D58A28] focus:ring-offset-2"
         >
           Submit Suggestion
         </button>

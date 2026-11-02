@@ -22,17 +22,17 @@ export default function ResidentialPlotsPage() {
     <main className="overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* HERO */}
-      <section className="relative flex min-h-[520px] items-center overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center opacity-95"
           style={{
             backgroundImage: "url('/images/residentails.jpeg')",
           }}
         />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
-
-        <div className="relative mx-auto w-full max-w-7xl px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
 
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.28em] text-[#B9741C]">
             Jattari Real Estate Guide
@@ -44,7 +44,7 @@ export default function ResidentialPlotsPage() {
             Your Future.
           </h1>
 
-          <p className="mt-7 max-w-xl text-base leading-8 text-[#263D3A] sm:text-lg">
+          <p className="mt-7 max-w-xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">
             Explore residential plot opportunities around Jattari.
             Understand the location, review important documents, and make
             informed decisions about your property journey.
@@ -53,7 +53,7 @@ export default function ResidentialPlotsPage() {
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               href="/real-estate/property-enquiries?type=Residential%20Plot"
-              className="inline-flex items-center gap-3 rounded-[10px] bg-[#10251F] px-6 py-4 font-semibold text-white transition hover:bg-[#254C3C]"
+              className="inline-flex items-center gap-3 rounded-[10px] bg-[#D58A28] px-6 py-4 font-semibold text-white transition hover:bg-[#B9741C]"
             >
               Explore Property Enquiries
               <ArrowRight size={18} />
@@ -260,4 +260,6 @@ export default function ResidentialPlotsPage() {
     </main>
   );
 }
+
+
 

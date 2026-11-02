@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -304,11 +304,40 @@ export default function AboutJattari() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [selectedPlace, setSelectedPlace] = useState("jattari");
   const [activeTopic, setActiveTopic] = useState(0);
+  const travelRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const currentPlace =
     places.find((place) => place.id === selectedPlace) ?? places[0];
 
   const currentTopic = exploreTopics[activeTopic];
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-index"));
+            if (!isNaN(index)) {
+              setActiveTravel(index);
+            }
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-20% 0px -20% 0px",
+        threshold: 0.4,
+      }
+    );
+
+    travelRefs.current.forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   // Scroll reveal: sections appear smoothly when they enter the viewport.
   useEffect(() => {
@@ -673,62 +702,42 @@ export default function AboutJattari() {
 
           <div className="mt-12 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="group relative overflow-hidden rounded-[2rem] border border-[#10251F]/15 bg-[#EAF2F6] p-4 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl sm:p-7">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(#254C3C_1px,transparent_1px)] bg-[size:20px_20px] opacity-40"
-              />
+              {/* Dedicated Map Stage Canvas */}
+              <div className="relative h-[480px] w-full overflow-hidden rounded-2xl bg-[#EAF2F6] sm:h-[540px]">
+                {/* Dot grid */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(#254C3C_1.2px,transparent_1.2px)] bg-[size:22px_22px] opacity-35"
+                />
 
-              <svg
-                viewBox="0 0 600 500"
-                preserveAspectRatio="none"
-                className="pointer-events-none absolute inset-0 h-full w-full"
-                aria-hidden="true"
-              >
-                <path
-                  d="M300 250 C240 200 180 160 100 100"
-                  fill="none"
-                  stroke="#D58A28"
-                  strokeWidth="3"
-                  strokeDasharray="7 8"
-                />
-                <path
-                  d="M300 250 C390 180 440 140 510 90"
-                  fill="none"
-                  stroke="#254C3C"
-                  strokeWidth="3"
-                  strokeDasharray="7 8"
-                />
-                <path
-                  d="M300 250 C410 250 480 230 550 210"
-                  fill="none"
-                  stroke="#D58A28"
-                  strokeWidth="3"
-                  strokeDasharray="7 8"
-                />
-                <path
-                  d="M300 250 C200 300 140 350 90 390"
-                  fill="none"
-                  stroke="#254C3C"
-                  strokeWidth="3"
-                  strokeDasharray="7 8"
-                />
-                <path
-                  d="M300 250 C380 340 430 390 500 440"
-                  fill="none"
-                  stroke="#D58A28"
-                  strokeWidth="3"
-                  strokeDasharray="7 8"
-                />
-                <path
-                  d="M300 250 L300 35 M300 250 L300 470"
-                  fill="none"
-                  stroke="#254C3C"
-                  strokeOpacity=".2"
-                  strokeWidth="2"
-                />
-              </svg>
+                {/* SVG Route lines & crosshairs centered at (300, 250) = 50%, 50% */}
+                <svg
+                  viewBox="0 0 600 500"
+                  preserveAspectRatio="none"
+                  className="pointer-events-none absolute inset-0 h-full w-full"
+                  aria-hidden="true"
+                >
+                  <line x1="0" y1="250" x2="600" y2="250" stroke="#254C3C" strokeOpacity=".2" strokeWidth="1.5" />
+                  <line x1="300" y1="0" x2="300" y2="500" stroke="#254C3C" strokeOpacity=".2" strokeWidth="1.5" />
 
-              <div className="relative min-h-[480px] sm:min-h-[540px]">
+                  <path d="M300 250 L120 215" stroke="#D58A28" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L228 75" stroke="#254C3C" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L402 95" stroke="#254C3C" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L492 210" stroke="#D58A28" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L114 380" stroke="#254C3C" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L498 360" stroke="#D58A28" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L222 455" stroke="#254C3C" strokeWidth="2.5" strokeDasharray="6 6" />
+                  <path d="M300 250 L396 455" stroke="#D58A28" strokeWidth="2.5" strokeDasharray="6 6" />
+                </svg>
+
+                {/* Concentric radar rings centered EXACTLY at 50%, 50% */}
+                <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+                  <div className="h-44 w-44 rounded-full border border-[#D58A28]/35 transition-transform duration-1000 group-hover:scale-110 sm:h-56 sm:w-56" />
+                  <div className="absolute h-28 w-28 rounded-full border border-[#D58A28]/25 sm:h-36 sm:w-36" />
+                  <div className="absolute h-64 w-64 rounded-full border border-[#254C3C]/15 sm:h-80 sm:w-80" />
+                </div>
+
+                {/* City location buttons - circle image centered exactly at place.x, place.y */}
                 {places.map((place, index) => {
                   const isSelected = selectedPlace === place.id;
                   const isMain = place.id === "jattari";
@@ -745,53 +754,48 @@ export default function AboutJattari() {
                         top: place.y,
                         transitionDelay: `${index * 30}ms`,
                       }}
-                      className="group absolute z-10 -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 hover:z-20 hover:scale-110 focus-visible:scale-110 focus-visible:outline-none"
+                      className="group absolute z-10 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center transition-transform duration-300 hover:z-20 hover:scale-110 focus-visible:scale-110 focus-visible:outline-none"
                     >
-                      <span className="flex flex-col items-center">
-                        <span
-                          className={`relative flex items-center justify-center overflow-hidden rounded-full border-[3px] border-[#F4F8FA] shadow-lg transition-all duration-500 ${
-                            isMain
-                              ? "h-[76px] w-[76px] ring-4 ring-[#D58A28]/30 group-hover:ring-[#D58A28]/60 sm:h-[84px] sm:w-[84px]"
-                              : isSelected
-                                ? "h-16 w-16 ring-4 ring-[#D58A28]/30 sm:h-[72px] sm:w-[72px]"
-                                : "h-14 w-14 group-hover:ring-4 group-hover:ring-[#D58A28]/30 sm:h-16 sm:w-16"
-                          }`}
-                        >
-                          <Image
-                            src={place.image}
-                            alt={`${place.name} location`}
-                            fill
-                            sizes="(max-width: 640px) 56px, 84px"
-                            className="object-cover transition-transform duration-700 group-hover:scale-125"
-                          />
+                      <span
+                        className={`relative flex items-center justify-center overflow-hidden rounded-full border-[3px] border-[#F4F8FA] shadow-lg transition-all duration-500 ${
+                          isMain
+                            ? "h-[76px] w-[76px] ring-4 ring-[#D58A28]/40 group-hover:ring-[#D58A28]/70 sm:h-[84px] sm:w-[84px]"
+                            : isSelected
+                              ? "h-16 w-16 ring-4 ring-[#D58A28]/30 sm:h-[72px] sm:w-[72px]"
+                              : "h-14 w-14 group-hover:ring-4 group-hover:ring-[#D58A28]/30 sm:h-16 sm:w-16"
+                        }`}
+                      >
+                        <Image
+                          src={place.image}
+                          alt={`${place.name} location`}
+                          fill
+                          sizes="(max-width: 640px) 56px, 84px"
+                          className="object-cover transition-transform duration-700 group-hover:scale-125"
+                        />
 
-                          {isMain && (
-                            <span className="absolute inset-0 rounded-full border-2 border-[#D58A28]/70" />
-                          )}
-                        </span>
+                        {isMain && (
+                          <span className="absolute inset-0 rounded-full border-2 border-[#D58A28]/70" />
+                        )}
+                      </span>
 
-                        <span
-                          className={`mt-2 whitespace-nowrap rounded-full border px-2.5 py-1.5 text-[9px] font-extrabold shadow-sm transition-all duration-300 sm:px-3 sm:text-[11px] ${
-                            isSelected
-                              ? "border-[#D58A28] bg-[#10251F] text-white"
-                              : isMain
-                                ? "border-[#D58A28] bg-white text-[#10251F]"
-                                : "border-[#10251F]/10 bg-white/95 text-[#10251F] group-hover:border-[#D58A28] group-hover:bg-[#10251F] group-hover:text-white"
-                          }`}
-                        >
-                          {place.name}
-                        </span>
+                      <span
+                        className={`absolute top-full mt-1.5 whitespace-nowrap rounded-full border px-2.5 py-1 text-[9px] font-extrabold shadow-sm transition-all duration-300 sm:px-3 sm:text-[11px] ${
+                          isSelected
+                            ? "border-[#D58A28] bg-[#10251F] text-white shadow-md"
+                            : isMain
+                              ? "border-[#D58A28] bg-[#10251F] text-white ring-2 ring-[#D58A28]/40 shadow-md"
+                              : "border-[#10251F]/10 bg-white/95 text-[#10251F] group-hover:border-[#D58A28] group-hover:bg-[#10251F] group-hover:text-white"
+                        }`}
+                      >
+                        {place.name}
                       </span>
                     </button>
                   );
                 })}
-
-                <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2">
-                  <div className="h-32 w-32 rounded-full border border-[#D58A28]/30 transition-transform duration-1000 group-hover:scale-110 sm:h-44 sm:w-44" />
-                </div>
               </div>
 
-              <div className="relative mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-[#10251F]/15 pt-5">
+              {/* Legend & disclaimer outside the map canvas */}
+              <div className="relative mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-[#10251F]/15 pt-4">
                 <span className="flex items-center gap-2 text-[10px] font-semibold text-[#4A605A]">
                   <span className="h-3 w-3 rounded-full bg-[#D58A28]" />
                   Main destination
@@ -802,7 +806,7 @@ export default function AboutJattari() {
                 </span>
               </div>
 
-              <p className="relative mt-4 text-center text-[10px] leading-5 text-[#263D3A]">
+              <p className="relative mt-3 text-center text-[10px] leading-5 text-[#263D3A]">
                 Illustrative regional connectivity diagram, not a scale-accurate
                 navigation map. Verify exact routes and directions before travelling.
               </p>
@@ -886,38 +890,42 @@ export default function AboutJattari() {
             </h2>
           </div>
 
-          <div className="grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="group relative min-h-[380px] overflow-hidden rounded-[24px] border border-[#D8E5E8] bg-white shadow-md sm:min-h-[480px]">
-              <Image
-                key={selectedTravel.image}
-                src={selectedTravel.image}
-                alt={selectedTravel.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-              />
+          <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+            {/* Sticky image card on the left */}
+            <div className="relative lg:sticky lg:top-28 lg:self-start">
+              <div className="group relative min-h-[380px] h-[480px] sm:h-[540px] overflow-hidden rounded-[24px] border border-[#D8E5E8] bg-[#10251F] shadow-lg">
+                <Image
+                  key={selectedTravel.image}
+                  src={selectedTravel.image}
+                  alt={selectedTravel.imageAlt}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-all duration-700 ease-out group-hover:scale-105"
+                />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/85 via-transparent to-transparent transition-opacity duration-500 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/90 via-[#10251F]/30 to-black/20 transition-opacity duration-500" />
 
-              <div className="absolute left-6 top-6 rounded-full border border-white/30 bg-black/25 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">
-                {selectedTravel.number} / 04
-              </div>
+                <div className="absolute left-6 top-6 rounded-full border border-white/30 bg-black/40 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-[#F2AE45] backdrop-blur-md">
+                  {selectedTravel.number} / 04
+                </div>
 
-              <div
-                key={selectedTravel.number}
-                className="absolute bottom-0 left-0 p-7 transition-all duration-500 sm:p-10"
-              >
-                <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#F2AE45]">
-                  {selectedTravel.caption}
-                </span>
+                <div
+                  key={selectedTravel.number}
+                  className="absolute bottom-0 left-0 right-0 p-7 sm:p-10 transition-all duration-500"
+                >
+                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#F2AE45]">
+                    {selectedTravel.caption}
+                  </span>
 
-                <h3 className="mt-3 text-3xl font-extrabold sm:text-4xl">
-                  {selectedTravel.title}
-                </h3>
+                  <h3 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">
+                    {selectedTravel.title}
+                  </h3>
 
-                <p className="mt-3 max-w-sm text-sm leading-7 text-white/75">
-                  {selectedTravel.description}
-                </p>
+                  <p className="mt-2 max-w-md text-sm leading-7 text-white/85">
+                    {selectedTravel.description}
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -933,12 +941,18 @@ export default function AboutJattari() {
                   return (
                     <button
                       key={item.number}
+                      ref={(el) => {
+                        travelRefs.current[index] = el;
+                      }}
+                      data-index={index}
                       type="button"
                       onClick={() => setActiveTravel(index)}
+                      onMouseEnter={() => setActiveTravel(index)}
+                      onFocus={() => setActiveTravel(index)}
                       aria-pressed={isActive}
-                      className={`group grid w-full grid-cols-[48px_1fr_28px] items-center gap-4 border-b border-[#D8E5E8] py-5 text-left transition-all duration-300 rounded-xl px-2 ${
+                      className={`group grid w-full grid-cols-[48px_1fr_28px] items-center gap-4 border-b border-[#D8E5E8] py-5 text-left transition-all duration-300 rounded-xl px-3 ${
                         isActive
-                          ? "bg-white shadow-sm border-[#D58A28] px-4"
+                          ? "bg-white shadow-md border-[#D58A28] px-4"
                           : "hover:bg-white/70 hover:px-4"
                       }`}
                     >
@@ -1250,7 +1264,7 @@ export default function AboutJattari() {
             </p>
             <Link
               href="/#contact"
-              className="group mt-7 inline-flex items-center gap-3 rounded-full bg-[#10251F] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
+              className="group mt-7 inline-flex items-center gap-3 rounded-full bg-[#D58A28] px-6 py-3 text-sm font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Ask an enquiry
               <span className="text-[#F2AE45] transition-transform duration-300 group-hover:translate-x-1">

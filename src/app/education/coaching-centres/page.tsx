@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import Link from "next/link";
@@ -117,20 +117,21 @@ export default function CoachingCentresPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       {/* Hero Section */}
-      <section className="group relative isolate min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         {/* Hero Background Image */}
         <Image
-          src="/images/coaching-hero.webp"
+          src="/images/school.jpeg"
           alt="Learning and coaching environment"
           fill
           priority
           sizes="100vw"
           quality={75}
-          className="z-0 object-cover object-center opacity-25 transition-transform duration-[2000ms] ease-out group-hover:scale-105"
+          className="z-0 object-cover object-center opacity-95 transition-transform duration-[2000ms] ease-out group-hover:scale-105"
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/80 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         {/* Animated Decorative Lines */}
         <div
@@ -145,7 +146,7 @@ export default function CoachingCentresPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 mx-auto flex min-h-[520px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[580px] sm:pt-32 sm:pb-20 md:min-h-[640px] md:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[580px] max-w-7xl items-center px-6 pt-28 pb-14 sm:min-h-[640px] sm:pt-32 sm:pb-20 md:min-h-[700px] md:px-10">
           <div
             data-coach-reveal
             className="max-w-3xl translate-x-[-45px] opacity-0 transition-all duration-1000 ease-out"
@@ -158,11 +159,11 @@ export default function CoachingCentresPage() {
               Coaching Centres Near Jattari
             </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">Explore academic coaching and competitive-exam preparation
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">Explore academic coaching and competitive-exam preparation
               options in Jattari and the surrounding Aligarh area.
             </p>
 
-            <div className="mt-7 text-sm font-medium text-[#263D3A]">
+            <div className="mt-7 text-sm font-medium text-[#10251F] font-medium">
               <span className="font-bold text-[#D58A28]">{coachingCentres.length}
               </span>{" "}
               directory entries · Aligarh, Uttar Pradesh
@@ -235,7 +236,7 @@ export default function CoachingCentresPage() {
               key={centre.name}
               data-coach-reveal
               style={{ transitionDelay: `${(index % 4) * 90}ms` }}
-              className="group relative grid translate-y-8 gap-4 overflow-hidden rounded-xl border border-border bg-surface p-5 opacity-0 shadow-sm transition-all duration-700 ease-out hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg sm:grid-cols-[70px_minmax(0,1fr)] sm:gap-6 sm:p-6 md:p-7"
+              className="group relative grid translate-y-8 gap-4 overflow-hidden rounded-xl border border-border bg-surface p-5 opacity-0 shadow-sm transition-all duration-700 ease-out hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg sm:grid-cols-[70px_minmax(0,1fr)_160px] sm:gap-6 sm:p-6 md:p-7 sm:items-center"
             >
               {/* Animated Side Accent */}
               <span
@@ -339,7 +340,7 @@ export default function CoachingCentresPage() {
               Learning opportunities shape the future of a neighbourhood.
             </h2>
 
-            <p className="mt-4 text-sm leading-7 text-[#263D3A] sm:text-base">
+            <p className="mt-4 text-sm leading-7 text-[#10251F] font-medium sm:text-base">
               Education, connectivity and residential development all
               contribute to the character of a growing area. Along with
               learning facilities, families and property explorers may
@@ -365,7 +366,7 @@ export default function CoachingCentresPage() {
                 Anugrah Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Discover Anugrah Homes and explore its residential project
                 in Jattari. Learn more about the project and the surrounding
                 neighbourhood through its official website.
@@ -399,7 +400,7 @@ export default function CoachingCentresPage() {
                 Skyline Aero Homes
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-[#263D3A]">
+              <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium">
                 Explore Skyline Aero Homes and learn about its residential
                 offerings in the wider Jewar region through its official
                 website.
@@ -450,7 +451,7 @@ export default function CoachingCentresPage() {
           >
             <Link
               href="/education"
-              className="group inline-flex w-fit items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-primary-hover hover:shadow-lg"
+              className="group inline-flex w-fit items-center gap-3 rounded-full bg-[#D58A28] px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:gap-5 hover:bg-[#B9741C] hover:shadow-lg"
             >
               Back to Education
               <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -463,3 +464,4 @@ export default function CoachingCentresPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 import { newsPageConfig } from "@/config/news";
 
@@ -26,45 +26,41 @@ export default function NewsUpdatesPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <section className="relative isolate overflow-hidden border-b border-border">
-        {/* Background image */}
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
+        {/* Background image: crisp, high visibility without distortion */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-20 bg-no-repeat"
+          className="absolute inset-0 -z-20 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover:scale-105"
           style={{
-            backgroundImage: "url('/images/jattari.jpeg')",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "center",
+            backgroundImage: "url('/images/developments.jpeg')",
           }}
         />
 
-        {/* Minimal overlay: image remains visible */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-black/10"
-        />
+        {/* Directional contrast overlay: readable text on left, 100% clear photo on right */}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
-        <div className="container-site flex min-h-[560px] items-center py-10 sm:min-h-[500px] sm:py-14 lg:min-h-[530px]">
-          <div className="w-full max-w-2xl">
-            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/95 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary shadow-sm sm:px-4 sm:text-xs sm:tracking-[0.16em]">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 pt-32 pb-16 sm:px-10 sm:pt-36 sm:pb-20 lg:px-12">
+          <div className="w-full max-w-3xl">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D8E5E8] bg-white/95 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-primary shadow-sm sm:px-4 sm:text-xs sm:tracking-[0.16em]">
               <span className="h-2 w-2 shrink-0 rounded-full bg-primary" />
               {newsPageConfig.eyebrow}
             </p>
 
-            <h1 className="max-w-xl text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-[#10251F] sm:text-6xl lg:text-7xl">
               {newsPageConfig.title}
             </h1>
 
-            <p className="mt-4 max-w-xl text-sm leading-6 text-slate-950 sm:mt-5 sm:text-lg sm:leading-8">
+            <p className="mt-5 max-w-2xl text-base leading-7 text-[#10251F] font-medium sm:mt-6 sm:text-lg sm:leading-8">
               {newsPageConfig.description}
             </p>
 
-            <div className="mt-6 flex flex-col items-start gap-2.5 sm:mt-7 sm:flex-row sm:flex-wrap sm:gap-3">
+            <div className="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
               {categories.map((category) => (
                 <Link
                   key={category.href}
                   href={category.href}
-                  className="button-primary inline-flex min-h-11 w-fit max-w-full items-center justify-center gap-2 px-4 py-3 text-sm font-semibold shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg sm:px-5"
+                  className="inline-flex min-h-12 w-fit max-w-full items-center justify-center gap-2 rounded-xl bg-[#D58A28] px-5 py-3 text-sm font-bold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:bg-[#B9741C] hover:shadow-lg sm:px-6"
                 >
                   <span>{category.title}</span>
                   <span aria-hidden="true">→</span>
@@ -227,3 +223,5 @@ export default function NewsUpdatesPage() {
     </main>
   );
 }
+
+

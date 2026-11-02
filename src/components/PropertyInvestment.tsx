@@ -12,57 +12,44 @@ const companies = [
   {
     number: "01",
     title: "Anugrah Homes",
+    category: "Residential Plots & Enquiries",
     description:
       "Explore residential plots and real estate investment opportunities.",
     website: "https://anugrahhomes.com/",
-    featured: true,
+    image: "/images/anugrah.jpeg",
   },
   {
     number: "02",
     title: "Skyline Aero Homes",
+    category: "Modern Living Township",
     description:
       "Discover property options and explore real estate opportunities.",
     website: "https://www.skylineaerohomes.com/",
-    featured: true,
+    image: "/images/skyline%20aerohomes.jpeg",
   },
   {
     number: "03",
     title: "Dreams N Realtors",
+    category: "Property Advisory & Plots",
     description:
       "Explore property opportunities and investment options.",
+    image: "/images/residentails.jpeg",
   },
   {
     number: "04",
     title: "Jewar Lands",
+    category: "Jewar-Region Land Opportunities",
     description:
       "Enquire about land and real estate investment opportunities.",
+    image: "/images/commercial.jpeg",
   },
   {
     number: "05",
     title: "Shiva Associates",
+    category: "Commercial & Strategic Plots",
     description:
       "Discuss your property requirements and investment plans.",
-  },
-];
-
-const propertyPoints = [
-  {
-    number: "01",
-    title: "Understand the Location",
-    description:
-      "Research the area, access routes, and surrounding facilities before making a property decision.",
-  },
-  {
-    number: "02",
-    title: "Check the Documentation",
-    description:
-      "Verify ownership, land records, approvals, and applicable legal requirements independently.",
-  },
-  {
-    number: "03",
-    title: "Compare Your Options",
-    description:
-      "Compare prices, property details, connectivity, and long-term suitability before investing.",
+    image: "/images/developments.jpeg",
   },
 ];
 
@@ -256,142 +243,10 @@ export default function PropertyInvestment() {
     >
       <div className="container-site">
 
-        {/* Editorial introduction */}
-        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-
-          <div className={`${revealClasses} relative`}>
-            <div className="mb-6 flex items-center gap-3">
-              <span className="h-px w-10 bg-accent" />
-
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                Real Estate & Investment
-              </span>
-            </div>
-
-            <h2 className="max-w-xl text-4xl font-bold leading-[1.12] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Make informed
-              <span className="mt-2 block text-primary">
-                property decisions
-              </span>
-            </h2>
-
-            <p className="mt-6 max-w-lg text-sm leading-7 text-muted sm:text-base sm:leading-8">
-              Explore real estate investment options, understand the
-              property market, and compare opportunities before making
-              an investment decision.
-            </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-5">
-              <a
-                href="#investment-options"
-                className="button-primary group"
-              >
-                Explore Opportunities
-
-                <span
-                  aria-hidden="true"
-                  className="inline-block transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  →
-                </span>
-              </a>
-
-              <span className="text-xs text-muted">
-                Research before you invest
-              </span>
-            </div>
-
-            {/* Decorative theme accent */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-10 left-0 h-px w-24 bg-accent/50"
-            />
-          </div>
-
-          {/* Investment research panel */}
-          <div
-            className={`${revealClasses} relative overflow-hidden rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-card)] sm:p-8`}
-          >
-            <div
-              aria-hidden="true"
-              className="absolute right-0 top-0 h-28 w-28 rounded-bl-full bg-soft-accent/70"
-            />
-
-            <div className="relative">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                    Investment Guide
-                  </span>
-
-                  <h3 className="mt-2 text-xl font-bold text-foreground sm:text-2xl">
-                    Before You Invest
-                  </h3>
-
-                  <p className="mt-2 max-w-sm text-sm leading-6 text-muted">
-                    Important checks to include in your property research.
-                  </p>
-                </div>
-
-                <span
-                  aria-hidden="true"
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-soft-accent text-primary"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-5 w-5"
-                    stroke="currentColor"
-                    strokeWidth="1.7"
-                  >
-                    <path
-                      d="M4 19.5V8.5L12 4l8 4.5v11M8 19.5v-7h8v7M2.5 19.5h19"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
-              </div>
-
-              <div className="mt-7 space-y-1">
-                {propertyPoints.map((point, index) => (
-                  <div
-                    key={point.number}
-                    className="group flex gap-4 rounded-xl px-3 py-4 transition-all duration-300 hover:bg-background"
-                  >
-                    <div className="flex shrink-0 flex-col items-center">
-                      <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-background text-xs font-bold text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-white">
-                        {point.number}
-                      </span>
-
-                      {index !== propertyPoints.length - 1 && (
-                        <span
-                          aria-hidden="true"
-                          className="mt-2 h-full min-h-4 w-px bg-border"
-                        />
-                      )}
-                    </div>
-
-                    <div className="pb-1">
-                      <h4 className="text-sm font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
-                        {point.title}
-                      </h4>
-
-                      <p className="mt-1.5 text-sm leading-6 text-muted">
-                        {point.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Investment opportunities */}
         <div
           id="investment-options"
-          className="mt-20 scroll-mt-24 sm:mt-28"
+          className="scroll-mt-24"
         >
           <div className={`${revealClasses} mb-10`}>
             <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
@@ -420,54 +275,60 @@ export default function PropertyInvestment() {
             </div>
           </div>
 
-          {/* Featured company directory */}
-          <div className="grid gap-5 lg:grid-cols-2">
+          {/* Company directory - All 5 projects shown in the exact same card format with images */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {companies.map((company) => (
+              <article
+                key={company.number}
+                className={`${revealClasses} group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/40 hover:shadow-xl`}
+              >
+                {/* Image Banner */}
+                <div className="relative h-48 w-full overflow-hidden bg-muted/20 sm:h-52">
+                  <img
+                    src={company.image}
+                    alt={company.title}
+                    className="h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#10251F]/70 via-black/20 to-transparent" />
 
-            {companies
-              .filter((company) => company.featured)
-              .map((company, index) => (
-                <article
-                  key={company.number}
-                  className={`${revealClasses} group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 shadow-[var(--shadow-card)] transition-all duration-500 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl sm:p-8`}
-                >
-                  {/* Decorative background number */}
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -right-3 -top-8 select-none text-[150px] font-bold leading-none text-soft-accent/70 transition-transform duration-700 group-hover:scale-110"
-                  >
-                    {company.number}
-                  </span>
-
-                  <div className="relative flex items-center justify-between">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-soft-accent px-3 py-1.5 text-xs font-semibold text-primary">
+                  {/* Badge & Number on Image */}
+                  <div className="absolute inset-x-4 top-4 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-[#10251F] shadow-sm backdrop-blur-md">
                       <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-
                       Featured Opportunity
                     </span>
-
-                    <span className="text-sm font-medium text-muted">
-                      0{index + 1}
+                    <span className="rounded-full bg-black/60 px-2.5 py-0.5 text-xs font-bold text-white backdrop-blur-sm">
+                      {company.number}
                     </span>
                   </div>
 
-                  <div className="relative mt-8">
-                    <h4 className="max-w-sm text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                  {/* Category tag on image bottom */}
+                  <div className="absolute bottom-3 left-4">
+                    <span className="text-xs font-medium text-white/95 drop-shadow">
+                      {company.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content body */}
+                <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
+                  <div>
+                    <h4 className="text-xl font-bold tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
                       {company.title}
                     </h4>
 
-                    <p className="mt-3 max-w-sm text-sm leading-7 text-muted">
+                    <p className="mt-2.5 text-sm leading-6 text-muted">
                       {company.description}
                     </p>
                   </div>
 
-                  <div className="relative mt-auto flex flex-wrap items-center gap-4 pt-7">
+                  <div className="mt-6 flex flex-wrap items-center gap-4 border-t border-border/60 pt-5">
                     <button
                       type="button"
                       onClick={() => openForm(company.title)}
-                      className="button-primary group/button"
+                      className="button-primary group/button !px-5 !py-2.5 !text-sm"
                     >
                       Enquire Now
-
                       <span
                         aria-hidden="true"
                         className="inline-block transition-transform duration-300 group-hover/button:translate-x-1"
@@ -484,63 +345,13 @@ export default function PropertyInvestment() {
                         className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors duration-300 hover:text-accent"
                       >
                         Visit Website
-
                         <span aria-hidden="true">↗</span>
                       </a>
                     )}
                   </div>
-                </article>
-              ))}
-          </div>
-
-          {/* Other company directory */}
-          <div className={`${revealClasses} mt-12`}>
-            <div className="mb-5 flex items-center justify-between gap-4">
-              <h4 className="text-sm font-semibold text-foreground">
-                More Property Opportunities
-              </h4>
-
-              <span className="text-xs text-muted">
-                03 — 05
-              </span>
-            </div>
-
-            <div className="divide-y divide-border overflow-hidden rounded-2xl border border-border bg-surface">
-              {companies
-                .filter((company) => !company.featured)
-                .map((company) => (
-                  <article
-                    key={company.number}
-                    className="group flex flex-col gap-4 p-5 transition-colors duration-300 hover:bg-soft-accent/40 sm:flex-row sm:items-center sm:justify-between sm:p-6"
-                  >
-                    <div className="flex items-start gap-4">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-background text-xs font-bold text-primary transition-all duration-300 group-hover:bg-primary group-hover:text-white">
-                        {company.number}
-                      </span>
-
-                      <div>
-                        <h5 className="font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
-                          {company.title}
-                        </h5>
-
-                        <p className="mt-1 max-w-lg text-sm leading-6 text-muted">
-                          {company.description}
-                        </p>
-                      </div>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => openForm(company.title)}
-                      className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-primary transition-all duration-300 hover:gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:ml-14"
-                    >
-                      Enquire Now
-
-                      <span aria-hidden="true">→</span>
-                    </button>
-                  </article>
-                ))}
-            </div>
+                </div>
+              </article>
+            ))}
           </div>
 
           <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-6 text-muted">

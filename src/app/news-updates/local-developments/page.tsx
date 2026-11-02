@@ -1,4 +1,4 @@
-
+﻿
 import Link from "next/link";
 
 const developmentTopics = [
@@ -59,10 +59,10 @@ export default function LocalDevelopmentsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO SECTION */}
-      <section className="relative isolate overflow-hidden border-b border-border">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         {/* Background image */}
         <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
           style={{
             backgroundImage: "url('/images/developments.jpeg')",
             backgroundSize: "cover",
@@ -72,12 +72,10 @@ export default function LocalDevelopmentsPage() {
         />
 
         {/* Light overlay only behind the text */}
-        <div
-          className="absolute inset-0 -z-10 bg-gradient-to-r from-[#F4F8FA]/55 via-[#F4F8FA]/25 to-transparent"
-          aria-hidden="true"
-        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
-        <div className="container-site relative mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
+        <div className="container-site relative z-10 mx-auto px-4 py-20 sm:px-6 sm:py-24 lg:py-32">
           <div className="max-w-3xl">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#10251F]">
               Jattari · Local Development
@@ -168,15 +166,15 @@ export default function LocalDevelopmentsPage() {
             <div className="mt-6 border-t border-border pt-5">
               <ul className="space-y-3 text-sm leading-6 text-muted">
                 <li className="flex gap-3">
-                  <span className="text-primary">✓</span>
+                  <span className="text-primary">âœ“</span>
                   Original announcement or official notice
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-primary">✓</span>
+                  <span className="text-primary">âœ“</span>
                   Confirmed location and current project status
                 </li>
                 <li className="flex gap-3">
-                  <span className="text-primary">✓</span>
+                  <span className="text-primary">âœ“</span>
                   Published timelines and relevant conditions
                 </li>
               </ul>
@@ -295,7 +293,7 @@ export default function LocalDevelopmentsPage() {
               ].map((item) => (
                 <li key={item} className="flex gap-3 leading-7 text-muted">
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-soft-accent text-sm font-bold text-primary">
-                    ✓
+                    âœ“
                   </span>
                   {item}
                 </li>
@@ -444,3 +442,4 @@ export default function LocalDevelopmentsPage() {
     </main>
   );
 }
+

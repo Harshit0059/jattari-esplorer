@@ -35,9 +35,9 @@ const propertyTypes = [
 const budgets = [
   "Not decided yet",
   "Below â‚¹10 lakh",
-  "â‚¹10â€“25 lakh",
-  "â‚¹25â€“50 lakh",
-  "â‚¹50 lakhâ€“â‚¹1 crore",
+  "â‚¹10–25 lakh",
+  "â‚¹25–50 lakh",
+  "â‚¹50 lakh–â‚¹1 crore",
   "Above â‚¹1 crore",
 ];
 
@@ -111,26 +111,28 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
   return (
     <main className="min-h-screen bg-[#F4F8FA] text-[#10251F]">
       {/* Hero */}
-      <section className="relative isolate flex min-h-[390px] items-end overflow-hidden bg-[#10251F]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <div
-          className="absolute inset-0 -z-20 bg-cover bg-center"
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
           style={{
             backgroundImage: "url('/images/skyline%20aerohomes.jpeg')",
           }}
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#E4EDF0]/90 via-[#F4F8FA]/75 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="mx-auto w-full max-w-7xl px-5 pb-14 pt-28 sm:px-8 lg:px-12">
+        
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#F2B85B]">
-            Property Enquiries Â· Jattari
+            Property Enquiries · Jattari
           </p>
 
           <h1 className="max-w-3xl text-4xl font-bold leading-tight text-[#10251F] sm:text-6xl lg:text-6xl">
             Tell Us What Property You Are Looking For.
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-7 text-[#263D3A] sm:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-7 text-[#10251F] font-medium sm:text-lg">
             Share your requirements for residential plots, commercial land or
             property projects around Jattari.
           </p>
@@ -469,7 +471,7 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
 
               <button
                 type="submit"
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-[#10251F] px-6 py-3.5 font-semibold text-white transition hover:bg-[#254C3C] focus:outline-none focus:ring-2 focus:ring-[#287A6D] focus:ring-offset-2"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-[10px] bg-[#D58A28] px-6 py-3.5 font-semibold text-white transition hover:bg-[#B9741C] focus:outline-none focus:ring-2 focus:ring-[#287A6D] focus:ring-offset-2"
               >
                 Prepare Enquiry Email
                 <Send size={17} />
@@ -533,4 +535,6 @@ Note: This enquiry was prepared through the Jattari Explorer website.`
     </main>
   );
 }
+
+
 

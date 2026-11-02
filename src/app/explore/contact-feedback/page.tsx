@@ -141,11 +141,18 @@ export default function ContactFeedbackPage() {
     <main className="min-h-screen scroll-smooth overflow-hidden bg-[#F4F8FA] text-[#10251F]">
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden border-b border-[#E9DFCF] bg-[#EAF2F6]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
+        <img
+          src="/images/jattari.jpeg"
+          alt="Jattari town overview"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105 motion-reduce:transition-none motion-reduce:group-hover/hero:scale-100"
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#D58A28]/10 blur-3xl transition-transform duration-1000 hover:scale-125" />
         <div className="pointer-events-none absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-[#10251F]/10 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:py-24">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pt-28 pb-14 sm:px-8 sm:pt-32 sm:pb-18 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:pb-24">
 
           <div className={reveal}>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D58A28]/30 bg-[#F4F8FA] px-4 py-2 text-sm font-semibold text-[#254C3C] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-md">
@@ -172,7 +179,7 @@ export default function ContactFeedbackPage() {
             <div className="mt-9 flex flex-wrap gap-3">
               <a
                 href="#feedback-form"
-                className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-[#10251F] px-7 py-3 font-semibold text-white shadow-lg shadow-[#10251F]/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#10251F]/20"
+                className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-[#D58A28] px-7 py-3 font-semibold text-white shadow-lg shadow-[#10251F]/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#10251F]/20"
               >
                 Share Your Feedback
                 <ArrowRight
@@ -450,7 +457,7 @@ export default function ContactFeedbackPage() {
                 <button
                   type="button"
                   onClick={() => setSubmitted(false)}
-                  className="group mt-8 inline-flex min-h-[50px] items-center justify-center gap-2 rounded-xl bg-[#10251F] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg"
+                  className="group mt-8 inline-flex min-h-[50px] items-center justify-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg"
                 >
                   Write Another Message
                   <ArrowRight
@@ -576,7 +583,7 @@ export default function ContactFeedbackPage() {
 
                   <button
                     type="submit"
-                    className="group inline-flex min-h-[54px] w-full items-center justify-center gap-2 rounded-xl bg-[#10251F] px-6 py-3 font-bold text-white shadow-lg shadow-[#10251F]/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#10251F]/20 active:translate-y-0"
+                    className="group inline-flex min-h-[54px] w-full items-center justify-center gap-2 rounded-xl bg-[#D58A28] px-6 py-3 font-bold text-white shadow-lg shadow-[#10251F]/10 transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#10251F]/20 active:translate-y-0"
                   >
                     Submit Feedback
                     <Send
@@ -696,7 +703,7 @@ export default function ContactFeedbackPage() {
               Keep Exploring Jattari.
             </h2>
 
-            <p className="mt-3 text-sm leading-7 text-[#263D3A] sm:text-base">
+            <p className="mt-3 text-sm leading-7 text-[#10251F] font-medium sm:text-base">
               Discover local places, history, culture, markets and useful
               information about the area.
             </p>

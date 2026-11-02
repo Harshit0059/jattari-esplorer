@@ -1,4 +1,4 @@
-
+﻿
 "use client";
 
 import Image from "next/image";
@@ -220,17 +220,17 @@ export default function FoodPage() {
       `}</style>
 
       {/* HERO SECTION */}
-      <section className="group relative min-h-[520px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] sm:min-h-[580px] md:min-h-[640px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
         <Image
           src="/images/food-hero.jpg"
           alt="Food and dining culture around Jattari"
           fill
           priority
-          className="object-cover opacity-25 transition-transform duration-[1800ms] ease-out group-hover:scale-[1.035]"
+          className="object-cover opacity-95 transition-transform duration-[1800ms] ease-out group-hover:scale-[1.035]"
           sizes="100vw"
         />
-
-        <div className="absolute inset-0 bg-gradient-to-r from-[#E4EDF0]/95 via-[#F4F8FA]/70 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
         <div className="pointer-events-none absolute -right-24 -top-32 h-96 w-96 rounded-full border border-[#10251F]/10 transition-transform duration-1000 group-hover:scale-110" />
         <div className="pointer-events-none absolute -right-10 -top-16 h-64 w-64 rounded-full border border-[#10251F]/10" />
@@ -248,7 +248,7 @@ export default function FoodPage() {
               </span>
             </h1>
 
-            <p data-reveal className="mt-6 max-w-2xl text-base leading-8 text-[#263D3A] sm:text-lg">
+            <p data-reveal className="mt-6 max-w-2xl text-base leading-8 text-[#10251F] font-medium sm:text-lg">
               From everyday North Indian meals and roadside dhabas to tea
               stalls, family restaurants and modern fast-food outlets,
               explore the different food experiences you can find in and
@@ -266,14 +266,14 @@ export default function FoodPage() {
 
               <a
                 href="#food-culture"
-                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-[#10251F]/40 px-5 py-3 font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#10251F] hover:text-white"
+                className="group/button inline-flex items-center gap-2 rounded-[10px] border border-[#10251F]/40 px-5 py-3 font-semibold text-[#10251F] transition-all duration-300 hover:-translate-y-1 hover:bg-[#D58A28] hover:text-white"
               >
                 Discover Food Culture
                 <ArrowUpRight size={18} className="transition-transform duration-300 group-hover/button:translate-x-1 group-hover/button:-translate-y-1" />
               </a>
             </div>
 
-            <div data-reveal className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#263D3A]">
+            <div data-reveal className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-[#10251F]/20 pt-6 text-sm text-[#10251F] font-medium">
               <span className="flex items-center gap-2 transition-transform duration-300 hover:translate-y-[-3px]">
                 <Coffee size={17} className="text-[#D58A28]" />
                 Tea & Snacks
@@ -545,14 +545,14 @@ export default function FoodPage() {
               Discover more than just food
             </h2>
 
-            <p className="mt-6 leading-8 text-[#263D3A]">
+            <p className="mt-6 leading-8 text-[#10251F] font-medium">
               Exploring food outlets is also a way to discover the everyday
               rhythm of Jattari. Local markets, shops and roadside
               establishments together create the town's everyday
               commercial and social environment.
             </p>
 
-            <p className="mt-4 leading-8 text-[#263D3A]">
+            <p className="mt-4 leading-8 text-[#10251F] font-medium">
               Take time to explore nearby market areas, ask local residents
               about their favourite food spots and check the latest
               information before planning your visit.
@@ -672,3 +672,5 @@ export default function FoodPage() {
     </main>
   );
 }
+
+

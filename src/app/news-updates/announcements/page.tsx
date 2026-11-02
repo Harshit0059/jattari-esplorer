@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 const announcementTopics = [
@@ -73,7 +73,7 @@ export default function AnnouncementsPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Hero section with visible background image */}
-      <section className="relative isolate min-h-[540px] overflow-hidden border-b border-border sm:min-h-[580px] lg:min-h-[620px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
 
 <Image
   src="/images/anouncements.jpeg"
@@ -81,17 +81,14 @@ export default function AnnouncementsPage() {
   fill
   priority
   sizes="100vw"
-  className="object-cover object-center"
+  className="z-0 object-cover object-center opacity-95 transition-transform duration-[12000ms] ease-out group-hover/hero:scale-105"
 />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
 
-        <div
-          className="absolute inset-0 z-10 bg-gradient-to-r from-white/85 via-white/85 to-white/30"
-          aria-hidden="true"
-        />
-
-        <div className="container-site relative z-20 mx-auto flex min-h-[540px] items-center px-4 py-16 sm:min-h-[580px] sm:px-6 lg:min-h-[620px] lg:py-24">
+        <div className="container-site relative z-20 mx-auto flex min-h-[580px] items-center px-4 py-16 sm:min-h-[640px] sm:px-6 lg:min-h-[700px] lg:py-24">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/45 bg-white/90 px-4 py-2 text-sm font-semibold text-primary shadow-sm">
               <span className="h-2 w-2 rounded-full bg-primary" />
               Jattari Community Updates
             </span>
@@ -403,3 +400,4 @@ export default function AnnouncementsPage() {
     </main>
   );
 }
+

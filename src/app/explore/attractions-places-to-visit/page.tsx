@@ -27,7 +27,7 @@ const places = [
     name: "Khatu Shyam Jattari Dham",
     category: "Religious Places",
     type: "Temple",
-    location: "Aligarhâ€“Palwal Road, Jattari",
+    location: "Aligarh–Palwal Road, Jattari",
     description:
       "A local place of worship dedicated to Baba Khatu Shyam. It can be included in a visit around Jattari for people interested in devotional places and local religious traditions.",
     image: "/images/khatu shyam.jpeg",
@@ -75,7 +75,7 @@ const places = [
     name: "Shiv Mandir",
     category: "Nearby Places",
     type: "Temple",
-    location: "Fazilpur Kalan, Pisawaâ€“Jattari Road",
+    location: "Fazilpur Kalan, Pisawa–Jattari Road",
     description:
       "A nearby village temple that can be explored by visitors interested in the religious places and local communities around Jattari.",
     image: "/images/shiv-mandir.jpeg",
@@ -111,7 +111,7 @@ const places = [
     name: "Ramleela Ground",
     category: "Culture & Community",
     type: "Community Ground",
-    location: "Aligarhâ€“Palwal Road, Jattari",
+    location: "Aligarh–Palwal Road, Jattari",
     description:
       "A local community ground associated with public and cultural activities. It is better understood as a community landmark than a regular tourist park.",
     image: "/images/ramleela.jpeg",
@@ -219,7 +219,13 @@ export default function AttractionsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#F4F8FA] text-[#10251F]">
       {/* HERO */}
-      <section className="relative isolate min-h-[650px] overflow-hidden bg-gradient-to-b from-[#C7DDE6] via-[#DCEBF0] to-[#EEF5F8] lg:min-h-[740px]">
+      <section className="group/hero relative isolate flex min-h-[600px] items-center overflow-hidden bg-[#F4F8FA] sm:min-h-[660px] md:min-h-[720px] lg:min-h-[760px] md:px-12">
+        <div
+          className="absolute inset-0 -z-20 bg-cover bg-center opacity-95 transition-transform duration-[12000ms] ease-out hover:scale-105"
+          style={{ backgroundImage: "url('/images/ambedkar-park.jpeg')" }}
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 z-0 h-64 bg-gradient-to-b from-[#8FC8F1]/60 via-[#B7DDF4]/25 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-r from-white/95 via-white/80 via-35% to-transparent" />
         <div className="pointer-events-none absolute inset-0 opacity-20">
           <div className="absolute -right-20 top-10 h-[420px] w-[420px] animate-[spin_50s_linear_infinite] rounded-full border border-[#10251F]/15 lg:h-[580px] lg:w-[580px]" />
           <div className="absolute -right-10 top-28 h-[300px] w-[300px] animate-[spin_35s_linear_infinite_reverse] rounded-full border border-[#D58A28]/30 lg:h-[430px] lg:w-[430px]" />
@@ -242,7 +248,7 @@ export default function AttractionsPage() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-sm leading-8 text-[#263D3A] sm:text-base md:text-lg">
+            <p className="mt-7 max-w-2xl text-sm leading-8 text-[#10251F] font-medium sm:text-base md:text-lg">
               From local temples and community landmarks to nearby outdoor
               spaces, discover places in Jattari and its surrounding villages.
               Explore the local character of the region, one destination at
@@ -273,7 +279,7 @@ export default function AttractionsPage() {
               </a>
             </div>
 
-            <div className="mt-12 flex flex-wrap gap-x-7 gap-y-4 border-t border-[#10251F]/20 pt-7 text-sm font-medium text-[#263D3A]">
+            <div className="mt-12 flex flex-wrap gap-x-7 gap-y-4 border-t border-[#10251F]/20 pt-7 text-sm font-medium text-[#10251F] font-medium">
               <span className="flex items-center gap-2 transition-colors hover:text-[#D58A28]">
                 <MapPin size={17} className="text-[#D58A28]" />
                 Jattari & nearby areas
@@ -384,7 +390,7 @@ export default function AttractionsPage() {
                 Explore nearby
               </p>
               <p className="mt-1 text-xs text-[#64736D]">
-                Discover Â· Learn Â· Experience
+                Discover · Learn · Experience
               </p>
             </div>
           </div>
@@ -754,7 +760,7 @@ export default function AttractionsPage() {
               There is more to discover in Jattari.
             </h2>
 
-            <p className="mt-4 text-sm leading-8 text-[#263D3A] sm:text-base">
+            <p className="mt-4 text-sm leading-8 text-[#10251F] font-medium sm:text-base">
               Explore local history, culture, markets and everyday life to
               understand the neighbourhood beyond its destinations.
             </p>
@@ -949,7 +955,7 @@ function PlacesExplorer() {
           <button
             type="button"
             onClick={resetFilters}
-            className="mt-5 rounded-xl bg-[#10251F] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#254C3C] hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#10251F]/20"
+            className="mt-5 rounded-xl bg-[#D58A28] px-5 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#B9741C] hover:shadow-lg focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#10251F]/20"
           >
             Reset filters
           </button>
@@ -958,3 +964,5 @@ function PlacesExplorer() {
     </div>
   );
 }
+
+

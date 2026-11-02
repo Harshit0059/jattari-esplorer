@@ -171,10 +171,10 @@ export default function Navbar() {
     : [];
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
     if (href.startsWith("http")) return false;
-    // Exact match only — prevents parent items from staying highlighted when on a subpage
-    return pathname === href;
+    const cleanPath = pathname.replace(/\/+$/, "") || "/";
+    const cleanHref = href.replace(/\/+$/, "") || "/";
+    return cleanPath === cleanHref;
   };
 
   const closeMobileMenu = () => {
@@ -195,20 +195,22 @@ export default function Navbar() {
 
   const regularLinkClass = (active: boolean, open = false) =>
     `flex items-center gap-1.5 whitespace-nowrap rounded-xl px-3.5 py-3 text-[14px] font-bold transition duration-200 2xl:px-4 2xl:text-[15px] ${
-      active || open
-        ? "bg-[#E8F2F6] text-[#10251F]"
-        : "text-[#10251F] hover:bg-[#E8F2F6] hover:text-[#10251F]"
+      active
+        ? "bg-white text-[#10251F] shadow-sm"
+        : open
+        ? "bg-white/80 text-[#10251F]"
+        : "text-[#10251F] hover:bg-white/60 hover:text-[#10251F]"
     }`;
 
   const locationLinkClass = (active: boolean) =>
     `flex items-center gap-2 rounded-full border px-4 py-3 text-sm font-extrabold transition duration-200 2xl:px-5 ${
       active
-        ? "border-[#10251F] bg-[#10251F] text-white shadow-md"
+        ? "border-[#D58A28] bg-[#D58A28] text-white shadow-md"
         : "border-[#D58A28] bg-[#FFF0D8] text-[#10251F] hover:border-[#B9741C] hover:bg-[#D58A28] hover:text-white"
     }`;
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 w-full bg-transparent border-none">
+    <header className="absolute top-0 left-0 right-0 z-50 w-full bg-gradient-to-b from-[#8FC8F1]/65 via-[#B7DDF4]/30 to-transparent border-none">
       {/* Main Navbar */}
       <div className="flex min-h-[82px] items-center justify-between gap-3 px-3 py-3 sm:px-5 lg:px-7 2xl:px-10">
 
